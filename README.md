@@ -1,33 +1,40 @@
 # Python Algorithmen und Datenstrukturen
 
-Dies ist ein Repository, das grundlegende Algorithmen und Datenstrukturen in Python implementiert.
+## Projektziele
+Das Ziel dieses Projekts ist es, grundlegende Algorithmen und Datenstrukturen in Python zu implementieren und zu demonstrieren. Diese Implementierungen sollen als Lernwerkzeug dienen und die Anwendung dieser Konzepte in der Softwareentwicklung verdeutlichen.
 
-## Inhalt
-- Sortieralgorithmen
-- Suchalgorithmen
-- Datenstrukturen (Listen, Stacks, Queues, Bäume, Graphen)
+## Inhaltsverzeichnis
+- [Projektziele](#projektziele)
+- [Benutzungsanleitung](#benutzungsanleitung)
+- [Einrichtungsanleitung](#einrichtungsanleitung)
+- [Dokumentation](#dokumentation)
+- [Contributing](#contributing)
+- [Lizenz](#lizenz)
 
-## Installation
-Um die Implementierungen in diesem Repository zu verwenden, klonen Sie das Repository und installieren Sie die Abhängigkeiten:
+## Benutzungsanleitung
+Um die Algorithmen und Datenstrukturen in diesem Projekt zu verwenden, folgen Sie einfach den Anweisungen in den entsprechenden Dateien. Die Hauptdateien befinden sich im Verzeichnis `algorithmen/` und `datenstrukturen/`.
 
-```
-git clone https://github.com/ChristineJanischek/python-algorithmen-datenstrukturen.git
-cd python-algorithmen-datenstrukturen
-```
+## Einrichtungsanleitung
+1. Klonen Sie das Repository:
+   ```bash
+   git clone https://github.com/ChristineJanischek/python-algorithmen-datenstrukturen.git
+   ```
+2. Wechseln Sie in das Projektverzeichnis:
+   ```bash
+   cd python-algorithmen-datenstrukturen
+   ```
+3. Installieren Sie die benötigten Abhängigkeiten (sofern vorhanden):
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-## Verwendung
-Verwenden Sie die einzelnen Module, um auf die implementierten Algorithmen und Datenstrukturen zuzugreifen. Zum Beispiel:
+## Dokumentation
+Detaillierte Dokumentationen sind in den folgenden Dateien verfügbar:
+- [Algorithmus-Dokumentation](algorithmen/Dokumentation.md)
+- [Datenstruktur-Dokumentation](datenstrukturen/Dokumentation.md)
 
-```python
-from sortieralgorithmen import bubble_sort
-
-unsorted_list = [5, 2, 9, 1]
-sorted_list = bubble_sort(unsorted_list)
-print(sorted_list)
-```
-
-## Beiträge
-Beiträge sind willkommen! Bitte senden Sie einen Pull-Request oder eröffnen Sie ein Issue, um Vorschläge zu machen.
+## Contributing
+Beiträge sind willkommen! Bitte sehen Sie sich die [CONTRIBUTING.md](CONTRIBUTING.md) Datei für weitere Informationen zum Beitrag zu diesem Projekt an.
 
 ## Lizenz
-Dieses Projekt ist lizenziert unter der MIT-Lizenz.
+Dieses Projekt ist unter der MIT-Lizenz lizenziert. Siehe die [LICENSE](LICENSE) Datei für Details.
