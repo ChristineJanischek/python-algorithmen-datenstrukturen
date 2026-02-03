@@ -1,0 +1,9 @@
+[
+  {
+    "id": "ms1",
+    "title": "Struktogramm → Code (Listen, Sortieren, Suchen)",
+    "description": "Lesen von Struktogrammen und Umsetzung in Quellcode mit Operatorenliste.",
+    "operatorListPath": "struktogramme/Operatorenliste-Struktogramme.md",
+    "contentPath": "aufgaben/meilenstein-1-listen-sortier-suche.md"
+  }
+]

@@ -1,0 +1,66 @@
+[
+  {
+    "id": "task-linear-search-member",
+    "milestoneId": "ms1",
+    "title": "Lineare Suche (Mitgliedsnummer)",
+    "description": "Index der Mitgliedsnummer finden oder „nicht gefunden“ zurückgeben.",
+    "struktogramm": "struktogramme/L2_3_1_1_Struktogramm_Lineare_Suche_Mitgliedsnummer.stgr",
+    "tags": ["suche", "listen"]
+  },
+  {
+    "id": "task-binary-search-lotto",
+    "milestoneId": "ms1",
+    "title": "Binäre Suche (Losnummer)",
+    "description": "Elementposition in sortierter Liste ermitteln.",
+    "struktogramm": "struktogramme/L2_3_2_1_Struktogramm_Binaere_Suche_Losnummer.stgr",
+    "tags": ["suche", "listen"]
+  },
+  {
+    "id": "task-bubble-sort",
+    "milestoneId": "ms1",
+    "title": "Bubble Sort (Zahlenreihe)",
+    "description": "Liste aufsteigend sortieren.",
+    "struktogramm": "struktogramme/L2_2_1_2_Struktogramm_Bubble_Sort_Zahlenreihe.stgr",
+    "tags": ["sortieren", "listen"]
+  },
+  {
+    "id": "task-selection-sort-desc",
+    "milestoneId": "ms1",
+    "title": "Selection Sort (absteigend)",
+    "description": "Liste absteigend sortieren.",
+    "struktogramm": "struktogramme/L2_2_2_3_Struktogramm_Selection_Sort_absteigend.stgr",
+    "tags": ["sortieren", "listen"]
+  },
+  {
+    "id": "task-insert-element",
+    "milestoneId": "ms1",
+    "title": "Listelemente einfügen",
+    "description": "Element an Position einfügen.",
+    "struktogramm": "struktogramme/L2_3_5_1_Struktogramm_Volleyball_Spieler_einfuegen.stgr",
+    "tags": ["listen"]
+  },
+  {
+    "id": "task-remove-element",
+    "milestoneId": "ms1",
+    "title": "Listelemente entfernen",
+    "description": "Element an Position entfernen.",
+    "struktogramm": "struktogramme/L2_3_6_Struktogramm_Volleyball_Spieler_entfernen.stgr",
+    "tags": ["listen"]
+  },
+  {
+    "id": "task-lottery-sort",
+    "milestoneId": "ms1",
+    "title": "Gewinnziehung sortieren und anzeigen",
+    "description": "Zahlen sortieren und ausgeben.",
+    "struktogramm": "struktogramme/L2_2_3_1 Struktogramm_Sortierung_Gewinnziehung.stgr",
+    "tags": ["sortieren", "ausgabe"]
+  },
+  {
+    "id": "task-volleyball-search",
+    "milestoneId": "ms1",
+    "title": "Volleyball-Spieler suchen",
+    "description": "Suche nach Name/Position mit passender Rückgabe.",
+    "struktogramm": "struktogramme/L2_3_1_3_Struktogramm_Volleyball_Spieler_suchen.stgr",
+    "tags": ["suche", "listen"]
+  }
+]

@@ -1,0 +1,119 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", "Segoe UI", sans-serif;
+  color: #0f172a;
+  background: #f8fafc;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  min-height: 100vh;
+}
+
+.sidebar {
+  background: #0f172a;
+  color: #e2e8f0;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.subtitle {
+  font-size: 0.9rem;
+  color: #94a3b8;
+}
+
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.task-item {
+  background: #1e293b;
+  border: 1px solid transparent;
+  padding: 12px;
+  border-radius: 10px;
+  color: #e2e8f0;
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.task-item:hover {
+  border-color: #38bdf8;
+}
+
+.task-item.active {
+  background: #0ea5e9;
+  border-color: #0ea5e9;
+}
+
+.task-title {
+  font-weight: 600;
+  display: block;
+}
+
+.task-description {
+  font-size: 0.85rem;
+  display: block;
+  color: #cbd5f5;
+}
+
+.content {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.panel {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+
+.codebox {
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #0f172a;
+}
+
+.codebox-textarea {
+  width: 100%;
+  min-height: 220px;
+  border: none;
+  padding: 16px;
+  background: transparent;
+  color: #e2e8f0;
+  font-family: "Fira Code", "Courier New", monospace;
+  font-size: 0.95rem;
+  resize: vertical;
+}
+
+.codebox-textarea:focus {
+  outline: none;
+}
+
+.markdown {
+  white-space: pre-wrap;
+  font-family: "Fira Code", "Courier New", monospace;
+  background: #f1f5f9;
+  padding: 12px;
+  border-radius: 10px;
+  max-height: 300px;
+  overflow: auto;
+}
+
+.meta {
+  font-size: 0.85rem;
+  color: #64748b;
+}
