@@ -118,37 +118,106 @@ def berechne_summe(zahlen: list[int]) -> int:
     return summe
 ```
 
-### 3. E-Learning Aufgaben
+### 3. E-Learning Content Management (WICHTIG!)
 
-Wenn E-Learning-Aufgaben erstellt werden:
+**⚠️ ALLE E-Learning-Inhalte MÜSSEN mit dem Python Manager erstellt werden!**
 
-1. **Struktogramm erstellen** (Pflicht!)
-2. **Python-Code erstellen**
-3. **Testfälle definieren**
-4. **Musterlösung bereitstellen**
+#### Python E-Learning Manager verwenden:
 
-Template:
-```markdown
-# Aufgabe: [Titel]
+```python
+from src.utils.elearning_manager import (
+    ELearningManager,
+    create_aufgabe_quick,
+    create_information_quick,
+    create_loesung_quick,
+    Level
+)
 
-## Problemstellung
-[Beschreibung]
-
-## Struktogramm
-\`\`\`
-[Struktogramm nach BW-Standard]
-\`\`\`
-
-## Implementierung
-\`\`\`python
-[Python-Code]
-\`\`\`
-
-## Tests
-\`\`\`python
-[Testfälle]
-\`\`\`
+manager = ELearningManager()
 ```
+
+#### Workflows:
+
+**Aufgabe erstellen:**
+```python
+aufgabe = create_aufgabe_quick(
+    titel="Array-Summe",
+    level=Level.L1,
+    kategorie=3,
+    nummer=1,
+    problemstellung="...",
+    autor="Dein Name",
+    struktogramm="..."  # Aus struktogramm_helper!
+)
+aufgabe.metadata.themen = ["Arrays", "Schleifen"]
+aufgabe.metadata.lernziele = ["Ziel 1", "Ziel 2"]
+manager.save_aufgabe(aufgabe)
+```
+
+**Information erstellen:**
+```python
+info = create_information_quick(
+    titel="Bubble Sort",
+    level=Level.L2,
+    kategorie=2,
+    nummer=1,
+    einfuehrung="...",
+    inhalt="...",
+    autor="Dein Name"
+)
+manager.save_information(info)
+```
+
+**Lösung erstellen:**
+```python
+loesung = create_loesung_quick(
+    titel="Array-Summe",  # Gleicher Titel wie Aufgabe!
+    level=Level.L1,
+    kategorie=3,
+    nummer=1,
+    loesungsansatz="...",
+    python_code="def ...",
+    autor="Dein Name"
+)
+loesung.komplexitaet = "O(n)"
+manager.save_loesung(loesung)
+```
+
+**Indices aktualisieren:**
+```python
+manager.generate_all_indices()
+```
+
+#### Wichtige Regeln:
+
+1. **IMMER Python Manager verwenden** für neue Inhalte
+2. **Namenskonvention:** `LX_Y_Z_Thema.md` wird automatisch generiert
+3. **Metadaten vollständig:** Titel, Level, Kategorie, Nummer, Autor (Pflicht!)
+4. **Struktogramme einbinden:** Verwende `struktogramm_helper.py`
+5. **Indices regenerieren:** Nach jeder Änderung
+6. **Templates nur als Referenz:** Nicht manuell verwenden
+
+#### Dateistruktur:
+
+```
+docs/
+├── aufgaben/
+│   ├── L1/           # Grundlagen
+│   ├── L2/           # Fortgeschritten  
+│   ├── L3/           # Expert
+│   └── INDEX.md      # Automatisch
+├── information/
+│   ├── L1/, L2/, L3/
+│   └── INDEX.md
+├── loesungen/
+│   ├── L1/, L2/, L3/
+│   └── INDEX.md
+└── handbuch/
+    ├── ELEARNING_TEMPLATE_GUIDE.md  ← Vollständige Anleitung!
+    └── STRUKTOGRAMM_GUIDE.md
+```
+
+**Siehe:** `docs/handbuch/ELEARNING_TEMPLATE_GUIDE.md` für Details!
 
 ### 4. Sortier- und Suchalgorithmen
 
@@ -214,12 +283,21 @@ Format: `LX_Y_Z_Thema`
 
 - 📄 `struktogramme/Operatorenliste-Struktogramme.md` - Die Bibel für Struktogramme!
 - 📄 `docs/handbuch/STRUKTOGRAMM_GUIDE.md` - Praktischer Guide mit Patterns
+- � `docs/handbuch/ELEARNING_TEMPLATE_GUIDE.md` - E-Learning Content Management
 - 🐍 `src/utils/struktogramm_helper.py` - Python-Helper für Struktogramme
+- 🐍 `src/utils/elearning_manager.py` - E-Learning Content Manager
 - 📄 `.github/copilot-instructions.md` - Diese Datei
+
+**Templates:**
+
+- `docs/aufgaben/TEMPLATE_Aufgabe.md` - Template für Aufgaben
+- `docs/information/TEMPLATE_Information.md` - Template für Informationen
+- `docs/loesungen/TEMPLATE_Loesung.md` - Template für Lösungen
 
 **Beispiele:**
 
 - `struktogramme/*.stgr` - Fertige Struktogramm-Beispiele
+- `docs/aufgaben/L*/` - Beispiel-Aufgaben
 - `src/niveau/infodateien/` - Informationsmaterialien
 
 ### 10. Workflow für neue Aufgaben
@@ -271,11 +349,13 @@ Wenn du Code/Aufgaben für dieses Repository erstellst:
 
 - [ ] Brauche ich ein Struktogramm? (Ja, bei Logik-Aufgaben!)
 - [ ] Entspricht es den BW-Standards? (Guide checken!)
+- [ ] Verwende ich Python Manager für E-Learning-Inhalte?
 - [ ] Habe ich Type Hints verwendet?
 - [ ] Sind die Variablennamen verständlich?
 - [ ] Gibt es Tests?
 - [ ] Ist die Komplexität dokumentiert? (bei Algorithmen)
 - [ ] Ist alles auf Deutsch kommentiert?
+- [ ] Habe ich Indices regeneriert? (nach E-Learning-Änderungen)
 
 ---
 
@@ -285,6 +365,10 @@ Wenn du Code/Aufgaben für dieses Repository erstellst:
 
 1. **LIES ZUERST:** `docs/handbuch/STRUKTOGRAMM_GUIDE.md`
 2. **BEI STRUKTOGRAMMEN:** Verwende IMMER die Operatorenliste
+3. **BEI E-LEARNING:** Verwende IMMER `elearning_manager.py`
+4. **BEI PATTERNS:** Nutze die vorgefertigten Patterns aus den Guides
+5. **BEI UNSICHERHEIT:** Validiere mit den Helper-Modulen
+6. **DENKE DARAN:** Dies ist für Schüler im Abitur - klar und verständlich!
 3. **BEI PATTERNS:** Nutze die vorgefertigten Patterns aus dem Guide
 4. **BEI UNSICHERHEIT:** Validiere mit `struktogramm_helper.py`
 5. **DENKE DARAN:** Dies ist für Schüler im Abitur - klar und verständlich!
