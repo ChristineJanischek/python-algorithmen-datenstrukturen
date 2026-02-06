@@ -23,7 +23,7 @@ Diese Checkliste stellt sicher, dass **alle Contributor** diese Grundlagen verst
 | **Todo** | **Beschreibung** | **Link zu Anleitung** | **Warum?** |
 |---------|---------|---------|---------|
 | 1️⃣ Git Basics | Git und unser Branching-Modell verstehen | [Siehe unten: Set 1](#set-1-git--versionskontrolle) | Damit Änderungen nicht in Konflikt kommen |
-| 2️⃣ Environment Setup | Python, Tools lokal installieren & testen | [DEVELOPEMENT.MD](DEVELOPEMENT.MD) | Zum Lokaltesten vor dem Push |
+| 2️⃣ Environment Setup | Python, Tools lokal installieren & testen | [DEVELOPMENT.MD](DEVELOPMENT.MD) | Zum Lokaltesten vor dem Push |
 | 3️⃣ Backup Strategy | Unser Tag/Release/Hotfix-System verstehen | [BACKUP_STRATEGY.md](BACKUP_STRATEGY.md) | Damit es immer einen stabilen Rollback gibt |
 | 4️⃣ Struktogramme | BW-Abitur-Standard für Programmlogik | [STRUKTOGRAMM_GUIDE.md](STRUKTOGRAMM_GUIDE.md) | Pflichtanforderung für Aufgaben |
 | 5️⃣ Content Management | Wie man Aufgaben/Infos/Lösungen erstellt | [ELEARNING_TEMPLATE_GUIDE.md](ELEARNING_TEMPLATE_GUIDE.md) | Das ist unser zentrales System |
@@ -59,14 +59,14 @@ Diese Checkliste stellt sicher, dass **alle Contributor** diese Grundlagen verst
 - [ ] Python 3.8+ ist installiert (`python --version`)
 - [ ] Ich habe das Repository geklont: `git clone <repo-url>`
 - [ ] Ich bin im Projekt-Root-Verzeichnis: `/workspaces/python-algorithmen-datenstrukturen`
-- [ ] Ich habe die [DEVELOPEMENT.MD](DEVELOPEMENT.MD) Anweisungen gelesen
+- [ ] Ich habe die [DEVELOPMENT.MD](DEVELOPMENT.MD) Anweisungen gelesen
 - [ ] Ich verstehe die Verzeichnisstruktur (docs/, src/, apps/, ...)
 - [ ] Ich habe einen Python venv / Umgebung eingerichtet (falls nötig)
 - [ ] Ich kann Python-Dateien in `src/utils/` ausführen
 - [ ] Ich habe versucht, `elearning_manager.py` zu importieren (kein Fehler!)
 - [ ] Ich habe versucht, `struktogramm_helper.py` zu importieren (kein Fehler!)
 
-**Falls blockiert:** Siehe [DEVELOPEMENT.MD](DEVELOPEMENT.MD)
+**Falls blockiert:** Siehe [DEVELOPMENT.MD](DEVELOPMENT.MD)
 
 ---
 
@@ -183,7 +183,7 @@ Diese Checkliste stellt sicher, dass **alle Contributor** diese Grundlagen verst
 ### Zentrale Handbücher
 - [SYSTEM_INDEX.md](SYSTEM_INDEX.md) - Übersicht aller Routinen
 - [BACKUP_STRATEGY.md](BACKUP_STRATEGY.md) - Versionierung & Backups
-- [DEVELOPEMENT.MD](DEVELOPEMENT.MD) - Lokalsetup & Entwicklung
+- [DEVELOPMENT.MD](DEVELOPMENT.MD) - Lokalsetup & Entwicklung
 - [STRUKTOGRAMM_GUIDE.md](STRUKTOGRAMM_GUIDE.md) - Struktogramme BW-Standard
 - [ELEARNING_TEMPLATE_GUIDE.md](ELEARNING_TEMPLATE_GUIDE.md) - Content Management
 - [ROUTINEN.md](ROUTINEN.md) - Alle verfügbaren Funktionen

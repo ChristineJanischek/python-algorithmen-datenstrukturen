@@ -60,7 +60,7 @@ Strategie für stabile Releases und Versionierung:
 Systemarchitektur und technische Übersicht.
 
 ### Entwicklung
-→ [**DEVELOPEMENT.MD**](DEVELOPEMENT.MD)
+→ [**DEVELOPMENT.MD**](DEVELOPMENT.MD)
 
 Entwicklungs-Richtlinien und lokales Setup.
 
@@ -95,7 +95,7 @@ Entwicklungs-Richtlinien und lokales Setup.
 1. System-Übersicht: [SYSTEM_INDEX.md](SYSTEM_INDEX.md)
 2. Architektur: [ARCHITECTURE.MD](ARCHITECTURE.MD)
 3. Backup-Strategie: [BACKUP_STRATEGY.md](BACKUP_STRATEGY.md)
-4. Entwicklung: [DEVELOPEMENT.MD](DEVELOPEMENT.MD)
+4. Entwicklung: [DEVELOPMENT.MD](DEVELOPMENT.MD)
 
 ---
 

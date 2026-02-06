@@ -17,7 +17,7 @@ Dieses Dokument bietet einen Überblick über alle zentralen Systemroutinen, Dok
 | [ROUTINEN.md](ROUTINEN.md) | Vollständige Übersicht aller System- und Anwendungsroutinen | Entwickler, Administratoren |
 | [BACKUP_STRATEGY.md](BACKUP_STRATEGY.md) | Versionierungs- und Backup-Strategien für verlässliche Releases | DevOps, Administratoren |
 | [ARCHITECTURE.MD](ARCHITECTURE.MD) | Systemarchitektur und technische Übersicht | Entwickler |
-| [DEVELOPEMENT.MD](DEVELOPEMENT.MD) | Entwicklungs-Richtlinien und Setup | Entwickler |
+| [DEVELOPMENT.MD](DEVELOPMENT.MD) | Entwicklungs-Richtlinien und Setup | Entwickler |
 
 ---
 
