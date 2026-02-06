@@ -1,22 +1,23 @@
-// ...existing code...
-# Dokumentationsübersicht
+# Python Repository: Algorithmen und Datenstrukturen
+Praktische Implementierungen und Materialien für das Abitur im Bereich Informatik/Wirtschaftsinformatik (Baden-Württemberg).
 
-Dieses Repository enthält Implementierungen und Erklärungen zu Algorithmen und Datenstrukturen in Python. Die Dokumentation ist im Verzeichnis `doc` in die Bereiche INFORMATION, AUFGABEN, LÖSUNGEN und HANDBUCH gegliedert.
+## 📚 Dokumentation & Guides
 
-## INFORMATION
-| Dokumentname | Erläuterung | Vorkenntnisse |
-|---|---|---|
-| [bubble_sort](doc/information/bubble_sort.md) | Beschreibung, Funktionsweise und Analyse des Bubble‑Sort‑Algorithmus. | Python‑Grundkenntnisse, Listen |
-| [quick_sort](doc/information/quick_sort.md) | Erklärung des Quicksort‑Prinzips, Pivot‑Strategien und Komplexität. | Rekursion, Algorithmen‑Grundlagen |
-| [merge_sort](doc/information/merge_sort.md) | Merge‑Sort‑Verfahren, Stabilität und Laufzeitanalyse. | Rekursion, Divide‑and‑Conquer |
-| [linked_list](doc/information/linked_list.md) | Aufbau und typische Operationen verketteter Listen. | Datenstrukturen: Listen |
-| [binary_tree](doc/information/binary_tree.md) | Einführung in binäre Bäume, Traversierungen und Anwendungen. | Rekursion, grundlegende Datenstrukturen |
+### Zentrale Handbücher
+**👉 NEUE CONTRIBUTOR?** Lese zuerst: [CONTRIBUTOR_ONBOARDING.md](docs/handbuch/CONTRIBUTOR_ONBOARDING.md) - Schritt-fuer-Schritt Anleitung zum Contributen.
 
-## AUFGABEN
-| Dokumentname | Erläuterung | Vorkenntnisse |
-|---|---|---|
-| [bubble_sort_aufgaben](doc/aufgaben/bubble_sort_aufgaben.md) | Übungsaufgaben zur Implementierung und Analyse von Bubble Sort. | Python‑Grundkenntnisse |
-| [linked_list_aufgaben](doc/aufgaben/linked_list_aufgaben.md) | Implementierungs‑ und Verständnisaufgaben zu verketteten Listen. | Listen, Zeigerkonzepte |
+Alle technischen Dokumentationen, Strategien und Systembeschreibungen sind im zentralen Handbuch verfügbar:
+
+- [**STRUKTOGRAMM_GUIDE.md**](docs/handbuch/STRUKTOGRAMM_GUIDE.md) - Praktischer Guide zu Struktogrammen nach BW-Standard
+- [**ELEARNING_TEMPLATE_GUIDE.md**](docs/handbuch/ELEARNING_TEMPLATE_GUIDE.md) - Anleitung für E-Learning-Content-Management
+- [**ROUTINEN.md**](docs/handbuch/ROUTINEN.md) - Vollständige Übersicht aller Routinen und Funktionen des Systems
+- [**BACKUP_STRATEGY.md**](docs/handbuch/BACKUP_STRATEGY.md) - Versionierungs- und Backup-Strategie
+- [**ARCHITECTURE.MD**](docs/handbuch/ARCHITECTURE.MD) - Systemarchitektur
+
+### Lernmaterialien
+- **Aufgaben**: [docs/aufgaben/](docs/aufgaben/)
+- **Lösungen**: [docs/loesungen/](docs/loesungen/)
+- **Informationen**: [docs/information/](docs/information/)
 
 ## LÖSUNGEN
 | Dokumentname | Erläuterung | Vorkenntnisse |
