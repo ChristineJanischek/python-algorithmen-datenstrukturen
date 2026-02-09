@@ -31,6 +31,15 @@ class MarkdownReviewer:
         self.docs_dir = self.repo_root / "docs"
         self.src_dir = self.repo_root / "src"
         self.apps_dir = self.repo_root / "apps"
+
+        self.top_level_prefixes = (
+            "docs/",
+            "src/",
+            "apps/",
+            "struktogramme/",
+            "data/",
+            ".github/",
+        )
         
         self.errors: List[Dict] = []
         self.warnings: List[Dict] = []
@@ -88,7 +97,7 @@ class MarkdownReviewer:
             
             # Markdown Links: [text](path)
             for match in re.finditer(r'\]\(([^)]+)\)', content):
-                ref = match.group(1)
+                ref = match.group(1).strip()
                 # Entferne Anchor-Links
                 ref = ref.split('#')[0]
                 if ref and not ref.startswith('http'):
@@ -96,12 +105,12 @@ class MarkdownReviewer:
             
             # Inline Code-Referenzen: `path/to/file.md`
             for match in re.finditer(r'`([^\`]+\.md)`', content):
-                ref = match.group(1)
+                ref = match.group(1).strip()
                 references.add(ref)
             
             # Explizite Pfad-Referenzen in Text
             for match in re.finditer(r'(?:Datei|File|Pfad|Path):\s*[`\']?([^\s`\']+\.md)[`\']?', content):
-                ref = match.group(1)
+                ref = match.group(1).strip()
                 references.add(ref)
                 
         except Exception as e:
@@ -112,6 +121,39 @@ class MarkdownReviewer:
             })
         
         return references
+
+    def _should_skip_reference(self, ref: str, source_file: Path) -> bool:
+        """Erkenne Platzhalter- und Template-Referenzen, die nicht geprüft werden sollen."""
+        if not ref or ref == "/":
+            return True
+
+        if ref.startswith("http") or ref.startswith("mailto:"):
+            return True
+
+        placeholder_patterns = (
+            r"\[.+\]",
+            r"^LX_Y_Z_",
+            r"^link/pfad/",
+            r"\bparameter\b",
+        )
+
+        if any(re.search(pattern, ref) for pattern in placeholder_patterns):
+            return True
+
+        if "TEMPLATE" in source_file.name:
+            return True
+
+        return False
+
+    def _resolve_reference(self, ref: str, source_file: Path) -> Path:
+        """Löse eine Referenz in einen absoluten Pfad innerhalb des Repos auf."""
+        if ref.startswith('/'):
+            return self.repo_root / ref.lstrip('/')
+
+        if ref.startswith(self.top_level_prefixes):
+            return self.repo_root / ref
+
+        return (source_file.parent / ref).resolve()
     
     def _check_file_references(self):
         """Überprüfe, dass alle Datei-Referenzen gültig sind."""
@@ -121,11 +163,10 @@ class MarkdownReviewer:
             references = self._extract_references(md_file)
             
             for ref in references:
-                # Relative Pfad auflösen
-                if ref.startswith('/'):
-                    target = self.repo_root / ref.lstrip('/')
-                else:
-                    target = (md_file.parent / ref).resolve()
+                if self._should_skip_reference(ref, md_file):
+                    continue
+
+                target = self._resolve_reference(ref, md_file)
                 
                 # Überprüfe ob Datei existiert
                 if not target.exists():
