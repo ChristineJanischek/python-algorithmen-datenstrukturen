@@ -14,6 +14,9 @@ Alle technischen Dokumentationen, Strategien und Systembeschreibungen sind im ze
 - [**BACKUP_STRATEGY.md**](docs/handbuch/BACKUP_STRATEGY.md) - Versionierungs- und Backup-Strategie
 - [**ARCHITECTURE.MD**](docs/handbuch/ARCHITECTURE.MD) - Systemarchitektur
 
+### Development Workflows
+- [**MARKDOWN_REVIEWER_README.md**](apps/tools/MARKDOWN_REVIEWER_README.md) - Automatische Konsistenz-Überprüfung aller .md Dateien bei jedem `git push`
+
 ### Lernmaterialien
 - **Aufgaben**: [docs/aufgaben/](docs/aufgaben/)
 - **Lösungen**: [docs/loesungen/](docs/loesungen/)
