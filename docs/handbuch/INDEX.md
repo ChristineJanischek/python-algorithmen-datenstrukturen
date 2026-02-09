@@ -70,6 +70,11 @@ Systemarchitektur und technische Übersicht.
 
 Entwicklungs-Richtlinien und lokales Setup.
 
+### Frontend Setup
+→ [**FRONTEND_SETUP.md**](FRONTEND_SETUP.md)
+
+Anleitung zur Frontend-Entwicklung und lokalen Einrichtung.
+
 ---
 
 ## 📂 Verwandte Verzeichnisse

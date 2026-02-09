@@ -1,43 +1,10 @@
 {
   "errors": [],
-  "warnings": [
-    {
-      "type": "orphaned_file",
-      "file": "docs/handbuch/FRONTEND_SETUP.md",
-      "message": "Datei wird nirgendwo verlinkt: docs/handbuch/FRONTEND_SETUP.md"
-    },
-    {
-      "type": "orphaned_file",
-      "file": "docs/pruefungen/Klausur_L2_2_1_Verfuegung.md",
-      "message": "Datei wird nirgendwo verlinkt: docs/pruefungen/Klausur_L2_2_1_Verfuegung.md"
-    },
-    {
-      "type": "orphaned_file",
-      "file": "docs/pruefungen/Klausur_L2_2_1_Musterloesung.md",
-      "message": "Datei wird nirgendwo verlinkt: docs/pruefungen/Klausur_L2_2_1_Musterloesung.md"
-    },
-    {
-      "type": "incomplete_index",
-      "file": "docs/handbuch/INDEX.md",
-      "missing_entries": [
-        "FRONTEND_SETUP.md"
-      ],
-      "message": "INDEX.md - Fehlende Einträge: FRONTEND_SETUP.md"
-    },
-    {
-      "type": "incomplete_index",
-      "file": "docs/pruefungen/INDEX.md",
-      "missing_entries": [
-        "Klausur_L2_2_1_Verfuegung.md",
-        "Klausur_L2_2_1_Musterloesung.md"
-      ],
-      "message": "INDEX.md - Fehlende Einträge: Klausur_L2_2_1_Verfuegung.md, Klausur_L2_2_1_Musterloesung.md"
-    }
-  ],
+  "warnings": [],
   "info": [],
   "summary": {
     "error_count": 0,
-    "warning_count": 5,
+    "warning_count": 0,
     "info_count": 0
   }
 }
