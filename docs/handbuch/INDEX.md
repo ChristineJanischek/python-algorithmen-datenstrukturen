@@ -47,6 +47,9 @@ Umfassende Dokumentation aller Routinen im System:
 - Tool-Skripte (generate_information_docs.py)
 - Klassenstrukturen und Funktionssignaturen
 
+**Markdown-Review (Pre-Push):**
+- [**MARKDOWN_REVIEWER_README.md**](../../apps/tools/MARKDOWN_REVIEWER_README.md)
+
 #### Versionierung & Backups
 → [**BACKUP_STRATEGY.md**](BACKUP_STRATEGY.md)
 
