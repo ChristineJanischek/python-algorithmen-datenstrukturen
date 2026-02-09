@@ -1,0 +1,94 @@
+#!/bin/bash
+#
+# Git Pre-Push Hook: Markdown-Dateien Review
+# 
+# Dieser Hook wird vor jedem Push ausgeführt und fragt den Nutzer, 
+# ob die Markdown-Dateien auf Konsistenz und Aktualität überprüft werden sollen.
+#
+# Installation:
+#   cp .githooks/pre-push .git/hooks/pre-push
+#   chmod +x .git/hooks/pre-push
+#
+
+# Farben für Terminal-Output
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
+BLUE='\033[0;34m'
+NC='\033[0m' # No Color
+
+# Hole das Root-Verzeichnis des Repositories
+REPO_ROOT="$(git rev-parse --show-toplevel)"
+TOOLS_DIR="$REPO_ROOT/apps/tools"
+REVIEWER_SCRIPT="$TOOLS_DIR/markdown_reviewer.py"
+
+# Überprüfe ob Python und das Script vorhanden sind
+if [ ! -f "$REVIEWER_SCRIPT" ]; then
+    echo -e "${YELLOW}⚠️  Markdown Reviewer Script nicht gefunden. Überspringe Review.${NC}"
+    exit 0
+fi
+
+# Frage den Nutzer
+echo -e "\n${BLUE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+echo -e "${BLUE}📋 GIT PRE-PUSH HOOK - Markdown Review${NC}"
+echo -e "${BLUE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+echo ""
+echo -e "Möchtest Du die ${YELLOW}Markdown-Dateien${NC} überprüfen lassen?"
+echo "  ✓ Ungültige Datei-Referenzen"
+echo "  ✓ Tote Links / Verwaiste Dateien"
+echo "  ✓ Struktur-Konsistenz (fehlende INDEX-Einträge)"
+echo "  ✓ Dokumentations-Synchronisation"
+echo ""
+
+# Interaktive Abfrage
+read -p "Review durchführen? (ja/Ja/j/J oder Enter zum Überspringen): " -n 1 RESPONSE
+echo ""
+
+# Überprüfe Antwort (case-insensitive)
+if [[ $RESPONSE =~ ^[jJ]$ ]]; then
+    echo ""
+    echo -e "${BLUE}▶ Starten des Markdown-Dateien Reviews...${NC}"
+    echo ""
+    
+    # Führe Python-Script aus
+    python3 "$REVIEWER_SCRIPT"
+    REVIEW_EXIT_CODE=$?
+    
+    echo ""
+    
+    # Überprüfe Ergebnis
+    if [ $REVIEW_EXIT_CODE -eq 0 ]; then
+        echo -e "${GREEN}✅ Review erfolgreich - keine kritischen Fehler${NC}"
+        echo -e "${YELLOW}(Warnungen sollten trotzdem überprüft werden)${NC}"
+        echo ""
+        read -p "Mit Push fortfahren? (Enter=Ja / n=Nein): " -n 1 CONTINUE
+        echo ""
+        
+        if [[ ! $CONTINUE =~ ^[nN]$ ]]; then
+            echo -e "${GREEN}▶ Push wird fortgesetzt...${NC}\n"
+            exit 0
+        else
+            echo -e "${YELLOW}⊘ Push wurde abgebrochen${NC}\n"
+            exit 1
+        fi
+    elif [ $REVIEW_EXIT_CODE -eq 1 ]; then
+        echo -e "${RED}❌ Markdown-Fehler gefunden!${NC}"
+        echo ""
+        read -p "Trotzdem pushen? (Enter=Nein / y=Ja): " -n 1 FORCE_PUSH
+        echo ""
+        
+        if [[ $FORCE_PUSH =~ ^[yY]$ ]]; then
+            echo -e "${YELLOW}⚠️  Push trotz Fehlern...${NC}\n"
+            exit 0
+        else
+            echo -e "${YELLOW}⊘ Push wurde abgebrochen${NC}\n"
+            exit 1
+        fi
+    else
+        echo -e "${RED}❌ Fehler beim Review-Script${NC}\n"
+        exit 0
+    fi
+else
+    echo -e "${YELLOW}⊘ Review übersprungen - Push wird fortgesetzt${NC}\n"
+    exit 0
+fi
