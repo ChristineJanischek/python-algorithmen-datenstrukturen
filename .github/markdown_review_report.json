@@ -1,0 +1,373 @@
+{
+  "errors": [
+    {
+      "type": "invalid_reference",
+      "file": "docs/information/TEMPLATE_Information.md",
+      "reference": "link/pfad/zur/ressource3",
+      "target": "docs/information/link/pfad/zur/ressource3",
+      "message": "Ungültige Referenz: link/pfad/zur/ressource3 → nicht gefunden"
+    },
+    {
+      "type": "invalid_reference",
+      "file": "docs/information/TEMPLATE_Information.md",
+      "reference": "link/pfad/zur/ressource1",
+      "target": "docs/information/link/pfad/zur/ressource1",
+      "message": "Ungültige Referenz: link/pfad/zur/ressource1 → nicht gefunden"
+    },
+    {
+      "type": "invalid_reference",
+      "file": "docs/information/TEMPLATE_Information.md",
+      "reference": "docs/handbuch/ELEARNING_TEMPLATE_GUIDE.md",
+      "target": "docs/information/docs/handbuch/ELEARNING_TEMPLATE_GUIDE.md",
+      "message": "Ungültige Referenz: docs/handbuch/ELEARNING_TEMPLATE_GUIDE.md → nicht gefunden"
+    },
+    {
+      "type": "invalid_reference",
+      "file": "docs/information/TEMPLATE_Information.md",
+      "reference": "link/pfad/zur/ressource2",
+      "target": "docs/information/link/pfad/zur/ressource2",
+      "message": "Ungültige Referenz: link/pfad/zur/ressource2 → nicht gefunden"
+    },
+    {
+      "type": "invalid_reference",
+      "file": "docs/handbuch/SYSTEM_INDEX.md",
+      "reference": " /",
+      "target": "docs/handbuch/ ",
+      "message": "Ungültige Referenz:  / → nicht gefunden"
+    },
+    {
+      "type": "invalid_reference",
+      "file": "docs/handbuch/ELEARNING_TEMPLATE_GUIDE.md",
+      "reference": "docs/loesungen/TEMPLATE_Loesung.md",
+      "target": "docs/handbuch/docs/loesungen/TEMPLATE_Loesung.md",
+      "message": "Ungültige Referenz: docs/loesungen/TEMPLATE_Loesung.md → nicht gefunden"
+    },
+    {
+      "type": "invalid_reference",
+      "file": "docs/handbuch/ELEARNING_TEMPLATE_GUIDE.md",
+      "reference": "L3_5_1_Verkettete_Listen.md",
+      "target": "docs/handbuch/L3_5_1_Verkettete_Listen.md",
+      "message": "Ungültige Referenz: L3_5_1_Verkettete_Listen.md → nicht gefunden"
+    },
+    {
+      "type": "invalid_reference",
+      "file": "docs/handbuch/ELEARNING_TEMPLATE_GUIDE.md",
+      "reference": "L1_1_1_Variablen_und_Datentypen.md",
+      "target": "docs/handbuch/L1_1_1_Variablen_und_Datentypen.md",
+      "message": "Ungültige Referenz: L1_1_1_Variablen_und_Datentypen.md → nicht gefunden"
+    },
+    {
+      "type": "invalid_reference",
+      "file": "docs/handbuch/ELEARNING_TEMPLATE_GUIDE.md",
+      "reference": "docs/aufgaben/TEMPLATE_Aufgabe.md",
+      "target": "docs/handbuch/docs/aufgaben/TEMPLATE_Aufgabe.md",
+      "message": "Ungültige Referenz: docs/aufgaben/TEMPLATE_Aufgabe.md → nicht gefunden"
+    },
+    {
+      "type": "invalid_reference",
+      "file": "docs/handbuch/ELEARNING_TEMPLATE_GUIDE.md",
+      "reference": "struktogramme/Operatorenliste-Struktogramme.md",
+      "target": "docs/handbuch/struktogramme/Operatorenliste-Struktogramme.md",
+      "message": "Ungültige Referenz: struktogramme/Operatorenliste-Struktogramme.md → nicht gefunden"
+    },
+    {
+      "type": "invalid_reference",
+      "file": "docs/handbuch/ELEARNING_TEMPLATE_GUIDE.md",
+      "reference": "LX_Y_Z_Thema.md",
+      "target": "docs/handbuch/LX_Y_Z_Thema.md",
+      "message": "Ungültige Referenz: LX_Y_Z_Thema.md → nicht gefunden"
+    },
+    {
+      "type": "invalid_reference",
+      "file": "docs/handbuch/ELEARNING_TEMPLATE_GUIDE.md",
+      "reference": "docs/information/TEMPLATE_Information.md",
+      "target": "docs/handbuch/docs/information/TEMPLATE_Information.md",
+      "message": "Ungültige Referenz: docs/information/TEMPLATE_Information.md → nicht gefunden"
+    },
+    {
+      "type": "invalid_reference",
+      "file": "docs/handbuch/ELEARNING_TEMPLATE_GUIDE.md",
+      "reference": "../aufgaben/L1/L1_1_1_Test.md",
+      "target": "docs/aufgaben/L1/L1_1_1_Test.md",
+      "message": "Ungültige Referenz: ../aufgaben/L1/L1_1_1_Test.md → nicht gefunden"
+    },
+    {
+      "type": "invalid_reference",
+      "file": "docs/handbuch/ELEARNING_TEMPLATE_GUIDE.md",
+      "reference": "L1/L1_1_2_Datentypen.md",
+      "target": "docs/handbuch/L1/L1_1_2_Datentypen.md",
+      "message": "Ungültige Referenz: L1/L1_1_2_Datentypen.md → nicht gefunden"
+    },
+    {
+      "type": "invalid_reference",
+      "file": "docs/handbuch/ELEARNING_TEMPLATE_GUIDE.md",
+      "reference": "docs/handbuch/STRUKTOGRAMM_GUIDE.md",
+      "target": "docs/handbuch/docs/handbuch/STRUKTOGRAMM_GUIDE.md",
+      "message": "Ungültige Referenz: docs/handbuch/STRUKTOGRAMM_GUIDE.md → nicht gefunden"
+    },
+    {
+      "type": "invalid_reference",
+      "file": "docs/handbuch/ELEARNING_TEMPLATE_GUIDE.md",
+      "reference": "L2_2_1_Bubble_Sort.md",
+      "target": "docs/handbuch/L2_2_1_Bubble_Sort.md",
+      "message": "Ungültige Referenz: L2_2_1_Bubble_Sort.md → nicht gefunden"
+    },
+    {
+      "type": "invalid_reference",
+      "file": "docs/handbuch/ELEARNING_TEMPLATE_GUIDE.md",
+      "reference": "L1/L1_1_1_Variablen.md",
+      "target": "docs/handbuch/L1/L1_1_1_Variablen.md",
+      "message": "Ungültige Referenz: L1/L1_1_1_Variablen.md → nicht gefunden"
+    },
+    {
+      "type": "invalid_reference",
+      "file": "docs/handbuch/ELEARNING_TEMPLATE_GUIDE.md",
+      "reference": "L2_3_2_Binaere_Suche.md",
+      "target": "docs/handbuch/L2_3_2_Binaere_Suche.md",
+      "message": "Ungültige Referenz: L2_3_2_Binaere_Suche.md → nicht gefunden"
+    },
+    {
+      "type": "invalid_reference",
+      "file": "docs/handbuch/STRUKTOGRAMM_COPILOT_INTEGRATION.md",
+      "reference": "struktogramme/Operatorenliste-Struktogramme.md",
+      "target": "docs/handbuch/struktogramme/Operatorenliste-Struktogramme.md",
+      "message": "Ungültige Referenz: struktogramme/Operatorenliste-Struktogramme.md → nicht gefunden"
+    },
+    {
+      "type": "invalid_reference",
+      "file": "docs/handbuch/STRUKTOGRAMM_COPILOT_INTEGRATION.md",
+      "reference": "docs/handbuch/STRUKTOGRAMM_TOOL_GUIDE.md",
+      "target": "docs/handbuch/docs/handbuch/STRUKTOGRAMM_TOOL_GUIDE.md",
+      "message": "Ungültige Referenz: docs/handbuch/STRUKTOGRAMM_TOOL_GUIDE.md → nicht gefunden"
+    },
+    {
+      "type": "invalid_reference",
+      "file": "docs/handbuch/STRUKTOGRAMM_COPILOT_INTEGRATION.md",
+      "reference": "docs/handbuch/STRUKTOGRAMM_TOOLS.md",
+      "target": "docs/handbuch/docs/handbuch/STRUKTOGRAMM_TOOLS.md",
+      "message": "Ungültige Referenz: docs/handbuch/STRUKTOGRAMM_TOOLS.md → nicht gefunden"
+    },
+    {
+      "type": "invalid_reference",
+      "file": "docs/handbuch/STRUKTOGRAMM_COPILOT_INTEGRATION.md",
+      "reference": ".github/copilot-instructions.md",
+      "target": "docs/handbuch/.github/copilot-instructions.md",
+      "message": "Ungültige Referenz: .github/copilot-instructions.md → nicht gefunden"
+    },
+    {
+      "type": "invalid_reference",
+      "file": "docs/handbuch/STRUKTOGRAMM_GUIDE.md",
+      "reference": "struktogramme/Operatorenliste-Struktogramme.md",
+      "target": "docs/handbuch/struktogramme/Operatorenliste-Struktogramme.md",
+      "message": "Ungültige Referenz: struktogramme/Operatorenliste-Struktogramme.md → nicht gefunden"
+    },
+    {
+      "type": "invalid_reference",
+      "file": "docs/handbuch/CONTRIBUTOR_ONBOARDING.md",
+      "reference": "struktogramme/Operatorenliste-Struktogramme.md",
+      "target": "docs/handbuch/struktogramme/Operatorenliste-Struktogramme.md",
+      "message": "Ungültige Referenz: struktogramme/Operatorenliste-Struktogramme.md → nicht gefunden"
+    },
+    {
+      "type": "invalid_reference",
+      "file": "docs/handbuch/CONTRIBUTOR_ONBOARDING.md",
+      "reference": "LX_Y_Z_Thema.md",
+      "target": "docs/handbuch/LX_Y_Z_Thema.md",
+      "message": "Ungültige Referenz: LX_Y_Z_Thema.md → nicht gefunden"
+    },
+    {
+      "type": "invalid_reference",
+      "file": "docs/handbuch/STRUKTOGRAMM_EXTENDED_COPILOT_INSTRUCTIONS.md",
+      "reference": ".github/copilot-instructions.md",
+      "target": "docs/handbuch/.github/copilot-instructions.md",
+      "message": "Ungültige Referenz: .github/copilot-instructions.md → nicht gefunden"
+    },
+    {
+      "type": "invalid_reference",
+      "file": "docs/handbuch/STRUKTOGRAMM_EXTENDED_COPILOT_INSTRUCTIONS.md",
+      "reference": "struktogramme/Operatorenliste-Struktogramme.md",
+      "target": "docs/handbuch/struktogramme/Operatorenliste-Struktogramme.md",
+      "message": "Ungültige Referenz: struktogramme/Operatorenliste-Struktogramme.md → nicht gefunden"
+    },
+    {
+      "type": "invalid_reference",
+      "file": "docs/handbuch/STRUKTOGRAMM_EXTENDED_COPILOT_INSTRUCTIONS.md",
+      "reference": "docs/handbuch/STRUKTOGRAMM_TOOL_GUIDE.md",
+      "target": "docs/handbuch/docs/handbuch/STRUKTOGRAMM_TOOL_GUIDE.md",
+      "message": "Ungültige Referenz: docs/handbuch/STRUKTOGRAMM_TOOL_GUIDE.md → nicht gefunden"
+    },
+    {
+      "type": "invalid_reference",
+      "file": "docs/handbuch/STRUKTOGRAMM_EXTENDED_COPILOT_INSTRUCTIONS.md",
+      "reference": "docs/handbuch/STRUKTOGRAMM_TOOLS.md",
+      "target": "docs/handbuch/docs/handbuch/STRUKTOGRAMM_TOOLS.md",
+      "message": "Ungültige Referenz: docs/handbuch/STRUKTOGRAMM_TOOLS.md → nicht gefunden"
+    },
+    {
+      "type": "invalid_reference",
+      "file": "docs/handbuch/STRUKTOGRAMM_EXTENDED_COPILOT_INSTRUCTIONS.md",
+      "reference": "docs/handbuch/STRUKTOGRAMM_COPILOT_INTEGRATION.md",
+      "target": "docs/handbuch/docs/handbuch/STRUKTOGRAMM_COPILOT_INTEGRATION.md",
+      "message": "Ungültige Referenz: docs/handbuch/STRUKTOGRAMM_COPILOT_INTEGRATION.md → nicht gefunden"
+    },
+    {
+      "type": "invalid_reference",
+      "file": "docs/handbuch/STRUKTOGRAMM_TOOLS.md",
+      "reference": "docs/handbuch/STRUKTOGRAMM_COPILOT_INTEGRATION.md",
+      "target": "docs/handbuch/docs/handbuch/STRUKTOGRAMM_COPILOT_INTEGRATION.md",
+      "message": "Ungültige Referenz: docs/handbuch/STRUKTOGRAMM_COPILOT_INTEGRATION.md → nicht gefunden"
+    },
+    {
+      "type": "invalid_reference",
+      "file": "docs/handbuch/STRUKTOGRAMM_TOOLS.md",
+      "reference": ".github/copilot-instructions.md",
+      "target": "docs/handbuch/.github/copilot-instructions.md",
+      "message": "Ungültige Referenz: .github/copilot-instructions.md → nicht gefunden"
+    },
+    {
+      "type": "invalid_reference",
+      "file": "docs/handbuch/STRUKTOGRAMM_TOOLS.md",
+      "reference": "struktogramme/Operatorenliste-Struktogramme.md",
+      "target": "docs/handbuch/struktogramme/Operatorenliste-Struktogramme.md",
+      "message": "Ungültige Referenz: struktogramme/Operatorenliste-Struktogramme.md → nicht gefunden"
+    },
+    {
+      "type": "invalid_reference",
+      "file": "docs/handbuch/STRUKTOGRAMM_TOOLS.md",
+      "reference": "docs/handbuch/ELEARNING_TEMPLATE_GUIDE.md",
+      "target": "docs/handbuch/docs/handbuch/ELEARNING_TEMPLATE_GUIDE.md",
+      "message": "Ungültige Referenz: docs/handbuch/ELEARNING_TEMPLATE_GUIDE.md → nicht gefunden"
+    },
+    {
+      "type": "invalid_reference",
+      "file": "docs/handbuch/STRUKTOGRAMM_TOOLS.md",
+      "reference": "docs/handbuch/STRUKTOGRAMM_GUIDE.md",
+      "target": "docs/handbuch/docs/handbuch/STRUKTOGRAMM_GUIDE.md",
+      "message": "Ungültige Referenz: docs/handbuch/STRUKTOGRAMM_GUIDE.md → nicht gefunden"
+    },
+    {
+      "type": "invalid_reference",
+      "file": "docs/handbuch/STRUKTOGRAMM_TOOLS.md",
+      "reference": "docs/handbuch/STRUKTOGRAMM_TOOL_GUIDE.md",
+      "target": "docs/handbuch/docs/handbuch/STRUKTOGRAMM_TOOL_GUIDE.md",
+      "message": "Ungültige Referenz: docs/handbuch/STRUKTOGRAMM_TOOL_GUIDE.md → nicht gefunden"
+    },
+    {
+      "type": "invalid_reference",
+      "file": "docs/handbuch/STRUKTOGRAMM_TOOL_GUIDE.md",
+      "reference": "struktogramme/Operatorenliste-Struktogramme.md",
+      "target": "docs/handbuch/struktogramme/Operatorenliste-Struktogramme.md",
+      "message": "Ungültige Referenz: struktogramme/Operatorenliste-Struktogramme.md → nicht gefunden"
+    },
+    {
+      "type": "invalid_reference",
+      "file": "docs/handbuch/STRUKTOGRAMM_TOOL_GUIDE.md",
+      "reference": "docs/handbuch/ELEARNING_TEMPLATE_GUIDE.md",
+      "target": "docs/handbuch/docs/handbuch/ELEARNING_TEMPLATE_GUIDE.md",
+      "message": "Ungültige Referenz: docs/handbuch/ELEARNING_TEMPLATE_GUIDE.md → nicht gefunden"
+    },
+    {
+      "type": "invalid_reference",
+      "file": "docs/handbuch/STRUKTOGRAMM_TOOL_GUIDE.md",
+      "reference": "docs/handbuch/STRUKTOGRAMM_GUIDE.md",
+      "target": "docs/handbuch/docs/handbuch/STRUKTOGRAMM_GUIDE.md",
+      "message": "Ungültige Referenz: docs/handbuch/STRUKTOGRAMM_GUIDE.md → nicht gefunden"
+    },
+    {
+      "type": "invalid_reference",
+      "file": "docs/handbuch/STRUKTOGRAMM_TOOL_GUIDE.md",
+      "reference": "docs/handbuch/STRUKTOGRAMM_TOOLS.md",
+      "target": "docs/handbuch/docs/handbuch/STRUKTOGRAMM_TOOLS.md",
+      "message": "Ungültige Referenz: docs/handbuch/STRUKTOGRAMM_TOOLS.md → nicht gefunden"
+    },
+    {
+      "type": "invalid_reference",
+      "file": "docs/aufgaben/TEMPLATE_Aufgabe.md",
+      "reference": "docs/handbuch/ELEARNING_TEMPLATE_GUIDE.md",
+      "target": "docs/aufgaben/docs/handbuch/ELEARNING_TEMPLATE_GUIDE.md",
+      "message": "Ungültige Referenz: docs/handbuch/ELEARNING_TEMPLATE_GUIDE.md → nicht gefunden"
+    },
+    {
+      "type": "invalid_reference",
+      "file": "docs/pruefungen/Klausur_L2_2_1_Verfuegung.md",
+      "reference": "struktogramme/Operatorenliste-Struktogramme.md",
+      "target": "docs/pruefungen/struktogramme/Operatorenliste-Struktogramme.md",
+      "message": "Ungültige Referenz: struktogramme/Operatorenliste-Struktogramme.md → nicht gefunden"
+    },
+    {
+      "type": "invalid_reference",
+      "file": "docs/loesungen/TEMPLATE_Loesung.md",
+      "reference": "[parameter]",
+      "target": "docs/loesungen/[parameter]",
+      "message": "Ungültige Referenz: [parameter] → nicht gefunden"
+    },
+    {
+      "type": "invalid_reference",
+      "file": "docs/loesungen/TEMPLATE_Loesung.md",
+      "reference": "../information/[Level]/[Dateiname].md",
+      "target": "docs/information/[Level]/[Dateiname].md",
+      "message": "Ungültige Referenz: ../information/[Level]/[Dateiname].md → nicht gefunden"
+    },
+    {
+      "type": "invalid_reference",
+      "file": "docs/loesungen/TEMPLATE_Loesung.md",
+      "reference": "../aufgaben/[Level]/[Dateiname].md",
+      "target": "docs/aufgaben/[Level]/[Dateiname].md",
+      "message": "Ungültige Referenz: ../aufgaben/[Level]/[Dateiname].md → nicht gefunden"
+    },
+    {
+      "type": "invalid_reference",
+      "file": "docs/loesungen/TEMPLATE_Loesung.md",
+      "reference": "parameter: typ",
+      "target": "docs/loesungen/parameter: typ",
+      "message": "Ungültige Referenz: parameter: typ → nicht gefunden"
+    },
+    {
+      "type": "invalid_reference",
+      "file": "docs/loesungen/TEMPLATE_Loesung.md",
+      "reference": "docs/handbuch/ELEARNING_TEMPLATE_GUIDE.md",
+      "target": "docs/loesungen/docs/handbuch/ELEARNING_TEMPLATE_GUIDE.md",
+      "message": "Ungültige Referenz: docs/handbuch/ELEARNING_TEMPLATE_GUIDE.md → nicht gefunden"
+    }
+  ],
+  "warnings": [
+    {
+      "type": "orphaned_file",
+      "file": "docs/handbuch/FRONTEND_SETUP.md",
+      "message": "Datei wird nirgendwo verlinkt: docs/handbuch/FRONTEND_SETUP.md"
+    },
+    {
+      "type": "orphaned_file",
+      "file": "docs/pruefungen/Klausur_L2_2_1_Verfuegung.md",
+      "message": "Datei wird nirgendwo verlinkt: docs/pruefungen/Klausur_L2_2_1_Verfuegung.md"
+    },
+    {
+      "type": "orphaned_file",
+      "file": "docs/pruefungen/Klausur_L2_2_1_Musterloesung.md",
+      "message": "Datei wird nirgendwo verlinkt: docs/pruefungen/Klausur_L2_2_1_Musterloesung.md"
+    },
+    {
+      "type": "incomplete_index",
+      "file": "docs/handbuch/INDEX.md",
+      "missing_entries": [
+        "FRONTEND_SETUP.md"
+      ],
+      "message": "INDEX.md - Fehlende Einträge: FRONTEND_SETUP.md"
+    },
+    {
+      "type": "incomplete_index",
+      "file": "docs/pruefungen/INDEX.md",
+      "missing_entries": [
+        "Klausur_L2_2_1_Verfuegung.md",
+        "Klausur_L2_2_1_Musterloesung.md"
+      ],
+      "message": "INDEX.md - Fehlende Einträge: Klausur_L2_2_1_Verfuegung.md, Klausur_L2_2_1_Musterloesung.md"
+    }
+  ],
+  "info": [],
+  "summary": {
+    "error_count": 47,
+    "warning_count": 5,
+    "info_count": 0
+  }
+}
