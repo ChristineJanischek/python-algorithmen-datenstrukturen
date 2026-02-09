@@ -14,13 +14,19 @@ Zentrale Dokumentation für das Python-Repository "Algorithmen und Datenstruktur
 ### 📖 Thematische Guides
 
 #### Struktogramme (BW-Abitur-Standard)
-→ [**STRUKTOGRAMM_GUIDE.md**](STRUKTOGRAMM_GUIDE.md)
+→ [**STRUKTOGRAMM_GUIDE.md**](STRUKTOGRAMM_GUIDE.md) | [**STRUKTOGRAMM_TOOLS.md**](STRUKTOGRAMM_TOOLS.md)
 
 Praktischer Guide zur Erstellung von Struktogrammen nach Baden-Württemberg-Standards:
 - Operatoren und Syntax
 - Häufige Patterns (Array-Durchlauf, Summe, Maximum, Suche)
 - Validierung und Best Practices
 - Beispiele für Sortier- und Suchalgorithmen
+
+**Struktogramm-Tools (Python-basiert):**
+- [**STRUKTOGRAMM_TOOLS.md**](STRUKTOGRAMM_TOOLS.md) - Hauptdokumentation
+- [**STRUKTOGRAMM_TOOL_GUIDE.md**](STRUKTOGRAMM_TOOL_GUIDE.md) - Ausführlicher Guide
+- [**STRUKTOGRAMM_COPILOT_INTEGRATION.md**](STRUKTOGRAMM_COPILOT_INTEGRATION.md) - GitHub Copilot Integration
+- [**STRUKTOGRAMM_EXTENDED_COPILOT_INSTRUCTIONS.md**](STRUKTOGRAMM_EXTENDED_COPILOT_INSTRUCTIONS.md) - Erweiterte Copilot-Rules
 
 #### E-Learning Content Management
 → [**ELEARNING_TEMPLATE_GUIDE.md**](ELEARNING_TEMPLATE_GUIDE.md)

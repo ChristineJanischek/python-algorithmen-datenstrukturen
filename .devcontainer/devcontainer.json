@@ -1,1 +1,24 @@
-{\n  \"name\": \"Python Algorithms and Data Structures\",\n  \"version\": \"0.1.0\",\n  \"settings\": {\n    \"python.pythonPath\": \"/usr/local/bin/python3\"\n  },\n  \"extensions\": [\n    \"ms-vscode Live Server\",\n    \"ms-python.python\",\n    \"ms-toolsai.jupyter\",\n    \"esbenp.prettier-vscode\",\n    \"dbaeumer.vscode-eslint\"\n  ],\n  \"postCreateCommand\": \"npm install -g live-server\"\n}
+{
+  "name": "Python Algorithms and Data Structures",
+  "image": "mcr.microsoft.com/devcontainers/python:3.11",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "python.defaultInterpreterPath": "/usr/local/bin/python"
+      },
+      "extensions": [
+        "ritwickdey.LiveServer",
+        "ms-python.python",
+        "ms-toolsai.jupyter",
+        "esbenp.prettier-vscode",
+        "dbaeumer.vscode-eslint"
+      ]
+    }
+  },
+  "postCreateCommand": "pip install -e . && npm install -g live-server",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "lts"
+    }
+  }
+}
