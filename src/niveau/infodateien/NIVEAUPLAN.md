@@ -17,19 +17,19 @@
 ## Themenbereiche
 
 ### 1. Algorithmen (70%)
+Struktogramme (prüfen,entwickeln, Schreibtischtest)
 
-#### Struktogramme und Quellcode (prüfen und entwickeln)
-- Zähler verwenden um Dinge zu zählen
-- Minimum/Maximum/Durchschnitt bestimmen
-- Einfache Listen verschlüsseln
-- Einfügen, Entfernen, Tauschen, Anzeigen von Listenelementen
-- Schreibtischtest durchführen
+#### Einfache Algorithmen (30%)
+- Zähler verwenden um Dinge zu zählen (5%)
+- Minimum/Maximum/Durchschnitt bestimmen (5%)
+- Einfache Listen verschlüsseln (10%)
+- Einfügen, Entfernen, Tauschen, Anzeigen von Listenelementen(10%)
 
-#### Sortieralgorithmen
+#### Sortieralgorithmen (20%)
 - **Bubble Sort**
 - **Selection Sort**
 
-#### Suchalgorithmen
+#### Suchalgorithmen (20%)
 - **Lineare Suche**
 - **Binäre Suche**
 
@@ -46,13 +46,13 @@
 
 ### Notation
 - Operatorenliste für Struktogramme gilt: `struktogramme/Operatorenliste-Struktogramme.md`
-- **Exakte grafische Notation verwenden!**
+- **Exakte grafische Notation aus dieser Datei verwenden! Auf für die Musterlösung!!!**
 
-### Pflicht-Algorithmen (Programmierung)
+### Pflicht-Algorithmen (Programmierung) 
 - Bubble Sort
 - Lineare Suche
 
-## Gewichtung
+## Gewichtung: Themen (Aufgaben)
 - **Algorithmen:** 70%
 - **Datenstrukturen:** 30%
 
