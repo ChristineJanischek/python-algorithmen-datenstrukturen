@@ -3,6 +3,8 @@
 
 **Dokumentation für Lehrkräfte**
 
+Grundlage: Inhalte aus [src/niveau/infodateien/L2_1 Information_Algorithmik.docx](src/niveau/infodateien/L2_1%20Information_Algorithmik.docx), [src/niveau/infodateien/L2_2.1 Information_Bubble_Sort.docx](src/niveau/infodateien/L2_2.1%20Information_Bubble_Sort.docx), [src/niveau/infodateien/L2_2.2 Information_Selection_Sort.docx](src/niveau/infodateien/L2_2.2%20Information_Selection_Sort.docx), [src/niveau/infodateien/L2_3.1 Information_Lineare_Suche.docx](src/niveau/infodateien/L2_3.1%20Information_Lineare_Suche.docx), [src/niveau/infodateien/L2_3.2 Information_Binäre_Suche.docx](src/niveau/infodateien/L2_3.2%20Information_Bin%C3%A4re_Suche.docx).
+
 ---
 
 ## 📌 Übersicht Erwartungshorizont
@@ -13,8 +15,8 @@
 | 2 | 3 | Struktogramm + Code | Logikfehler -1 bis -2 Punkte |
 | 3 | 3 | Code + Interpretation | Jeder fehlerhafte Teil -1 Punkt |
 | 4 | 6 | Struktogramm + Code (3 Varianten) | Pro Teilaufgabe -1 bis -2 Punkte |
-| 5 | 7 | Struktogramm + Code + Schreibtischtest | Kritisch: Schreibtischtest korrekt |
-| 6 | 5 | Struktogramm + Code + Ausgabe | Swap-Logik ist kritisch |
+| 5 | 8 | Struktogramm + Code + Schreibtischtest | Kritisch: Schreibtischtest korrekt |
+| 6 | 7 | Struktogramm + Code + Ausgabe | Swap-Logik ist kritisch |
 | **Summe** | **30** | — | — |
 
 ---
@@ -236,12 +238,6 @@ for i in range(len(werte)):
         print(werte[i])
 ```
 
-**oder mit List Comprehension (Advanced):**
-```python
-gefiltert = [w for w in werte if w > 30]
-print(gefiltert)  # [45, 67, 34, 56]
-```
-
 **Bewertung (2 Punkte):**
 - ✅ Schleife + if-Bedingung korrekt = 2 Punkte
 - ⚠️ Nur Bedingung ohne Schleife = 1 Punkt
@@ -268,12 +264,7 @@ for wert in werte:
 print(verdoppelt)  # [24, 90, 46, 134, 16, 68, 112, 22]
 ```
 
-**Musterlösung 2 (List Comprehension):**
-```python
-verdoppelt = [w * 2 for w in werte]
-```
-
-**Musterlösung 3 (modifizieren im Original):**
+**Musterlösung 2 (modifizieren im Original):**
 ```python
 for i in range(len(werte)):
     werte[i] = werte[i] * 2
@@ -281,13 +272,12 @@ for i in range(len(werte)):
 
 **Bewertung (2 Punkte):**
 - ✅ Schleife mit append() oder Index-Zugriff = 2 Punkte
-- ✅ List Comprehension = 2 Punkte
 - ⚠️ Nur Berechnung ohne Speicherung = 1 Punkt
 - ❌ Falsch strukturiert = 0 Punkte
 
 ---
 
-### **Aufgabe 5: Lineare Suche (7 Punkte)**
+### **Aufgabe 5: Lineare Suche (8 Punkte)**
 
 **Gegeben:** `buchstaben = ['A', 'B', 'C', 'D', 'E', 'F', 'G']`
 
@@ -332,7 +322,7 @@ Wenn gefunden, dann
 
 ---
 
-**b) Python-Code (3 Punkte)**
+**b) Python-Code (4 Punkte)**
 
 **Musterlösung 1 (while-Schleife mit Flag):**
 ```python
@@ -368,24 +358,11 @@ if not gefunden:
     print("Nicht gefunden")
 ```
 
-**Musterlösung 3 (mit Python-Methode):**
-```python
-such = input("Buchstabe suchen: ").upper()
-buchstaben = ['A', 'B', 'C', 'D', 'E', 'F', 'G']
-
-if such in buchstaben:
-    print(f"Gefunden! Index: {buchstaben.index(such)}")
-else:
-    print("Nicht gefunden")
-```
-⚠️ **Zu simpel für diese Aufgabe** – nur 2 Punkte (Algorithmus ist nicht selbst implementiert!)
-
-**Bewertung (3 Punkte):**
-- ✅ Schleife mit Vergleich = 1,5 Punkte
+**Bewertung (4 Punkte):**
+- ✅ Schleife mit Vergleich = 2 Punkte
 - ✅ Korrekte Ausgabe = 1 Punkt
-- ✅ Abbruch bei Fund = 0,5 Punkte
+- ✅ Abbruch bei Fund = 1 Punkt
 - ❌ Syntax-Fehler = -0,5 Punkte pro Fehler
-- ⚠️ Verwendung von `in` oder `.index()` = 2 Punkte (nicht selbst implementiert)
 
 ---
 
@@ -420,13 +397,13 @@ Schritt 5: Schleife beendet (gefunden=True)
 
 ---
 
-### **Aufgabe 6: Bubble Sort implementieren (5 Punkte)**
+### **Aufgabe 6: Bubble Sort implementieren (7 Punkte)**
 
 **Gegeben:** `zahlen = [5, 2, 8, 1, 9]`
 
 ---
 
-**a) Struktogramm (2 Punkte)**
+**a) Struktogramm (3 Punkte)**
 
 **Erwartete Struktur (BW-Standard nach Operatorenliste):**
 
@@ -444,11 +421,10 @@ Zähle i von 0 bis n - 2, Schrittweite 1
                 (keine Aktion)
 ```
 
-**Bewertung Struktogramm (2 Punkte):**
-- ✅ Äußere Schleife (for/while) (0,5 Punkte)
-- ✅ Innere Schleife verschachtelt (0,5 Punkte)
-- ✅ Vergleich und Tausch-Logik (0,75 Punkte)
-- ✅ Korrekte Grenzen für Indizes (0,25 Punkte)
+**Bewertung Struktogramm (3 Punkte):**
+- ✅ Äußere Schleife (for/while) (1 Punkt)
+- ✅ Innere Schleife verschachtelt (1 Punkt)
+- ✅ Vergleich und Tausch-Logik (1 Punkt)
 
 **Häufige Fehler:**
 | Fehler | Abzug |
@@ -460,7 +436,7 @@ Zähle i von 0 bis n - 2, Schrittweite 1
 
 ---
 
-**b) Python-Code (2 Punkte)**
+**b) Python-Code (3 Punkte)**
 
 **Musterlösung 1 (klassisch mit temp):**
 ```python
@@ -490,10 +466,10 @@ for i in range(len(zahlen) - 1):
 print(zahlen)
 ```
 
-**Bewertung (2 Punkte):**
-- ✅ Verschachtelte Schleifen mit Grenzen = 1 Punkt
-- ✅ Swap-Logik korrekt = 0,75 Punkte
-- ✅ Syntax korrekt = 0,25 Punkte
+**Bewertung (3 Punkte):**
+- ✅ Verschachtelte Schleifen mit Grenzen = 1,5 Punkte
+- ✅ Swap-Logik korrekt = 1 Punkt
+- ✅ Syntax korrekt = 0,5 Punkte
 - ⚠️ Äußere Schleife falsch (z.B. `range(n)` statt `range(n-1)`) = -0,5
 - ⚠️ Swap-Bedingung falsch = -0,75
 - ❌ Keine Schleifenverschachtelung = 0 Punkte
@@ -528,8 +504,8 @@ oder
 | **2** | 3 | II | Schleife + Bedingung korrekt |
 | **3** | 3 | I | Array-Index, Zugriff |
 | **4** | 6 | II | Schleife durchläuft korrekt |
-| **5** | 7 | II/III | **Schreibtischtest nachvollziehbar** |
-| **6** | 5 | III | **Swap-Logik korrekt** |
+| **5** | 8 | II/III | **Schreibtischtest nachvollziehbar** |
+| **6** | 7 | III | **Swap-Logik korrekt** |
 | **Summe** | **30** | — | — |
 
 ---
@@ -553,7 +529,7 @@ oder
 4. **Teilpunkte vergeben** (nicht alles-oder-nichts)
    - **2-Punkte-Aufgabe:** 2 oder 1 oder 0
    - **3-Punkte-Aufgabe:** 3, 2, 1, oder 0
-   - **Komplexe Aufgaben (5-7 Punkte):** Feinere Abstufung möglich
+    - **Komplexe Aufgaben (7-8 Punkte):** Feinere Abstufung möglich
 
 ### Häufige Schüler-Fehler akzeptieren
 

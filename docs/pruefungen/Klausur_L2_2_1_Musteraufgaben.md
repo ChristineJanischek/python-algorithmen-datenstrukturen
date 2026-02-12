@@ -13,7 +13,7 @@
 | **Erreichbare Punkte** | 30 Punkte |
 | **Bestanden ab** | 15 Punkte (50%) |
 | **Hilfsmittel** | Keine (Papier & Stift) |
-| **Themen** | BPE 5.2 – Kontrollstrukturen (20%) <br> BPE 7.1 – Arrays (30%) <br> BPE 7.2 – Algorithmen (50%) |
+| **Themen** | Algorithmen (70%): Kontrollstrukturen, Lineare Suche, Bubble Sort <br> Datenstrukturen (30%): Arrays |
 
 ---
 
@@ -26,6 +26,7 @@
   - ✅ `Deklaration und Einlesen:`, `Zuweisung:`, `Wenn...dann`, `Wiederhole solange`, `Zähle...von...bis`, `Ausgabe:`, `Rückgabe:`
   - ❌ **KEINE** englischen Keywords: `while`, `if`, `else`, `for`, `return`, `print`
 - Programmcode muss **eine gültige Python-Syntax** haben
+- Bei Algorithmusaufgaben sind **eigene Schleifenlösungen** erwartet (keine eingebauten Such- oder Kurzformen)
 - **Alle Zwischenschritte zeigen** – Korrektur erfolgt nach Rechenweg, nicht nur Endergebnis
 - Schreibtischtest: **Nachvollziehbares Durchlaufen** des Algorithmus aufschreiben
 - Bei Fragen: **Fragen Sie, bevor Sie spekulieren!**
@@ -40,8 +41,8 @@
 | **2** | Schleifen & Logik | 3 | II – Transfer |
 | **3** | Arrays: Deklaration & Zugriff | 3 | I – Reproduktion |
 | **4** | Arrays durchlaufen & filtern | 6 | II – Transfer |
-| **5** | Lineare Suche | 7 | II/III – Transfer & Analyse |
-| **6** | Sortieralgorithmus (Bubble Sort) | 5 | III – Kreativität |
+| **5** | Lineare Suche | 8 | II/III – Transfer & Analyse |
+| **6** | Sortieralgorithmus (Bubble Sort) | 7 | III – Kreativität |
 
 **Summe: 30 Punkte**
 
@@ -179,7 +180,7 @@ Schreibe Python-Code, um **jedes Element zu verdoppeln** und das Ergebnis in ein
 
 ---
 
-### **Aufgabe 5: Lineare Suche (7 Punkte)**
+### **Aufgabe 5: Lineare Suche (8 Punkte)**
 **Thema:** BPE 7.2 – Suchalgorithmen
 
 Gegeben ist das Array: `buchstaben = ['A', 'B', 'C', 'D', 'E', 'F', 'G']`
@@ -204,7 +205,8 @@ Schreibe ein Struktogramm und implementiere einen Python-Algorithmus, der:
 [Hier Struktogramm eintragen]
 ```
 
-**b) Python-Code (3 Punkte):**
+**b) Python-Code (4 Punkte):**
+- Hinweis: Verwende eine **eigene Schleife**, keine eingebauten Suchmethoden.
 ```python
 # Lineare Suche implementieren:
 
@@ -222,7 +224,7 @@ Schritt 2: ...
 
 ---
 
-### **Aufgabe 6: Bubble Sort implementieren (5 Punkte)**
+### **Aufgabe 6: Bubble Sort implementieren (7 Punkte)**
 **Thema:** BPE 7.2 – Sortieralgorithmen (Bubble Sort)
 
 Gegeben ist das Array: `zahlen = [5, 2, 8, 1, 9]`
@@ -233,7 +235,7 @@ Schreibe ein Struktogramm und implementiere **Bubble Sort** in Python.
 
 **Anforderungen:**
 
-**a) Struktogramm (2 Punkte):**
+**a) Struktogramm (3 Punkte):**
 - Äußere Schleife (Durchläufe)
 - Innere Schleife (Vergleiche & Tausch)
 - Swap-Bedingung erkennbar
@@ -243,7 +245,8 @@ Schreibe ein Struktogramm und implementiere **Bubble Sort** in Python.
 [Hier Struktogramm eintragen]
 ```
 
-**b) Python-Code (2 Punkte):**
+**b) Python-Code (3 Punkte):**
+- Hinweis: Verwende **verschachtelte Schleifen** und eine klare Tauschlogik.
 ```python
 # Bubble Sort implementieren:
 
@@ -265,6 +268,7 @@ Antwort: _______________
 - [ ] Alle Aufgaben bearbeitet
 - [ ] Struktogramme lesbar und vollständig
 - [ ] Python-Code syntaktisch korrekt (soweit möglich)
+- [ ] Bei Algorithmusaufgaben nur Schleifenloesungen verwendet
 - [ ] Alle Zwischenschritte erklärt
 - [ ] Schreibtischtest nachvollziehbar
 - [ ] Name & Datum oben eingetragen
