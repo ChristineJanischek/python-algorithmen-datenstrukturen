@@ -44,7 +44,7 @@ jobs:
       - name: 🔍 Validierung ausführen
         id: validate
         run: |
-          python -m src.utils.struktogramm_validator > validator_output.txt 2>&1
+          python src/utils/struktogramm_validator.py > validator_output.txt 2>&1
           EXIT_CODE=$?
           
           # Zähle Fehler
@@ -100,7 +100,7 @@ jobs:
       
       - name: 📊 Validierung nach Fixes
         run: |
-          python -m src.utils.struktogramm_validator
+          python src/utils/struktogramm_validator.py
       
       - name: 💾 Fixes committen (falls nötig)
         run: |
