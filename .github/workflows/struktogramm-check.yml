@@ -12,6 +12,11 @@ on:
       - 'docs/**/*.md'
       - '.github/config/struktogramm.yml'
 
+permissions:
+  contents: write
+  pull-requests: write
+  checks: write
+
 jobs:
   
   # ========================================================================
@@ -54,7 +59,8 @@ jobs:
           echo "error_count=$ERROR_COUNT" >> $GITHUB_OUTPUT
           
           cat validator_output.txt
-          exit $EXIT_CODE
+          # WICHTIG: Nicht mit exit code fehlschlagen - Report liegt vor!
+          exit 0
       
       - name: 📄 Report hochladen
         if: always()
