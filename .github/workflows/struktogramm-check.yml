@@ -144,7 +144,7 @@ jobs:
           path: .
       
       - name: 📝 PR-Comment erstellen
-        if: always()
+        if: always() && github.event_name == 'pull_request'
         uses: actions/github-script@v6
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
@@ -172,12 +172,13 @@ jobs:
               report_content += `- Auto-Fix: ${autofix_status === 'success' ? '✅' : autofix_status === 'skipped' ? '⏭️' : '❌'}\n`;
             }
             
-            // Poste Comment
-            github.rest.issues.createComment({
-              issue_number: context.issue.number,
+            // Poste Comment mit Pull Requests API (nicht Issues!)
+            github.rest.pulls.createReview({
+              pull_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: report_content
+              body: report_content,
+              event: 'COMMENT'
             });
 
   # ========================================================================
