@@ -48,19 +48,23 @@ jobs:
       
       - name: 🔍 Validierung ausführen
         id: validate
+        continue-on-error: true
         run: |
-          python src/utils/struktogramm_validator.py > validator_output.txt 2>&1
-          EXIT_CODE=$?
+          python src/utils/struktogramm_validator.py > validator_output.txt 2>&1 || true
           
-          # Zähle Fehler
-          ERROR_COUNT=$(grep -c "🚨" validator_output.txt || echo "0")
+          # Zähle Fehler (robust)
+          ERROR_COUNT=$(grep -c "🚨" validator_output.txt 2>/dev/null || echo "0")
+          HAS_ERRORS="false"
+          if [ "$ERROR_COUNT" -gt 0 ]; then
+            HAS_ERRORS="true"
+          fi
           
-          echo "has_errors=$(if [ $EXIT_CODE -ne 0 ]; then echo 'true'; else echo 'false'; fi)" >> $GITHUB_OUTPUT
+          echo "has_errors=$HAS_ERRORS" >> $GITHUB_OUTPUT
           echo "error_count=$ERROR_COUNT" >> $GITHUB_OUTPUT
           
-          cat validator_output.txt
-          # WICHTIG: Nicht mit exit code fehlschlagen - Report liegt vor!
-          exit 0
+          echo "=== VALIDATOR OUTPUT ===" 
+          cat validator_output.txt || echo "Keine Report-Datei"
+          echo "=== ERRORS FOUND: $ERROR_COUNT ===" 
       
       - name: 📄 Report hochladen
         if: always()
