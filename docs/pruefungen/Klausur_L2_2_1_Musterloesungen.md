@@ -25,16 +25,19 @@ Grundlage: Inhalte aus [src/niveau/infodateien/L2_1 Information_Algorithmik.docx
 
 ### **Aufgabe 1: Verzweigung & Logik (3 Punkte)**
 
-**Erwartetes Struktogramm (BW-Standard nach Operatorenliste):**
+**Erwartetes Struktogramm (BW-Standard - Grafische Notation):**
 
-```struktogramm
-Deklaration und Einlesen: alter als Ganzzahl
-Wenn alter < 18, dann
-    J
-        Ausgabe: "Jugendlicher"
-    , sonst
-    N
-        Ausgabe: "Erwachsener"
+```
+┌──────────────────────────────────────────────────────┐
+│ Deklaration und Einlesen: alter als Ganzzahl        │
+├──────────────────────────────────────────────────────┤
+│                    alter < 18                         │
+├──────────────────────────────────────────────────────┤
+│ J                              │ N                   │
+│                                │                     │
+│ Ausgabe: "Jugendlicher"        │ Ausgabe: "Erwachsener"
+│                                │                     │
+└────────────────────────────────┴─────────────────────┘
 ```
 
 **Python-Code (Musterlösung):**
@@ -44,7 +47,7 @@ if alter < 18:
     print("Jugendlicher")
 else:
     print("Erwachsener")
-```
+```python
 
 **Bewertung (3 Punkte):**
 - ✅ **Struktogramm korrekt formatiert** (1 Punkt)
@@ -69,16 +72,26 @@ else:
 
 ### **Aufgabe 2: Schleife mit Bedingung (3 Punkte)**
 
-**Erwartetes Struktogramm (BW-Standard nach Operatorenliste):**
+**Erwartetes Struktogramm (BW-Standard - Grafische Notation):**
 
-```struktogramm
-Deklaration und Initialisierung: summe als Ganzzahl = 0
-Deklaration und Einlesen: zahl als Ganzzahl
-Wiederhole solange zahl != -1
-    Zuweisung: summe = summe + zahl
-    Ausgabe: "Summe: " + summe
-    Einlesen: zahl als Ganzzahl
-Ausgabe: "Programm beendet."
+```
+┌───────────────────────────────────────────────────────────────┐
+│ Deklaration und Initialisierung: summe = 0                    │
+├───────────────────────────────────────────────────────────────┤
+│ Deklaration und Einlesen: zahl als Ganzzahl                   │
+├───────────────────────────────────────────────────────────────┤
+│ ┌─ Wiederhole solange zahl != -1                              │
+│ │                                                             │
+│ │    Zuweisung: summe = summe + zahl                          │
+│ │                                                             │
+│ │    Ausgabe: "Summe: " + summe                               │
+│ │                                                             │
+│ │    Einlesen: zahl als Ganzzahl                              │
+│ │                                                             │
+└─┘───────────────────────────────────────────────────────────────┘
+├───────────────────────────────────────────────────────────────┤
+│ Ausgabe: "Programm beendet."                                  │
+└───────────────────────────────────────────────────────────────┘
 ```
 
 **Python-Code (Musterlösung):**
@@ -92,7 +105,7 @@ while zahl != -1:
     zahl = int(input("Geben Sie eine Zahl ein (oder -1 zum Beenden): "))
 
 print("Programm beendet.")
-```
+```python
 
 **Bewertung (3 Punkte):**
 - ✅ **Struktogramm korrekt** (2 Punkte)
@@ -132,6 +145,24 @@ while True:
 **a) Deklaration (1 Punkt)**
 
 **Musterlösung:**
+
+## 📐 Struktogramm (grafische Notation)
+
+<!-- START_GRAPHIC_STRUKTOGRAMM -->
+```
+┌────────────────────────────────────────┐
+│ [STRUKTOGRAMM HIER HINZUFÜGEN]         │
+│                                        │
+│ Beispiel-Elemente:                     │
+│ • Deklaration                          │
+│ • Zuweisung                            │
+│ • Schleife (┌─ ... ─┘)                 │
+│ • Verzweigung (J/N Zweige)             │
+└────────────────────────────────────────┘
+```
+<!-- END_GRAPHIC_STRUKTOGRAMM -->
+
+
 ```python
 noten = [1, 2, 2, 3, 1, 5, 4, 2]
 ```
@@ -145,6 +176,24 @@ noten = [1, 2, 2, 3, 1, 5, 4, 2]
 **b) Array-Zugriff (1 Punkt)**
 
 **Musterlösung:**
+
+## 📐 Struktogramm (grafische Notation)
+
+<!-- START_GRAPHIC_STRUKTOGRAMM -->
+```
+┌────────────────────────────────────────┐
+│ [STRUKTOGRAMM HIER HINZUFÜGEN]         │
+│                                        │
+│ Beispiel-Elemente:                     │
+│ • Deklaration                          │
+│ • Zuweisung                            │
+│ • Schleife (┌─ ... ─┘)                 │
+│ • Verzweigung (J/N Zweige)             │
+└────────────────────────────────────────┘
+```
+<!-- END_GRAPHIC_STRUKTOGRAMM -->
+
+
 ```python
 erstes = noten[0]          # 1. Element = 1
 noten[-1] = 1              # Letztes Element auf 1 setzen
@@ -208,6 +257,24 @@ for wert in werte:
 ```
 
 **Musterlösung 3 (while-Schleife):**
+
+## 📐 Struktogramm (grafische Notation)
+
+<!-- START_GRAPHIC_STRUKTOGRAMM -->
+```
+┌────────────────────────────────────────┐
+│ [STRUKTOGRAMM HIER HINZUFÜGEN]         │
+│                                        │
+│ Beispiel-Elemente:                     │
+│ • Deklaration                          │
+│ • Zuweisung                            │
+│ • Schleife (┌─ ... ─┘)                 │
+│ • Verzweigung (J/N Zweige)             │
+└────────────────────────────────────────┘
+```
+<!-- END_GRAPHIC_STRUKTOGRAMM -->
+
+
 ```python
 i = 0
 while i < len(werte):
@@ -225,6 +292,24 @@ while i < len(werte):
 **b) Elemente filtern (2 Punkte)**
 
 **Musterlösung:**
+
+## 📐 Struktogramm (grafische Notation)
+
+<!-- START_GRAPHIC_STRUKTOGRAMM -->
+```
+┌────────────────────────────────────────┐
+│ [STRUKTOGRAMM HIER HINZUFÜGEN]         │
+│                                        │
+│ Beispiel-Elemente:                     │
+│ • Deklaration                          │
+│ • Zuweisung                            │
+│ • Schleife (┌─ ... ─┘)                 │
+│ • Verzweigung (J/N Zweige)             │
+└────────────────────────────────────────┘
+```
+<!-- END_GRAPHIC_STRUKTOGRAMM -->
+
+
 ```python
 for wert in werte:
     if wert > 30:
@@ -232,11 +317,29 @@ for wert in werte:
 ```
 
 **Alternative:**
+
+## 📐 Struktogramm (grafische Notation)
+
+<!-- START_GRAPHIC_STRUKTOGRAMM -->
+```
+┌────────────────────────────────────────┐
+│ [STRUKTOGRAMM HIER HINZUFÜGEN]         │
+│                                        │
+│ Beispiel-Elemente:                     │
+│ • Deklaration                          │
+│ • Zuweisung                            │
+│ • Schleife (┌─ ... ─┘)                 │
+│ • Verzweigung (J/N Zweige)             │
+└────────────────────────────────────────┘
+```
+<!-- END_GRAPHIC_STRUKTOGRAMM -->
+
+
 ```python
 for i in range(len(werte)):
     if werte[i] > 30:
         print(werte[i])
-```
+```python
 
 **Bewertung (2 Punkte):**
 - ✅ Schleife + if-Bedingung korrekt = 2 Punkte
@@ -257,6 +360,24 @@ for i in range(len(werte)):
 **c) Array manipulieren (2 Punkte)**
 
 **Musterlösung 1 (neue Liste mit Schleife):**
+
+## 📐 Struktogramm (grafische Notation)
+
+<!-- START_GRAPHIC_STRUKTOGRAMM -->
+```
+┌────────────────────────────────────────┐
+│ [STRUKTOGRAMM HIER HINZUFÜGEN]         │
+│                                        │
+│ Beispiel-Elemente:                     │
+│ • Deklaration                          │
+│ • Zuweisung                            │
+│ • Schleife (┌─ ... ─┘)                 │
+│ • Verzweigung (J/N Zweige)             │
+└────────────────────────────────────────┘
+```
+<!-- END_GRAPHIC_STRUKTOGRAMM -->
+
+
 ```python
 verdoppelt = []
 for wert in werte:
@@ -265,6 +386,24 @@ print(verdoppelt)  # [24, 90, 46, 134, 16, 68, 112, 22]
 ```
 
 **Musterlösung 2 (modifizieren im Original):**
+
+## 📐 Struktogramm (grafische Notation)
+
+<!-- START_GRAPHIC_STRUKTOGRAMM -->
+```
+┌────────────────────────────────────────┐
+│ [STRUKTOGRAMM HIER HINZUFÜGEN]         │
+│                                        │
+│ Beispiel-Elemente:                     │
+│ • Deklaration                          │
+│ • Zuweisung                            │
+│ • Schleife (┌─ ... ─┘)                 │
+│ • Verzweigung (J/N Zweige)             │
+└────────────────────────────────────────┘
+```
+<!-- END_GRAPHIC_STRUKTOGRAMM -->
+
+
 ```python
 for i in range(len(werte)):
     werte[i] = werte[i] * 2
@@ -304,7 +443,7 @@ Wenn gefunden, dann
     , sonst
     N
         Ausgabe: "Nicht gefunden"
-```
+```python
 
 **Bewertung Struktogramm (3 Punkte):**
 - ✅ Eingabe & Variableninitialisierung (0,5 Punkte)
@@ -343,6 +482,24 @@ if not gefunden:
 ```
 
 **Musterlösung 2 (for-Schleife mit break):**
+
+## 📐 Struktogramm (grafische Notation)
+
+<!-- START_GRAPHIC_STRUKTOGRAMM -->
+```
+┌────────────────────────────────────────┐
+│ [STRUKTOGRAMM HIER HINZUFÜGEN]         │
+│                                        │
+│ Beispiel-Elemente:                     │
+│ • Deklaration                          │
+│ • Zuweisung                            │
+│ • Schleife (┌─ ... ─┘)                 │
+│ • Verzweigung (J/N Zweige)             │
+└────────────────────────────────────────┘
+```
+<!-- END_GRAPHIC_STRUKTOGRAMM -->
+
+
 ```python
 such = input("Buchstabe suchen: ").upper()
 buchstaben = ['A', 'B', 'C', 'D', 'E', 'F', 'G']
@@ -455,6 +612,24 @@ print(zahlen)  # [1, 2, 5, 8, 9]
 ```
 
 **Musterlösung 2 (mit Python-Tuple-Swap):**
+
+## 📐 Struktogramm (grafische Notation)
+
+<!-- START_GRAPHIC_STRUKTOGRAMM -->
+```
+┌────────────────────────────────────────┐
+│ [STRUKTOGRAMM HIER HINZUFÜGEN]         │
+│                                        │
+│ Beispiel-Elemente:                     │
+│ • Deklaration                          │
+│ • Zuweisung                            │
+│ • Schleife (┌─ ... ─┘)                 │
+│ • Verzweigung (J/N Zweige)             │
+└────────────────────────────────────────┘
+```
+<!-- END_GRAPHIC_STRUKTOGRAMM -->
+
+
 ```python
 zahlen = [5, 2, 8, 1, 9]
 

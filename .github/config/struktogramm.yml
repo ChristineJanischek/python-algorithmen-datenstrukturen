@@ -1,0 +1,360 @@
+################################################################################
+# STRUKTOGRAMM VALIDIERUNGS-KONFIGURATION
+# Zentrale Regelsammlung für alle Tools
+# Version: 1.0 | Datum: 16.02.2026
+################################################################################
+
+# ============================================================================
+# ALLGEMEINE EINSTELLUNGEN
+# ============================================================================
+
+system:
+  enabled: true
+  version: "1.0"
+  description: "Automatische Validierung für grafische Struktogramm-Notationen"
+  
+# ============================================================================
+# VALIDIERUNGSPROFILE (abhängig vom Content-Typ)
+# ============================================================================
+
+profiles:
+  
+  # Profil für Lösungen (docs/loesungen/)
+  loesung:
+    enabled: true
+    severity: "ERROR"              # ERROR = Commit blockiert, WARNING = nur Info
+    auto_fix: true                 # Auto-Fixes erlaubt
+    required_sections:
+      - "📐 Struktogramm"
+      - "💻 Python-Implementierung"
+    order_required:
+      - "Struktogramm"             # muss VOR Python kommen
+      - "Python-Implementierung"
+    description: "Lösungen MÜSSEN grafische Struktogramme haben"
+    
+  # Profil für Aufgaben (docs/aufgaben/)
+  aufgabe:
+    enabled: true
+    severity: "WARNING"            # Nur warnen, nicht blockieren
+    auto_fix: false
+    required_sections:
+      - "Problemstellung"
+      - "Anforderungen"
+    descriptions: "Aufgaben sollten klar strukturiert sein"
+    
+  # Profil für Prüfungen (docs/pruefungen/)
+  pruefung:
+    enabled: true
+    severity: "ERROR"
+    auto_fix: true
+    required_before_python:
+      - "Struktogramm"
+      - "Grafische Notation"
+    max_python_blocks_without_struktogramm: 0
+    description: "Prüfungen MÜSSEN Struktogramme vor Python-Code haben"
+
+# ============================================================================
+# GRAFISCHE ELEMENTE (Struktogramm-Notation)
+# ============================================================================
+
+graphic_elements:
+  box_top_left:        "┌"
+  box_top_right:       "┐"
+  box_bottom_left:     "└"
+  box_bottom_right:    "┘"
+  vertical_line:       "│"
+  horizontal_line:     "─"
+  cross:              "┼"
+  t_right:            "├"
+  t_left:             "┤"
+  t_down:             "┬"
+  t_up:               "┴"
+  
+  # Alle erlaubten Kombinationen
+  all_allowed:
+    - "┌"
+    - "┐"
+    - "├"
+    - "┤"
+    - "─"
+    - "│"
+    - "└"
+    - "┘"
+    - "┼"
+    - "┬"
+    - "┴"
+
+# ============================================================================
+# VALIDIERUNGSREGELN
+# ============================================================================
+
+rules:
+  
+  # Regel 1: Python-Code braucht vorhergehendes Struktogramm
+  python_needs_struktogramm:
+    enabled: true
+    check_distance: 500              # Zeichen davor prüfen
+    error_message: "Python-Code ohne vorhergehendes grafisches Struktogramm"
+    severity: "ERROR"
+    auto_fixable: true
+    fix_template: "struktogramm_template_basic"
+    
+  # Regel 2: Richtige Abschnittsmreihenfolge
+  section_order:
+    enabled: true
+    check_order: true
+    error_message: "Struktogramm muss vor Python-Code kommen"
+    severity: "ERROR"
+    auto_fixable: true
+    
+  # Regel 3: Grafische Elemente müssen vorhanden sein
+  graphic_elements_required:
+    enabled: true
+    min_elements: 4                  # Mindestens 4 Box-Zeichenelemente
+    error_message: "Struktogramm braucht grafische Elemente (┌ ├ └ │)"
+    severity: "WARNING"
+    auto_fixable: false
+    
+  # Regel 4: Keine vermischten Notationen
+  no_mixed_notation:
+    enabled: true
+    allow_pseudocode_only: false
+    error_message: "Pseudocode ohne grafisches Struktogramm erkannt"
+    severity: "WARNING"
+    
+  # Regel 5: YAML-Frontmatter muss vorhanden sein
+  frontmatter_required:
+    enabled: true
+    required_fields:
+      - "titel"
+      - "level"
+      - "kategorie"
+      - "nummer"
+      - "autor"
+    error_message: "Fehlende YAML-Frontmatter-Felder"
+    severity: "ERROR"
+
+# ============================================================================
+# AUTO-FIX STRATEGIEN
+# ============================================================================
+
+auto_fix:
+  enabled: true
+  
+  # Strategie 1: Fehlende Struktogramme hinzufügen
+  add_missing_struktogramm:
+    enabled: true
+    template: "basic"              # Welches Template verwenden
+    position: "after_title"        # Wo einfügen
+    marker_start: "<!-- START_GRAPHIC_STRUKTOGRAMM -->"
+    marker_end: "<!-- END_GRAPHIC_STRUKTOGRAMM -->"
+    
+  # Strategie 2: Abschnitte neu anordnen
+  reorder_sections:
+    enabled: true
+    preferred_order:
+      - "Übersicht|Overview"
+      - "Lösungsansatz|Lösung|Solution"
+      - "Struktogramm|Pseudocode"
+      - "Python-Implementierung|Implementation"
+      - "Erklärung|Explanation"
+      
+  # Strategie 3: Code-Blöcke korrigieren
+  fix_code_blocks:
+    enabled: true
+    ensure_language_tag: true      # Stelle sicher: ```python
+    fix_missing_struktogramm_before: true
+
+# ============================================================================
+# TEMPLATES FÜR AUTO-FIXES
+# ============================================================================
+
+templates:
+  struktogramm_template_basic: |
+    ## 📐 Struktogramm (grafische Notation)
+    
+    <!-- START_GRAPHIC_STRUKTOGRAMM -->
+    ```
+    ┌────────────────────────────────────────┐
+    │ [STRUKTOGRAMM HIER HINZUFÜGEN]         │
+    │                                        │
+    │ Beispiel-Elemente:                     │
+    │ • Deklaration                          │
+    │ • Zuweisung                            │
+    │ • Schleife (┌─ ... ─┘)                 │
+    │ • Verzweigung (J/N Zweige)             │
+    └────────────────────────────────────────┘
+    ```
+    <!-- END_GRAPHIC_STRUKTOGRAMM -->
+
+  struktogramm_template_loop: |
+    ## 📐 Struktogramm (grafische Notation)
+    
+    ```
+    ┌────────────────────────────────────────┐
+    │ ┌─ Zähle i von START bis END           │
+    │ │                                      │
+    │ │    [SCHLEIFENKÖRPER]                 │
+    │ │                                      │
+    └─┘────────────────────────────────────────┘
+    ```
+
+# ============================================================================
+# REPORTING & AUSGABE
+# ============================================================================
+
+reporting:
+  # Konsolen-Output
+  console:
+    enabled: true
+    show_warnings: true
+    show_suggestions: true
+    color_output: true
+    
+  # Report-Datei
+  report_file:
+    enabled: true
+    path: "validation_report.md"
+    format: "markdown"
+    include_suggestions: true
+    include_statistics: true
+    
+  # GitHub PR-Comment
+  github_pr_comment:
+    enabled: true
+    title: "📊 Struktogramm Validierungs-Report"
+    post_on_failure: true
+    post_on_success: false
+    
+  # Slack Notification
+  slack:
+    enabled: false                 # Aktivieren wenn Webhook vorhanden
+    webhook_url: "${SLACK_WEBHOOK_URL}"
+    notify_on: ["ERROR"]
+    
+  # Metriken
+  metrics:
+    enabled: true
+    track_compliance_rate: true
+    track_auto_fix_count: true
+    save_history: true
+    history_file: ".github/metrics/struktogramm_history.json"
+
+# ============================================================================
+# CI/CD INTEGRATION
+# ============================================================================
+
+ci_cd:
+  # GitHub Actions Integration
+  github_actions:
+    enabled: true
+    run_on: ["pull_request", "push"]
+    
+    # Auto-Merge Bedingungen
+    auto_merge:
+      enabled: false               # Disable by default
+      condition: "all_checks_pass AND no_errors"
+      
+    # Bot-Verhalten
+    bot:
+      enabled: true
+      auto_commit_fixes: true      # Auto-Committe wenn Fixes möglich
+      auto_push: true
+      commit_message: "♻️ Struktogramm-Fix: Automatische Korrektur"
+      
+  # Pre-Commit Hook
+  pre_commit:
+    enabled: true
+    fail_fast: true
+    auto_fix_before_commit: true
+
+# ============================================================================
+# SCHWELLENWERTE & LIMITS
+# ============================================================================
+
+thresholds:
+  # Compliance-Quote
+  compliance_minimum: 90           # %
+  compliance_warning: 80           # %
+  
+  # Fehlerbehandlung
+  max_errors_allowed: 10           # In einem commit
+  max_warnings_allowed: 20
+  
+  # Auto-Fix Limits
+  max_auto_fixes_per_file: 5
+  max_files_to_auto_fix: 50
+
+# ============================================================================
+# AUSNAHMEN & EXCLUSIONS
+# ============================================================================
+
+exclusions:
+  # Dateien/Pfade ausschließen
+  ignore_patterns:
+    - "**/TEMPLATE_*.md"
+    - "**/INDEX.md"
+    - "docs/lehrplan/**"
+    - "docs/handbuch/**"
+    - "**/BACKUP_*"
+    
+  # Content-Typen
+  ignore_content_types:
+    - "index"
+    - "template"
+    - "backup"
+    
+  # Glob-Pattern
+  exclude_from_validation:
+    - ".git/**"
+    - "node_modules/**"
+    - ".venv/**"
+
+# ============================================================================
+# LOGGING & DEBUG
+# ============================================================================
+
+logging:
+  level: "INFO"                    # DEBUG, INFO, WARNING, ERROR
+  file: ".github/logs/struktogramm.log"
+  max_log_size: "10MB"
+  keep_backups: 5
+  verbose: false
+
+# ============================================================================
+# ERWEITERTE OPTIONEN
+# ============================================================================
+
+advanced:
+  # Semantische Analyse (erweitert)
+  semantic_analysis:
+    enabled: false                 # Experimentell
+    detect_complex_logic: true
+    require_struktogramm_if_complex: true
+    
+  # Pattern Recognition
+  pattern_detection:
+    enabled: true
+    detect_loops: true
+    detect_conditionals: true
+    detect_functions: true
+    
+  # Custom Rules
+  custom_rules:
+    enabled: false
+    rules_file: ".github/custom_struktogramm_rules.py"
+    
+  # Integration mit anderen Tools
+  integrations:
+    pylance_check: false
+    lint_before_validate: false
+    spell_check: false
+
+################################################################################
+# STRUKTUR-REFERENZ FÜR DOCS/
+################################################################################
+# docs/loesungen/  → Profil: loesung   (Severity: ERROR)
+# docs/aufgaben/   → Profil: aufgabe   (Severity: WARNING)
+# docs/pruefungen/ → Profil: pruefung  (Severity: ERROR)
+# docs/information/→ Standard          (nur Grundlegend)
+################################################################################

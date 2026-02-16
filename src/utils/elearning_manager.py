@@ -640,7 +640,78 @@ class ELearningManager:
         if not re.match(pattern, file_path.name):
             errors.append(f"Dateiname entspricht nicht der Konvention: {file_path.name}")
         
+        # Struktogramm-Validierung
+        errors.extend(self.validate_struktogramm_usage(file_path))
+        
         return errors
+    
+    def validate_struktogramm_usage(self, file_path: Path) -> List[str]:
+        """
+        Validiert, dass Programmlogik mit grafischen Struktogrammen erklärt wird.
+        
+        Args:
+            file_path: Pfah zur zu validierenden Datei
+            
+        Returns:
+            Liste von Warnungen/Fehlern
+        """
+        warnings = []
+        
+        try:
+            content = file_path.read_text(encoding='utf-8')
+        except:
+            return warnings
+        
+        # Erkenne Content-Typ basierend auf Pfad
+        path_str = str(file_path)
+        is_solution = "loesungen" in path_str
+        is_exam = "pruefungen" in path_str
+        
+        if is_solution:
+            # Für Lösungen: Prüfe auf Python-Code NACH Struktogramm
+            python_blocks = re.finditer(r'```python\n(.*?)\n```', content, re.DOTALL)
+            
+            for match in python_blocks:
+                # Finde die Position des Python-Blocks
+                pos = match.start()
+                content_before = content[:pos]
+                
+                # Prüfe ob davor ein grafisches Struktogramm ist
+                has_graphic = any(char in content_before for char in ['┌', '├', '└', '│', '─'])
+                has_struktogramm_heading = "Struktogramm" in content_before.split('\n')[-20:]
+                
+                if not (has_graphic or has_struktogramm_heading):
+                    warnings.append(
+                        f"⚠️  Python-Code ohne vorhergehendes grafisches Struktogramm "
+                        f"(Zeile ~{content[:pos].count(chr(10))})"
+                    )
+        
+        elif is_exam:
+            # Für Prüfungen: Prüfe auf Python-Code mit Struktogramm-Kontext
+            textual_struktogramms = re.finditer(r'```struktogramm\n', content)
+            graphic_blocks = re.finditer(r'┌', content)
+            
+            python_blocks = list(re.finditer(r'```python\n', content))
+            graphic_positions = [m.start() for m in graphic_blocks]
+            
+            for python_match in python_blocks:
+                pos = python_match.start()
+                
+                # Prüfe ob davor ein grafisches Struktogramm ist
+                has_graphic_before = any(
+                    graphic_pos < pos
+                    for graphic_pos in graphic_positions
+                    if pos - 500 < graphic_pos < pos  # Innerhalb 500 Zeichen davor
+                )
+                
+                if not has_graphic_before:
+                    line_num = content[:pos].count('\n') + 1
+                    warnings.append(
+                        f"⚠️  Python-Code ohne grafisches Struktogramm (Zeile {line_num})"
+                    )
+        
+        return warnings
+
 
 
 # Hilfs-Funktionen für schnelle Content-Erstellung

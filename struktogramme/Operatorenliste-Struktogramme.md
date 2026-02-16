@@ -3,6 +3,42 @@
 Version 2.2 vom 01.09.2024  
 Abiturprüfung Baden-Württemberg
 
+## Inhaltsverzeichnis
+
+1. [Variablen und Datenstrukturen](#1-variablen-und-datenstrukturen)
+   - 1.1 [Deklaration](#11-deklaration)
+   - 1.2 [Initialisierung](#12-initialisierung)
+   - 1.3 [Deklaration und Initialisierung](#13-deklaration-und-initialisierung)
+   - 1.4 [Zuweisung](#14-zuweisung)
+
+2. [Ein- und Ausgabe](#2-ein--und-ausgabe)
+   - 2.1 [Einlesen](#21-einlesen)
+   - 2.2 [Ausgabe](#22-ausgabe)
+   - 2.3 [Zeilenweise Ausgabe](#23-zeilenweise-ausgabe)
+   - 2.4 [Rückgabe](#24-rückgabe)
+
+3. [Funktionen und Methoden](#3-funktionen-und-methoden)
+   - 3.1 [Aufruf](#31-aufruf)
+
+4. [Kontrollstrukturen](#4-kontrollstrukturen)
+   - 4.1 [Bedingte Anweisung (Verzweigung)](#41-bedingte-anweisung-verzweigung)
+   - 4.2 [Wiederhole-solange-Schleife (while-Schleife)](#42-wiederhole-solange-schleife-while-schleife)
+   - 4.3 [Zählergesteuerte Schleife (for-Schleife)](#43-zählergesteuerte-schleife-for-schleife)
+
+5. [Arrays](#5-arrays)
+   - 5.1 [Array-Deklaration und Initialisierung](#51-array-deklaration-und-initialisierung)
+   - 5.2 [Array-Element-Zuweisung](#52-array-element-zuweisung)
+   - 5.3 [Anhängen an ein Array](#53-anhängen-an-ein-array)
+   - 5.4 [Anzahl der Elemente eines Arrays](#54-anzahl-der-elemente-eines-arrays)
+   - 5.5 [Array-Element-Ausgabe](#55-array-element-ausgabe)
+   - 5.6 [Gesamten Array ausgeben](#56-gesamten-array-ausgeben)
+
+6. [Zusammenfassung der wichtigsten Konzepte](#zusammenfassung-der-wichtigsten-konzepte)
+
+7. [Praktische Hinweise für die Verwendung](#praktische-hinweise-für-die-verwendung)
+
+---
+
 ## Wichtige Hinweise
 
 - **Kursive Ausdrücke** sind allgemeine Platzhalter (z. B. `variable`, `datentyp`, `wert`, `bedingung`)
@@ -156,6 +192,13 @@ Ausgabe: "Die Fläche beträgt " + qm + " Quadratmeter."
 **Beispiel:**
 ```
 Ausgabe: "Hallo!" + Zeilenumbruch
+```
+
+**Grafische Darstellung im Struktogramm:**
+```
+┌─────────────────────────────────────────────────────┐
+│ Ausgabe: "Hallo!" + Zeilenumbruch                   │
+└─────────────────────────────────────────────────────┘
 ```
 
 ---
@@ -410,6 +453,17 @@ Zuweisung: zahlen[0] = 5
 ```
 *Setzt das erste Element des Arrays auf 5*
 
+**Grafische Darstellung im Struktogramm:**
+```
+┌─────────────────────────────────────────────────────┐
+│ Zuweisung: personen[2] = "Kay"                      │
+└─────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────┐
+│ Zuweisung: zahlen[0] = 5                            │
+└─────────────────────────────────────────────────────┘
+```
+
 ---
 
 ### 5.3 Anhängen an ein Array
@@ -430,6 +484,13 @@ Zuweisung: personen[3] = "Milo"
 - Bei 5.2 wird ein **bestehendes** Element überschrieben
 - Bei 5.3 wird ein **neues** Element am Ende hinzugefügt
 
+**Grafische Darstellung im Struktogramm:**
+```
+┌─────────────────────────────────────────────────────┐
+│ Zuweisung: personen[3] = "Milo"                     │
+└─────────────────────────────────────────────────────┘
+```
+
 ---
 
 ### 5.4 Anzahl der Elemente eines Arrays
@@ -445,6 +506,14 @@ Zuweisung: personen[3] = "Milo"
 Deklaration und Initialisierung: laenge = Anzahl der Elemente des Arrays personen
 ```
 
+**Grafische Darstellung im Struktogramm:**
+```
+┌─────────────────────────────────────────────────────────────┐
+│ Deklaration und Initialisierung:                            │
+│ laenge = Anzahl der Elemente des Arrays personen            │
+└─────────────────────────────────────────────────────────────┘
+```
+
 **Typische Verwendung in Schleifen:**
 ```
 Deklaration und Initialisierung: n = Anzahl der Elemente des Arrays zahlen
@@ -452,6 +521,19 @@ Zähle i von 0 bis n - 1, Schrittweite 1
     Ausgabe: zahlen[i]
 ```
 *Gibt alle Elemente des Arrays aus*
+
+**Grafische Darstellung der Verwendung in Schleifen:**
+```
+┌─────────────────────────────────────────────────────────────┐
+│ Deklaration und Initialisierung:                            │
+│ n = Anzahl der Elemente des Arrays zahlen                   │
+├─────────────────────────────────────────────────────────────┤
+│ ┌─ Zähle i von 0 bis n - 1, Schrittweite 1                  │
+│ │                                                           │
+│ │    Ausgabe: zahlen[i]                                     │
+│ │                                                           │
+└─┘───────────────────────────────────────────────────────────┘
+```
 
 ---
 
@@ -645,13 +727,14 @@ Ausgabe: "Summe: " + summe
 ├─────────────────────────────────────────────────────────┤
 │ Deklaration und Initialisierung: zaehler = 1            │
 ├─────────────────────────────────────────────────────────┤
-│ ┌─ Wiederhole solange zaehler <= 10, Schrittweite 1     │
+│ ┌─ Wiederhole solange zaehler <= 10                     │
 │ │                                                       │
 │ │    Zuweisung: summe = summe + zaehler                 │
 │ │                                                       │
 │ │    Zuweisung: zaehler = zaehler + 1                   │
 │ │                                                       │
 └─┘───────────────────────────────────────────────────────┘
+┌─────────────────────────────────────────────────────────┐
 │ Ausgabe: "Summe: " + summe                              │
 └─────────────────────────────────────────────────────────┘
 ```

@@ -1,0 +1,277 @@
+name: 📊 Struktogramm Validierung & Auto-Fix
+
+on:
+  pull_request:
+    paths:
+      - 'docs/**/*.md'
+      - '.github/config/struktogramm.yml'
+  push:
+    branches:
+      - main
+    paths:
+      - 'docs/**/*.md'
+      - '.github/config/struktogramm.yml'
+
+jobs:
+  
+  # ========================================================================
+  # JOB 1: VALIDIERUNG
+  # ========================================================================
+  
+  validate:
+    name: 🔍 Struktogramm Validierung
+    runs-on: ubuntu-latest
+    outputs:
+      errors_found: ${{ steps.validate.outputs.has_errors }}
+      errors_count: ${{ steps.validate.outputs.error_count }}
+    
+    steps:
+      - name: 📥 Repository auschecken
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      
+      - name: 🐍 Python Setup
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+      
+      - name: 📦 Dependencies installieren
+        run: |
+          pip install pyyaml
+      
+      - name: 🔍 Validierung ausführen
+        id: validate
+        run: |
+          python -m src.utils.struktogramm_validator > validator_output.txt 2>&1
+          EXIT_CODE=$?
+          
+          # Zähle Fehler
+          ERROR_COUNT=$(grep -c "🚨" validator_output.txt || echo "0")
+          
+          echo "has_errors=$(if [ $EXIT_CODE -ne 0 ]; then echo 'true'; else echo 'false'; fi)" >> $GITHUB_OUTPUT
+          echo "error_count=$ERROR_COUNT" >> $GITHUB_OUTPUT
+          
+          cat validator_output.txt
+          exit $EXIT_CODE
+      
+      - name: 📄 Report hochladen
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: validation-report
+          path: validation_report.md
+  
+  # ========================================================================
+  # JOB 2: AUTO-FIX (nur bei Fehlern)
+  # ========================================================================
+  
+  auto_fix:
+    name: 🔧 Auto-Fix Anwendung
+    runs-on: ubuntu-latest
+    needs: validate
+    if: needs.validate.outputs.errors_found == 'true' && github.event_name == 'pull_request'
+    
+    steps:
+      - name: 📥 Repository auschecken
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.head_ref }}
+          fetch-depth: 0
+      
+      - name: 🐍 Python Setup
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+      
+      - name: 📦 Dependencies installieren
+        run: |
+          pip install pyyaml
+      
+      - name: 🔧 Auto-Fixes anwenden
+        run: |
+          # Finde alle geänderten Dateien
+          git diff --name-only origin/main...HEAD | grep "docs/.*\.md$" | while read file; do
+            echo "Fixing: $file"
+            python .github/struktogramm_auto_fix.py "$file" || true
+          done
+      
+      - name: 📊 Validierung nach Fixes
+        run: |
+          python -m src.utils.struktogramm_validator
+      
+      - name: 💾 Fixes committen (falls nötig)
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            git config user.name "🤖 Struktogramm-Bot"
+            git config user.email "bot@github.com"
+            git add docs/
+            git commit -m "♻️ Struktogramm-Fix: Automatische Korrektur" || true
+            git push
+            echo "✅ Automatische Fixes applied and pushed"
+          else
+            echo "ℹ️  Keine Änderungen nötig"
+          fi
+  
+  # ========================================================================
+  # JOB 3: PR-COMMENT MIT RESULTS
+  # ========================================================================
+  
+  report:
+    name: 📝 Report in PR
+    runs-on: ubuntu-latest
+    needs: [validate, auto_fix]
+    if: always() && github.event_name == 'pull_request'
+    
+    steps:
+      - name: 📥 Repository auschecken
+        uses: actions/checkout@v3
+      
+      - name: 📥 Report-Artifact downloaden
+        uses: actions/download-artifact@v3
+        with:
+          name: validation-report
+          path: .
+      
+      - name: 📝 PR-Comment erstellen
+        if: always()
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const fs = require('fs');
+            
+            let report_content = '## 📊 Struktogramm Validierungs-Report\n\n';
+            
+            // Lese Report wenn vorhanden
+            try {
+              const report = fs.readFileSync('validation_report.md', 'utf8');
+              report_content += report;
+            } catch (e) {
+              report_content += '✅ Keine Validierungsprobleme gefunden!\n';
+            }
+            
+            // Füge Status hinzu
+            const validate_status = '${{ needs.validate.result }}';
+            const autofix_status = '${{ needs.auto_fix.result }}';
+            
+            report_content += '\n\n---\n\n';
+            report_content += '### Status:\n';
+            report_content += `- Validierung: ${validate_status === 'success' ? '✅' : '❌'}\n`;
+            if (autofix_status) {
+              report_content += `- Auto-Fix: ${autofix_status === 'success' ? '✅' : autofix_status === 'skipped' ? '⏭️' : '❌'}\n`;
+            }
+            
+            // Poste Comment
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: report_content
+            });
+
+  # ========================================================================
+  # JOB 4: QUALITÄTS-CHECKS
+  # ========================================================================
+  
+  quality_gate:
+    name: 🎯 Qualitäts-Gate
+    runs-on: ubuntu-latest
+    needs: validate
+    if: always()
+    
+    steps:
+      - name: 📥 Repository auschecken
+        uses: actions/checkout@v3
+      
+      - name: 🎯 Qualitäts-Schwellenwerte prüfen
+        run: |
+          ERROR_COUNT="${{ needs.validate.outputs.errors_count }}"
+          MAX_ALLOWED=5
+          
+          if [ "$ERROR_COUNT" -gt "$MAX_ALLOWED" ]; then
+            echo "❌ Zu viele Fehler: $ERROR_COUNT (max: $MAX_ALLOWED)"
+            exit 1
+          else
+            echo "✅ Qualitäts-Gate bestanden: $ERROR_COUNT/$MAX_ALLOWED Fehler"
+          fi
+      
+      - name: 📊 Metrics sammeln
+        run: |
+          mkdir -p .github/metrics
+          echo "Validation passed at $(date)" >> .github/metrics/validation_history.txt
+
+  # ========================================================================
+  # JOB 5: STATUS CHECK FÜR MERGE
+  # ========================================================================
+  
+  merge_check:
+    name: ✅ Merge Check
+    runs-on: ubuntu-latest
+    needs: [validate, quality_gate]
+    if: always()
+    
+    steps:
+      - name: 📊 Merge Bedingung prüfen
+        run: |
+          VALIDATE_RESULT="${{ needs.validate.result }}"
+          QUALITY_RESULT="${{ needs.quality_gate.result }}"
+          
+          if [ "$VALIDATE_RESULT" = "success" ] && [ "$QUALITY_RESULT" = "success" ]; then
+            echo "✅ Alle Checks bestanden - Merge erlaubt"
+            exit 0
+          else
+            echo "⚠️  Einige Checks haben Probleme"
+            echo "Validate: $VALIDATE_RESULT"
+            echo "Quality: $QUALITY_RESULT"
+            exit 1
+          fi
+
+# ============================================================================
+# WORKFLOW-BESCHREIBUNG
+# ============================================================================
+# 
+# Dieser Workflow führt folgende Schritte durch:
+# 
+# 1. VALIDATE
+#    - Lädt Validator
+#    - Prüft alle Dateien in docs/
+#    - Generiert Report
+# 
+# 2. AUTO_FIX (nur bei Fehlern in PRs)
+#    - Lädt Auto-Fix Tool
+#    - Wendet automatische Korrektionen an
+#    - Committed und pushed Fixes
+# 
+# 3. REPORT
+#    - Postet Ergebnisse als PR-Comment
+#    - Zeigt Status und Details
+# 
+# 4. QUALITY_GATE
+#    - Prüft ob Fehler < Schwellenwert
+#    - Default: max 5 Fehler
+# 
+# 5. MERGE_CHECK
+#    - Finale Entscheidung: Merge OK?
+#    - Erforderlich: Validate + Quality beide OK
+
+# ============================================================================
+# KONFIGURATION
+# ============================================================================
+
+# Triggers:
+# - pull_request: bei PR mit docs/ Änderungen
+# - push: bei Push zu main mit docs/ Änderungen
+
+# Environment:
+# - Ubuntu Latest
+# - Python 3.11
+# - YAML parsing via pyyaml
+
+# Permissions benötigt:
+# - pull-requests: write (für Comments)
+# - contents: write (für Auto-Commit/Push)
+
+# ============================================================================
