@@ -27,12 +27,12 @@ jobs:
     
     steps:
       - name: 📥 Repository auschecken
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
       
       - name: 🐍 Python Setup
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.11'
           cache: 'pip'
@@ -75,13 +75,13 @@ jobs:
     
     steps:
       - name: 📥 Repository auschecken
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           ref: ${{ github.head_ref }}
           fetch-depth: 0
       
       - name: 🐍 Python Setup
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.11'
           cache: 'pip'
@@ -109,7 +109,7 @@ jobs:
             git config user.email "bot@github.com"
             git add docs/
             git commit -m "♻️ Struktogramm-Fix: Automatische Korrektur" || true
-            git push
+            git push origin HEAD:${{ github.head_ref }} || true
             echo "✅ Automatische Fixes applied and pushed"
           else
             echo "ℹ️  Keine Änderungen nötig"
@@ -127,7 +127,7 @@ jobs:
     
     steps:
       - name: 📥 Repository auschecken
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       
       - name: 📥 Report-Artifact downloaden
         uses: actions/download-artifact@v4
@@ -184,7 +184,7 @@ jobs:
     
     steps:
       - name: 📥 Repository auschecken
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       
       - name: 🎯 Qualitäts-Schwellenwerte prüfen
         run: |
