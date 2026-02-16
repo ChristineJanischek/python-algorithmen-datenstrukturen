@@ -50,9 +50,10 @@ jobs:
         id: validate
         continue-on-error: true
         run: |
-          python src/utils/struktogramm_validator.py > validator_output.txt 2>&1 || true
+          chmod +x .github/run_validator.sh
+          bash .github/run_validator.sh
           
-          # Zähle Fehler (robust)
+          # Parse Output
           ERROR_COUNT=$(grep -c "🚨" validator_output.txt 2>/dev/null || echo "0")
           HAS_ERRORS="false"
           if [ "$ERROR_COUNT" -gt 0 ]; then
@@ -61,10 +62,7 @@ jobs:
           
           echo "has_errors=$HAS_ERRORS" >> $GITHUB_OUTPUT
           echo "error_count=$ERROR_COUNT" >> $GITHUB_OUTPUT
-          
-          echo "=== VALIDATOR OUTPUT ===" 
-          cat validator_output.txt || echo "Keine Report-Datei"
-          echo "=== ERRORS FOUND: $ERROR_COUNT ===" 
+          echo "=== FOUND $ERROR_COUNT ERRORS ==="
       
       - name: 📄 Report hochladen
         if: always()
