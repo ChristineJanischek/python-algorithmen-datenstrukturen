@@ -19,7 +19,7 @@ zu Section 1 hinzugefügt werden sollten.
 ### SOFORTMASSNAHMEN
 
 1. **IMMER** die neueste Operatorenliste konsultieren:
-   ```
+   ```python
    struktogramme/Operatorenliste-Struktogramme.md
    ```
 
@@ -65,6 +65,24 @@ Wenn bedingung, dann
 ### TOOLS VERFÜGBAR
 
 Falls verfügbar, verwende die automatischen Werkzeuge:
+
+
+## 📐 Struktogramm (grafische Notation)
+
+<!-- START_GRAPHIC_STRUKTOGRAMM -->
+```
+┌────────────────────────────────────────┐
+│ [STRUKTOGRAMM HIER HINZUFÜGEN]         │
+│                                        │
+│ Beispiel-Elemente:                     │
+│ • Deklaration                          │
+│ • Zuweisung                            │
+│ • Schleife (┌─ ... ─┘)                 │
+│ • Verzweigung (J/N Zweige)             │
+└────────────────────────────────────────┘
+```
+<!-- END_GRAPHIC_STRUKTOGRAMM -->
+
 
 ```python
 from apps.tools.struktogramm_validator import StruktogrammValidator
@@ -115,6 +133,24 @@ Wenn alter < 18, dann
 | Fehlende Komma vor `sonst` | Schreibe: `, sonst` (mit Komma und Leerzeichen) |
 
 ### VALIDIERUNGSPROZESS VOR AUSGABE
+
+
+## 📐 Struktogramm (grafische Notation)
+
+<!-- START_GRAPHIC_STRUKTOGRAMM -->
+```
+┌────────────────────────────────────────┐
+│ [STRUKTOGRAMM HIER HINZUFÜGEN]         │
+│                                        │
+│ Beispiel-Elemente:                     │
+│ • Deklaration                          │
+│ • Zuweisung                            │
+│ • Schleife (┌─ ... ─┘)                 │
+│ • Verzweigung (J/N Zweige)             │
+└────────────────────────────────────────┘
+```
+<!-- END_GRAPHIC_STRUKTOGRAMM -->
+
 
 ```python
 def validate_before_output(struktogramm_text):

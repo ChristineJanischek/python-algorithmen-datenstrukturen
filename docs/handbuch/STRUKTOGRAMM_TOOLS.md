@@ -121,6 +121,24 @@ Zeigt alle verfügbaren Operatoren.
 
 ### Als Modul verwenden
 
+
+## 📐 Struktogramm (grafische Notation)
+
+<!-- START_GRAPHIC_STRUKTOGRAMM -->
+```
+┌────────────────────────────────────────┐
+│ [STRUKTOGRAMM HIER HINZUFÜGEN]         │
+│                                        │
+│ Beispiel-Elemente:                     │
+│ • Deklaration                          │
+│ • Zuweisung                            │
+│ • Schleife (┌─ ... ─┘)                 │
+│ • Verzweigung (J/N Zweige)             │
+└────────────────────────────────────────┘
+```
+<!-- END_GRAPHIC_STRUKTOGRAMM -->
+
+
 ```python
 from struktogramm_validator import StruktogrammValidator
 from struktogramm_refactorer import StruktogrammRefactorer
