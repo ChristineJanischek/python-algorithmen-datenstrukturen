@@ -146,15 +146,15 @@ Jede BPE-Detailseite verweist auf:
 
 ### Beispiel: BPE 7
 ```
-docs/lehrplan/
+docs/lehrplan/                                            
   ├── BPE7_Algorithmen_Datenstrukturen.md  ← Sie sind hier
-       ↓ Verknüpft zu:
-docs/aufgaben/L2/
-  ├── L2_2_*  (Sortieralgorithmen)
-  └── L2_3_*  (Suchalgorithmen)
-  
-docs/information/L1/L2/
-  └── Informationen zu Arrays, Algorithmen
+       ↓ Verknüpft zu:                                    
+docs/aufgaben/L2/                                         
+  ├── L2_2_*  (Sortieralgorithmen)                        
+  └── L2_3_*  (Suchalgorithmen)                           
+                                                          
+docs/information/L1/L2/                                   
+  └── Informationen zu Arrays, Algorithmen                
 ```
 
 ---
@@ -164,11 +164,11 @@ docs/information/L1/L2/
 ### Dateistruktur
 
 ```
-docs/lehrplan/
-├── INDEX.md                              (← Diese Datei)
-├── Lehrplan_Vollstaendig.md             (Kompletter Lehrplan)
-├── BPE5_Grundlagen_Programmierung.md    (Detailliert + Didaktik)
-├── BPE7_Algorithmen_Datenstrukturen.md  (Detailliert + Didaktik)
+docs/lehrplan/                                                    
+├── INDEX.md                              (← Diese Datei)         
+├── Lehrplan_Vollstaendig.md             (Kompletter Lehrplan)    
+├── BPE5_Grundlagen_Programmierung.md    (Detailliert + Didaktik) 
+├── BPE7_Algorithmen_Datenstrukturen.md  (Detailliert + Didaktik) 
 └── BPE*.md                              (weitere BPEs, ausbaubar)
 ```
 

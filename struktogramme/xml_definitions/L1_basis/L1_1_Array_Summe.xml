@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<struktogramm>
+  
+  <metadata>
+    <titel>Array-Summe berechnen</titel>
+    <level>L1</level>
+    <kategorie>Schleifen und Arrays</kategorie>
+    <autor>System</autor>
+    <beschreibung>Berechnet die Summe aller Elemente eines Arrays</beschreibung>
+  </metadata>
+  
+  <inhalt>
+    <!-- Initialisierung -->
+    <prozess>summe = 0</prozess>
+    <prozess>i = 0</prozess>
+    
+    <!-- While-Schleife durch Array -->
+    <wiederhole>
+      <bedingung>i &lt; länge(array)</bedingung>
+      <inhalt>
+        <prozess>summe = summe + array[i]</prozess>
+        <prozess>i = i + 1</prozess>
+      </inhalt>
+    </wiederhole>
+    
+    <!-- Ergebnis ausgeben -->
+    <ausgabe>return summe</ausgabe>
+  </inhalt>
+  
+</struktogramm>

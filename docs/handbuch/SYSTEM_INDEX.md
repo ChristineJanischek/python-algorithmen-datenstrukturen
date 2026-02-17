@@ -79,31 +79,31 @@ Code-Analyser und Dokumentations-Generator:
 
 ```
 docs/handbuch/                 ← ZENTRALE DOKUMENTATION
-├── STRUKTOGRAMM_GUIDE.md      (BW-Standard Guide)
-├── ELEARNING_TEMPLATE_GUIDE.md (Content Management)
-├── ROUTINEN.md                (Diese Übersicht)
-├── BACKUP_STRATEGY.md         (Versionierung)
-├── SYSTEM_INDEX.md            (↑ Sie sind hier)
-└── *.MD                       (weitere Handbücher)
+├── STRUKTOGRAMM_GUIDE.md      (BW-Standard Guide)     
+├── ELEARNING_TEMPLATE_GUIDE.md (Content Management)   
+├── ROUTINEN.md                (Diese Übersicht)       
+├── BACKUP_STRATEGY.md         (Versionierung)         
+├── SYSTEM_INDEX.md            (↑ Sie sind hier)       
+└── *.MD                       (weitere Handbücher)    
 
-src/utils/                      ← PYTHON UTILITIES
-├── struktogramm_helper.py
-├── elearning_manager.py
-└── version_manager.py
+src/utils/                      ← PYTHON UTILITIES     
+├── struktogramm_helper.py                             
+├── elearning_manager.py                               
+└── version_manager.py                                 
 
-apps/api/                       ← REST-API
-├── main.py
-└── data_loader.py
+apps/api/                       ← REST-API             
+├── main.py                                            
+└── data_loader.py                                     
 
-apps/tools/                     ← SKRIPTE & TOOLS
-└── generate_information_docs.py
+apps/tools/                     ← SKRIPTE & TOOLS      
+└── generate_information_docs.py                       
 
-docs/aufgaben/                  ← LERNMATERIALIEN
-docs/loesungen/
-docs/information/
+docs/aufgaben/                  ← LERNMATERIALIEN      
+docs/loesungen/                                        
+docs/information/                                      
 
-struktogramme/                  ← STRUKTOGRAMM-DATEIEN
-└── *.stgr
+struktogramme/                  ← STRUKTOGRAMM-DATEIEN 
+└── *.stgr                                             
 ```
 
 ---

@@ -27,18 +27,7 @@ Grundlage: Inhalte aus [src/niveau/infodateien/L2_1 Information_Algorithmik.docx
 
 **Erwartetes Struktogramm (BW-Standard - Grafische Notation):**
 
-```
-┌────────────────────────────────────────────────────────┐
-│ Deklaration und Einlesen: alter als Ganzzahl           │
-├────────────────────────────────────────────────────────┤
-│                    alter < 18                          │
-├────────────────────────────────────────────────────────┤
-│ J                              │ N                     │
-│                                │                       │
-│ Ausgabe: "Jugendlicher"        │ Ausgabe: "Erwachsener"│
-│                                │                       │
-└────────────────────────────────┴───────────────────────┘
-```
+![L2_1_Aufgabe1_Altersklassifikation](../../struktogramme/generated/svg/L2_1_Aufgabe1_Altersklassifikation.svg)
 
 **Python-Code (Musterlösung):**
 ```python
@@ -47,7 +36,7 @@ if alter < 18:
     print("Jugendlicher")
 else:
     print("Erwachsener")
-```python
+```
 
 **Bewertung (3 Punkte):**
 - ✅ **Struktogramm korrekt formatiert** (1 Punkt)
@@ -74,25 +63,7 @@ else:
 
 **Erwartetes Struktogramm (BW-Standard - Grafische Notation):**
 
-```
-┌───────────────────────────────────────────────────────────────┐
-│ Deklaration und Initialisierung: summe = 0                    │
-├───────────────────────────────────────────────────────────────┤
-│ Deklaration und Einlesen: zahl als Ganzzahl                   │
-├───────────────────────────────────────────────────────────────┤
-│ ┌─ Wiederhole solange zahl != -1                              │
-│ │                                                             │
-│ │    Zuweisung: summe = summe + zahl                          │
-│ │                                                             │
-│ │    Ausgabe: "Summe: " + summe                               │
-│ │                                                             │
-│ │    Einlesen: zahl als Ganzzahl                              │
-│ │                                                             │
-└─┘─────────────────────────────────────────────────────────────┘
-├───────────────────────────────────────────────────────────────┤
-│ Ausgabe: "Programm beendet."                                  │
-└───────────────────────────────────────────────────────────────┘
-```
+![L2_2_Aufgabe2_Summe](../../struktogramme/generated/svg/L2_2_Aufgabe2_Summe.svg)
 
 **Python-Code (Musterlösung):**
 ```python
@@ -105,7 +76,7 @@ while zahl != -1:
     zahl = int(input("Geben Sie eine Zahl ein (oder -1 zum Beenden): "))
 
 print("Programm beendet.")
-```python
+```
 
 **Bewertung (3 Punkte):**
 - ✅ **Struktogramm korrekt** (2 Punkte)
@@ -128,22 +99,8 @@ print("Programm beendet.")
 | Eingabe wird nur einmal gelesen | -1 Punkt |
 
 **Alternative Akzeptabel:**
-## 📐 Struktogramm (grafische Notation)
 
-<!-- START_GRAPHIC_STRUKTOGRAMM -->
-```
-┌────────────────────────────────────────┐
-│ Wiederhole solange wahr                │
-│   Wenn zahl == -1, dann                │
-│     J                                  │
-│       Abbruch                           │
-│     , sonst                            │
-│     N                                  │
-│       summe = summe + zahl             │
-│       Ausgabe: Summe                   │
-└────────────────────────────────────────┘
-```
-<!-- END_GRAPHIC_STRUKTOGRAMM -->
+![L2_2b_Aufgabe2_Summe_Break](../../struktogramme/generated/svg/L2_2b_Aufgabe2_Summe_Break.svg)
 
 ```python
 while True:
@@ -163,22 +120,7 @@ while True:
 
 **Musterlösung:**
 
-## 📐 Struktogramm (grafische Notation)
-
-<!-- START_GRAPHIC_STRUKTOGRAMM -->
-```
-┌────────────────────────────────────────┐
-│ [STRUKTOGRAMM HIER HINZUFÜGEN]         │
-│                                        │
-│ Beispiel-Elemente:                     │
-│ • Deklaration                          │
-│ • Zuweisung                            │
-│ • Schleife (┌─ ... ─┘)                 │
-│ • Verzweigung (J/N Zweige)             │
-└────────────────────────────────────────┘
-```
-<!-- END_GRAPHIC_STRUKTOGRAMM -->
-
+![L2_3a_Aufgabe3_Array_Deklaration](../../struktogramme/generated/svg/L2_3a_Aufgabe3_Array_Deklaration.svg)
 
 ```python
 noten = [1, 2, 2, 3, 1, 5, 4, 2]
@@ -194,22 +136,7 @@ noten = [1, 2, 2, 3, 1, 5, 4, 2]
 
 **Musterlösung:**
 
-## 📐 Struktogramm (grafische Notation)
-
-<!-- START_GRAPHIC_STRUKTOGRAMM -->
-```
-┌────────────────────────────────────────┐
-│ [STRUKTOGRAMM HIER HINZUFÜGEN]         │
-│                                        │
-│ Beispiel-Elemente:                     │
-│ • Deklaration                          │
-│ • Zuweisung                            │
-│ • Schleife (┌─ ... ─┘)                 │
-│ • Verzweigung (J/N Zweige)             │
-└────────────────────────────────────────┘
-```
-<!-- END_GRAPHIC_STRUKTOGRAMM -->
-
+![L2_3b_Aufgabe3_Array_Zugriff](../../struktogramme/generated/svg/L2_3b_Aufgabe3_Array_Zugriff.svg)
 
 ```python
 erstes = noten[0]          # 1. Element = 1
@@ -254,67 +181,24 @@ Das 4. Element des Arrays, dessen Wert 3 ist.
 **a) Alle Werte ausgeben (2 Punkte)**
 
 **Struktogramm (1 Punkt):**
-```struktogramm
-Zähle i von 0 bis Anzahl der Elemente des Arrays werte - 1, Schrittweite 1
-    Ausgabe: werte[i]
-```
+
+![L2_4a_Aufgabe4_Array_Ausgeben_Index](../../struktogramme/generated/svg/L2_4a_Aufgabe4_Array_Ausgeben_Index.svg)
 
 **Python-Code (1 Punkt):**
 
-**Musterlösung 1 (for-Schleife mit Index):**
-## 📐 Struktogramm (grafische Notation)
-
-<!-- START_GRAPHIC_STRUKTOGRAMM -->
-```
-┌────────────────────────────────────────┐
-│ Zähle i von 0 bis Anzahl der Elemente  │
-│ des Arrays werte - 1, Schrittweite 1   │
-│   Ausgabe: werte[i]                    │
-└────────────────────────────────────────┘
-```
-<!-- END_GRAPHIC_STRUKTOGRAMM -->
-
+**Musterlösung (for-Schleife mit Index):**
 ```python
 for i in range(len(werte)):
     print(werte[i])
 ```
 
-**Musterlösung 2 (for-Schleife mit Element):**
-## 📐 Struktogramm (grafische Notation)
-
-<!-- START_GRAPHIC_STRUKTOGRAMM -->
-```
-┌────────────────────────────────────────┐
-│ Zähle element in werte                 │
-│   Ausgabe: element                     │
-└────────────────────────────────────────┘
-```
-<!-- END_GRAPHIC_STRUKTOGRAMM -->
-
+**Alternative akzeptabel (for-Schleife mit Element):**
 ```python
 for wert in werte:
     print(wert)
 ```
 
-**Musterlösung 3 (while-Schleife):**
-
-## 📐 Struktogramm (grafische Notation)
-
-<!-- START_GRAPHIC_STRUKTOGRAMM -->
-```
-┌────────────────────────────────────────┐
-│ [STRUKTOGRAMM HIER HINZUFÜGEN]         │
-│                                        │
-│ Beispiel-Elemente:                     │
-│ • Deklaration                          │
-│ • Zuweisung                            │
-│ • Schleife (┌─ ... ─┘)                 │
-│ • Verzweigung (J/N Zweige)             │
-└────────────────────────────────────────┘
-```
-<!-- END_GRAPHIC_STRUKTOGRAMM -->
-
-
+**Alternative akzeptabel (while-Schleife):**
 ```python
 i = 0
 while i < len(werte):
@@ -323,7 +207,7 @@ while i < len(werte):
 ```
 
 **Bewertung:**
-- ✅ Jede Variante (1-3) = volle 2 Punkte
+- ✅ Jede Variante = volle 2 Punkte
 - ⚠️ `print(werte)` (gibt ganzes Array aus) = 1 Punkt
 - ❌ Keine Schleife, nur Einzelausgaben = 0 Punkte
 
@@ -333,21 +217,7 @@ while i < len(werte):
 
 **Musterlösung:**
 
-## 📐 Struktogramm (grafische Notation)
-
-<!-- START_GRAPHIC_STRUKTOGRAMM -->
-```
-┌────────────────────────────────────────┐
-│ [STRUKTOGRAMM HIER HINZUFÜGEN]         │
-│                                        │
-│ Beispiel-Elemente:                     │
-│ • Deklaration                          │
-│ • Zuweisung                            │
-│ • Schleife (┌─ ... ─┘)                 │
-│ • Verzweigung (J/N Zweige)             │
-└────────────────────────────────────────┘
-```
-<!-- END_GRAPHIC_STRUKTOGRAMM -->
+![L2_4b_Aufgabe4_Array_Filtern](../../struktogramme/generated/svg/L2_4b_Aufgabe4_Array_Filtern.svg)
 
 
 ```python
@@ -363,13 +233,15 @@ for wert in werte:
 <!-- START_GRAPHIC_STRUKTOGRAMM -->
 ```
 ┌────────────────────────────────────────┐
-│ [STRUKTOGRAMM HIER HINZUFÜGEN]         │
-│                                        │
-│ Beispiel-Elemente:                     │
-│ • Deklaration                          │
-│ • Zuweisung                            │
-│ • Schleife (┌─ ... ─┘)                 │
-│ • Verzweigung (J/N Zweige)             │
+│ Zähle i von 0 bis Anzahl der Elemente  │
+│ des Arrays werte - 1, Schrittweite 1   │
+│   Wenn werte[i] > 30, dann             │
+│     J                                  │
+│       Ausgabe:                         │
+│       werte[i]                         │
+│     , sonst                            │
+│     N                                  │
+│       (keine Aktion)                   │
 └────────────────────────────────────────┘
 ```
 <!-- END_GRAPHIC_STRUKTOGRAMM -->
@@ -406,13 +278,13 @@ for i in range(len(werte)):
 <!-- START_GRAPHIC_STRUKTOGRAMM -->
 ```
 ┌────────────────────────────────────────┐
-│ [STRUKTOGRAMM HIER HINZUFÜGEN]         │
-│                                        │
-│ Beispiel-Elemente:                     │
-│ • Deklaration                          │
-│ • Zuweisung                            │
-│ • Schleife (┌─ ... ─┘)                 │
-│ • Verzweigung (J/N Zweige)             │
+│ Deklaration und Initialisierung:       │
+│ verdoppelt = []                        │
+│ Zähle i von 0 bis Anzahl der Elemente  │
+│ des Arrays werte - 1, Schrittweite 1   │
+│   Zuweisung:                           │
+│   verdoppelt[Anzahl der Elemente des   │
+│   Arrays verdoppelt] = werte[i] * 2    │
 └────────────────────────────────────────┘
 ```
 <!-- END_GRAPHIC_STRUKTOGRAMM -->
@@ -432,13 +304,10 @@ print(verdoppelt)  # [24, 90, 46, 134, 16, 68, 112, 22]
 <!-- START_GRAPHIC_STRUKTOGRAMM -->
 ```
 ┌────────────────────────────────────────┐
-│ [STRUKTOGRAMM HIER HINZUFÜGEN]         │
-│                                        │
-│ Beispiel-Elemente:                     │
-│ • Deklaration                          │
-│ • Zuweisung                            │
-│ • Schleife (┌─ ... ─┘)                 │
-│ • Verzweigung (J/N Zweige)             │
+│ Zähle i von 0 bis Anzahl der Elemente  │
+│ des Arrays werte - 1, Schrittweite 1   │
+│   Zuweisung:                           │
+│   werte[i] = werte[i] * 2              │
 └────────────────────────────────────────┘
 ```
 <!-- END_GRAPHIC_STRUKTOGRAMM -->
@@ -483,25 +352,27 @@ Wenn gefunden, dann
     , sonst
     N
         Ausgabe: "Nicht gefunden"
-
-## 📐 Struktogramm (grafische Notation)
-
-<!-- START_GRAPHIC_STRUKTOGRAMM -->
 ```
-┌────────────────────────────────────────┐
-│ [STRUKTOGRAMM HIER HINZUFÜGEN]         │
-│                                        │
-│ Beispiel-Elemente:                     │
-│ • Deklaration                          │
-│ • Zuweisung                            │
-│ • Schleife (┌─ ... ─┘)                 │
-│ • Verzweigung (J/N Zweige)             │
+
+**Struktogramm (Grafische Notation):**
+
+![L2_5_Aufgabe5_Lineare_Suche](../../struktogramme/generated/svg/L2_5_Aufgabe5_Lineare_Suche.svg)
+│ │     J                                │
+│ │       Zuweisung:                     │
+│ │       gefunden = wahr                │
+│ │     , sonst                          │
+│ │     N                                │
+│ │       Zuweisung:                     │
+│ │       i = i + 1                      │
+│ Wenn gefunden, dann                    │
+│   J                                    │
+│     Ausgabe:                           │
+│     "Gefunden! Index: " + i            │
+│   , sonst                              │
+│   N                                    │
+│     Ausgabe:                           │
+│     "Nicht gefunden"                   │
 └────────────────────────────────────────┘
-```
-<!-- END_GRAPHIC_STRUKTOGRAMM -->
-
-
-```python
 
 **Bewertung Struktogramm (3 Punkte):**
 - ✅ Eingabe & Variableninitialisierung (0,5 Punkte)
@@ -546,13 +417,30 @@ if not gefunden:
 <!-- START_GRAPHIC_STRUKTOGRAMM -->
 ```
 ┌────────────────────────────────────────┐
-│ [STRUKTOGRAMM HIER HINZUFÜGEN]         │
-│                                        │
-│ Beispiel-Elemente:                     │
-│ • Deklaration                          │
-│ • Zuweisung                            │
-│ • Schleife (┌─ ... ─┘)                 │
-│ • Verzweigung (J/N Zweige)             │
+│ Deklaration und Einlesen:              │
+│ such als Zeichenkette                  │
+│ Deklaration und Initialisierung:       │
+│ gefunden als Wahrheitswert = falsch    │
+│ Zähle i von 0 bis Anzahl der Elemente  │
+│ des Arrays buchstaben - 1, Schrittweite│
+│ 1                                      │
+│   Wenn buchstaben[i] == such, dann     │
+│     J                                  │
+│       Ausgabe:                         │
+│       "Gefunden! Index: " + i          │
+│       Zuweisung:                       │
+│       gefunden = wahr                  │
+│       Abbruch                          │
+│     , sonst                            │
+│     N                                  │
+│       (keine Aktion)                   │
+│ Wenn nicht gefunden, dann              │
+│   J                                    │
+│     Ausgabe:                           │
+│     "Nicht gefunden"                   │
+│   , sonst                              │
+│   N                                    │
+│     (keine Aktion)                     │
 └────────────────────────────────────────┘
 ```
 <!-- END_GRAPHIC_STRUKTOGRAMM -->
@@ -654,25 +542,8 @@ Zähle i von 0 bis n - 2, Schrittweite 1
 **b) Python-Code (3 Punkte)**
 
 **Musterlösung 1 (klassisch mit temp):**
-## 📐 Struktogramm (grafische Notation)
 
-<!-- START_GRAPHIC_STRUKTOGRAMM -->
-```
-┌────────────────────────────────────────┐
-│ Deklaration: n = Anzahl Elemente       │
-│ Zähle i von 0 bis n - 2, Schrittweite  │
-│   Zähle j von 0 bis n - 2 - i, Schrittw│
-│   eite 1                               │
-│     Wenn zahlen[j] > zahlen[j + 1],    │
-│     dann                               │
-│       J                                │
-│         Tausch mit temp                │
-│       , sonst                          │
-│       N                                │
-│         (keine Aktion)                 │
-└────────────────────────────────────────┘
-```
-<!-- END_GRAPHIC_STRUKTOGRAMM -->
+![L2_6_Aufgabe6_Bubble_Sort](../../struktogramme/generated/svg/L2_6_Aufgabe6_Bubble_Sort.svg)
 
 ```python
 zahlen = [5, 2, 8, 1, 9]
@@ -696,13 +567,21 @@ print(zahlen)  # [1, 2, 5, 8, 9]
 <!-- START_GRAPHIC_STRUKTOGRAMM -->
 ```
 ┌────────────────────────────────────────┐
-│ [STRUKTOGRAMM HIER HINZUFÜGEN]         │
-│                                        │
-│ Beispiel-Elemente:                     │
-│ • Deklaration                          │
-│ • Zuweisung                            │
-│ • Schleife (┌─ ... ─┘)                 │
-│ • Verzweigung (J/N Zweige)             │
+│ Deklaration:                           │
+│ n = Anzahl Elemente                    │
+│ Zähle i von 0 bis n - 2, Schrittweite  │
+│ 1                                      │
+│   Zähle j von 0 bis n - 2 - i, Schritt │
+│   weite 1                              │
+│     Wenn zahlen[j] > zahlen[j + 1],    │
+│     dann                               │
+│       J                                │
+│         Zuweisung:                     │
+│         zahlen[j], zahlen[j + 1] =     │
+│         zahlen[j + 1], zahlen[j]       │
+│       , sonst                          │
+│       N                                │
+│         (keine Aktion)                 │
 └────────────────────────────────────────┘
 ```
 <!-- END_GRAPHIC_STRUKTOGRAMM -->

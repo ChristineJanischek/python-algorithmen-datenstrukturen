@@ -72,13 +72,18 @@ Falls verfügbar, verwende die automatischen Werkzeuge:
 <!-- START_GRAPHIC_STRUKTOGRAMM -->
 ```
 ┌────────────────────────────────────────┐
-│ [STRUKTOGRAMM HIER HINZUFÜGEN]         │
-│                                        │
-│ Beispiel-Elemente:                     │
-│ • Deklaration                          │
-│ • Zuweisung                            │
-│ • Schleife (┌─ ... ─┘)                 │
-│ • Verzweigung (J/N Zweige)             │
+│ Aufruf:                                │
+│ validate_document                      │
+│ Wenn Fehler vorhanden, dann            │
+│   J                                    │
+│     Aufruf:                            │
+│     refactor_content                   │
+│     Ausgabe:                           │
+│     korrigiertes Struktogramm          │
+│   , sonst                              │
+│   N                                    │
+│     Ausgabe:                           │
+│     Struktogramm                       │
 └────────────────────────────────────────┘
 ```
 <!-- END_GRAPHIC_STRUKTOGRAMM -->
@@ -140,13 +145,23 @@ Wenn alter < 18, dann
 <!-- START_GRAPHIC_STRUKTOGRAMM -->
 ```
 ┌────────────────────────────────────────┐
-│ [STRUKTOGRAMM HIER HINZUFÜGEN]         │
-│                                        │
-│ Beispiel-Elemente:                     │
-│ • Deklaration                          │
-│ • Zuweisung                            │
-│ • Schleife (┌─ ... ─┘)                 │
-│ • Verzweigung (J/N Zweige)             │
+│ Wenn englische Keywords enthalten,     │
+│ dann                                  │
+│   J                                    │
+│     Rueckgabe:                         │
+│     Korrektur                          │
+│   , sonst                              │
+│   N                                    │
+│     Aufruf:                            │
+│     validate_document                  │
+│     Wenn Fehler, dann                  │
+│       J                                │
+│         Rueckgabe:                     │
+│         Korrektur                      │
+│       , sonst                          │
+│       N                                │
+│         Rueckgabe:                     │
+│         Ausgabe                        │
 └────────────────────────────────────────┘
 ```
 <!-- END_GRAPHIC_STRUKTOGRAMM -->

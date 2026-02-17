@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" 
+     width="700" 
+     height="1200" 
+     viewBox="0 0 700 1200">
+  
+  <style>
+    .box { stroke: #000; stroke-width: 2; fill: #fff; }
+    .text { font-family: Arial, sans-serif; font-size: 13px; fill: #000; }
+    .label { font-size: 11px; fill: #666; }
+    .bold { font-weight: bold; }
+  </style>
+  
+  <!-- Titel -->
+  <text x="350" y="30" class="text bold" text-anchor="middle" font-size="16">Aufgabe 5: Lineare Suche mit Flag</text>
+  <line x1="30" y1="50" x2="670" y2="50" stroke="#000" stroke-width="1"/>
+  
+  <!-- PROZESS -->
+  <rect x="50" y="80" width="600" height="50" class="box"/>
+  
+  <!-- Bezeichnung -->
+  <text x="60" y="98" class="text label">Anweisung:</text>
+  
+  <!-- Text -->
+  <text x="60" y="115" class="text">i = 0</text>
+  <!-- PROZESS -->
+  <rect x="50" y="130" width="600" height="50" class="box"/>
+  
+  <!-- Bezeichnung -->
+  <text x="60" y="148" class="text label">Anweisung:</text>
+  
+  <!-- Text -->
+  <text x="60" y="165" class="text">gefunden = falsch</text>
+  <!-- WHILE-SCHLEIFE (umgedrehtes L) -->
+  <!-- Schleifenkopf -->
+  <rect x="50" y="180" width="600" height="40" class="box"/>
+  <text x="60" y="205" class="text">Wiederhole solange i &lt; Anzahl der Elemente des Arrays buchstaben AND NOT gefunden</text>
+  
+  <line x1="50" y1="220" x2="50" y2="390" stroke="#000" stroke-width="2"/>
+  <!-- ALTERNATIVE (Briefumschlag - BW-Standard) -->
+  <!-- Äußeres Rechteck -->
+  <rect x="70" y="220" width="580" height="120" class="box"/>
+  
+  <!-- Eingebettetes Dreieck (Hypotenuse oben, Spitze unten) -->
+  <polygon points="70,220 650,220 360,260" 
+           fill="#fff" stroke="#000" stroke-width="2"/>
+  
+  <!-- Bedingung im Dreieck (obere Hälfte) -->
+  <text x="360" y="238" class="text" text-anchor="middle">buchstaben[i] == such</text>
+  
+  <line x1="360" y1="260" x2="360" y2="340" stroke="#000" stroke-width="2"/>
+  <text x="80" y="275" class="text bold">J</text>
+  <text x="370" y="275" class="text bold">N</text>
+  <!-- PROZESS -->
+  <rect x="85" y="280" width="265" height="50" class="box"/>
+  
+  <!-- Bezeichnung -->
+  <text x="95" y="298" class="text label">Anweisung:</text>
+  
+  <!-- Text -->
+  <text x="95" y="315" class="text">gefunden = wahr</text>
+  <!-- PROZESS -->
+  <rect x="70" y="340" width="580" height="50" class="box"/>
+  
+  <!-- Bezeichnung -->
+  <text x="80" y="358" class="text label">Anweisung:</text>
+  
+  <!-- Text -->
+  <text x="80" y="375" class="text">i = i + 1</text>
+  <line x1="50" y1="390" x2="650" y2="390" stroke="#000" stroke-width="2"/>
+  <!-- ALTERNATIVE (Briefumschlag - BW-Standard) -->
+  <!-- Äußeres Rechteck -->
+  <rect x="50" y="390" width="600" height="120" class="box"/>
+  
+  <!-- Eingebettetes Dreieck (Hypotenuse oben, Spitze unten) -->
+  <polygon points="50,390 650,390 350,430" 
+           fill="#fff" stroke="#000" stroke-width="2"/>
+  
+  <!-- Bedingung im Dreieck (obere Hälfte) -->
+  <text x="350" y="408" class="text" text-anchor="middle">gefunden</text>
+  
+  <line x1="350" y1="430" x2="350" y2="510" stroke="#000" stroke-width="2"/>
+  <text x="60" y="445" class="text bold">J</text>
+  <text x="360" y="445" class="text bold">N</text>
+  <!-- AUSGABE -->
+  <rect x="65" y="450" width="275" height="50" class="box"/>
+  
+  <!-- Bezeichnung -->
+  <text x="75" y="468" class="text label">Ausgabe:</text>
+  
+  <!-- Text -->
+  <text x="75" y="485" class="text">Element gefunden an Position i</text>
+  <!-- AUSGABE -->
+  <rect x="365" y="450" width="275" height="50" class="box"/>
+  
+  <!-- Bezeichnung -->
+  <text x="375" y="468" class="text label">Ausgabe:</text>
+  
+  <!-- Text -->
+  <text x="375" y="485" class="text">Element nicht gefunden</text>
+</svg>

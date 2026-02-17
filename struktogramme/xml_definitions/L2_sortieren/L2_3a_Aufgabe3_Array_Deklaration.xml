@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<struktogramm>
+  <metadata>
+    <titel>Aufgabe 3a: Array-Deklaration</titel>
+    <level>L2</level>
+    <kategorie>Arrays</kategorie>
+    <autor>Klassenarbeit</autor>
+    <beschreibung>Deklaration und Initialisierung eines Noten-Arrays</beschreibung>
+  </metadata>
+  <inhalt>
+    <prozess>noten = [1, 2, 2, 3, 1, 5, 4, 2]</prozess>
+    <ausgabe>noten</ausgabe>
+  </inhalt>
+</struktogramm>

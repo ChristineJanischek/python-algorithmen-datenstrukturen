@@ -7,12 +7,12 @@
 ## 📍 Standort
 
 ```
-/apps/tools/
-├── struktogramm_validator.py      # Validator & Analyzer
+/apps/tools/                                                        
+├── struktogramm_validator.py      # Validator & Analyzer           
 ├── struktogramm_refactorer.py      # Refactoring-Engine & Formatter
-├── struktogramm_cli.py             # Kommandozeilen-Interface
-├── __init__.py                     # Python Package
-└── (Dokumentation in docs/handbuch/)
+├── struktogramm_cli.py             # Kommandozeilen-Interface      
+├── __init__.py                     # Python Package                
+└── (Dokumentation in docs/handbuch/)                               
 ```
 
 ---
@@ -127,13 +127,18 @@ Zeigt alle verfügbaren Operatoren.
 <!-- START_GRAPHIC_STRUKTOGRAMM -->
 ```
 ┌────────────────────────────────────────┐
-│ [STRUKTOGRAMM HIER HINZUFÜGEN]         │
-│                                        │
-│ Beispiel-Elemente:                     │
-│ • Deklaration                          │
-│ • Zuweisung                            │
-│ • Schleife (┌─ ... ─┘)                 │
-│ • Verzweigung (J/N Zweige)             │
+│ Deklaration:                           │
+│ validator als Objekt                   │
+│ Aufruf:                                │
+│ validate_document                      │
+│ Wenn Fehler vorhanden, dann            │
+│   J                                    │
+│     Ausgabe:                           │
+│     Ergebnisse                         │
+│   , sonst                              │
+│   N                                    │
+│     Ausgabe:                           │
+│     "OK"                               │
 └────────────────────────────────────────┘
 ```
 <!-- END_GRAPHIC_STRUKTOGRAMM -->

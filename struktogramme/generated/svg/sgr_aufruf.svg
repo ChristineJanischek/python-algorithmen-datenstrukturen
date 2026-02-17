@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" 
+     width="700" 
+     height="210" 
+     viewBox="0 0 700 210">
+  
+  <style>
+    .box { stroke: #000; stroke-width: 2; fill: #fff; }
+    .text { font-family: Arial, sans-serif; font-size: 13px; fill: #000; }
+    .label { font-size: 11px; fill: #666; }
+    .bold { font-weight: bold; }
+  </style>
+  
+  <!-- Titel -->
+  <text x="350" y="30" class="text bold" text-anchor="middle" font-size="16">Funktionsaufruf - Beispiele</text>
+  <line x1="30" y1="50" x2="670" y2="50" stroke="#000" stroke-width="1"/>
+  
+  <!-- FUNKTIONSAUFRUF -->
+  <!-- Hauptrechteck -->
+  <rect x="50" y="80" width="600" height="50" class="box"/>
+  
+  <!-- Vertikale Striche links und rechts -->
+  <line x1="60" y1="80" x2="60" y2="130" stroke="#000" stroke-width="2"/>
+  <line x1="640" y1="80" x2="640" y2="130" stroke="#000" stroke-width="2"/>
+  
+  <!-- Text -->
+  <text x="350" y="110" class="text" text-anchor="middle">Aufruf: sortiereListe()</text>
+  
+  <!-- FUNKTIONSAUFRUF -->
+  <!-- Hauptrechteck -->
+  <rect x="50" y="130" width="600" height="50" class="box"/>
+  
+  <!-- Vertikale Striche links und rechts -->
+  <line x1="60" y1="130" x2="60" y2="180" stroke="#000" stroke-width="2"/>
+  <line x1="640" y1="130" x2="640" y2="180" stroke="#000" stroke-width="2"/>
+  
+  <!-- Text -->
+  <text x="350" y="160" class="text" text-anchor="middle">Aufruf: einzahlen(betrag)</text>
+  
+</svg>

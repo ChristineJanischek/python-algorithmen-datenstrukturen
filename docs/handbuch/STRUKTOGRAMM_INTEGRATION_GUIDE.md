@@ -120,12 +120,14 @@ Wir verwenden eine Schleife, um...
 
 <!-- START_GRAPHIC_STRUKTOGRAMM -->
 ```
-┌──────────────────────────────────────┐
-│ Deklaration: variable als Ganzzahl   │
-├──────────────────────────────────────┤
-│ ┌─ Zähle i von 0 bis n - 1           │
-│ │  Ausgabe: i                        │
-└─┘──────────────────────────────────────┘
+┌────────────────────────────────────────┐
+│ Deklaration:                           │
+│ variable als Ganzzahl                  │
+├────────────────────────────────────────┤
+│ ┌─ Zähle i von 0 bis n - 1             │
+│ │  Ausgabe:                            │
+││ i                                     │
+└────────────────────────────────────────┘
 ```
 <!-- END_GRAPHIC_STRUKTOGRAMM -->
 

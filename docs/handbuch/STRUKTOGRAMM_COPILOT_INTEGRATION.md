@@ -72,19 +72,20 @@ Die Struktogramm-Tools sind für folgende Szenarien optimiert:
 ## 📐 Struktogramm (grafische Notation)
 ```
 ┌────────────────────────────────────────┐
-│ Wenn Anfrage Struktogramm enthaelt,   │
-│ dann                                  │
-│   J                                   │
-│     Validierung ausfuehren            │
-│     Wenn Fehler, dann                 │
-│       J                               │
-│         Rueckgabe: korrigierte Antwort│
-│       , sonst                         │
-│       N                               │
-│         (keine Aktion)                │
-│   , sonst                             │
-│   N                                   │
-│     (keine Aktion)                    │
+│ Wenn Anfrage Struktogramm enthaelt,    │
+│ dann                                   │
+│   J                                    │
+│     Validierung ausfuehren             │
+│     Wenn Fehler, dann                  │
+│       J                                │
+│         Rueckgabe:                     │
+│ korrigierte Antwort                    │
+│       , sonst                          │
+│       N                                │
+│         (keine Aktion)                 │
+│   , sonst                              │
+│   N                                    │
+│     (keine Aktion)                     │
 └────────────────────────────────────────┘
 ```
 ```python

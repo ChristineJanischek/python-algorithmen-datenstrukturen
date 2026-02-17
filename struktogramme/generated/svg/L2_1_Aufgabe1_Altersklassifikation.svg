@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" 
+     width="700" 
+     height="280" 
+     viewBox="0 0 700 280">
+  
+  <style>
+    .box { stroke: #000; stroke-width: 2; fill: #fff; }
+    .text { font-family: Arial, sans-serif; font-size: 13px; fill: #000; }
+    .label { font-size: 11px; fill: #666; }
+    .bold { font-weight: bold; }
+  </style>
+  
+  <!-- Titel -->
+  <text x="350" y="30" class="text bold" text-anchor="middle" font-size="16">Aufgabe 1: Altersklassifizierung</text>
+  <line x1="30" y1="50" x2="670" y2="50" stroke="#000" stroke-width="1"/>
+  
+  <!-- EINGABE -->
+  <rect x="50" y="80" width="600" height="50" class="box"/>
+  
+  <!-- Bezeichnung -->
+  <text x="60" y="98" class="text label">Anweisung:</text>
+  
+  <!-- Text -->
+  <text x="60" y="115" class="text">alter als Ganzzahl</text>
+  <!-- ALTERNATIVE (Briefumschlag - BW-Standard) -->
+  <!-- Äußeres Rechteck -->
+  <rect x="50" y="130" width="600" height="120" class="box"/>
+  
+  <!-- Eingebettetes Dreieck (Hypotenuse oben, Spitze unten) -->
+  <polygon points="50,130 650,130 350,170" 
+           fill="#fff" stroke="#000" stroke-width="2"/>
+  
+  <!-- Bedingung im Dreieck (obere Hälfte) -->
+  <text x="350" y="148" class="text" text-anchor="middle">alter &lt; 18</text>
+  
+  <line x1="350" y1="170" x2="350" y2="250" stroke="#000" stroke-width="2"/>
+  <text x="60" y="185" class="text bold">J</text>
+  <text x="360" y="185" class="text bold">N</text>
+  <!-- AUSGABE -->
+  <rect x="65" y="190" width="275" height="50" class="box"/>
+  
+  <!-- Bezeichnung -->
+  <text x="75" y="208" class="text label">Anweisung:</text>
+  
+  <!-- Text -->
+  <text x="75" y="225" class="text">Jugendlicher</text>
+  <!-- AUSGABE -->
+  <rect x="365" y="190" width="275" height="50" class="box"/>
+  
+  <!-- Bezeichnung -->
+  <text x="375" y="208" class="text label">Anweisung:</text>
+  
+  <!-- Text -->
+  <text x="375" y="225" class="text">Erwachsener</text>
+</svg>

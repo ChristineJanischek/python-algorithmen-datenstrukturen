@@ -1,0 +1,113 @@
+#!/bin/bash
+#
+# Pre-Commit Hook: XML → SVG Auto-Generierung
+# Wird automatisch vor jedem Commit ausgeführt
+#
+# Installieren:
+#   cp .github/hooks/pre-commit-xml-svg .git/hooks/pre-commit
+#   chmod +x .git/hooks/pre-commit
+#
+# Deaktivieren (wenn nötig):
+#   git commit --no-verify
+#
+
+set -e
+
+# Shell-Farben
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
+NC='\033[0m' # No Color
+
+# Pfade
+REPO_ROOT="$(git rev-parse --show-toplevel)"
+CONVERTER_DIR="${REPO_ROOT}/struktogramme/converter"
+XML_DIR="${REPO_ROOT}/struktogramme/xml_definitions"
+SVG_DIR="${REPO_ROOT}/struktogramme/generated/svg"
+
+# Python-Executable
+PYTHON3=$(which python3)
+
+# Prüfe ob Python3 verfügbar ist
+if [ -z "$PYTHON3" ]; then
+    echo -e "${RED}❌ Fehler: python3 nicht gefunden${NC}"
+    exit 1
+fi
+
+# Erstelle SVG-Verzeichnis wenn nicht vorhanden
+mkdir -p "$SVG_DIR"
+
+echo -e "${YELLOW}🔄 Pre-Commit Hook: XML → SVG Generierung${NC}"
+echo -e "${YELLOW}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+
+# Finde alle neuen/veränderten XML-Dateien
+MODIFIED_XML=$( (git diff --cached --name-only --diff-filter=ACM || true) | grep "struktogramme/xml_definitions/.*\.xml$" || true)
+
+if [ -z "$MODIFIED_XML" ]; then
+    echo -e "${GREEN}✓ Keine XML-Struktogramme hinzugefügt/verändert${NC}"
+    exit 0
+fi
+
+# Validiere alle XML-Dateien
+echo -e "\n${YELLOW}1️⃣  Validierung läuft...${NC}"
+
+VALIDATION_PASSED=true
+for xml_file in $MODIFIED_XML; do
+    echo -n "   📄 ${xml_file##*/}... "
+    
+    if $PYTHON3 "${CONVERTER_DIR}/struktogramm_xml_validator.py" "$REPO_ROOT/$xml_file" > /dev/null 2>&1; then
+        echo -e "${GREEN}✓${NC}"
+    else
+        echo -e "${RED}✗${NC}"
+        $PYTHON3 "${CONVERTER_DIR}/struktogramm_xml_validator.py" "$REPO_ROOT/$xml_file"
+        VALIDATION_PASSED=false
+    fi
+done
+
+if [ "$VALIDATION_PASSED" = false ]; then
+    echo -e "\n${RED}❌ Validierung fehlgeschlagen. Bitte Fehler korrigieren.${NC}"
+    exit 1
+fi
+
+# Generiere SVGs
+echo -e "\n${YELLOW}2️⃣  SVG-Generierung läuft...${NC}"
+
+GENERATION_PASSED=true
+for xml_file in $MODIFIED_XML; do
+    filename=$(basename "$xml_file" .xml)
+    svg_file="${SVG_DIR}/${filename}.svg"
+    
+    echo -n "   🎨 ${filename}.svg... "
+    
+    if $PYTHON3 "${CONVERTER_DIR}/struktogramm_xml_renderer.py" "$REPO_ROOT/$xml_file" "$svg_file" > /dev/null 2>&1; then
+        echo -e "${GREEN}✓${NC}"
+    else
+        echo -e "${RED}✗${NC}"
+        $PYTHON3 "${CONVERTER_DIR}/struktogramm_xml_renderer.py" "$REPO_ROOT/$xml_file" "$svg_file"
+        GENERATION_PASSED=false
+    fi
+done
+
+if [ "$GENERATION_PASSED" = false ]; then
+    echo -e "\n${RED}❌ SVG-Generierung fehlgeschlagen. Bitte manuell prüfen.${NC}"
+    exit 1
+fi
+
+# Füge generierte SVGs zu Git hinzu
+echo -e "\n${YELLOW}3️⃣  SVG-Dateien zu Git hinzufügen...${NC}"
+
+for xml_file in $MODIFIED_XML; do
+    filename=$(basename "$xml_file" .xml)
+    svg_file="${SVG_DIR}/${filename}.svg"
+    
+    if [ -f "$svg_file" ]; then
+        echo -n "   📦 ${filename}.svg... "
+        git add "$svg_file"
+        echo -e "${GREEN}✓${NC}"
+    fi
+done
+
+echo -e "\n${GREEN}✅ Pre-Commit Hook abgeschlossen!${NC}"
+echo -e "${GREEN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}\n"
+
+exit 0
