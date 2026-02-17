@@ -18,7 +18,7 @@
   <rect x="50" y="80" width="600" height="50" class="box"/>
   
   <!-- Bezeichnung -->
-  <text x="60" y="98" class="text label">Anweisung:</text>
+  <text x="60" y="98" class="text label">Deklaration und Einlesen:</text>
   
   <!-- Text -->
   <text x="60" y="115" class="text">alter als Ganzzahl</text>
@@ -40,7 +40,7 @@
   <rect x="65" y="190" width="275" height="50" class="box"/>
   
   <!-- Bezeichnung -->
-  <text x="75" y="208" class="text label">Anweisung:</text>
+  <text x="75" y="208" class="text label">Ausgabe:</text>
   
   <!-- Text -->
   <text x="75" y="225" class="text">Jugendlicher</text>
@@ -48,7 +48,7 @@
   <rect x="365" y="190" width="275" height="50" class="box"/>
   
   <!-- Bezeichnung -->
-  <text x="375" y="208" class="text label">Anweisung:</text>
+  <text x="375" y="208" class="text label">Ausgabe:</text>
   
   <!-- Text -->
   <text x="375" y="225" class="text">Erwachsener</text>

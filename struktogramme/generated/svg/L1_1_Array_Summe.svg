@@ -18,7 +18,7 @@
   <rect x="50" y="80" width="600" height="50" class="box"/>
   
   <!-- Bezeichnung -->
-  <text x="60" y="98" class="text label">Anweisung:</text>
+  <text x="60" y="98" class="text label">Zuweisung:</text>
   
   <!-- Text -->
   <text x="60" y="115" class="text">summe = 0</text>
@@ -26,7 +26,7 @@
   <rect x="50" y="130" width="600" height="50" class="box"/>
   
   <!-- Bezeichnung -->
-  <text x="60" y="148" class="text label">Anweisung:</text>
+  <text x="60" y="148" class="text label">Zuweisung:</text>
   
   <!-- Text -->
   <text x="60" y="165" class="text">i = 0</text>
@@ -40,7 +40,7 @@
   <rect x="70" y="220" width="580" height="50" class="box"/>
   
   <!-- Bezeichnung -->
-  <text x="80" y="238" class="text label">Anweisung:</text>
+  <text x="80" y="238" class="text label">Zuweisung:</text>
   
   <!-- Text -->
   <text x="80" y="255" class="text">summe = summe + array[i]</text>
@@ -48,7 +48,7 @@
   <rect x="70" y="270" width="580" height="50" class="box"/>
   
   <!-- Bezeichnung -->
-  <text x="80" y="288" class="text label">Anweisung:</text>
+  <text x="80" y="288" class="text label">Zuweisung:</text>
   
   <!-- Text -->
   <text x="80" y="305" class="text">i = i + 1</text>
@@ -57,7 +57,7 @@
   <rect x="50" y="320" width="600" height="50" class="box"/>
   
   <!-- Bezeichnung -->
-  <text x="60" y="338" class="text label">Anweisung:</text>
+  <text x="60" y="338" class="text label">Ausgabe:</text>
   
   <!-- Text -->
   <text x="60" y="355" class="text">return summe</text>

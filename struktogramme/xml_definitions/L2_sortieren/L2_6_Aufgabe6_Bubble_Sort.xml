@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <struktogramm>
   <metadata>
     <titel>Aufgabe 6: Bubble Sort</titel>
@@ -21,15 +21,15 @@
             <wenn>
               <bedingung>zahlen[j] &gt; zahlen[j + 1]</bedingung>
               <dann>
-                <prozess>temp = zahlen[j]</prozess>
-                <prozess>zahlen[j] = zahlen[j + 1]</prozess>
-                <prozess>zahlen[j + 1] = temp</prozess>
+                <prozess typ="zuweisung">temp = zahlen[j]</prozess>
+                <prozess typ="zuweisung">zahlen[j] = zahlen[j + 1]</prozess>
+                <prozess typ="zuweisung">zahlen[j + 1] = temp</prozess>
               </dann>
             </wenn>
           </inhalt>
         </zaehle>
       </inhalt>
     </zaehle>
-    <ausgabe>Sortiertes Array: zahlen</ausgabe>
+    <ausgabe typ="ausgabe">Sortiertes Array: zahlen</ausgabe>
   </inhalt>
 </struktogramm>

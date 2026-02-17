@@ -48,7 +48,11 @@ class StruktogrammXMLValidator:
         self.errors = []
         self.warnings = []
     
-    def validate_file(self, file_path: str) -> Tuple[bool, List[str]]:
+    def validate_file(
+        self,
+        file_path: str,
+        fix_types: bool = False,
+    ) -> Tuple[bool, List[str], List[str]]:
         """
         Validate single XML file.
         
@@ -56,7 +60,7 @@ class StruktogrammXMLValidator:
             file_path: Path to XML file to validate
             
         Returns:
-            Tuple of (is_valid, list_of_error_messages)
+            Tuple of (is_valid, list_of_error_messages, list_of_warnings)
         """
         self.errors = []
         self.warnings = []
@@ -64,26 +68,32 @@ class StruktogrammXMLValidator:
         file_path = Path(file_path)
         
         if not file_path.exists():
-            return False, [f"Datei existiert nicht: {file_path}"]
+            return False, [f"Datei existiert nicht: {file_path}"], []
         
         if not file_path.suffix.lower() == ".xml":
-            return False, [f"Keine XML-Datei: {file_path}"]
+            return False, [f"Keine XML-Datei: {file_path}"], []
         
         try:
             tree = ET.parse(str(file_path))
             root = tree.getroot()
         except ET.ParseError as e:
-            return False, [f"XML Parse Error (Zeile {e.position[0]}): {e.msg}"]
+            return False, [f"XML Parse Error (Zeile {e.position[0]}): {e.msg}"], []
         except Exception as e:
-            return False, [f"Fehler beim Lesen: {str(e)}"]
+            return False, [f"Fehler beim Lesen: {str(e)}"], []
         
+        # Typ-Attribute prüfen/setzen
+        typ_changed = self._check_typ_attributes(root, fix_types)
+        if fix_types and typ_changed:
+            ET.indent(tree, space="  ", level=0)
+            tree.write(file_path, encoding="utf-8", xml_declaration=True)
+
         # Validate against XSD (manual checks since Python has no built-in XSD validator)
         errors = self._validate_against_schema(root, file_path)
         
         if errors:
-            return False, errors
+            return False, errors, self.warnings
         
-        return True, []
+        return True, [], self.warnings
     
     def _validate_against_schema(self, root: ET.Element, file_path: Path) -> List[str]:
         """
@@ -137,6 +147,49 @@ class StruktogrammXMLValidator:
         errors.extend(content_errors)
         
         return errors
+
+    def _check_typ_attributes(self, root: ET.Element, fix_types: bool) -> bool:
+        """Prueft fehlende typ-Attribute und kann sie automatisch setzen."""
+        changed = False
+        for elem in root.iter():
+            if elem.tag not in {"prozess", "eingabe", "ausgabe", "rueckgabe"}:
+                continue
+            if elem.get("typ"):
+                continue
+            text = elem.text.strip() if elem.text else ""
+            inferred = self._infer_typ_attr(elem.tag, text)
+            if inferred:
+                self.warnings.append(
+                    f"Warnung: typ-Attribut fehlt bei <{elem.tag}> (empfohlen: '{inferred}')"
+                )
+                if fix_types:
+                    elem.set("typ", inferred)
+                    changed = True
+            else:
+                self.warnings.append(
+                    f"Warnung: typ-Attribut fehlt bei <{elem.tag}> (konnte nicht abgeleitet werden)"
+                )
+        return changed
+
+    def _infer_typ_attr(self, tag: str, text: str) -> str:
+        """Leitet typ-Attribute aus Tag und Text ab."""
+        if tag == "ausgabe":
+            return "ausgabe"
+        if tag == "rueckgabe":
+            return "rueckgabe"
+        if tag == "eingabe":
+            if " als " in text:
+                return "deklaration_und_einlesen"
+            return "einlesen"
+        if tag == "prozess":
+            if " als " in text and "=" in text:
+                return "deklaration_und_initialisierung"
+            if " als " in text:
+                return "deklaration"
+            if "=" in text:
+                return "zuweisung"
+            return "default"
+        return "default"
     
     def _validate_content_structure(
         self, 
@@ -238,7 +291,11 @@ class StruktogrammXMLValidator:
         
         return errors
     
-    def validate_directory(self, directory: str) -> Dict[str, Tuple[bool, List[str]]]:
+    def validate_directory(
+        self,
+        directory: str,
+        fix_types: bool = False,
+    ) -> Dict[str, Tuple[bool, List[str], List[str]]]:
         """
         Validate all XML files in directory.
         
@@ -252,16 +309,16 @@ class StruktogrammXMLValidator:
         results = {}
         
         if not directory.is_dir():
-            return {directory: (False, [f"Nicht existendes Verzeichnis: {directory}"])}
+            return {directory: (False, [f"Nicht existendes Verzeichnis: {directory}"], [])}
         
         xml_files = list(directory.rglob("*.xml"))
         
         if not xml_files:
-            return {directory: (False, ["Keine .xml Dateien gefunden"])}
+            return {directory: (False, ["Keine .xml Dateien gefunden"], [])}
         
         for xml_file in xml_files:
-            is_valid, errors = self.validate_file(str(xml_file))
-            results[xml_file] = (is_valid, errors)
+            is_valid, errors, warnings = self.validate_file(str(xml_file), fix_types=fix_types)
+            results[xml_file] = (is_valid, errors, warnings)
         
         return results
 
@@ -278,18 +335,19 @@ def print_validation_results(results: Dict, verbose: bool = False) -> int:
         Exit code (0 = all valid, 1 = errors found)
     """
     total = len(results)
-    valid = sum(1 for is_valid, _ in results.values() if is_valid)
+    valid = sum(1 for is_valid, *_ in results.values() if is_valid)
     invalid = total - valid
+    warning_count = sum(len(warnings) for _, _, warnings in results.values())
     
     print(f"\n{'=' * 70}")
     print(f"📋 XML-Struktogramm Validierung")
     print(f"{'=' * 70}")
-    print(f"Gesamt: {total} | ✅ Gültig: {valid} | ❌ Fehler: {invalid}")
+    print(f"Gesamt: {total} | ✅ Gültig: {valid} | ❌ Fehler: {invalid} | ⚠️ Warnungen: {warning_count}")
     print(f"{'=' * 70}\n")
     
     if invalid > 0:
         print("❌ FEHLER GEFUNDEN:\n")
-        for file_path, (is_valid, errors) in results.items():
+        for file_path, (is_valid, errors, _) in results.items():
             if not is_valid:
                 print(f"📄 {file_path}")
                 for error in errors:
@@ -297,6 +355,15 @@ def print_validation_results(results: Dict, verbose: bool = False) -> int:
                 print()
     else:
         print("✅ ALLE DATEIEN GÜLTIG!")
+
+    if warning_count > 0 and verbose:
+        print("⚠️  WARNUNGEN:")
+        for file_path, (_, _, warnings) in results.items():
+            if warnings:
+                print(f"📄 {file_path}")
+                for warning in warnings:
+                    print(f"   ⚠️  {warning}")
+                print()
     
     print(f"{'=' * 70}\n")
     
@@ -327,6 +394,11 @@ def main():
         "--dry-run",
         action="store_true",
         help="Nur Beispiel-Validierungen durchführen"
+    )
+    parser.add_argument(
+        "--fix-types",
+        action="store_true",
+        help="Fehlende typ-Attribute automatisch setzen"
     )
     parser.add_argument(
         "-v", "--verbose",
@@ -366,8 +438,8 @@ def main():
         temp_path.write_text(test_xml)
         
         # Validate
-        is_valid, errors = validator.validate_file(str(temp_path))
-        results = {temp_path: (is_valid, errors)}
+        is_valid, errors, warnings = validator.validate_file(str(temp_path))
+        results = {temp_path: (is_valid, errors, warnings)}
         
         temp_path.unlink()  # Cleanup
         
@@ -377,10 +449,10 @@ def main():
     path = Path(args.path)
     
     if path.is_file():
-        is_valid, errors = validator.validate_file(str(path))
-        results = {path: (is_valid, errors)}
+        is_valid, errors, warnings = validator.validate_file(str(path), fix_types=args.fix_types)
+        results = {path: (is_valid, errors, warnings)}
     elif path.is_dir() or args.all:
-        results = validator.validate_directory(str(path))
+        results = validator.validate_directory(str(path), fix_types=args.fix_types)
     else:
         print(f"❌ Pfad nicht existiert: {path}")
         return 1

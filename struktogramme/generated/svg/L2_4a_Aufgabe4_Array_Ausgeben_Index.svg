@@ -23,7 +23,7 @@
   <rect x="70" y="120" width="580" height="50" class="box"/>
   
   <!-- Bezeichnung -->
-  <text x="80" y="138" class="text label">Anweisung:</text>
+  <text x="80" y="138" class="text label">Ausgabe:</text>
   
   <!-- Text -->
   <text x="80" y="155" class="text">werte[i]</text>

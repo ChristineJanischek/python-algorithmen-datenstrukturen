@@ -37,7 +37,7 @@
   <rect x="85" y="180" width="265" height="50" class="box"/>
   
   <!-- Bezeichnung -->
-  <text x="95" y="198" class="text label">Anweisung:</text>
+  <text x="95" y="198" class="text label">Ausgabe:</text>
   
   <!-- Text -->
   <text x="95" y="215" class="text">werte[i]</text>

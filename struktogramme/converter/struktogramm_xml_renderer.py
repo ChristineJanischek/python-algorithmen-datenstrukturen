@@ -160,7 +160,7 @@ class BWStruktogrammRenderer:
         text = element.text.strip() if element.text else ""
         
         # Ermittle die genaue Bezeichnung basierend auf typ-Attribut
-        typ_attr = element.get("typ", "default")
+        typ_attr = self._ensure_typ_attr(element, typ)
         
         # Mapping für alle differenzierten Bezeichnungen
         bezeichnung_map = {
@@ -216,6 +216,40 @@ class BWStruktogrammRenderer:
         
         self.current_y += height
         return svg
+
+    def _ensure_typ_attr(self, element: ET.Element, tag: str) -> str:
+        """Setzt fehlende typ-Attribute anhand einfacher Heuristiken."""
+        typ_attr = element.get("typ")
+        if typ_attr:
+            return typ_attr
+
+        text = element.text.strip() if element.text else ""
+        inferred = self._infer_typ_attr(text, tag)
+        if inferred:
+            element.set("typ", inferred)
+            return inferred
+
+        return "default"
+
+    def _infer_typ_attr(self, text: str, tag: str) -> str:
+        """Leitet den Typ aus Tag und Text ab, wenn kein Attribut vorhanden ist."""
+        if tag == "ausgabe":
+            return "ausgabe"
+        if tag == "rueckgabe":
+            return "rueckgabe"
+        if tag == "eingabe":
+            if " als " in text:
+                return "deklaration_und_einlesen"
+            return "einlesen"
+        if tag == "prozess":
+            if " als " in text and "=" in text:
+                return "deklaration_und_initialisierung"
+            if " als " in text:
+                return "deklaration"
+            if "=" in text:
+                return "zuweisung"
+            return "default"
+        return "default"
     
     def _render_alternative(self, element: ET.Element, x: int, width: int) -> str:
         """

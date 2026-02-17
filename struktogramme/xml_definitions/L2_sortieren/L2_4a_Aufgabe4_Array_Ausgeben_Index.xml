@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <struktogramm>
   <metadata>
     <titel>Aufgabe 4a: Array ausgeben mit Index</titel>
@@ -14,7 +14,7 @@
       <bedingung>i &lt; Anzahl der Elemente des Arrays werte</bedingung>
       <schrittweite>1</schrittweite>
       <inhalt>
-        <ausgabe>werte[i]</ausgabe>
+        <ausgabe typ="ausgabe">werte[i]</ausgabe>
       </inhalt>
     </wiederhole_von>
   </inhalt>

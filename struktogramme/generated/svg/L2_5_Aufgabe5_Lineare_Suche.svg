@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" 
      width="700" 
-     height="1200" 
-     viewBox="0 0 700 1200">
+     height="540" 
+     viewBox="0 0 700 540">
   
   <style>
     .box { stroke: #000; stroke-width: 2; fill: #fff; }
@@ -18,7 +18,7 @@
   <rect x="50" y="80" width="600" height="50" class="box"/>
   
   <!-- Bezeichnung -->
-  <text x="60" y="98" class="text label">Anweisung:</text>
+  <text x="60" y="98" class="text label">Zuweisung:</text>
   
   <!-- Text -->
   <text x="60" y="115" class="text">i = 0</text>
@@ -26,7 +26,7 @@
   <rect x="50" y="130" width="600" height="50" class="box"/>
   
   <!-- Bezeichnung -->
-  <text x="60" y="148" class="text label">Anweisung:</text>
+  <text x="60" y="148" class="text label">Zuweisung:</text>
   
   <!-- Text -->
   <text x="60" y="165" class="text">gefunden = falsch</text>
@@ -54,7 +54,7 @@
   <rect x="85" y="280" width="265" height="50" class="box"/>
   
   <!-- Bezeichnung -->
-  <text x="95" y="298" class="text label">Anweisung:</text>
+  <text x="95" y="298" class="text label">Zuweisung:</text>
   
   <!-- Text -->
   <text x="95" y="315" class="text">gefunden = wahr</text>
@@ -62,7 +62,7 @@
   <rect x="70" y="340" width="580" height="50" class="box"/>
   
   <!-- Bezeichnung -->
-  <text x="80" y="358" class="text label">Anweisung:</text>
+  <text x="80" y="358" class="text label">Zuweisung:</text>
   
   <!-- Text -->
   <text x="80" y="375" class="text">i = i + 1</text>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <struktogramm>
   <metadata>
     <titel>Aufgabe 4b: Array filtern nach Bedingung</titel>
@@ -16,7 +16,7 @@
         <wenn>
           <bedingung>werte[i] &gt; 30</bedingung>
           <dann>
-            <ausgabe>werte[i]</ausgabe>
+            <ausgabe typ="ausgabe">werte[i]</ausgabe>
           </dann>
         </wenn>
       </inhalt>

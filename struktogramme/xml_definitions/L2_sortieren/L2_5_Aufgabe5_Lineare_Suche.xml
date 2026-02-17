@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <struktogramm>
   <metadata>
     <titel>Aufgabe 5: Lineare Suche mit Flag</titel>
@@ -8,27 +8,27 @@
     <beschreibung>Suche nach Element in Array mit Hilfs-Flag</beschreibung>
   </metadata>
   <inhalt>
-    <prozess>i = 0</prozess>
-    <prozess>gefunden = falsch</prozess>
+    <prozess typ="zuweisung">i = 0</prozess>
+    <prozess typ="zuweisung">gefunden = falsch</prozess>
     <wiederhole>
       <bedingung>i &lt; Anzahl der Elemente des Arrays buchstaben AND NOT gefunden</bedingung>
       <inhalt>
         <wenn>
           <bedingung>buchstaben[i] == such</bedingung>
           <dann>
-            <prozess>gefunden = wahr</prozess>
+            <prozess typ="zuweisung">gefunden = wahr</prozess>
           </dann>
         </wenn>
-        <prozess>i = i + 1</prozess>
+        <prozess typ="zuweisung">i = i + 1</prozess>
       </inhalt>
     </wiederhole>
     <wenn>
       <bedingung>gefunden</bedingung>
       <dann>
-        <ausgabe>Element gefunden an Position i</ausgabe>
+        <ausgabe typ="ausgabe">Element gefunden an Position i</ausgabe>
       </dann>
       <sonst>
-        <ausgabe>Element nicht gefunden</ausgabe>
+        <ausgabe typ="ausgabe">Element nicht gefunden</ausgabe>
       </sonst>
     </wenn>
   </inhalt>

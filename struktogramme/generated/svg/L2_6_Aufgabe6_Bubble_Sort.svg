@@ -42,7 +42,7 @@
   <rect x="105" y="220" width="255" height="50" class="box"/>
   
   <!-- Bezeichnung -->
-  <text x="115" y="238" class="text label">Anweisung:</text>
+  <text x="115" y="238" class="text label">Zuweisung:</text>
   
   <!-- Text -->
   <text x="115" y="255" class="text">temp = zahlen[j]</text>
@@ -50,7 +50,7 @@
   <rect x="105" y="270" width="255" height="50" class="box"/>
   
   <!-- Bezeichnung -->
-  <text x="115" y="288" class="text label">Anweisung:</text>
+  <text x="115" y="288" class="text label">Zuweisung:</text>
   
   <!-- Text -->
   <text x="115" y="305" class="text">zahlen[j] = zahlen[j + 1]</text>
@@ -58,7 +58,7 @@
   <rect x="105" y="320" width="255" height="50" class="box"/>
   
   <!-- Bezeichnung -->
-  <text x="115" y="338" class="text label">Anweisung:</text>
+  <text x="115" y="338" class="text label">Zuweisung:</text>
   
   <!-- Text -->
   <text x="115" y="355" class="text">zahlen[j + 1] = temp</text>
@@ -68,7 +68,7 @@
   <rect x="50" y="370" width="600" height="50" class="box"/>
   
   <!-- Bezeichnung -->
-  <text x="60" y="388" class="text label">Anweisung:</text>
+  <text x="60" y="388" class="text label">Ausgabe:</text>
   
   <!-- Text -->
   <text x="60" y="405" class="text">Sortiertes Array: zahlen</text>

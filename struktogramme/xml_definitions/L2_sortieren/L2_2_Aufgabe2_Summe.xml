@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <struktogramm>
   <metadata>
     <titel>Aufgabe 2: Summenberechnung mit While-Schleife</titel>
@@ -8,16 +8,16 @@
     <beschreibung>Berechnet die Summe von Eingabezahlen bis -1 eingegeben wird</beschreibung>
   </metadata>
   <inhalt>
-    <prozess>summe = 0</prozess>
-    <eingabe>zahl als Ganzzahl</eingabe>
+    <prozess typ="zuweisung">summe = 0</prozess>
+    <eingabe typ="deklaration_und_einlesen">zahl als Ganzzahl</eingabe>
     <wiederhole>
       <bedingung>zahl != -1</bedingung>
       <inhalt>
-        <prozess>summe = summe + zahl</prozess>
-        <ausgabe>Summe + summe</ausgabe>
-        <eingabe>zahl als Ganzzahl</eingabe>
+        <prozess typ="zuweisung">summe = summe + zahl</prozess>
+        <ausgabe typ="ausgabe">Summe + summe</ausgabe>
+        <eingabe typ="deklaration_und_einlesen">zahl als Ganzzahl</eingabe>
       </inhalt>
     </wiederhole>
-    <ausgabe>Programm beendet</ausgabe>
+    <ausgabe typ="ausgabe">Programm beendet</ausgabe>
   </inhalt>
 </struktogramm>

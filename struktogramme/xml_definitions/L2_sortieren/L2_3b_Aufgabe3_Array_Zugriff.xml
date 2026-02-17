@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <struktogramm>
   <metadata>
     <titel>Aufgabe 3b: Array-Zugriff</titel>
@@ -8,9 +8,9 @@
     <beschreibung>Zugriff auf Array-Elemente und Längenbestimmung</beschreibung>
   </metadata>
   <inhalt>
-    <prozess>erstes = noten[0]</prozess>
-    <prozess>noten[Anzahl der Elemente des Arrays noten - 1] = 1</prozess>
-    <prozess>laenge = Anzahl der Elemente des Arrays noten</prozess>
-    <ausgabe>erstes, laenge</ausgabe>
+    <prozess typ="zuweisung">erstes = noten[0]</prozess>
+    <prozess typ="zuweisung">noten[Anzahl der Elemente des Arrays noten - 1] = 1</prozess>
+    <prozess typ="zuweisung">laenge = Anzahl der Elemente des Arrays noten</prozess>
+    <ausgabe typ="ausgabe">erstes, laenge</ausgabe>
   </inhalt>
 </struktogramm>

@@ -237,7 +237,7 @@ Ausgabe: "Die Fläche beträgt " + qm + " Quadratmeter."
 
 **XML Darstellung:**
 ```xml
-<ausgabe>"Die Fläche beträgt " + qm + " Quadratmeter."</ausgabe>
+<ausgabe typ="ausgabe">"Die Fläche beträgt " + qm + " Quadratmeter."</ausgabe>
 ```
 
 **Visuell - Struktogramm:**
@@ -264,7 +264,7 @@ Ausgabe: "Hallo!" + Zeilenumbruch
 
 **XML Darstellung:**
 ```xml
-<ausgabe>"Hallo!" + Zeilenumbruch</ausgabe>
+<ausgabe typ="ausgabe">"Hallo!" + Zeilenumbruch</ausgabe>
 ```
 
 **Visuell - Struktogramm:**
@@ -286,7 +286,7 @@ Rückgabe: strecke
 
 **XML Darstellung:**
 ```xml
-<rueckgabe>strecke</rueckgabe>
+<rueckgabe typ="rueckgabe">strecke</rueckgabe>
 ```
 
 **Visuell - Struktogramm:**
@@ -627,7 +627,7 @@ Ausgabe: zahlen[1]
 
 **XML Darstellung:**
 ```xml
-<ausgabe>zahlen[1]</ausgabe>
+<ausgabe typ="ausgabe">zahlen[1]</ausgabe>
 ```
 
 **Visuell - Struktogramm:**
@@ -649,7 +649,7 @@ Ausgabe: zahlen
 
 **XML Darstellung:**
 ```xml
-<ausgabe>zahlen</ausgabe>
+<ausgabe typ="ausgabe">zahlen</ausgabe>
 ```
 
 **Visuell - Struktogramm:**
@@ -721,22 +721,6 @@ Deklaration und Initialisierung: zahlen = [1, 2, 3, 4, 5]
 Deklaration und Initialisierung: n = Anzahl der Elemente des Arrays zahlen
 Zähle i von 0 bis n - 1, Schrittweite 1
     Ausgabe: zahlen[i]
-```
-
-**Grafische Darstellung:**
-```
-┌─────────────────────────────────────────────────────────┐
-│ Deklaration und Initialisierung:                        │
-│ zahlen = [1, 2, 3, 4, 5]                                │
-├─────────────────────────────────────────────────────────┤
-│ Deklaration und Initialisierung:                        │
-│ n = Anzahl der Elemente des Arrays zahlen               │
-├─────────────────────────────────────────────────────────┤
-│ ┌─ Zähle i von 0 bis n - 1, Schrittweite 1              │
-│ │                                                       │
-│ │    Ausgabe: zahlen[i]                                 │
-│ │                                                       │
-└─┘───────────────────────────────────────────────────────┘
 ```
 
 ---
@@ -853,12 +837,6 @@ Ausgabe: "Sortiertes Array: " + zahlen
 
 ### Elementare Operationen (Anweisungen)
 
-```
-┌────────────────────────────────┐
-│ Bezeichnung: Formulierung      │  ← Einfaches Rechteck
-└────────────────────────────────┘    mit Bezeichnung + Text
-```
-
 **Formen:** Deklaration, Initialisierung, Zuweisung, Ausgabe, Rückgabe, Funktionsaufruf
 
 ---
@@ -866,40 +844,12 @@ Ausgabe: "Sortiertes Array: " + zahlen
 ### Kontrollstrukturen
 
 #### 1. Alternative (Verzweigung)
-```
-┌─────────────────────────┐
-│╲                       ╱│
-│ ╲    Bedingung        ╱ │  ← Rechteck mit Dreieck
-│  ╲_________________/__│     (Hypotenuse oben, Spitze unten)
-│     │            │      │
-│  J  │            │  N   │  ← J/N in Ecken unten
-└─────┴────────────┴──────┘
-```
-
 ---
 
 #### 2. While-Schleife
-```
-┌──────────────────────────┐
-│ Wiederhole solange ...   │  ← Schleifenkopf
-│ ┌─ ──────────────────    │
-│ │  (Schleifenkörper)     │  ← L-Form mit eingerücktem Körper
-│ │                        │
-└─┘────────────────────────┘     Vertikale Linie = L
-```
-
 ---
 
 #### 3. For-Schleife
-```
-┌──────────────────────────┐
-│ Zähle i von 0 bis n ...  │  ← Schleifenkopf
-│ ┌─ ──────────────────    │
-│ │  (Schleifenkörper)     │  ← Gleiche L-Form wie While
-│ │                        │
-└─┘────────────────────────┘     (nur andere Kopf-Formulierung)
-```
-
 ---
 
 ## 10. Speichern und Laden von Datensätzen (Zusätzlich)
@@ -907,42 +857,6 @@ Ausgabe: "Sortiertes Array: " + zahlen
 *(Falls benötigt für fortgeschrittene Themen)*
 
 ---
-
-**Grafische Darstellung:**
-```
-┌───────────────────────────────────────────────────────────┐
-│ Deklaration und Initialisierung:                          │
-│ namen = ["Anna", "Ben", "Clara"]                          │
-├───────────────────────────────────────────────────────────┤
-│ Einlesen: suchName als Text                               │
-├───────────────────────────────────────────────────────────┤
-│ Deklaration und Initialisierung: gefunden = falsch        │
-├───────────────────────────────────────────────────────────┤
-│ Deklaration und Initialisierung:                          │
-│ n = Anzahl der Elemente des Arrays namen                  │
-├───────────────────────────────────────────────────────────┤
-│ ┌─ Zähle i von 0 bis n - 1, Schrittweite 1                │
-│ │                                                         │
-│ │  ┌───────────────────────────────────────────────────┐  │
-│ │  │           namen[i] == suchName                    │  │
-│ │  ├───────────────────────────────────────────────────┤  │
-│ │  │ J                      │ N                        │  │
-│ │  │                        │                          │  │
-│ │  │ Zuweisung:             │ (nichts)                 │  │
-│ │  │ gefunden = wahr        │                          │  │
-│ │  │                        │                          │  │
-│ │  └────────────────────────┴──────────────────────────┘  │
-│ │                                                         │
-└─┘─────────────────────────────────────────────────────────┘
-│                  gefunden == wahr                         │
-├───────────────────────────────────────────────────────────┤
-│ J                              │ N                        │
-│                                │                          │
-│ Ausgabe:                       │ Ausgabe:                 │
-│ "Name gefunden!"               │ "Name nicht gefunden!"   │
-│                                │                          │
-└────────────────────────────────┴──────────────────────────┘
-```
 
 ---
 
