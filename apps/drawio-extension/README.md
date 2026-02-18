@@ -27,6 +27,31 @@ npm run dev
 
 ---
 
+## 🧪 Testing (Phase 2-A)
+
+**Neu!** Du kannst das Stencil-System jetzt in Draw.io testen - **OHNE npm install**!
+
+📖 **[→ Zum Testing Guide (TESTING_GUIDE.md)](./TESTING_GUIDE.md)**
+
+**Was du testen kannst:**
+- ✅ 11 Shapes in Draw.io laden (via URL oder lokale Datei)
+- ✅ Drag & Drop auf Canvas
+- ✅ Text editieren
+- ✅ Farb-Kodierung überprüfen
+- ✅ Export als PNG/SVG
+
+**Warum jetzt testen?**
+- Validiert Phase 2-A (Stencil-System)
+- Gibt Feedback vor Phase 2-B (Plugin-Code)
+- Best Practice: Test early, test often!
+
+**Quick Test:** Öffne [Draw.io](https://app.diagrams.net) → File → Open Library from → URL → Gib ein:
+```
+https://raw.githubusercontent.com/ChristineJanischek/python-algorithmen-datenstrukturen/main/apps/drawio-extension/stencil.xml
+```
+
+---
+
 ## 📋 Was ist dieses Projekt?
 
 Dies ist eine **Draw.io Extension** für Struktogramme nach dem Baden-Württemberg Abitur-Standard.
@@ -72,33 +97,45 @@ npm test:watch   # Watch-Mode für TDD
 
 ## 📚 Dokumentation
 
+### Setup & Installation
 - **[Installation Guide](./docs/installation.md)** - Detaillierte Setup-Anleitung
 - **[Architecture](./docs/architecture.md)** - Technische Architektur
-- **[Developer Guide](./docs/dev-guide.md)** - Wie trägt man Code bei?
-- **[API Reference](./docs/api-reference.md)** - Alle Functionen & Hooks
+- **[Dependencies](./DEPENDENCIES.md)** - Alle NPM-Pakete & Version Constraints
+
+### Development & Testing
+- **[Testing Guide](./TESTING_GUIDE.md)** - 🆕 Stencil in Draw.io testen (Phase 2-A)
+- **[Stencil Guide](./STENCIL_GUIDE.md)** - Technische Doku zu Shapes & SVG
+- **[Developer Guide](./docs/dev-guide.md)** - Wie trägt man Code bei? (coming soon)
+
+### Security & Progress
+- **[Security Notes](./SECURITY_NOTES.md)** - Known Vulnerabilities & Mitigation
+- **[Phase 1 Progress](./PHASE_1_PROGRESS.md)** - Setup-Phase Dokumentation
 
 ---
 
 ## 🎯 Roadmap (Phase 1-4)
 
-### ✅ Phase 1: Vorbereitung (Diese Woche)
-- Directory Structure
-- package.json
-- Setup Dokumentation
+### ✅ Phase 1: Vorbereitung (COMPLETE)
+- ✅ Directory Structure
+- ✅ package.json mit allen Dependencies
+- ✅ Setup Dokumentation (Installation, Architecture)
+- ✅ Security Assessment (Option B: Monitor & Document)
 
-### 🔄 Phase 2: Stencils & Plugin (Nächste Woche)
-- Stencil XML Definition
-- Draw.io Palette Integration
-- Basic Plugin Loader
+### 🔄 Phase 2: Stencils & Plugin (IN PROGRESS)
+- ✅ **Phase 2-A:** Stencil XML Definition (11 Shapes) - TESTABLE!
+- 🔄 **Phase 2-B:** Plugin Loader Implementation
+- 🔄 **Phase 2-C:** Draw.io Palette Integration
+- 🔄 **Phase 2-D:** Shape Renderer & Event Handlers
+- 🔄 **Phase 2-E:** Complete Testing & Documentation
 
-### 🔄 Phase 3: Konvertierung (Woche 3)
+### 🔜 Phase 3: Konvertierung (Woche 3)
 - XML → Draw.io Format Converter
-- SVG Export
-- API Integration
+- SVG Export via API
+- Backend Integration (FastAPI endpoints)
 
-### 🔄 Phase 4: Dokumentation & Tests (Woche 4)
+### 🔜 Phase 4: Dokumentation & UX (Woche 4)
 - Komplette Developer Docs
-- Schüler-Tutorials
+- Schüler-Tutorials mit Screenshots
 - Beispiele & Use Cases
 
 ---
