@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<struktogramm>
+  <metadata>
+    <titel>Aufgabe 2b Alternative: Summe mit Break</titel>
+    <level>L2</level>
+    <kategorie>Schleifen</kategorie>
+    <autor>Klassenarbeit</autor>
+    <beschreibung>Alternative Lösung mit While True und Break</beschreibung>
+  </metadata>
+  <inhalt>
+    <prozess typ="zuweisung">summe = 0</prozess>
+    <wiederhole>
+      <bedingung>wahr</bedingung>
+      <inhalt>
+        <eingabe typ="deklaration_und_einlesen">zahl als Ganzzahl</eingabe>
+        <wenn>
+          <bedingung>zahl == -1</bedingung>
+          <dann>
+            <prozess typ="default">Abbruch</prozess>
+          </dann>
+          <sonst>
+            <prozess typ="zuweisung">summe = summe + zahl</prozess>
+            <ausgabe typ="ausgabe">Summe + summe</ausgabe>
+          </sonst>
+        </wenn>
+      </inhalt>
+    </wiederhole>
+  </inhalt>
+</struktogramm>

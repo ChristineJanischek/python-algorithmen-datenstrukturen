@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" 
+     width="700" 
+    height="250" 
+    viewBox="0 0 700 250">
+  
+  <style>
+    .box { stroke: #000; stroke-width: 2; fill: #fff; }
+    .text { font-family: Arial, sans-serif; font-size: 13px; fill: #000; }
+    .label { font-size: 11px; fill: #666; }
+    .bold { font-weight: bold; }
+  </style>
+  
+  <!-- Titel -->
+  <text x="350" y="30" class="text bold" text-anchor="middle" font-size="16">For-Schleife (Zähle) - Beispiel</text>
+  <line x1="30" y1="50" x2="670" y2="50" stroke="#000" stroke-width="1"/>
+  
+  <!-- PROZESS -->
+  <rect x="50" y="80" width="600" height="50" class="box"/>
+  
+  <!-- Bezeichnung -->
+  <text x="60" y="98" class="text label">Deklaration und Initialisierung:</text>
+  
+  <!-- Text -->
+  <text x="60" y="115" class="text">werte als Array = [1, 2, 3, 4, 5]</text>
+  <!-- FOR-SCHLEIFE (umgedrehtes L) -->
+  <rect x="50" y="130" width="600" height="40" class="box"/>
+  <text x="60" y="155" class="text">Zähle i von 0 bis Anzahl der Elemente des Arrays werte - 1, Schrittweite 1</text>
+  
+  <line x1="50" y1="170" x2="50" y2="220" stroke="#000" stroke-width="2"/>
+  <!-- AUSGABE -->
+  <rect x="70" y="170" width="580" height="50" class="box"/>
+  
+  <!-- Bezeichnung -->
+  <text x="80" y="188" class="text label">Ausgabe:</text>
+  
+  <!-- Text -->
+  <text x="80" y="205" class="text">werte[i]</text>
+  <line x1="50" y1="220" x2="650" y2="220" stroke="#000" stroke-width="2"/>
+</svg>

@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<struktogramm>
+  <metadata>
+    <titel>Aufgabe 1: Altersklassifizierung</titel>
+    <level>L2</level>
+    <kategorie>Verzweigung</kategorie>
+    <autor>Klassenarbeit</autor>
+    <beschreibung>Klassifiziert Personen nach Alter in Jugendliche und Erwachsene</beschreibung>
+  </metadata>
+  <inhalt>
+    <eingabe typ="deklaration_und_einlesen">alter als Ganzzahl</eingabe>
+    <wenn>
+      <bedingung>alter &lt; 18</bedingung>
+      <dann>
+        <ausgabe typ="ausgabe">Jugendlicher</ausgabe>
+      </dann>
+      <sonst>
+        <ausgabe typ="ausgabe">Erwachsener</ausgabe>
+      </sonst>
+    </wenn>
+  </inhalt>
+</struktogramm>

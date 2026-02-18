@@ -69,6 +69,25 @@ Die folgenden Instructions sind in `.github/copilot-instructions.md` integriert:
 Die Struktogramm-Tools sind für folgende Szenarien optimiert:
 
 ### 1. **Validierung in Echtzeit**
+## 📐 Struktogramm (grafische Notation)
+```
+┌────────────────────────────────────────┐
+│ Wenn Anfrage Struktogramm enthaelt,    │
+│ dann                                   │
+│   J                                    │
+│     Validierung ausfuehren             │
+│     Wenn Fehler, dann                  │
+│       J                                │
+│         Rueckgabe:                     │
+│ korrigierte Antwort                    │
+│       , sonst                          │
+│       N                                │
+│         (keine Aktion)                 │
+│   , sonst                              │
+│   N                                    │
+│     (keine Aktion)                     │
+└────────────────────────────────────────┘
+```
 ```python
 # Pseudocode
 if "Struktogramm" in user_request:

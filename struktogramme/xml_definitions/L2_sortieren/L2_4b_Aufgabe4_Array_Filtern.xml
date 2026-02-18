@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<struktogramm>
+  <metadata>
+    <titel>Aufgabe 4b: Array filtern nach Bedingung</titel>
+    <level>L2</level>
+    <kategorie>Schleifen und Arrays</kategorie>
+    <autor>Klassenarbeit</autor>
+    <beschreibung>Nur Array-Elemente ausgeben die größer als 30 sind</beschreibung>
+  </metadata>
+  <inhalt>
+    <zaehle>
+      <variable>i</variable>
+      <von>0</von>
+      <bis>Anzahl der Elemente des Arrays werte - 1</bis>
+      <inhalt>
+        <wenn>
+          <bedingung>werte[i] &gt; 30</bedingung>
+          <dann>
+            <ausgabe typ="ausgabe">werte[i]</ausgabe>
+          </dann>
+        </wenn>
+      </inhalt>
+    </zaehle>
+  </inhalt>
+</struktogramm>

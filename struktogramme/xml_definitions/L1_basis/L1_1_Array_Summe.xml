@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<struktogramm>
+  <metadata>
+    <titel>Array-Summe berechnen</titel>
+    <level>L1</level>
+    <kategorie>Schleifen und Arrays</kategorie>
+    <autor>System</autor>
+    <beschreibung>Berechnet die Summe aller Elemente eines Arrays</beschreibung>
+  </metadata>
+  <inhalt>
+    <prozess typ="zuweisung">summe = 0</prozess>
+    <prozess typ="zuweisung">i = 0</prozess>
+    <wiederhole>
+      <bedingung>i &lt; länge(array)</bedingung>
+      <inhalt>
+        <prozess typ="zuweisung">summe = summe + array[i]</prozess>
+        <prozess typ="zuweisung">i = i + 1</prozess>
+      </inhalt>
+    </wiederhole>
+    <ausgabe typ="ausgabe">return summe</ausgabe>
+  </inhalt>
+</struktogramm>

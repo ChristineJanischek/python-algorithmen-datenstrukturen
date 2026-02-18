@@ -1,0 +1,44 @@
+#!/bin/bash
+#
+# Pre-Commit Hook für Struktogramm-Validierung
+# Stellt sicher, dass alle geänderten Dateien die richtigen Struktogramm-Notationen haben
+#
+# Installation:
+# cp .github/hooks/pre-commit-struktogramm .git/hooks/pre-commit
+# chmod +x .git/hooks/pre-commit
+
+echo "🔍 Validiere Struktogramm-Notationen..."
+
+# Finde alle geänderten Markdown-Dateien in docs/
+CHANGED_DOCS=$(git diff --cached --name-only --diff-filter=ACMR | grep "^docs/.*\.md$")
+
+if [ -z "$CHANGED_DOCS" ]; then
+    echo "✓ Keine Markdown-Dateien in docs/ geändert"
+    exit 0
+fi
+
+# Python-Validator aufrufen
+python -m src.utils.struktogramm_validator 2>/dev/null
+
+VALIDATOR_EXIT=$?
+
+if [ $VALIDATOR_EXIT -ne 0 ]; then
+    echo ""
+    echo "⚠️  WARNUNG: Struktogramm-Validierungsfehler gefunden!"
+    echo ""
+    echo "Bitte überprüfen Sie die Datei validation_report.md"
+    echo "Wichtig:"
+    echo "  - Python-Code sollte IMMER von grafischen Struktogrammen begleitet sein"
+    echo "  - Verwenden Sie die Box-Drawing-Elemente: ┌ ├ └ │ ─"
+    echo ""
+    echo "Tipps:"
+    echo "  1. Siehe: docs/handbuch/STRUKTOGRAMM_INTEGRATION_GUIDE.md"
+    echo "  2. Siehe: struktogramme/Operatorenliste-Struktogramme.md"
+    echo ""
+    
+    # Kommit trotzdem erlauben mit --no-verify, aber Warnung zeigen
+    echo "Drücken Sie Enter zum Fortfahren oder Ctrl+C zum Abbrechen..."
+    read
+fi
+
+exit 0

@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+<struktogramm>
+  <metadata>
+    <titel>Aufgabe 6: Bubble Sort</titel>
+    <level>L2</level>
+    <kategorie>Sortieralgorithmen</kategorie>
+    <autor>Klassenarbeit</autor>
+    <beschreibung>Sortiert Array mit Bubble Sort Algorithmus</beschreibung>
+  </metadata>
+  <inhalt>
+    <zaehle>
+      <variable>i</variable>
+      <von>0</von>
+      <bis>Anzahl der Elemente des Arrays zahlen - 1</bis>
+      <inhalt>
+        <zaehle>
+          <variable>j</variable>
+          <von>0</von>
+          <bis>Anzahl der Elemente des Arrays zahlen - i - 1</bis>
+          <inhalt>
+            <wenn>
+              <bedingung>zahlen[j] &gt; zahlen[j + 1]</bedingung>
+              <dann>
+                <prozess typ="zuweisung">temp = zahlen[j]</prozess>
+                <prozess typ="zuweisung">zahlen[j] = zahlen[j + 1]</prozess>
+                <prozess typ="zuweisung">zahlen[j + 1] = temp</prozess>
+              </dann>
+            </wenn>
+          </inhalt>
+        </zaehle>
+      </inhalt>
+    </zaehle>
+    <ausgabe typ="ausgabe">Sortiertes Array: zahlen</ausgabe>
+  </inhalt>
+</struktogramm>

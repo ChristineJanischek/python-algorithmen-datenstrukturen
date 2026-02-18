@@ -19,7 +19,7 @@ zu Section 1 hinzugefügt werden sollten.
 ### SOFORTMASSNAHMEN
 
 1. **IMMER** die neueste Operatorenliste konsultieren:
-   ```
+   ```python
    struktogramme/Operatorenliste-Struktogramme.md
    ```
 
@@ -65,6 +65,29 @@ Wenn bedingung, dann
 ### TOOLS VERFÜGBAR
 
 Falls verfügbar, verwende die automatischen Werkzeuge:
+
+
+## 📐 Struktogramm (grafische Notation)
+
+<!-- START_GRAPHIC_STRUKTOGRAMM -->
+```
+┌────────────────────────────────────────┐
+│ Aufruf:                                │
+│ validate_document                      │
+│ Wenn Fehler vorhanden, dann            │
+│   J                                    │
+│     Aufruf:                            │
+│     refactor_content                   │
+│     Ausgabe:                           │
+│     korrigiertes Struktogramm          │
+│   , sonst                              │
+│   N                                    │
+│     Ausgabe:                           │
+│     Struktogramm                       │
+└────────────────────────────────────────┘
+```
+<!-- END_GRAPHIC_STRUKTOGRAMM -->
+
 
 ```python
 from apps.tools.struktogramm_validator import StruktogrammValidator
@@ -115,6 +138,34 @@ Wenn alter < 18, dann
 | Fehlende Komma vor `sonst` | Schreibe: `, sonst` (mit Komma und Leerzeichen) |
 
 ### VALIDIERUNGSPROZESS VOR AUSGABE
+
+
+## 📐 Struktogramm (grafische Notation)
+
+<!-- START_GRAPHIC_STRUKTOGRAMM -->
+```
+┌────────────────────────────────────────┐
+│ Wenn englische Keywords enthalten,     │
+│ dann                                  │
+│   J                                    │
+│     Rueckgabe:                         │
+│     Korrektur                          │
+│   , sonst                              │
+│   N                                    │
+│     Aufruf:                            │
+│     validate_document                  │
+│     Wenn Fehler, dann                  │
+│       J                                │
+│         Rueckgabe:                     │
+│         Korrektur                      │
+│       , sonst                          │
+│       N                                │
+│         Rueckgabe:                     │
+│         Ausgabe                        │
+└────────────────────────────────────────┘
+```
+<!-- END_GRAPHIC_STRUKTOGRAMM -->
+
 
 ```python
 def validate_before_output(struktogramm_text):

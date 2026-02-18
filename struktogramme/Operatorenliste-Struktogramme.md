@@ -3,6 +3,48 @@
 Version 2.2 vom 01.09.2024  
 Abiturprüfung Baden-Württemberg
 
+## Inhaltsverzeichnis
+
+1. [Variablen und Datenstrukturen](#1-variablen-und-datenstrukturen)
+   - 1.1 [Deklaration](#11-deklaration)
+   - 1.2 [Initialisierung](#12-initialisierung)
+   - 1.3 [Deklaration und Initialisierung](#13-deklaration-und-initialisierung)
+   - 1.4 [Zuweisung](#14-zuweisung)
+
+2. [Ein- und Ausgabe](#2-ein--und-ausgabe)
+   - 2.1 [Einlesen](#21-einlesen)
+   - 2.2 [Ausgabe](#22-ausgabe)
+   - 2.3 [Zeilenweise Ausgabe](#23-zeilenweise-ausgabe)
+   - 2.4 [Rückgabe](#24-rückgabe)
+
+3. [Funktionen und Methoden](#3-funktionen-und-methoden)
+   - 3.1 [Aufruf](#31-aufruf)
+
+4. [Kontrollstrukturen](#4-kontrollstrukturen)
+   - 4.1 [Bedingte Anweisung (Verzweigung)](#41-bedingte-anweisung-verzweigung)
+   - 4.2 [Wiederhole-solange-Schleife (while-Schleife)](#42-wiederhole-solange-schleife-while-schleife)
+   - 4.3 [Zählergesteuerte Schleife (for-Schleife)](#43-zählergesteuerte-schleife-for-schleife)
+
+5. [Arrays](#5-arrays)
+   - 5.1 [Array-Deklaration und Initialisierung](#51-array-deklaration-und-initialisierung)
+   - 5.2 [Array-Element-Zuweisung](#52-array-element-zuweisung)
+   - 5.3 [Anhängen an ein Array](#53-anhängen-an-ein-array)
+   - 5.4 [Anzahl der Elemente eines Arrays](#54-anzahl-der-elemente-eines-arrays)
+   - 5.5 [Array-Element-Ausgabe](#55-array-element-ausgabe)
+   - 5.6 [Gesamten Array ausgeben](#56-gesamten-array-ausgeben)
+
+6. [Zusammenfassung der wichtigsten Konzepte](#zusammenfassung-der-wichtigsten-konzepte)
+
+7. [Praktische Hinweise für die Verwendung](#praktische-hinweise-für-die-verwendung)
+
+8. [Weitere Beispiele - Verschiedene Kontrollstrukturen](#8-weitere-beispiele---verschiedene-kontrollstrukturen)
+
+9. [Zusammenfassung - Alle Struktogramm-Formen im Überblick](#9-zusammenfassung---alle-struktogramm-formen-im-überblick)
+
+10. [Speichern und Laden von Datensätzen](#10-speichern-und-laden-von-datensätzen-zusätzlich)
+
+---
+
 ## Wichtige Hinweise
 
 - **Kursive Ausdrücke** sind allgemeine Platzhalter (z. B. `variable`, `datentyp`, `wert`, `bedingung`)
@@ -13,6 +55,14 @@ Abiturprüfung Baden-Württemberg
 ---
 
 ## 1. Variablen und Datenstrukturen
+
+**Alle Anweisungstypen - Überblick:**
+
+![Anweisungen: Alle Varianten](generated/svg/Operatorenliste_Anweisungen_Alle_Varianten.svg)
+
+*Übersicht aller Anweisungstypen nach BW-Standard: Deklaration, Deklaration und Initialisierung, Einlesen, Deklaration und Einlesen, Zuweisung, Ausgabe, Rückgabe*
+
+---
 
 ### 1.1 Deklaration
 
@@ -33,12 +83,18 @@ Abiturprüfung Baden-Württemberg
 Deklaration: alter als Ganzzahl
 ```
 
-**Grafische Darstellung im Struktogramm:**
+**XML Darstellung:**
+```xml
+<prozess typ="deklaration">alter als Ganzzahl</prozess>
 ```
-┌─────────────────────────────────────┐
-│ Deklaration: alter als Ganzzahl     │
-└─────────────────────────────────────┘
-```
+
+**Visuell - Struktogramm:**
+
+![Deklaration - Beispiel](generated/svg/sgr_deklaration.svg)
+
+**Unterscheidung in der Operatorenliste:**
+- **Nur Deklaration** (keine Initialisierung mit Wert)
+- Variable wird reserviert, hat aber noch keinen Initialwert
 
 ---
 
@@ -50,15 +106,19 @@ Deklaration: alter als Ganzzahl
 
 **Beispiel:**
 ```
-Initialisierung: guthaben = 10
+Zuweisung: guthaben = 10
 ```
 
-**Grafische Darstellung im Struktogramm:**
+**XML Darstellung:**
+```xml
+<prozess typ="zuweisung">guthaben = 10</prozess>
 ```
-┌─────────────────────────────────────┐
-│ Initialisierung: guthaben = 10      │
-└─────────────────────────────────────┘
-```
+
+**Visuell - Struktogramm:**
+
+![Initialisierung - Beispiel](generated/svg/sgr_initialisierung.svg)
+
+**Hinweis:** Wird selten isoliert verwendet; meist kombiniert mit Deklaration (siehe 1.3)
 
 ---
 
@@ -66,20 +126,27 @@ Initialisierung: guthaben = 10
 
 **Operator:** `Deklaration und Initialisierung: variable |als datentyp| = wert`
 
-**Beschreibung:** Kombination von Deklaration und Initialisierung
+**Beschreibung:** Kombination von Deklaration und Initialisierung - eine Variable wird gleichzeitig deklariert und mit einem Wert initialisiert
+
+**Zweck:** Dies ist die häufigste Form bei der Variablenerstellung, da die Variable sofort einsatzbereit ist.
 
 **Beispiel:**
 ```
 Deklaration und Initialisierung: anzahl als Ganzzahl = 0
 ```
 
-**Grafische Darstellung im Struktogramm:**
+**XML Darstellung:**
+```xml
+<prozess typ="deklaration_und_initialisierung">anzahl als Ganzzahl = 0</prozess>
 ```
-┌───────────────────────────────────────────────────────┐
-│ Deklaration und Initialisierung:                      │
-│ anzahl als Ganzzahl = 0                               │
-└───────────────────────────────────────────────────────┘
-```
+
+**Visuell - Struktogramm:**
+
+![Deklaration und Initialisierung - Beispiel](generated/svg/sgr_deklaration_init.svg)
+
+**Unterscheidung:**
+- Zeile 1 der Bezeichnung zeigt den **Operator** (Deklaration und Initialisierung)
+- Zeile 2+ zeigen die **konkrete Formulierung** (Variable, Typ, Wert)
 
 ---
 
@@ -89,17 +156,25 @@ Deklaration und Initialisierung: anzahl als Ganzzahl = 0
 
 **Beschreibung:** Zuweisung eines Wertes (oder des Ergebnisses einer Berechnung o. ä.) zu einem Element, das eine Variable oder ein anderes Element (z. B. ein Ausgabefeld) sein kann
 
+**Zweck:** Wertzuweisung an eine bereits existierende Variable (change value during execution)
+
 **Beispiel:**
 ```
 Zuweisung: qm = laenge * breite
 ```
 
-**Grafische Darstellung im Struktogramm:**
+**XML Darstellung:**
+```xml
+<prozess typ="zuweisung">qm = laenge * breite</prozess>
 ```
-┌─────────────────────────────────────┐
-│ Zuweisung: qm = laenge * breite     │
-└─────────────────────────────────────┘
-```
+
+**Visuell - Struktogramm:**
+
+![Zuweisung - Beispiel](generated/svg/sgr_zuweisung.svg)
+
+**Unterscheidung:**
+- **Unterschied zu Deklaration:** Bei Zuweisung existiert die Variable bereits
+- **Unterschied zu Initialisierung:** Zuweisung kann mehrfach vorkommen (Wertänderung während Laufzeit)
 
 ---
 
@@ -107,22 +182,45 @@ Zuweisung: qm = laenge * breite
 
 ### 2.1 Einlesen
 
-**Operator:** `Einlesen: variable |als datentyp|`
+**Operator:** `Einlesen: variable |als datentyp|` oder `Deklaration und Einlesen: variable |als datentyp|`
 
 **Beschreibung:** Einlesen einer Eingabe, z. B. aus einem Eingabefeld, einer Kommandozeile, …; auch in Kombination mit Deklaration möglich
 
-**Beispiel:**
+**Unterscheidung:**
+- **Einlesen (einfach):** Variable existiert bereits, es wird nur der Wert eingeleseninterpretiert
+- **Deklaration und Einlesen:** Variable wird gleichzeitig deklariert und Wert wird eingelesen
+
+**Beispiel Einlesen allein:**
+```
+Einlesen: betrag
+```
+*Variable existiert bereits - Datentyp bekannt*
+
+**XML Darstellung:**
+```xml
+<eingabe typ="einlesen">betrag</eingabe>
+```
+
+**Visuell - Struktogramm:**
+
+![Einlesen - Beispiel](generated/svg/sgr_einlesen.svg)
+
+**Beispiel Deklaration und Einlesen:**
 ```
 Deklaration und Einlesen: betrag als Dezimalzahl
 ```
+*Variable wird gleichzeitig deklariert UND vom Benutzer Eingabewert eingelesen*
 
-**Grafische Darstellung im Struktogramm:**
+**XML Darstellung:**
+```xml
+<eingabe typ="deklaration_und_einlesen">betrag als Dezimalzahl</eingabe>
 ```
-┌────────────────────────────────────────────────┐
-│ Deklaration und Einlesen:                      │
-│ betrag als Dezimalzahl                         │
-└────────────────────────────────────────────────┘
-```
+
+**Visuell - Struktogramm:**
+
+![Deklaration und Einlesen - Beispiel](generated/svg/sgr_deklaration_einlesen.svg)
+
+**Hinweis:** Diese Form ist häufig in Aufgaben anzutreffen, da Eingaben erwartet werden
 
 ---
 
@@ -137,26 +235,41 @@ Deklaration und Einlesen: betrag als Dezimalzahl
 Ausgabe: "Die Fläche beträgt " + qm + " Quadratmeter."
 ```
 
-**Grafische Darstellung im Struktogramm:**
+**XML Darstellung:**
+```xml
+<ausgabe typ="ausgabe">"Die Fläche beträgt " + qm + " Quadratmeter."</ausgabe>
 ```
-┌─────────────────────────────────────────────────────┐
-│ Ausgabe: "Die Fläche beträgt " + qm +               │
-│          " Quadratmeter."                           │
-└─────────────────────────────────────────────────────┘
-```
+
+**Visuell - Struktogramm:**
+
+![Ausgabe - Beispiel](generated/svg/sgr_ausgabe.svg)
+
+**Variationen:**
+- Ausgabe einzelner Variablen: `Ausgabe: ergebnis`
+- Ausgabe Kombinationen: `Ausgabe: "Ergebnis: " + x`
+- Ausgabe Arrays: `Ausgabe: werte[i]`
 
 ---
 
 ### 2.3 Zeilenweise Ausgabe
 
-**Operator:** `Zeilenweise Ausgabe: inhalt`
+**Operator:** `Ausgabe: inhalt` mit `Zeilenumbruch`
 
-**Beschreibung:** Ausgabe mit Zeilenumbruch
+**Beschreibung:** Ausgabe mit abschließendem Zeilenumbruch, sodass nachfolgende Ausgabe auf einer neuen Zeile beschrieben
 
 **Beispiel:**
 ```
 Ausgabe: "Hallo!" + Zeilenumbruch
 ```
+
+**XML Darstellung:**
+```xml
+<ausgabe typ="ausgabe">"Hallo!" + Zeilenumbruch</ausgabe>
+```
+
+**Visuell - Struktogramm:**
+
+![Zeilenweise Ausgabe - Beispiel](generated/svg/sgr_zeilenweise_ausgabe.svg)
 
 ---
 
@@ -164,19 +277,26 @@ Ausgabe: "Hallo!" + Zeilenumbruch
 
 **Operator:** `Rückgabe: wert`
 
-**Beschreibung:** Anweisung zur Rückgabe eines Wertes innerhalb einer Funktion/Methode/Prozedur
+**Beschreibung:** Anweisung zur Rückgabe eines Wertes innerhalb einer Funktion/Methode/Prozedur. Die Funktion wird damit beendet und der Wert an den Aufrufer zurückgegeben
 
 **Beispiel:**
 ```
 Rückgabe: strecke
 ```
 
-**Grafische Darstellung im Struktogramm:**
+**XML Darstellung:**
+```xml
+<rueckgabe typ="rueckgabe">strecke</rueckgabe>
 ```
-┌─────────────────────────────────────┐
-│ Rückgabe: strecke                   │
-└─────────────────────────────────────┘
-```
+
+**Visuell - Struktogramm:**
+
+![Rückgabe - Beispiel](generated/svg/sgr_rueckgabe.svg)
+
+**Wichtig:**
+- Rückgabe beendet die Funktionsausführung sofort
+- Der Wert kann eine Variable, ein Ausdruck oder eine Konstante sein
+- Wird oft am Ende von Funktionen verwendet
 
 ---
 
@@ -188,24 +308,48 @@ Rückgabe: strecke
 
 **Beschreibung:** Aufruf einer Funktion/Methode/Prozedur/Unterprogramm, auch in Kombination mit anderen Operatoren (wie Zuweisungen oder Bedingungen), wenn Rückgabewerte verwendet werden sollen
 
-**Beispiele:**
-```
-Aufruf: sortiereListe()
-```
-```
-Aufruf: einzahlen(betrag)
-```
+**Zweck:** Wiederverwendung von bestehendem Code; Modularisierung von Programmen
+
+**Beispiele (verschiedene Varianten):**
+
+1. **Aufruf ohne Parameter:**
+   ```
+   Aufruf: sortiereListe()
+   ```
+
+2. **Aufruf mit einem Parameter:**
+   ```
+   Aufruf: einzahlen(betrag)
+   ```
+
+3. **Aufruf mit mehreren Parametern:**
+   ```
+   Aufruf: berechne(x, y, z)
+   ```
+
+4. **Aufruf mit Rückgabewert (Zuweisung):**
+   ```
+   Zuweisung: ergebnis = berechne(wert)
+   ```
 
 **Grafische Darstellung im Struktogramm:**
-```
-┌─────────────────────────────────────┐
-│ Aufruf: sortiereListe()             │
-└─────────────────────────────────────┘
 
-┌─────────────────────────────────────┐
-│ Aufruf: einzahlen(betrag)           │
-└─────────────────────────────────────┘
+Bei Aufruf-Anweisungen wird das Rechteck mit vertikalen Strichen an den Seiten gekennzeichnet:
+
+**XML Darstellung (Beispiele):**
+```xml
+<aufruf>sortiereListe()</aufruf>
+<aufruf>einzahlen(betrag)</aufruf>
 ```
+
+**Visuell - Struktogramm:**
+
+![Funktionsaufruf - Beispiele](generated/svg/sgr_aufruf.svg)
+
+**Wichtig:**
+- Der Funktionsaufruf wird **immer** als eigene Anweisung im Struktogramm dargestellt
+- Der Name und die Parameter sollten klar angeführt sein
+- Rückgabewerte werden meist mit Zuweisungen kombiniert
 
 ---
 
@@ -242,19 +386,20 @@ Wenn alter > 18 AND geschlecht == "w", dann
         …
 ```
 
-**Grafische Darstellung im Struktogramm:**
-```
-┌───────────────────────────────────────────────────────┐
-│           alter > 18 AND geschlecht == "w"            │
-├───────────────────────────────────────────────────────┤
-│ J                        │ N                          │
-│                          │                            │
-│ (Anweisungen für Ja)     │ (Anweisungen für Nein)     │
-│                          │                            │
-└──────────────────────────┴────────────────────────────┘
-```
+**Grafische Darstellung im Struktogramm (Beschreibung):**
 
-**Hinweis:** Die Zweige werden oft mit `J` (Ja) und `N` (Nein) gekennzeichnet
+Die Alternative wird als **rechteckige Form mit eingebettetem gleichschenkligem Dreieck** dargestellt:
+- **Äußere Form:** Rechteck (Gesamtrahmen)
+- **Dreieck:** Gleichschenkliges Dreieck mit Hypotenuse oben und Spitze unten
+- **Bedingung:** Im Dreieck (oberer Bereich) angebracht
+- **J-Zweig:** Links unten (nach dem Dreieck) für "Ja"-Anweisungen
+- **N-Zweig:** Rechts unten (nach dem Dreieck) für "Nein"-Anweisungen
+
+**Visuelle Beispiele:**
+
+![Operatorenliste: Bedingte Anweisung - Altersklassifikation](generated/svg/Operatorenliste_Alternative_Beispiel.svg)
+
+*Beispiel: Wenn `alter < 18`, dann wird J-Zweig ausgeführt ("Du bist noch minderjährig."), sonst N-Zweig ("Du bist volljährig.")*
 
 ---
 
@@ -276,15 +421,18 @@ Wiederhole solange inhalt > 10
     …
 ```
 
-**Grafische Darstellung im Struktogramm:**
-```
-┌─────────────────────────────────────────────────────┐
-│ ┌─ Wiederhole solange inhalt > 10                   │
-│ │                                                   │
-│ │  (Anweisungen im Schleifenkörper)                 │
-│ │                                                   │
-└─┘───────────────────────────────────────────────────┘
-```
+**Grafische Darstellung im Struktogramm (Beschreibung):**
+
+Die While-Schleife wird als **umgedrehtes L** (gespiegelt horizontal) dargestellt:
+- **Schleifenkopf:** Horizontaler Kasten oben mit der Bedingung "Wiederhole solange bedingung"
+- **Vertikale Linie:** Links vom Schleifenkopf nach unten (L-Form)
+- **Schleifenkörper:** Darunter die Anweisungen, eingerückt
+
+**Visuelle Beispiele:**
+
+![Operatorenliste: While-Schleife - Summenberechnung](generated/svg/Operatorenliste_While_Beispiel.svg)
+
+*Beispiel: Wiederhole solange i <= 10. In jedem Durchlauf wird summe = summe + i und i = i + 1 ausgeführt*
 
 ---
 
@@ -311,15 +459,8 @@ Wiederhole von i = 0 solange i < 5, Schrittweite 1
 ```
 
 **Grafische Darstellung im Struktogramm:**
-```
-┌─────────────────────────────────────────────────────┐
-│ ┌─ Wiederhole von i = 0 solange i < 5,              │
-│ │  Schrittweite 1                                   │
-│ │                                                   │
-│ │  (Anweisungen im Schleifenkörper)                 │
-│ │                                                   │
-└─┘───────────────────────────────────────────────────┘
-```
+
+Die For-Schleife wird als **umgedrehtes L** dargestellt (identisch zur While-Schleife)
 
 #### Alternative Darstellung 2
 
@@ -333,17 +474,20 @@ Zähle i von 0 bis 4, Schrittweite 1
     …
 ```
 
-**Grafische Darstellung im Struktogramm:**
-```
-┌─────────────────────────────────────────────────────┐
-│ ┌─ Zähle i von 0 bis 4, Schrittweite 1              │
-│ │                                                   │
-│ │  (Anweisungen im Schleifenkörper)                 │
-│ │                                                   │
-└─┘───────────────────────────────────────────────────┘
-```
+**Grafische Darstellung im Struktogramm (Beschreibung):**
 
-**Unterschied zwischen beiden Darstellungen:**
+Die For-Schleife wird als **umgedrehtes L** dargestellt, genau wie die While-Schleife:
+- **Schleifenkopf:** Kasten mit der Zähler-Deklaration
+- **Vertikale Linie:** Links vom Kopf nach unten
+- **Schleifenkörper:** Eingerückt unterhalb
+
+**Visuelle Beispiele:**
+
+![Operatorenliste: For-Schleife - Array durchlaufen](generated/svg/Operatorenliste_For_Beispiel.svg)
+
+*Beispiel: Zähle i von 0 bis Anzahl der Elemente - 1, Schrittweite 1. Durchläuft alle Elemente eines Arrays*
+
+**Unterschied zwischen Alternative Darstellung 1 und 2:**
 - Darstellung 1: `i < 5` (Bedingung wird geprüft, 5 ist exklusiv)
 - Darstellung 2: `bis 4` (4 ist inklusiv, ergibt die gleichen Werte 0, 1, 2, 3, 4)
 
@@ -368,25 +512,18 @@ Zähle i von 0 bis 4, Schrittweite 1
 Deklaration und Initialisierung: personen = ["Sven", "Tina", "Anja"]
 ```
 
-**Grafische Darstellung im Struktogramm:**
+**XML Darstellung:**
+```xml
+<prozess typ="deklaration_und_initialisierung">personen = ["Sven", "Tina", "Anja"]</prozess>
 ```
-┌─────────────────────────────────────────────────────┐
-│ Deklaration und Initialisierung:                    │
-│ personen = ["Sven", "Tina", "Anja"]                 │
-└─────────────────────────────────────────────────────┘
-```
+
+**Visuell - Struktogramm:**
+
+![Array-Deklaration - Beispiel](generated/svg/sgr_array_deklaration.svg)
 
 **Beispiel leerer Array:**
 ```
 Deklaration und Initialisierung: zahlen als Array = [ ]
-```
-
-**Grafische Darstellung im Struktogramm:**
-```
-┌─────────────────────────────────────────────────────┐
-│ Deklaration und Initialisierung:                    │
-│ zahlen als Array = [ ]                              │
-└─────────────────────────────────────────────────────┘
 ```
 
 ---
@@ -410,6 +547,15 @@ Zuweisung: zahlen[0] = 5
 ```
 *Setzt das erste Element des Arrays auf 5*
 
+**XML Darstellung:**
+```xml
+<prozess typ="zuweisung">personen[2] = "Kay"</prozess>
+```
+
+**Visuell - Struktogramm:**
+
+![Array-Element-Zuweisung - Beispiel](generated/svg/sgr_array_zuweisung.svg)
+
 ---
 
 ### 5.3 Anhängen an ein Array
@@ -430,6 +576,10 @@ Zuweisung: personen[3] = "Milo"
 - Bei 5.2 wird ein **bestehendes** Element überschrieben
 - Bei 5.3 wird ein **neues** Element am Ende hinzugefügt
 
+**Visuell - Struktogramm:**
+
+![Array-Element-Anhängen - Beispiel](generated/svg/sgr_array_anhaengen.svg)
+
 ---
 
 ### 5.4 Anzahl der Elemente eines Arrays
@@ -444,6 +594,15 @@ Zuweisung: personen[3] = "Milo"
 ```
 Deklaration und Initialisierung: laenge = Anzahl der Elemente des Arrays personen
 ```
+
+**XML Darstellung:**
+```xml
+<prozess typ="deklaration_und_initialisierung">laenge = Anzahl der Elemente des Arrays personen</prozess>
+```
+
+**Visuell - Struktogramm:**
+
+![Array-Länge auslesen - Beispiel](generated/svg/sgr_array_laenge.svg)
 
 **Typische Verwendung in Schleifen:**
 ```
@@ -465,27 +624,15 @@ Zähle i von 0 bis n - 1, Schrittweite 1
 ```
 Ausgabe: zahlen[1]
 ```
-```
-Deklaration und Initialisierung: i = 0
-Ausgabe: personen[i]
-```
-```
-Ausgabe: personen[i + 2]
+
+**XML Darstellung:**
+```xml
+<ausgabe typ="ausgabe">zahlen[1]</ausgabe>
 ```
 
-**Grafische Darstellung im Struktogramm:**
-```
-┌─────────────────────────────────────┐
-│ Ausgabe: zahlen[1]                  │
-└─────────────────────────────────────┘
+**Visuell - Struktogramm:**
 
-┌─────────────────────────────────────┐
-│ Deklaration und Initialisierung:    │
-│ i = 0                               │
-├─────────────────────────────────────┤
-│ Ausgabe: personen[i]                │
-└─────────────────────────────────────┘
-```
+![Array-Element-Ausgabe - Beispiel](generated/svg/sgr_array_element_ausgabe.svg)
 
 ---
 
@@ -500,12 +647,14 @@ Ausgabe: personen[i + 2]
 Ausgabe: zahlen
 ```
 
-**Grafische Darstellung im Struktogramm:**
+**XML Darstellung:**
+```xml
+<ausgabe typ="ausgabe">zahlen</ausgabe>
 ```
-┌─────────────────────────────────────┐
-│ Ausgabe: zahlen                     │
-└─────────────────────────────────────┘
-```
+
+**Visuell - Struktogramm:**
+
+![Array-Ausgabe - Beispiel](generated/svg/sgr_array_ausgabe.svg)
 
 ---
 
@@ -562,16 +711,7 @@ Zuweisung: ergebnis = wert * 2
 Ausgabe: "Das Ergebnis ist: " + ergebnis
 ```
 
-**Grafische Darstellung:**
-```
-┌─────────────────────────────────────────────────────────┐
-│ Einlesen: wert als Ganzzahl                             │
-├─────────────────────────────────────────────────────────┤
-│ Zuweisung: ergebnis = wert * 2                          │
-├─────────────────────────────────────────────────────────┤
-│ Ausgabe: "Das Ergebnis ist: " + ergebnis                │
-└─────────────────────────────────────────────────────────┘
-```
+*Diese Struktur zeigt die typische Abfolge: Eingabe → Verarbeitung → Ausgabe*
 
 ---
 
@@ -583,137 +723,140 @@ Zähle i von 0 bis n - 1, Schrittweite 1
     Ausgabe: zahlen[i]
 ```
 
-**Grafische Darstellung:**
-```
-┌─────────────────────────────────────────────────────────┐
-│ Deklaration und Initialisierung:                        │
-│ zahlen = [1, 2, 3, 4, 5]                                │
-├─────────────────────────────────────────────────────────┤
-│ Deklaration und Initialisierung:                        │
-│ n = Anzahl der Elemente des Arrays zahlen               │
-├─────────────────────────────────────────────────────────┤
-│ ┌─ Zähle i von 0 bis n - 1, Schrittweite 1              │
-│ │                                                       │
-│ │    Ausgabe: zahlen[i]                                 │
-│ │                                                       │
-└─┘───────────────────────────────────────────────────────┘
-```
-
 ---
 
-**Beispiel 3: Bedingte Verarbeitung**
+**Beispiel 3: Bedingte Verarbeitung (Altersklassifikation)**
 ```
 Einlesen: alter als Ganzzahl
-Wenn alter >= 18, dann
+Wenn alter < 18, dann
     J
-        Ausgabe: "Volljährig"
+        Ausgabe: "Jugendlicher"
     , sonst
     N
-        Ausgabe: "Minderjährig"
+        Ausgabe: "Erwachsener"
 ```
 
-**Grafische Darstellung:**
-```
-┌───────────────────────────────────────────────────────────┐
-│ Einlesen: alter als Ganzzahl                              │
-├───────────────────────────────────────────────────────────┤
-│                    alter >= 18                            │
-├───────────────────────────────────────────────────────────┤
-│ J                              │ N                        │
-│                                │                          │
-│ Ausgabe: "Volljährig"          │ Ausgabe: "Minderjährig"  │
-│                                │                          │
-└────────────────────────────────┴──────────────────────────┘
-```
+**Visuelle Darstellung - Struktogramm:**
+
+![L2_1 Aufgabe 1: Bedingte Verarbeitung mit Alternative](generated/svg/L2_1_Aufgabe1_Altersklassifikation.svg)
+
+*Beispiel: Einfache Alternative basierend auf Altersgruppe*
 
 ---
 
 **Beispiel 4: Schleife mit Bedingung (Summe berechnen)**
 ```
 Deklaration und Initialisierung: summe = 0
-Deklaration und Initialisierung: zaehler = 1
-Wiederhole solange zaehler <= 10
-    Zuweisung: summe = summe + zaehler
-    Zuweisung: zaehler = zaehler + 1
-Ausgabe: "Summe: " + summe
+Wiederhole solange zahl != -1
+    Einlesen: zahl als Ganzzahl
+    Zuweisung: summe = summe + zahl
+    Ausgabe: "Aktuelle Summe: " + summe
+Ausgabe: "Endsumme: " + summe
 ```
 
-**Grafische Darstellung:**
-```
-┌─────────────────────────────────────────────────────────┐
-│ Deklaration und Initialisierung: summe = 0              │
-├─────────────────────────────────────────────────────────┤
-│ Deklaration und Initialisierung: zaehler = 1            │
-├─────────────────────────────────────────────────────────┤
-│ ┌─ Wiederhole solange zaehler <= 10, Schrittweite 1     │
-│ │                                                       │
-│ │    Zuweisung: summe = summe + zaehler                 │
-│ │                                                       │
-│ │    Zuweisung: zaehler = zaehler + 1                   │
-│ │                                                       │
-└─┘───────────────────────────────────────────────────────┘
-│ Ausgabe: "Summe: " + summe                              │
-└─────────────────────────────────────────────────────────┘
-```
+**Visuelle Darstellung - Struktogramm:**
+
+![L2_2 Aufgabe 2: While-Schleife mit Summe](generated/svg/L2_2_Aufgabe2_Summe.svg)
+
+*Beispiel: While-Schleife mit Summation bis Abbruchbedingung*
 
 ---
 
-**Beispiel 5: Verschachtelte Strukturen (Array-Suche)**
+**Beispiel 5: Verschachtelte Strukturen (Bubble Sort mit Array-Vergleich)**
+
+Dies ist ein komplexes Beispiel, das folgende Konzepte kombiniert:
+- Verschachtelte For-Schleifen
+- Array-Zugriff
+- Bedingte Anweisungen (Alternative)
+- Zuweisungen (Tausch-Logik)
+
 ```
-Deklaration und Initialisierung: namen = ["Anna", "Ben", "Clara"]
-Einlesen: suchName als Text
-Deklaration und Initialisierung: gefunden = falsch
-Deklaration und Initialisierung: n = Anzahl der Elemente des Arrays namen
-Zähle i von 0 bis n - 1, Schrittweite 1
-    Wenn namen[i] == suchName, dann
-        J
-            Zuweisung: gefunden = wahr
-        , sonst
-        N
-            (nichts)
-Wenn gefunden == wahr, dann
-    J
-        Ausgabe: "Name gefunden!"
-    , sonst
-    N
-        Ausgabe: "Name nicht gefunden!"
+Deklaration und Initialisierung: zahlen = [5, 2, 8, 1, 9]
+Zähle i von 0 bis 4, Schrittweite 1
+    Zähle j von 0 bis 4-i, Schrittweite 1
+        Wenn zahlen[j] > zahlen[j+1], dann
+            J
+                Zuweisung: temp = zahlen[j]
+                Zuweisung: zahlen[j] = zahlen[j+1]
+                Zuweisung: zahlen[j+1] = temp
+            , sonst
+            N
+                (nichts)
+Ausgabe: "Sortiertes Array: " + zahlen
 ```
 
-**Grafische Darstellung:**
-```
-┌───────────────────────────────────────────────────────────┐
-│ Deklaration und Initialisierung:                          │
-│ namen = ["Anna", "Ben", "Clara"]                          │
-├───────────────────────────────────────────────────────────┤
-│ Einlesen: suchName als Text                               │
-├───────────────────────────────────────────────────────────┤
-│ Deklaration und Initialisierung: gefunden = falsch        │
-├───────────────────────────────────────────────────────────┤
-│ Deklaration und Initialisierung:                          │
-│ n = Anzahl der Elemente des Arrays namen                  │
-├───────────────────────────────────────────────────────────┤
-│ ┌─ Zähle i von 0 bis n - 1, Schrittweite 1                │
-│ │                                                         │
-│ │  ┌───────────────────────────────────────────────────┐  │
-│ │  │           namen[i] == suchName                    │  │
-│ │  ├───────────────────────────────────────────────────┤  │
-│ │  │ J                      │ N                        │  │
-│ │  │                        │                          │  │
-│ │  │ Zuweisung:             │ (nichts)                 │  │
-│ │  │ gefunden = wahr        │                          │  │
-│ │  │                        │                          │  │
-│ │  └────────────────────────┴──────────────────────────┘  │
-│ │                                                         │
-└─┘─────────────────────────────────────────────────────────┘
-│                  gefunden == wahr                         │
-├───────────────────────────────────────────────────────────┤
-│ J                              │ N                        │
-│                                │                          │
-│ Ausgabe:                       │ Ausgabe:                 │
-│ "Name gefunden!"               │ "Name nicht gefunden!"   │
-│                                │                          │
-└────────────────────────────────┴──────────────────────────┘
-```
+**Visuelle Darstellung - Struktogramm (Komplexes Beispiel mit allen Formen):**
+
+![L2_6 Aufgabe 6: Bubble Sort mit verschachtelten Strukturen](generated/svg/L2_6_Aufgabe6_Bubble_Sort.svg)
+
+*Beispiel: Verschachtelte For-Schleifen mit interner Alternative - zeigt die Komplexität echter Algorithmen*
+
+**Besonderheiten dieses Beispiels:**
+- **Äußere Schleife:** Zähle i von 0 bis 4 (L-Form)
+- **Innere Schleife:** Zähle j von 0 bis 4-i (verschachtelte L-Form, eingerückt)
+- **Alternative:** Vergleich zahlen[j] > zahlen[j+1] (Briefumschlag-Form im Inneren)
+- **Zuweisungen:** Drei Tausch-Anweisungen im Ja-Zweig
+
+---
+
+## 8. Weitere Beispiele - Verschiedene Kontrollstrukturen
+
+### Array-Zugriff und Filterung
+
+![L2_3b Aufgabe 3: Array-Element-Zugriff](generated/svg/L2_3b_Aufgabe3_Array_Zugriff.svg)
+
+*Zeigt: Deklaration, Zuweisung und Array-Element-Zugriff (zahlen[index])*
+
+---
+
+### Lineare Suche mit Flag
+
+![L2_5 Aufgabe 5: Lineare Suche mit While-Schleife und Flag](generated/svg/L2_5_Aufgabe5_Lineare_Suche.svg)
+
+*Zeigt: Komplexes Suchbeispiel mit While-Schleife, Alternative und Flag-Variablen*
+
+---
+
+### For-Schleife mit interner Alternative und Filterung
+
+![L2_4b Aufgabe 4: Array-Filterung mit For-Schleife](generated/svg/L2_4b_Aufgabe4_Array_Filtern.svg)
+
+*Zeigt: For-Schleife mit eingebetteter Alternative für Filterung*
+
+---
+
+### While-Schleife mit Break-/Abbruch-Bedingung
+
+![L2_2b Aufgabe 2: Summe mit Break-Bedingung](generated/svg/L2_2b_Aufgabe2_Summe_Break.svg)
+
+*Zeigt: While-Schleife mit expliziter Alternative für vorzeitigen Abbruch*
+
+---
+
+## 9. Zusammenfassung - Alle Struktogramm-Formen im Überblick
+
+### Elementare Operationen (Anweisungen)
+
+**Formen:** Deklaration, Initialisierung, Zuweisung, Ausgabe, Rückgabe, Funktionsaufruf
+
+---
+
+### Kontrollstrukturen
+
+#### 1. Alternative (Verzweigung)
+---
+
+#### 2. While-Schleife
+---
+
+#### 3. For-Schleife
+---
+
+## 10. Speichern und Laden von Datensätzen (Zusätzlich)
+
+*(Falls benötigt für fortgeschrittene Themen)*
+
+---
 
 ---
 

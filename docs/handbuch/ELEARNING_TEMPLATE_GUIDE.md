@@ -38,23 +38,23 @@ from src.utils.elearning_manager import (
 ### Verzeichnisse
 
 ```
-docs/
-├── aufgaben/           # Aufgabenstellungen
-│   ├── L1/            # Grundlagen
-│   ├── L2/            # Fortgeschritten
-│   ├── L3/            # Expert
-│   └── INDEX.md       # Automatisch generiert
+docs/                                            
+├── aufgaben/           # Aufgabenstellungen     
+│   ├── L1/            # Grundlagen              
+│   ├── L2/            # Fortgeschritten         
+│   ├── L3/            # Expert                  
+│   └── INDEX.md       # Automatisch generiert   
 ├── information/        # Informationsmaterialien
-│   ├── L1/
-│   ├── L2/
-│   ├── L3/
-│   └── INDEX.md
-├── loesungen/          # Lösungen
-│   ├── L1/
-│   ├── L2/
-│   ├── L3/
-│   └── INDEX.md
-└── handbuch/           # Guides & Dokumentation
+│   ├── L1/                                      
+│   ├── L2/                                      
+│   ├── L3/                                      
+│   └── INDEX.md                                 
+├── loesungen/          # Lösungen               
+│   ├── L1/                                      
+│   ├── L2/                                      
+│   ├── L3/                                      
+│   └── INDEX.md                                 
+└── handbuch/           # Guides & Dokumentation 
 ```
 
 ### Namenskonvention

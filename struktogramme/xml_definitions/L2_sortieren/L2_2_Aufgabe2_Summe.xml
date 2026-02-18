@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?>
+<struktogramm>
+  <metadata>
+    <titel>Aufgabe 2: Summenberechnung mit While-Schleife</titel>
+    <level>L2</level>
+    <kategorie>Schleifen</kategorie>
+    <autor>Klassenarbeit</autor>
+    <beschreibung>Berechnet die Summe von Eingabezahlen bis -1 eingegeben wird</beschreibung>
+  </metadata>
+  <inhalt>
+    <prozess typ="zuweisung">summe = 0</prozess>
+    <eingabe typ="deklaration_und_einlesen">zahl als Ganzzahl</eingabe>
+    <wiederhole>
+      <bedingung>zahl != -1</bedingung>
+      <inhalt>
+        <prozess typ="zuweisung">summe = summe + zahl</prozess>
+        <ausgabe typ="ausgabe">Summe + summe</ausgabe>
+        <eingabe typ="deklaration_und_einlesen">zahl als Ganzzahl</eingabe>
+      </inhalt>
+    </wiederhole>
+    <ausgabe typ="ausgabe">Programm beendet</ausgabe>
+  </inhalt>
+</struktogramm>
