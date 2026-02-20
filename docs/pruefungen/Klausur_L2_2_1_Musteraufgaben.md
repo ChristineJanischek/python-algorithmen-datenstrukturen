@@ -28,7 +28,7 @@
 - Programmcode muss **eine gültige Python-Syntax** haben
 - Bei Algorithmusaufgaben sind **eigene Schleifenlösungen** erwartet (keine eingebauten Such- oder Kurzformen)
 - **Alle Zwischenschritte zeigen** – Korrektur erfolgt nach Rechenweg, nicht nur Endergebnis
-- Schreibtischtest: **Nachvollziehbares Durchlaufen** des Algorithmus aufschreiben
+- Analyseaufgaben: **Zweck und Fehlerursache** klar und nachvollziehbar begründen
 - Bei Fragen: **Fragen Sie, bevor Sie spekulieren!**
 
 ---
@@ -41,7 +41,7 @@
 | **2** | Schleifen & Logik | 3 | II – Transfer |
 | **3** | Arrays: Deklaration & Zugriff | 3 | I – Reproduktion |
 | **4** | Arrays durchlaufen & filtern | 6 | II – Transfer |
-| **5** | Lineare Suche | 8 | II/III – Transfer & Analyse |
+| **5** | Lineare Suche (Fehleranalyse) | 8 | II/III – Transfer & Analyse |
 | **6** | Sortieralgorithmus (Bubble Sort) | 7 | III – Kreativität |
 
 **Summe: 30 Punkte**
@@ -185,41 +185,36 @@ Schreibe Python-Code, um **jedes Element zu verdoppeln** und das Ergebnis in ein
 
 Gegeben ist das Array: `buchstaben = ['A', 'B', 'C', 'D', 'E', 'F', 'G']`
 
-**Aufgabe:**
+**Aufgabe (Analyse eines fehlerhaften Struktogramms):**
 
-Schreibe ein Struktogramm und implementiere einen Python-Algorithmus, der:
-1. **Einen Buchstaben vom Nutzer einliest**
-2. **Diese Buchstabe im Array sucht** (Lineare Suche)
-3. **Bei Fund:** Den Index (Position) ausgibt
-4. **Bei Nicht-Fund:** „Nicht gefunden" ausgibt
+Das folgende Struktogramm wurde mit der BW-Operatorenliste (Draw.io-Library) entworfen und enthält **einen häufigen logischen Fehler**.
 
-**Anforderungen:**
+![L2_5_Aufgabe5_Lineare_Suche_Fehleranalyse](../../struktogramme/generated/svg/L2_5_Aufgabe5_Lineare_Suche_Fehleranalyse.svg)
 
-**a) Struktogramm (3 Punkte):**
-- Eingabe darstellen
-- Wiederholung (for oder while) mit Abbruch
-- Verzweigung (gefunden/nicht gefunden)
-- Ausgabe
+Bearbeite die Teilaufgaben in dieser Reihenfolge:
 
-```struktogramm
-[Hier Struktogramm eintragen]
-```
+**a) Vermuteter Zweck (3 Punkte):**
 
-**b) Python-Code (4 Punkte):**
-- Hinweis: Verwende eine **eigene Schleife**, keine eingebauten Suchmethoden.
-```python
-# Lineare Suche implementieren:
-
+Beschreibe in 2–4 Sätzen, **welchen Zweck** der Algorithmus wahrscheinlich hat.
 
 ```
+Antwort:
+```
 
-**c) Schreibtischtest (1 Punkt):**
+**b) Fehleranalyse (3 Punkte):**
 
-Führe Deinen Algorithmus mit der Eingabe „D" durch. Schreibe jeden Schritt auf!
+Nenne den **logischen Fehler** im Struktogramm und erkläre kurz die Auswirkung auf die Programmausführung.
 
 ```
-Schritt 1: Index 0, Wert = A ≠ D
-Schritt 2: ...
+Antwort:
+```
+
+**c) Korrekturvorschlag (2 Punkte):**
+
+Formuliere die fehlende/falsch platzierte Anweisung in **BW-konformer Operator-Notation**.
+
+```
+Antwort:
 ```
 
 ---
@@ -270,7 +265,7 @@ Antwort: _______________
 - [ ] Python-Code syntaktisch korrekt (soweit möglich)
 - [ ] Bei Algorithmusaufgaben nur Schleifenloesungen verwendet
 - [ ] Alle Zwischenschritte erklärt
-- [ ] Schreibtischtest nachvollziehbar
+- [ ] Fehleranalyse nachvollziehbar begründet
 - [ ] Name & Datum oben eingetragen
 
 ---

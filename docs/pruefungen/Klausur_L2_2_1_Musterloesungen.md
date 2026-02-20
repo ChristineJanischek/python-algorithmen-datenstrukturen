@@ -15,7 +15,7 @@ Grundlage: Inhalte aus [src/niveau/infodateien/L2_1 Information_Algorithmik.docx
 | 2 | 3 | Struktogramm + Code | Logikfehler -1 bis -2 Punkte |
 | 3 | 3 | Code + Interpretation | Jeder fehlerhafte Teil -1 Punkt |
 | 4 | 6 | Struktogramm + Code (3 Varianten) | Pro Teilaufgabe -1 bis -2 Punkte |
-| 5 | 8 | Struktogramm + Code + Schreibtischtest | Kritisch: Schreibtischtest korrekt |
+| 5 | 8 | Struktogramm-Analyse + Fehlerdiagnose | Kritisch: Fehlerursache korrekt erkannt |
 | 6 | 7 | Struktogramm + Code + Ausgabe | Swap-Logik ist kritisch |
 | **Summe** | **30** | — | — |
 
@@ -331,172 +331,75 @@ for i in range(len(werte)):
 
 ---
 
-**a) Struktogramm (3 Punkte)**
+**Fehlerhaftes Struktogramm (Aufgabenmaterial):**
 
-**Erwartete Struktur:**
+![L2_5_Aufgabe5_Lineare_Suche_Fehleranalyse](../../struktogramme/generated/svg/L2_5_Aufgabe5_Lineare_Suche_Fehleranalyse.svg)
+
+---
+
+**a) Vermuteter Zweck (3 Punkte)**
+
+**Erwartung:**
+- Der Algorithmus soll eine **lineare Suche** im Array `buchstaben` durchführen.
+- Es wird ein Suchzeichen eingelesen.
+- Bei Treffer soll „Gefunden! Index: i“ ausgegeben werden, sonst „Nicht gefunden“.
+
+**Musterantwort (Beispiel):**
+```
+Der Algorithmus durchsucht das Array buchstaben nacheinander nach einem eingegebenen Zeichen.
+Er verwendet dazu einen Index i und eine Wiederhole-solange-Schleife.
+Wenn das Zeichen gefunden wird, soll eine Fundmeldung mit Index ausgegeben werden.
+Falls kein Treffer existiert, soll "Nicht gefunden" ausgegeben werden.
+```
+
+**Bewertung (3 Punkte):**
+- ✅ Zweck „lineare Suche“ klar benannt = 1 Punkt
+- ✅ Sequenzielles Durchlaufen/Schleife beschrieben = 1 Punkt
+- ✅ Ausgabeidee (Fund/Nicht-Fund) korrekt = 1 Punkt
+
+---
+
+**b) Fehleranalyse (3 Punkte)**
+
+**Erwarteter Fehler:**
+- Im **Nein-Zweig** der inneren Verzweigung fehlt die Anweisung
+  `Zuweisung: i = i + 1`.
+- Dadurch bleibt `i` unverändert, wenn `buchstaben[i] != such` ist.
+- Folge: Die Schleife kann in eine **Endlosschleife** geraten (bei Nicht-Treffer am aktuellen Index).
+
+**Musterantwort (kurz):**
+```
+Der Index i wird nicht erhöht, wenn das aktuelle Array-Element nicht dem Suchwert entspricht.
+Dadurch prüft der Algorithmus immer wieder dasselbe Element.
+Die Wiederhole-solange-Bedingung bleibt wahr und das Programm kann hängen bleiben.
+```
+
+**Bewertung (3 Punkte):**
+- ✅ Fehlerstelle korrekt lokalisiert (Nein-Zweig) = 1 Punkt
+- ✅ Fehlende/falsche Anweisung korrekt benannt = 1 Punkt
+- ✅ Laufzeitfolge (Endlosschleife/kein Fortschritt) korrekt erklärt = 1 Punkt
+
+---
+
+**c) Korrekturvorschlag (2 Punkte)**
+
+**Erwartete BW-konforme Korrektur:**
 
 ```struktogramm
-Deklaration und Einlesen: such als Zeichenkette
-Deklaration und Initialisierung: gefunden als Wahrheitswert = falsch
-Deklaration und Initialisierung: i als Ganzzahl = 0
-Wiederhole solange i < Anzahl der Elemente des Arrays buchstaben AND NOT gefunden
-    Wenn buchstaben[i] == such, dann
-        J
-            Zuweisung: gefunden = wahr
-        , sonst
-        N
-            Zuweisung: i = i + 1
-Wenn gefunden, dann
+Wenn buchstaben[i] == such, dann
     J
-        Ausgabe: "Gefunden! Index: " + i
+        Zuweisung: gefunden = wahr
     , sonst
     N
-        Ausgabe: "Nicht gefunden"
+        Zuweisung: i = i + 1
 ```
 
-**Struktogramm (Grafische Notation):**
+**Alternative akzeptabel:**
+- Zuweisung `i = i + 1` außerhalb der Verzweigung, sofern die Suchlogik korrekt bleibt.
 
-![L2_5_Aufgabe5_Lineare_Suche](../../struktogramme/generated/svg/L2_5_Aufgabe5_Lineare_Suche.svg)
-│ │     J                                │
-│ │       Zuweisung:                     │
-│ │       gefunden = wahr                │
-│ │     , sonst                          │
-│ │     N                                │
-│ │       Zuweisung:                     │
-│ │       i = i + 1                      │
-│ Wenn gefunden, dann                    │
-│   J                                    │
-│     Ausgabe:                           │
-│     "Gefunden! Index: " + i            │
-│   , sonst                              │
-│   N                                    │
-│     Ausgabe:                           │
-│     "Nicht gefunden"                   │
-└────────────────────────────────────────┘
-
-**Bewertung Struktogramm (3 Punkte):**
-- ✅ Eingabe & Variableninitialisierung (0,5 Punkte)
-- ✅ Wiederholung (for oder while mit Bedingung) (1 Punkt)
-- ✅ Vergleich im Schleifenkörper (0,75 Punkte)
-- ✅ Verzweigung (gefunden/nicht gefunden) (0,75 Punkte)
-
-**Häufige Fehler:**
-| Fehler | Abzug |
-|--------|-------|
-| Ohne Initialisierung `gefunden = False` | -0,5 |
-| Schleifenbedingung unvollständig | -0,5 |
-| Abbruchbedingung fehlend | -1 Punkt |
-| Ausgabe nicht klar positioniert | -0,5 |
-
----
-
-**b) Python-Code (4 Punkte)**
-
-**Musterlösung 1 (while-Schleife mit Flag):**
-```python
-such = input("Buchstabe suchen: ").upper()
-buchstaben = ['A', 'B', 'C', 'D', 'E', 'F', 'G']
-gefunden = False
-i = 0
-
-while i < len(buchstaben) and not gefunden:
-    if buchstaben[i] == such:
-        print(f"Gefunden! Index: {i}")
-        gefunden = True
-    else:
-        i += 1
-
-if not gefunden:
-    print("Nicht gefunden")
-```
-
-**Musterlösung 2 (for-Schleife mit break):**
-
-## 📐 Struktogramm (grafische Notation)
-
-<!-- START_GRAPHIC_STRUKTOGRAMM -->
-```
-┌────────────────────────────────────────┐
-│ Deklaration und Einlesen:              │
-│ such als Zeichenkette                  │
-│ Deklaration und Initialisierung:       │
-│ gefunden als Wahrheitswert = falsch    │
-│ Zähle i von 0 bis Anzahl der Elemente  │
-│ des Arrays buchstaben - 1, Schrittweite│
-│ 1                                      │
-│   Wenn buchstaben[i] == such, dann     │
-│     J                                  │
-│       Ausgabe:                         │
-│       "Gefunden! Index: " + i          │
-│       Zuweisung:                       │
-│       gefunden = wahr                  │
-│       Abbruch                          │
-│     , sonst                            │
-│     N                                  │
-│       (keine Aktion)                   │
-│ Wenn nicht gefunden, dann              │
-│   J                                    │
-│     Ausgabe:                           │
-│     "Nicht gefunden"                   │
-│   , sonst                              │
-│   N                                    │
-│     (keine Aktion)                     │
-└────────────────────────────────────────┘
-```
-<!-- END_GRAPHIC_STRUKTOGRAMM -->
-
-
-```python
-such = input("Buchstabe suchen: ").upper()
-buchstaben = ['A', 'B', 'C', 'D', 'E', 'F', 'G']
-gefunden = False
-
-for i in range(len(buchstaben)):
-    if buchstaben[i] == such:
-        print(f"Gefunden! Index: {i}")
-        gefunden = True
-        break
-
-if not gefunden:
-    print("Nicht gefunden")
-```
-
-**Bewertung (4 Punkte):**
-- ✅ Schleife mit Vergleich = 2 Punkte
-- ✅ Korrekte Ausgabe = 1 Punkt
-- ✅ Abbruch bei Fund = 1 Punkt
-- ❌ Syntax-Fehler = -0,5 Punkte pro Fehler
-
----
-
-**c) Schreibtischtest (1 Punkt)**
-
-**Eingabe:** "D"
-
-**Musterlösung (Beispiel mit Musterlösung 1):**
-
-```
-Schritt 1: i=0, gefunden=False
-           buchstaben[0]='A', 'A' ≠ 'D' → i=1
-
-Schritt 2: i=1, gefunden=False
-           buchstaben[1]='B', 'B' ≠ 'D' → i=2
-
-Schritt 3: i=2, gefunden=False
-           buchstaben[2]='C', 'C' ≠ 'D' → i=3
-
-Schritt 4: i=3, gefunden=False
-           buchstaben[3]='D', 'D' ≠ 'D'? NEIN! → gefunden=True
-           AUSGABE: "Gefunden! Index: 3"
-           
-Schritt 5: Schleife beendet (gefunden=True)
-           Keine weitere Ausgabe
-```
-
-**Bewertung (1 Punkt):**
-- ✅ Mindestens 3 Schritte nachvollziehbar = 1 Punkt
-- ⚠️ Nur Anfang oder Ende = 0,5 Punkte
-- ❌ Vollständig falsch oder gar nicht = 0 Punkte
+**Bewertung (2 Punkte):**
+- ✅ Operator-Notation korrekt = 1 Punkt
+- ✅ Logikfehler tatsächlich behoben = 1 Punkt
 
 ---
 
@@ -636,7 +539,7 @@ oder
 | **2** | 3 | II | Schleife + Bedingung korrekt |
 | **3** | 3 | I | Array-Index, Zugriff |
 | **4** | 6 | II | Schleife durchläuft korrekt |
-| **5** | 8 | II/III | **Schreibtischtest nachvollziehbar** |
+| **5** | 8 | II/III | **Fehlerursache und Korrektur korrekt** |
 | **6** | 7 | III | **Swap-Logik korrekt** |
 | **Summe** | **30** | — | — |
 
@@ -682,8 +585,8 @@ oder
 ### Besondere Hinweise zu Aufgaben
 
 **Aufgabe 5 (Lineare Suche):**
-- Der Schreibtischtest ist wichtig! Zeigt, ob Schüler den Algorithmus versteht
-- Auch wenn Code fehlerhaft, kann Schreibtischtest +1 Punkt sein
+- Der Fokus liegt auf **Algorithmusverständnis und Fehlerdiagnose**
+- Teilpunkte geben, wenn Zweck korrekt erkannt wurde, auch wenn die Korrektur unvollständig ist
 
 **Aufgabe 6 (Bubble Sort):**
 - Kontrollieren Sie die Swap-Bedingung genau
@@ -726,9 +629,9 @@ Bei 30 Punkten:
 - [ ] c) Neues Array mit verdoppelten Werten
 
 ### Aufgabe 5
-- [ ] Struktogramm zeigt Wiederholung + Verzweigung
-- [ ] Code sucht korrekt (Index findet D bei Index 3)
-- [ ] Schreibtischtest zeigt 4 Schritte bis zum Fund
+- [ ] Zweck als lineare Suche korrekt beschrieben
+- [ ] Fehlerstelle im Nein-Zweig korrekt erkannt
+- [ ] `Zuweisung: i = i + 1` als Korrektur benannt
 
 ### Aufgabe 6
 - [ ] Äußere Schleife: `for i in range(n-1)`
