@@ -811,7 +811,7 @@ Ausgabe: "Sortiertes Array: " + zahlen
 
 ### Lineare Suche mit Flag
 
-![L2_5 Aufgabe 5: Lineare Suche mit While-Schleife und Flag](generated/svg/L2_5_Aufgabe5_Lineare_Suche.svg)
+![L2_5 Aufgabe 5: Algorithmen prüfen mit While-Schleife und Flag](generated/svg/L2_5_Aufgabe5_Algorithmen_pruefen.svg)
 
 *Zeigt: Komplexes Suchbeispiel mit While-Schleife, Alternative und Flag-Variablen*
 

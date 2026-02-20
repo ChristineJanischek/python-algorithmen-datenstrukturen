@@ -246,7 +246,7 @@ grep -A5 "ALTERNATIVE" struktogramme/generated/svg/L2_2b_Aufgabe2_Summe_Break.sv
 - ✅ `struktogramme/generated/svg/L2_1_Aufgabe1_Altersklassifikation.svg` (1.9 KB)
 - ✅ `struktogramme/generated/svg/L2_2b_Aufgabe2_Summe_Break.svg` (2.7 KB)
 - ✅ `struktogramme/generated/svg/L2_4b_Aufgabe4_Array_Filtern.svg` (1.8 KB)
-- ✅ `struktogramme/generated/svg/L2_5_Aufgabe5_Lineare_Suche.svg` (3.7 KB)
+- ✅ `struktogramme/generated/svg/L2_5_Aufgabe5_Algorithmen_pruefen.svg` (3.7 KB)
 - ✅ `struktogramme/generated/svg/L2_6_Aufgabe6_Bubble_Sort.svg` (2.9 KB)
 - ✅ Alle anderen Dateien (auch ohne Alternative aktualisiert)
 

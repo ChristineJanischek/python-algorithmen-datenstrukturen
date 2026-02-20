@@ -635,7 +635,7 @@ struktogramme/generated/svg/
 ├── L2_3b_Aufgabe3_Array_Zugriff.svg (1.6K)
 ├── L2_4a_Aufgabe4_Array_Ausgeben_Index.svg (1.2K)
 ├── L2_4b_Aufgabe4_Array_Filtern.svg (1.8K)
-├── L2_5_Aufgabe5_Lineare_Suche.svg (3.5K)
+├── L2_5_Aufgabe5_Algorithmen_pruefen.svg (3.5K)
 └── L2_6_Aufgabe6_Bubble_Sort.svg (2.9K)
 ```
 
