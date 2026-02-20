@@ -1,5 +1,5 @@
 # Musterlösung & Erwartungshorizont
-## Klassenarbeit: Kontrollstrukturen, Arrays und Algorithmen
+## Klassenarbeit: Kontrollstrukturen, Arrays (Listen) und Algorithmen
 
 **Dokumentation für Lehrkräfte**
 
@@ -140,10 +140,10 @@ loese_aufgabe2_summe_mit_break()
 
 ---
 
-### **Aufgabe 3: Array-Grundlagen (3 Punkte)**
+### **Aufgabe 3: Array (Liste)-Grundlagen (3 Punkte)**
 
 **Aufgabenstellung (aus Prüfungsblatt):**
-> a) Array deklarieren und initialisieren: `Noten = [1, 2, 2, 3, 1, 5, 4, 2]`
+> a) Array (Liste) deklarieren und initialisieren: `Noten = [1, 2, 2, 3, 1, 5, 4, 2]`
 > b) 1. Element auslesen, letztes Element auf `1` setzen, Länge ausgeben
 > c) Bedeutung von `noten[3]` erklären
 
@@ -169,7 +169,7 @@ print(loese_aufgabe3a_deklaration())
 
 ---
 
-**b) Array-Zugriff (1 Punkt)**
+**b) Array (Liste)-Zugriff (1 Punkt)**
 
 **Musterlösung:**
 
@@ -205,7 +205,7 @@ noten[3] = 3 (das Element an Index 3 = 4. Position = Note 3)
 
 **Alternativ akzeptabel:**
 ```
-Das 4. Element des Arrays, dessen Wert 3 ist.
+Das 4. Element des Arrays (Listen), dessen Wert 3 ist.
 ```
 
 **Bewertung:**
@@ -215,13 +215,13 @@ Das 4. Element des Arrays, dessen Wert 3 ist.
 
 ---
 
-### **Aufgabe 4: Array durchlaufen & filtern (6 Punkte)**
+### **Aufgabe 4: Array (Liste) durchlaufen & filtern (6 Punkte)**
 
 **Aufgabenstellung (aus Prüfungsblatt):**
-> Gegeben ist das Array: `werte = [12, 45, 23, 67, 8, 34, 56, 11]`
+> Gegeben ist das Array (Liste): `werte = [12, 45, 23, 67, 8, 34, 56, 11]`
 > a) Alle Werte zeilenweise ausgeben
 > b) Nur Werte > 30 ausgeben
-> c) Jedes Element verdoppeln und in einem neuen Array speichern
+> c) Jedes Element verdoppeln und in einem neuen Array (Liste) speichern
 
 **Gegeben:** `werte = [12, 45, 23, 67, 8, 34, 56, 11]`
 
@@ -272,7 +272,7 @@ loese_aufgabe4a_werte_ausgeben_while([12, 45, 23, 67, 8, 34, 56, 11])
 
 **Bewertung:**
 - ✅ Jede Variante = volle 2 Punkte
-- ⚠️ `print(werte)` (gibt ganzes Array aus) = 1 Punkt
+- ⚠️ `print(werte)` (gibt ganzes Array (Liste) aus) = 1 Punkt
 - ❌ Keine Schleife, nur Einzelausgaben = 0 Punkte
 
 ---
@@ -303,7 +303,7 @@ loese_aufgabe4b_filtere_groesser_30([12, 45, 23, 67, 8, 34, 56, 11])
 ```
 ┌────────────────────────────────────────┐
 │ Zähle i von 0 bis Anzahl der Elemente  │
-│ des Arrays werte - 1, Schrittweite 1   │
+│ des Arrays (Listen) werte - 1, Schrittweite 1   │
 │   Wenn werte[i] > 30, dann             │
 │     J                                  │
 │       Ausgabe:                         │
@@ -343,7 +343,7 @@ loese_aufgabe4b_filtere_groesser_30_index([12, 45, 23, 67, 8, 34, 56, 11])
 
 ---
 
-**c) Array manipulieren (2 Punkte)**
+**c) Array (Liste) manipulieren (2 Punkte)**
 
 **Musterlösung 1 (neue Liste mit Schleife):**
 
@@ -355,10 +355,10 @@ loese_aufgabe4b_filtere_groesser_30_index([12, 45, 23, 67, 8, 34, 56, 11])
 │ Deklaration und Initialisierung:       │
 │ verdoppelt = []                        │
 │ Zähle i von 0 bis Anzahl der Elemente  │
-│ des Arrays werte - 1, Schrittweite 1   │
+│ des Arrays (Listen) werte - 1, Schrittweite 1   │
 │   Zuweisung:                           │
 │   verdoppelt[Anzahl der Elemente des   │
-│   Arrays verdoppelt] = werte[i] * 2    │
+│   Arrays (Listen) verdoppelt] = werte[i] * 2    │
 └────────────────────────────────────────┘
 ```
 <!-- END_GRAPHIC_STRUKTOGRAMM -->
@@ -384,7 +384,7 @@ print(loese_aufgabe4c_verdoppeln_neue_liste([12, 45, 23, 67, 8, 34, 56, 11]))  #
 ```
 ┌────────────────────────────────────────┐
 │ Zähle i von 0 bis Anzahl der Elemente  │
-│ des Arrays werte - 1, Schrittweite 1   │
+│ des Arrays (Listen) werte - 1, Schrittweite 1   │
 │   Zuweisung:                           │
 │   werte[i] = werte[i] * 2              │
 └────────────────────────────────────────┘
@@ -431,13 +431,13 @@ print(loese_aufgabe4c_verdoppeln_im_original([12, 45, 23, 67, 8, 34, 56, 11]))
 **a) Vermuteter Zweck (3 Punkte)**
 
 **Erwartung:**
-- Der Algorithmus soll eine **lineare Suche** im Array `buchstaben` durchführen.
+- Der Algorithmus soll eine **lineare Suche** im Array (Liste) `buchstaben` durchführen.
 - Es wird ein Eingabewert eingelesen.
 - Bei Treffer soll „Treffer“ ausgegeben werden, sonst „Kein Treffer“.
 
 **Musterantwort (Beispiel):**
 ```
-Der Algorithmus durchsucht das Array buchstaben nacheinander nach einem eingegebenen Zeichen.
+Der Algorithmus durchsucht das Array (Liste) buchstaben nacheinander nach einem eingegebenen Zeichen.
 Er verwendet dazu einen Index i und eine Wiederhole-solange-Schleife.
 Wenn das Zeichen gefunden wird, soll eine Fundmeldung mit Index ausgegeben werden.
 Falls kein Treffer existiert, soll "Nicht gefunden" ausgegeben werden.
@@ -460,7 +460,7 @@ Falls kein Treffer existiert, soll "Nicht gefunden" ausgegeben werden.
 
 **Musterantwort (kurz):**
 ```
-Der Index i wird nicht erhöht, wenn das aktuelle Array-Element nicht dem Suchwert entspricht.
+Der Index i wird nicht erhöht, wenn das aktuelle Array (Liste)-Element nicht dem Suchwert entspricht.
 Dadurch prüft der Algorithmus immer wieder dasselbe Element.
 Die Wiederhole-solange-Bedingung bleibt wahr und das Programm kann hängen bleiben.
 ```
@@ -499,7 +499,7 @@ Wenn buchstaben[i] == eingabe, dann
 **Aufgabenstellung (aus Prüfungsblatt):**
 > Schreibe ein Struktogramm und implementiere **Bubble Sort** in Python.
 > Verwende verschachtelte Schleifen und eine klare Tauschlogik.
-> Gib das sortierte Array aus.
+> Gib das sortierte Array (Liste) aus.
 
 **Gegeben:** `zahlen = [5, 2, 8, 1, 9]`
 
@@ -510,7 +510,7 @@ Wenn buchstaben[i] == eingabe, dann
 **Erwartete Struktur (BW-Standard nach Operatorenliste):**
 
 ```struktogramm
-Deklaration und Initialisierung: n als Ganzzahl = Anzahl der Elemente des Arrays zahlen
+Deklaration und Initialisierung: n als Ganzzahl = Anzahl der Elemente des Arrays (Listen) zahlen
 Zähle i von 0 bis n - 2, Schrittweite 1
     Zähle j von 0 bis n - 2 - i, Schrittweite 1
         Wenn zahlen[j] > zahlen[j + 1], dann
@@ -642,7 +642,7 @@ oder
 |---------|---------|-------------------|------------------|
 | **1** | 3 | I | Struktogramm-Syntax |
 | **2** | 3 | II | Schleife + Bedingung korrekt |
-| **3** | 3 | I | Array-Index, Zugriff |
+| **3** | 3 | I | Array (Liste)-Index, Zugriff |
 | **4** | 6 | II | Schleife durchläuft korrekt |
 | **5** | 8 | II/III | **Fehlerursache und Korrektur korrekt** |
 | **6** | 7 | III | **Swap-Logik korrekt** |
@@ -675,14 +675,14 @@ oder
 
 ✅ **Akzeptabel auch wenn nicht optimal:**
 - `for i in range(len(array))` vs. `for element in array` – beide OK
-- while-Schleife statt for-Schleife bei Arrays – OK
+- while-Schleife statt for-Schleife bei Arrays (Listen) – OK
 - Tausch mit temp vs. Tuple-Swap – beide OK
 - `if not gefunden` vs. `if gefunden == False` – beide OK
 - Deutsche Variablennamen (z.B. `zaehler`) – OK
 
 ❌ **Nicht akzeptabel:**
 - Struktogramm ist Flussdiagramm
-- Array wird als Dictionary behandelt: `werte = {'0': 12, '1': 45}`
+- Array (Liste) wird als Dictionary behandelt: `werte = {'0': 12, '1': 45}`
 - Schleife wird nicht beendet
 - Swap erfolgt falsch (`zahlen[j] = zahlen[j+1]` ohne temp)
 - Index Out of Range (z.B. `zahlen[j+1]` wenn `j = len(zahlen)-1`)
@@ -724,14 +724,14 @@ Bei 30 Punkten:
 - [ ] Ausgabe erfolgt in Schleife
 
 ### Aufgabe 3
-- [ ] Array wird mit [ ] deklariert
+- [ ] Array (Liste) wird mit [ ] deklariert
 - [ ] Indexing benutzt [0] für erstes Element
-- [ ] len() zeigt Array-Länge
+- [ ] len() zeigt Array (Liste)-Länge
 
 ### Aufgabe 4
 - [ ] a) Schleife durchläuft alle 8 Elemente
 - [ ] b) Bedingung > 30 ist erfüllt, Ausgabe: 4 Werte
-- [ ] c) Neues Array mit verdoppelten Werten
+- [ ] c) Neues Array (Liste) mit verdoppelten Werten
 
 ### Aufgabe 5
 - [ ] Zweck des Algorithmus korrekt beschrieben (lineare Suche erkannt)

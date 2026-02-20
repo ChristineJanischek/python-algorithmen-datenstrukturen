@@ -1,4 +1,4 @@
-# Klassenarbeit: Kontrollstrukturen, Arrays und Algorithmen
+# Klassenarbeit: Kontrollstrukturen, Arrays (Listen) und Algorithmen
 ## Informatik – Berufliches Gymnasium (Klasse 2)
 
 ---
@@ -13,7 +13,7 @@
 | **Erreichbare Punkte** | 30 Punkte |
 | **Bestanden ab** | 15 Punkte (50%) |
 | **Hilfsmittel** | Keine (Papier & Stift) |
-| **Themen** | Algorithmen (70%): Kontrollstrukturen, Lineare Suche, Bubble Sort <br> Datenstrukturen (30%): Arrays |
+| **Themen** | Algorithmen (70%): Kontrollstrukturen, Lineare Suche, Bubble Sort <br> Datenstrukturen (30%): Arrays (Listen) |
 
 ---
 
@@ -39,8 +39,8 @@
 |---------|-------|--------|-------------------|
 | **1** | Kontrollstrukturen (if-else) | 3 | I – Reproduktion |
 | **2** | Schleifen & Logik | 3 | II – Transfer |
-| **3** | Arrays: Deklaration & Zugriff | 3 | I – Reproduktion |
-| **4** | Arrays durchlaufen & filtern | 6 | II – Transfer |
+| **3** | Arrays (Listen): Deklaration & Zugriff | 3 | I – Reproduktion |
+| **4** | Arrays (Listen) durchlaufen & filtern | 6 | II – Transfer |
 | **5** | Algorithmen prüfen (Fehleranalyse) | 8 | II/III – Transfer & Analyse |
 | **6** | Sortieralgorithmus (Bubble Sort) | 7 | III – Kreativität |
 
@@ -105,12 +105,12 @@ Programm endet
 
 ---
 
-### **Aufgabe 3: Array-Grundlagen (3 Punkte)**
-**Thema:** BPE 7.1 – Arrays (Deklaration, Initialisierung, Zugriff)
+### **Aufgabe 3: Array (Liste)-Grundlagen (3 Punkte)**
+**Thema:** BPE 7.1 – Arrays (Listen) (Deklaration, Initialisierung, Zugriff)
 
 **a) Deklaration (1 Punkt)**
 
-Schreibe die Python-Zeile, um folgendes Array zu deklarieren und zu initialisieren:
+Schreibe die Python-Zeile, um folgendes Array (Liste) zu deklarieren und zu initialisieren:
 > Noten: [1, 2, 2, 3, 1, 5, 4, 2]
 
 ```python
@@ -119,12 +119,12 @@ Schreibe die Python-Zeile, um folgendes Array zu deklarieren und zu initialisier
 
 ```
 
-**b) Array-Zugriff (1 Punkt)**
+**b) Array (Liste)-Zugriff (1 Punkt)**
 
 Schreibe Python-Code, um:
 - Das **1. Element** auslesen
 - Das **letzte Element** ändern auf `1`
-- Die **Länge des Arrays** ausgeben
+- Die **Länge des Arrays (Listen)** ausgeben
 
 ```python
 # Zugriff und Manipulation:
@@ -134,7 +134,7 @@ Schreibe Python-Code, um:
 
 **c) Interpretation (1 Punkt)**
 
-Was bedeutet `noten[3]` in Ihrem obigen Array?
+Was bedeutet `noten[3]` in Ihrem obigen Array (Liste)?
 
 ```
 Antwort:
@@ -142,14 +142,14 @@ Antwort:
 
 ---
 
-### **Aufgabe 4: Array durchlaufen & filtern (6 Punkte)**
-**Thema:** BPE 7.1 – Schleife über Arrays
+### **Aufgabe 4: Array (Liste) durchlaufen & filtern (6 Punkte)**
+**Thema:** BPE 7.1 – Schleife über Arrays (Listen)
 
-Gegeben ist das Array: `werte = [12, 45, 23, 67, 8, 34, 56, 11]`
+Gegeben ist das Array (Liste): `werte = [12, 45, 23, 67, 8, 34, 56, 11]`
 
 **a) Alle Werte ausgeben (2 Punkte)**
 
-Schreibe ein Struktogramm und Python-Code, um **alle Elemente des Arrays** zeilenweise auszugeben.
+Schreibe ein Struktogramm und Python-Code, um **alle Elemente des Arrays (Listen)** zeilenweise auszugeben.
 
 Struktogramm (textbasierte Notation nach Operatorenliste):
 ```struktogramm
@@ -168,9 +168,9 @@ Schreibe Python-Code, um **nur die Werte > 30** auszugeben.
 
 ```
 
-**c) Array manipulieren (2 Punkte)**
+**c) Array (Liste) manipulieren (2 Punkte)**
 
-Schreibe Python-Code, um **jedes Element zu verdoppeln** und das Ergebnis in einem neuen Array zu speichern.
+Schreibe Python-Code, um **jedes Element zu verdoppeln** und das Ergebnis in einem neuen Array (Liste) zu speichern.
 
 ```python
 # Hier Lösung:
@@ -183,7 +183,7 @@ Schreibe Python-Code, um **jedes Element zu verdoppeln** und das Ergebnis in ein
 ### **Aufgabe 5: Algorithmen prüfen (8 Punkte)**
 **Thema:** BPE 7.2 – Algorithmenanalyse
 
-Gegeben ist das Array: `buchstaben = ['A', 'B', 'C', 'D', 'E', 'F', 'G']`
+Gegeben ist das Array (Liste): `buchstaben = ['A', 'B', 'C', 'D', 'E', 'F', 'G']`
 
 **Aufgabe (Analyse eines fehlerhaften Struktogramms):**
 
@@ -222,7 +222,7 @@ Antwort:
 ### **Aufgabe 6: Bubble Sort implementieren (7 Punkte)**
 **Thema:** BPE 7.2 – Sortieralgorithmen (Bubble Sort)
 
-Gegeben ist das Array: `zahlen = [5, 2, 8, 1, 9]`
+Gegeben ist das Array (Liste): `zahlen = [5, 2, 8, 1, 9]`
 
 **Aufgabe:**
 
@@ -250,7 +250,7 @@ Schreibe ein Struktogramm und implementiere **Bubble Sort** in Python.
 
 **c) Ausgabe (1 Punkt):**
 
-Wie sieht das sortierte Array aus?
+Wie sieht das sortierte Array (Liste) aus?
 
 ```
 Antwort: _______________
