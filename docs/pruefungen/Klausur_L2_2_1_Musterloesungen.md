@@ -31,11 +31,16 @@ Grundlage: Inhalte aus [src/niveau/infodateien/L2_1 Information_Algorithmik.docx
 
 **Python-Code (Musterlösung):**
 ```python
-alter = int(input("Geben Sie Ihr Alter ein: "))
-if alter < 18:
-    print("Jugendlicher")
-else:
-    print("Erwachsener")
+def klassifiziere_alter() -> None:
+    alter = int(input("Geben Sie Ihr Alter ein: "))
+    if alter < 18:
+        print("Jugendlicher")
+    else:
+        print("Erwachsener")
+
+
+# Test: Funktions-/Methodenaufruf
+klassifiziere_alter()
 ```
 
 **Bewertung (3 Punkte):**
@@ -67,15 +72,20 @@ else:
 
 **Python-Code (Musterlösung):**
 ```python
-summe = 0
-zahl = int(input("Geben Sie eine Zahl ein (oder -1 zum Beenden): "))
-
-while zahl != -1:
-    summe = summe + zahl
-    print(f"Summe: {summe}")
+def summiere_bis_abbruch() -> None:
+    summe = 0
     zahl = int(input("Geben Sie eine Zahl ein (oder -1 zum Beenden): "))
 
-print("Programm beendet.")
+    while zahl != -1:
+        summe = summe + zahl
+        print(f"Summe: {summe}")
+        zahl = int(input("Geben Sie eine Zahl ein (oder -1 zum Beenden): "))
+
+    print("Programm beendet.")
+
+
+# Test: Funktions-/Methodenaufruf
+summiere_bis_abbruch()
 ```
 
 **Bewertung (3 Punkte):**
@@ -103,12 +113,18 @@ print("Programm beendet.")
 ![L2_2b_Aufgabe2_Summe_Break](../../struktogramme/generated/svg/L2_2b_Aufgabe2_Summe_Break.svg)
 
 ```python
-while True:
-    zahl = int(input("Zahl: "))
-    if zahl == -1:
-        break
-    summe += zahl
-    print(f"Summe: {summe}")
+def summiere_mit_break() -> None:
+    summe = 0
+    while True:
+        zahl = int(input("Zahl: "))
+        if zahl == -1:
+            break
+        summe += zahl
+        print(f"Summe: {summe}")
+
+
+# Test: Funktions-/Methodenaufruf
+summiere_mit_break()
 ```
 → Volle Punkte (alternative Kontrollflussvariante)
 
@@ -123,7 +139,13 @@ while True:
 ![L2_3a_Aufgabe3_Array_Deklaration](../../struktogramme/generated/svg/L2_3a_Aufgabe3_Array_Deklaration.svg)
 
 ```python
-noten = [1, 2, 2, 3, 1, 5, 4, 2]
+def erstelle_noten_array() -> list[int]:
+    noten = [1, 2, 2, 3, 1, 5, 4, 2]
+    return noten
+
+
+# Test: Funktions-/Methodenaufruf
+print(erstelle_noten_array())
 ```
 
 **Bewertung:**
@@ -139,10 +161,16 @@ noten = [1, 2, 2, 3, 1, 5, 4, 2]
 ![L2_3b_Aufgabe3_Array_Zugriff](../../struktogramme/generated/svg/L2_3b_Aufgabe3_Array_Zugriff.svg)
 
 ```python
-erstes = noten[0]          # 1. Element = 1
-noten[-1] = 1              # Letztes Element auf 1 setzen
-laenge = len(noten)        # Länge = 8
-print(erstes, laenge)
+def demonstriere_array_zugriff() -> None:
+    noten = [1, 2, 2, 3, 1, 5, 4, 2]
+    erstes = noten[0]          # 1. Element = 1
+    noten[-1] = 1              # Letztes Element auf 1 setzen
+    laenge = len(noten)        # Länge = 8
+    print(erstes, laenge)
+
+
+# Test: Funktions-/Methodenaufruf
+demonstriere_array_zugriff()
 ```
 
 **Bewertung (1 Punkt, alles oder nichts):**
@@ -188,22 +216,37 @@ Das 4. Element des Arrays, dessen Wert 3 ist.
 
 **Musterlösung (for-Schleife mit Index):**
 ```python
-for i in range(len(werte)):
-    print(werte[i])
+def gib_alle_werte_aus_index(werte: list[int]) -> None:
+    for i in range(len(werte)):
+        print(werte[i])
+
+
+# Test: Funktions-/Methodenaufruf
+gib_alle_werte_aus_index([12, 45, 23, 67, 8, 34, 56, 11])
 ```
 
 **Alternative akzeptabel (for-Schleife mit Element):**
 ```python
-for wert in werte:
-    print(wert)
+def gib_alle_werte_aus_element(werte: list[int]) -> None:
+    for wert in werte:
+        print(wert)
+
+
+# Test: Funktions-/Methodenaufruf
+gib_alle_werte_aus_element([12, 45, 23, 67, 8, 34, 56, 11])
 ```
 
 **Alternative akzeptabel (while-Schleife):**
 ```python
-i = 0
-while i < len(werte):
-    print(werte[i])
-    i += 1
+def gib_alle_werte_mit_while_aus(werte: list[int]) -> None:
+    i = 0
+    while i < len(werte):
+        print(werte[i])
+        i += 1
+
+
+# Test: Funktions-/Methodenaufruf
+gib_alle_werte_mit_while_aus([12, 45, 23, 67, 8, 34, 56, 11])
 ```
 
 **Bewertung:**
@@ -221,9 +264,14 @@ while i < len(werte):
 
 
 ```python
-for wert in werte:
-    if wert > 30:
-        print(wert)
+def filtere_werte_groesser_30(werte: list[int]) -> None:
+    for wert in werte:
+        if wert > 30:
+            print(wert)
+
+
+# Test: Funktions-/Methodenaufruf
+filtere_werte_groesser_30([12, 45, 23, 67, 8, 34, 56, 11])
 ```
 
 **Alternative:**
@@ -248,10 +296,15 @@ for wert in werte:
 
 
 ```python
-for i in range(len(werte)):
-    if werte[i] > 30:
-        print(werte[i])
-```python
+def filtere_werte_groesser_30_mit_index(werte: list[int]) -> None:
+    for i in range(len(werte)):
+        if werte[i] > 30:
+            print(werte[i])
+
+
+# Test: Funktions-/Methodenaufruf
+filtere_werte_groesser_30_mit_index([12, 45, 23, 67, 8, 34, 56, 11])
+```
 
 **Bewertung (2 Punkte):**
 - ✅ Schleife + if-Bedingung korrekt = 2 Punkte
@@ -291,10 +344,15 @@ for i in range(len(werte)):
 
 
 ```python
-verdoppelt = []
-for wert in werte:
-    verdoppelt.append(wert * 2)
-print(verdoppelt)  # [24, 90, 46, 134, 16, 68, 112, 22]
+def verdoppele_werte_neue_liste(werte: list[int]) -> list[int]:
+    verdoppelt = []
+    for wert in werte:
+        verdoppelt.append(wert * 2)
+    return verdoppelt
+
+
+# Test: Funktions-/Methodenaufruf
+print(verdoppele_werte_neue_liste([12, 45, 23, 67, 8, 34, 56, 11]))  # [24, 90, 46, 134, 16, 68, 112, 22]
 ```
 
 **Musterlösung 2 (modifizieren im Original):**
@@ -314,8 +372,14 @@ print(verdoppelt)  # [24, 90, 46, 134, 16, 68, 112, 22]
 
 
 ```python
-for i in range(len(werte)):
-    werte[i] = werte[i] * 2
+def verdoppele_werte_im_original(werte: list[int]) -> list[int]:
+    for i in range(len(werte)):
+        werte[i] = werte[i] * 2
+    return werte
+
+
+# Test: Funktions-/Methodenaufruf
+print(verdoppele_werte_im_original([12, 45, 23, 67, 8, 34, 56, 11]))
 ```
 
 **Bewertung (2 Punkte):**
@@ -449,18 +513,22 @@ Zähle i von 0 bis n - 2, Schrittweite 1
 ![L2_6_Aufgabe6_Bubble_Sort](../../struktogramme/generated/svg/L2_6_Aufgabe6_Bubble_Sort.svg)
 
 ```python
-zahlen = [5, 2, 8, 1, 9]
-n = len(zahlen)
+def bubble_sort_temp(zahlen: list[int]) -> list[int]:
+    sortierte_zahlen = zahlen.copy()
+    n = len(sortierte_zahlen)
 
-for i in range(n - 1):
-    for j in range(n - 1 - i):
-        if zahlen[j] > zahlen[j + 1]:
-            # Tausch
-            temp = zahlen[j]
-            zahlen[j] = zahlen[j + 1]
-            zahlen[j + 1] = temp
+    for i in range(n - 1):
+        for j in range(n - 1 - i):
+            if sortierte_zahlen[j] > sortierte_zahlen[j + 1]:
+                temp = sortierte_zahlen[j]
+                sortierte_zahlen[j] = sortierte_zahlen[j + 1]
+                sortierte_zahlen[j + 1] = temp
 
-print(zahlen)  # [1, 2, 5, 8, 9]
+    return sortierte_zahlen
+
+
+# Test: Funktions-/Methodenaufruf
+print(bubble_sort_temp([5, 2, 8, 1, 9]))  # [1, 2, 5, 8, 9]
 ```
 
 **Musterlösung 2 (mit Python-Tuple-Swap):**
@@ -491,14 +559,19 @@ print(zahlen)  # [1, 2, 5, 8, 9]
 
 
 ```python
-zahlen = [5, 2, 8, 1, 9]
+def bubble_sort_tuple_swap(zahlen: list[int]) -> list[int]:
+    sortierte_zahlen = zahlen.copy()
 
-for i in range(len(zahlen) - 1):
-    for j in range(len(zahlen) - 1 - i):
-        if zahlen[j] > zahlen[j + 1]:
-            zahlen[j], zahlen[j + 1] = zahlen[j + 1], zahlen[j]
+    for i in range(len(sortierte_zahlen) - 1):
+        for j in range(len(sortierte_zahlen) - 1 - i):
+            if sortierte_zahlen[j] > sortierte_zahlen[j + 1]:
+                sortierte_zahlen[j], sortierte_zahlen[j + 1] = sortierte_zahlen[j + 1], sortierte_zahlen[j]
 
-print(zahlen)
+    return sortierte_zahlen
+
+
+# Test: Funktions-/Methodenaufruf
+print(bubble_sort_tuple_swap([5, 2, 8, 1, 9]))
 ```
 
 **Bewertung (3 Punkte):**
