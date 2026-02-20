@@ -275,7 +275,7 @@ def _render_funktionsaufruf(self, element: ET.Element, x: int, width: int) -> st
 | 3b | Array Zugriff | `L2_3b_Aufgabe3...xml` | ✅ | ✅ Label-Rechteck | 1.6 KB |
 | 4a | Array Ausgeben | `L2_4a_Aufgabe4...xml` | ✅ | ✅ L-Form (For) | 1.2 KB |
 | 4b | Array Filtern | `L2_4b_Aufgabe4...xml` | ✅ | ✅ L + Briefumschlag | 1.8 KB |
-| 5 | Lineare Suche | `L2_5_Aufgabe5...xml` | ✅ | ✅ Komplex (alle Formen) | 3.5 KB |
+| 5 | Algorithmen prüfen | `L2_5_Aufgabe5...xml` | ✅ | ✅ Komplex (alle Formen) | 3.5 KB |
 | 6 | Bubble Sort | `L2_6_Aufgabe6...xml` | ✅ | ✅ Verschachtelt (L+L+Briefumschlag) | 2.9 KB |
 
 **Gesamt:** 9/9 erfolgreich (19.1 KB)

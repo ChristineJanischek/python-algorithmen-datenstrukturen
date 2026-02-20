@@ -80,7 +80,7 @@
 - ✅ SVG generiert: `L2_4b_Aufgabe4_Array_Filtern.svg` (1.4 KB)
 - ✅ Markdown verlinkt
 
-### Aufgabe 5: Lineare Suche
+### Aufgabe 5: Algorithmen prüfen
 - ✅ XML-Definition: `L2_5_Aufgabe5_Algorithmen_pruefen.xml`
 - ✅ SVG generiert: `L2_5_Aufgabe5_Algorithmen_pruefen.svg` (2.4 KB)
 - ✅ Markdown verlinkt
