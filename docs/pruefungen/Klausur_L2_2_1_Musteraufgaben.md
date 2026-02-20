@@ -1,4 +1,4 @@
-# Klassenarbeit: Kontrollstrukturen, Arrays (Listen) und Algorithmen
+# Klassenarbeit: Kontrollstrukturen, Arrays (der Liste) und Algorithmen
 ## Informatik – Berufliches Gymnasium (Klasse 2)
 
 ---
@@ -13,7 +13,7 @@
 | **Erreichbare Punkte** | 30 Punkte |
 | **Bestanden ab** | 15 Punkte (50%) |
 | **Hilfsmittel** | Keine (Papier & Stift) |
-| **Themen** | Algorithmen (70%): Kontrollstrukturen, Lineare Suche, Bubble Sort <br> Datenstrukturen (30%): Arrays (Listen) |
+| **Themen** | Algorithmen (70%) und Datenstrukturen (30%) |
 
 ---
 
@@ -40,7 +40,7 @@
 | **1** | Kontrollstrukturen (if-else) | 3 | I – Reproduktion |
 | **2** | Schleifen & Logik | 3 | II – Transfer |
 | **3** | Arrays (Listen): Deklaration & Zugriff | 3 | I – Reproduktion |
-| **4** | Arrays (Listen) durchlaufen & filtern | 6 | II – Transfer |
+| **4** | Arrays (der Liste) durchlaufen & filtern | 6 | II – Transfer |
 | **5** | Algorithmen prüfen (Fehleranalyse) | 8 | II/III – Transfer & Analyse |
 | **6** | Sortieralgorithmus (Bubble Sort) | 7 | III – Kreativität |
 
@@ -105,7 +105,7 @@ Programm endet
 
 ---
 
-### **Aufgabe 3: Array (Liste)-Grundlagen (3 Punkte)**
+### **Aufgabe 3: Array-/Listen-Grundlagen (3 Punkte)**
 **Thema:** BPE 7.1 – Arrays (Listen) (Deklaration, Initialisierung, Zugriff)
 
 **a) Deklaration (1 Punkt)**
@@ -119,12 +119,12 @@ Schreibe die Python-Zeile, um folgendes Array (Liste) zu deklarieren und zu init
 
 ```
 
-**b) Array (Liste)-Zugriff (1 Punkt)**
+**b) Array-/Listen-Zugriff (1 Punkt)**
 
 Schreibe Python-Code, um:
 - Das **1. Element** auslesen
 - Das **letzte Element** ändern auf `1`
-- Die **Länge des Arrays (Listen)** ausgeben
+- Die **Länge des Arrays (der Liste)** ausgeben
 
 ```python
 # Zugriff und Manipulation:
@@ -149,7 +149,7 @@ Gegeben ist das Array (Liste): `werte = [12, 45, 23, 67, 8, 34, 56, 11]`
 
 **a) Alle Werte ausgeben (2 Punkte)**
 
-Schreibe ein Struktogramm und Python-Code, um **alle Elemente des Arrays (Listen)** zeilenweise auszugeben.
+Schreibe ein Struktogramm und Python-Code, um **alle Elemente des Arrays (der Liste)** zeilenweise auszugeben.
 
 Struktogramm (textbasierte Notation nach Operatorenliste):
 ```struktogramm
