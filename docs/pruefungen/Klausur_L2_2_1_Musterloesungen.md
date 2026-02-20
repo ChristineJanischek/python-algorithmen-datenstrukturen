@@ -1,5 +1,5 @@
 # Musterlösung & Erwartungshorizont
-## Klassenarbeit: Kontrollstrukturen, Arrays (Listen) und Algorithmen
+## Klassenarbeit: Kontrollstrukturen, Arrays (der Liste) und Algorithmen
 
 **Dokumentation für Lehrkräfte**
 
@@ -140,7 +140,7 @@ loese_aufgabe2_summe_mit_break()
 
 ---
 
-### **Aufgabe 3: Array (Liste)-Grundlagen (3 Punkte)**
+### **Aufgabe 3: Array-/Listen-Grundlagen (3 Punkte)**
 
 **Aufgabenstellung (aus Prüfungsblatt):**
 > a) Array (Liste) deklarieren und initialisieren: `Noten = [1, 2, 2, 3, 1, 5, 4, 2]`
@@ -169,7 +169,7 @@ print(loese_aufgabe3a_deklaration())
 
 ---
 
-**b) Array (Liste)-Zugriff (1 Punkt)**
+**b) Array-/Listen-Zugriff (1 Punkt)**
 
 **Musterlösung:**
 
@@ -205,7 +205,7 @@ noten[3] = 3 (das Element an Index 3 = 4. Position = Note 3)
 
 **Alternativ akzeptabel:**
 ```
-Das 4. Element des Arrays (Listen), dessen Wert 3 ist.
+Das 4. Element des Arrays (der Liste), dessen Wert 3 ist.
 ```
 
 **Bewertung:**
@@ -303,7 +303,7 @@ loese_aufgabe4b_filtere_groesser_30([12, 45, 23, 67, 8, 34, 56, 11])
 ```
 ┌────────────────────────────────────────┐
 │ Zähle i von 0 bis Anzahl der Elemente  │
-│ des Arrays (Listen) werte - 1, Schrittweite 1   │
+│ des Arrays (der Liste) werte - 1, Schrittweite 1   │
 │   Wenn werte[i] > 30, dann             │
 │     J                                  │
 │       Ausgabe:                         │
@@ -355,10 +355,10 @@ loese_aufgabe4b_filtere_groesser_30_index([12, 45, 23, 67, 8, 34, 56, 11])
 │ Deklaration und Initialisierung:       │
 │ verdoppelt = []                        │
 │ Zähle i von 0 bis Anzahl der Elemente  │
-│ des Arrays (Listen) werte - 1, Schrittweite 1   │
+│ des Arrays (der Liste) werte - 1, Schrittweite 1   │
 │   Zuweisung:                           │
 │   verdoppelt[Anzahl der Elemente des   │
-│   Arrays (Listen) verdoppelt] = werte[i] * 2    │
+│   Arrays (der Liste) verdoppelt] = werte[i] * 2    │
 └────────────────────────────────────────┘
 ```
 <!-- END_GRAPHIC_STRUKTOGRAMM -->
@@ -384,7 +384,7 @@ print(loese_aufgabe4c_verdoppeln_neue_liste([12, 45, 23, 67, 8, 34, 56, 11]))  #
 ```
 ┌────────────────────────────────────────┐
 │ Zähle i von 0 bis Anzahl der Elemente  │
-│ des Arrays (Listen) werte - 1, Schrittweite 1   │
+│ des Arrays (der Liste) werte - 1, Schrittweite 1   │
 │   Zuweisung:                           │
 │   werte[i] = werte[i] * 2              │
 └────────────────────────────────────────┘
@@ -460,7 +460,7 @@ Falls kein Treffer existiert, soll "Nicht gefunden" ausgegeben werden.
 
 **Musterantwort (kurz):**
 ```
-Der Index i wird nicht erhöht, wenn das aktuelle Array (Liste)-Element nicht dem Suchwert entspricht.
+Der Index i wird nicht erhöht, wenn das aktuelle Array-/Listen-Element nicht dem Suchwert entspricht.
 Dadurch prüft der Algorithmus immer wieder dasselbe Element.
 Die Wiederhole-solange-Bedingung bleibt wahr und das Programm kann hängen bleiben.
 ```
@@ -510,7 +510,7 @@ Wenn buchstaben[i] == eingabe, dann
 **Erwartete Struktur (BW-Standard nach Operatorenliste):**
 
 ```struktogramm
-Deklaration und Initialisierung: n als Ganzzahl = Anzahl der Elemente des Arrays (Listen) zahlen
+Deklaration und Initialisierung: n als Ganzzahl = Anzahl der Elemente des Arrays (der Liste) zahlen
 Zähle i von 0 bis n - 2, Schrittweite 1
     Zähle j von 0 bis n - 2 - i, Schrittweite 1
         Wenn zahlen[j] > zahlen[j + 1], dann
@@ -642,7 +642,7 @@ oder
 |---------|---------|-------------------|------------------|
 | **1** | 3 | I | Struktogramm-Syntax |
 | **2** | 3 | II | Schleife + Bedingung korrekt |
-| **3** | 3 | I | Array (Liste)-Index, Zugriff |
+| **3** | 3 | I | Array-/Listen-Index, Zugriff |
 | **4** | 6 | II | Schleife durchläuft korrekt |
 | **5** | 8 | II/III | **Fehlerursache und Korrektur korrekt** |
 | **6** | 7 | III | **Swap-Logik korrekt** |
@@ -726,7 +726,7 @@ Bei 30 Punkten:
 ### Aufgabe 3
 - [ ] Array (Liste) wird mit [ ] deklariert
 - [ ] Indexing benutzt [0] für erstes Element
-- [ ] len() zeigt Array (Liste)-Länge
+- [ ] len() zeigt Array-/Listen-Länge
 
 ### Aufgabe 4
 - [ ] a) Schleife durchläuft alle 8 Elemente
