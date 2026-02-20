@@ -1,0 +1,17 @@
+# Milestone-Index
+
+Zentrale Übersicht aller Meilenstein- und Fortschrittsdokumente.
+
+## Aktueller Stand
+- [Meilenstein 2026-02-20: Klausur L2_2_1 Optimierung](MEILENSTEIN-2026-02-20-KLAUSUR-L2_2_1-OPTIMIERUNG.MD)
+  - Neutralisierung Aufgabe 5, Dateikonsolidierung, Optimierung der Musterlösung als Korrekturvorlage
+- [Entwicklungsschritte](ENTWICKLUNGSSCHRITTE.MD)
+  - Chronologische Dokumentation der wichtigsten Änderungen
+
+## Meilenstein-Dokumente
+- [Meilenstein 1 – Aufgabenpaket: Listen, Sortier- und Suchalgorithmen](MEILENSTEIN-1-LISTEN-SORTIER-SUCHE.MD)
+- [Meilenstein-Plan für das E-Learning-Tool](FUNCTIONAL-MILESTONE-PLAN.MD)
+- [Milestone: Option 3 - Multi-Purpose Umstrukturierung](OPTION3_DRAWIO_EXTENSION.md)
+
+## Hinweis
+Neue Meilensteine bitte immer hier ergänzen, damit der aktuelle Projektstand schnell auffindbar bleibt.
