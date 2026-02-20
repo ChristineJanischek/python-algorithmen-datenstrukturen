@@ -1,19 +1,19 @@
-# 🧪 Testing Guide - Stencil in Draw.io laden
+# 🧪 Testing Guide - BW Library in Draw.io laden
 
 **Version:** 0.1.0  
 **Phase:** 2-A Testing  
-**Ziel:** Validieren, dass stencil.xml in Draw.io korrekt geladen wird
+**Ziel:** Validieren, dass `library.xml` mit BW-Operator-Templates in Draw.io korrekt geladen wird
 
 ---
 
 ## 🎯 Was testen wir?
 
-Nach Phase 2-A haben wir `stencil.xml` mit 11 Shapes erstellt. Jetzt überprüfen wir:
+Nach Phase 2-A haben wir `library.xml` mit BW-konformen Operator-Templates erstellt. Jetzt überprüfen wir:
 
-- ✅ Stencil kann in Draw.io geladen werden
-- ✅ Alle 11 Shapes werden angezeigt
+- ✅ Library kann in Draw.io geladen werden
+- ✅ Alle BW-Operator-Templates werden angezeigt
 - ✅ Shapes können in Canvas gezogen werden
-- ✅ Farben & Formen sind korrekt
+- ✅ Formen entsprechen BW-Standard (Alternative-Dreieck, umgedrehtes L, Aufruf-Seitenstriche)
 - ✅ Text kann editiert werden
 
 ---
@@ -23,7 +23,7 @@ Nach Phase 2-A haben wir `stencil.xml` mit 11 Shapes erstellt. Jetzt überprüfe
 **Du brauchst:**
 - ✅ Web-Browser (Chrome, Firefox, Edge)
 - ✅ Internet-Verbindung
-- ✅ Die Datei `stencil.xml` (bereits vorhanden in `apps/drawio-extension/`)
+- ✅ Die Datei `library.xml` (bereits vorhanden in `apps/drawio-extension/`)
 - ⚠️ **KEIN** npm install nötig für diesen Test!
 
 **Zeit:** ~10-15 Minuten
@@ -43,7 +43,7 @@ Du siehst jetzt einen leeren Canvas mit der Shape-Palette links.
 
 ---
 
-### Schritt 2: Stencil-Datei vorbereiten
+### Schritt 2: Library-Datei vorbereiten
 
 Die `library.xml` muss für Draw.io als Bibliotheksdatei zugänglich sein:
 
@@ -58,7 +58,7 @@ https://raw.githubusercontent.com/ChristineJanischek/python-algorithmen-datenstr
 
 ---
 
-### Schritt 3: Custom Stencil Library laden
+### Schritt 3: Custom BW Library laden
 
 #### Via URL (wenn GitHub):
 
@@ -77,7 +77,7 @@ https://raw.githubusercontent.com/ChristineJanischek/python-algorithmen-datenstr
 
 ---
 
-### Schritt 4: Stencil sollte jetzt laden! 🎉
+### Schritt 4: Library sollte jetzt laden! 🎉
 
 **Was du sehen solltest:**
 
@@ -135,18 +135,17 @@ Links in der Palette sollte ein neuer Abschnitt erscheinen:
 └──────────────────┘
 ```
 
-#### Test 3: Farben überprüfen
+#### Test 3: BW-Formen überprüfen
 
-Ziehe folgende Shapes und überprüfe Farben:
+Ziehe folgende Shapes und überprüfe die Struktur:
 
-| Shape | Erwartete Farbe |
+| Shape | Erwartete Form |
 |-------|-----------------|
-| Anweisung | Weiß |
-| Alternative | Hellgelb |
-| Deklaration | Hellblau |
-| Einlesen | Hellgrün (mit schrägen Kanten) |
-| Ausgabe | Gelb (mit schrägen Kanten) |
-| Rückgabe | Hellrot |
+| Anweisung | Rechteck |
+| Alternative | Rechteck mit eingebettetem Dreieck + J/N-Bereiche |
+| While | Umgedrehtes L |
+| For | Umgedrehtes L |
+| Aufruf | Rechteck mit zwei vertikalen Seitenstrichen |
 
 #### Test 4: Kontrollstrukturen
 
@@ -155,19 +154,16 @@ Teste die komplexen Shapes:
 **While-Schleife:**
 ```
 ┌──────────────────┐
-│ Wiederhole...    │  ← Kopf (gelb)
-├──────────────────┤
+│ Wiederhole...    │  ← Schleifenkopf
 │                  │
-│  (Körper)        │  ← Körper (weiß)
-│                  │
+│  (Körper)        │  ← umgedrehtes L
 └──────────────────┘
 ```
 
 **For-Schleife:**
 ```
 ┌──────────────────┐
-│ Zähle i...       │  ← Kopf (grün)
-├──────────────────┤
+│ Zähle i...       │  ← Schleifenkopf
 │                  │
 │  (Körper)        │  ← Körper (weiß)
 │                  │
@@ -181,8 +177,8 @@ Teste die komplexen Shapes:
 Hake ab, was funktioniert:
 
 ### Basis-Tests:
-- [ ] Stencil erscheint in der Palette
-- [ ] Alle 11 Shapes sind sichtbar
+- [ ] Library erscheint in der Palette
+- [ ] Alle BW-Operator-Templates sind sichtbar
 - [ ] Shape kann auf Canvas gezogen werden
 - [ ] Text kann editiert werden
 - [ ] Shape kann verschoben werden
@@ -190,13 +186,11 @@ Hake ab, was funktioniert:
 
 ### Visuelle Tests:
 - [ ] Anweisung ist weiß mit schwarzer Umrandung
-- [ ] Alternative zeigt Raute (◇) Form
-- [ ] While hat gelben Kopf + weißen Körper
-- [ ] For hat grünen Kopf + weißen Körper
-- [ ] Deklaration ist hellblau
-- [ ] Einlesen hat schräge Kanten (Trapez)
-- [ ] Ausgabe hat schräge Kanten (Trapez)
-- [ ] Rückgabe ist hellrot
+- [ ] Alternative zeigt Rechteck + eingebettetes Dreieck + J/N
+- [ ] While ist als umgedrehtes L dargestellt
+- [ ] For ist als umgedrehtes L dargestellt
+- [ ] Aufruf zeigt vertikale Seitenstriche im Rechteck
+- [ ] Operator-Text folgt `Operator: ...`-Notation
 
 ### Fortgeschrittene Tests:
 - [ ] Mehrere Shapes können kombiniert werden
@@ -209,12 +203,12 @@ Hake ab, was funktioniert:
 
 ## 🐛 Troubleshooting
 
-### Problem 1: Stencil erscheint nicht
+### Problem 1: Library erscheint nicht
 
 **Symptom:** Nach "Open Library from URL/Device" passiert nichts
 
 **Mögliche Ursachen:**
-1. **XML-Syntax-Fehler** in stencil.xml
+1. **XML/JSON-Syntax-Fehler** in `library.xml`
 2. **Falsche URL** (Tippfehler)
 3. **Browser-Blocker** (CORS Issue)
 4. **Draw.io Cache** (alte Version geladen)
@@ -226,7 +220,7 @@ Wichtig: `File → Open Library from ...` erwartet eine **Bibliotheksdatei** (`<
 ```bash
 # 1. XML validieren
 cd apps/drawio-extension
-xmllint stencil.xml  # Sollte keine Fehler zeigen
+python3 -c "import xml.etree.ElementTree as ET; ET.parse('library.xml'); print('OK')"
 
 # 2. URL überprüfen
 # Öffne die URL direkt im Browser - sollte XML zeigen
@@ -238,23 +232,23 @@ xmllint stencil.xml  # Sollte keine Fehler zeigen
 # Strg+Shift+Del → "Cached Images/Files" → Clear
 ```
 
-### Problem 2: Shapes sehen falsch aus
+### Problem 2: Shapes sehen nicht BW-konform aus
 
-**Symptom:** Farben sind anders, Formen sind kaputt
-
-**Lösung:**
-- Überprüfe `<path data="...">` in stencil.xml
-- Vergleiche mit STENCIL_GUIDE.md
-- Teste mit einem einfacheren Shape (nur Rechteck)
-
-### Problem 3: Text wird nicht angezeigt
-
-**Symptom:** Shape zeichnet, aber kein Text-Placeholder
+**Symptom:** Alternative/Schleife/Aufruf sehen wie Flussdiagramm statt Struktogramm aus
 
 **Lösung:**
-- Überprüfe `<foreground>` in stencil.xml
-- Stelle sicher, dass `<text>` Element korrekt ist
-- Teste mit Rechtsklick → "Edit Style" → setze "text=1"
+- Vergleiche mit `struktogramme/Operatorenliste-Struktogramme.md`
+- Prüfe die Templates „Wenn ... dann ... sonst“, „While“, „For“, „Aufruf“ in `library.xml`
+- Lade die Library neu (File → Close Library, dann erneut öffnen)
+
+### Problem 3: Operator-Text wird nicht korrekt übernommen
+
+**Symptom:** Shape wird angezeigt, aber Operator-Zeilen fehlen oder sind falsch formatiert
+
+**Lösung:**
+- Doppelklick auf Shape und Operator-Text direkt eintragen
+- Prüfe, dass `whiteSpace=wrap` im Style aktiv ist
+- Nutze kurze Zeilen im Kopf (z. B. `Deklaration:`) und Details in Zeile 2
 
 ### Problem 4: Library verschwindet nach Reload
 
@@ -274,7 +268,7 @@ Wenn alles funktioniert, mache Screenshots von:
 
 1. **Palette mit allen Shapes:** (für README.md)
 2. **Beispiel-Struktogramm:** (ein einfacher Algorithmus gezeichnet)
-3. **Farbcodierung:** (alle 7 Instruction Types nebeneinander)
+3. **BW-Formen:** Alternative, While, For, Aufruf nebeneinander
 
 Speichere in: `apps/drawio-extension/docs/screenshots/`
 
@@ -298,7 +292,7 @@ cd drawio/src/main/webapp
 python3 -m http.server 8080
 
 # Öffne http://localhost:8080
-# Lade stencil.xml von lokalem Dateisystem
+# Lade library.xml von lokalem Dateisystem
 ```
 
 ---
@@ -308,7 +302,7 @@ python3 -m http.server 8080
 Nach dem Test, dokumentiere:
 
 ```markdown
-## Test-Report: stencil.xml in Draw.io
+## Test-Report: library.xml in Draw.io
 
 **Datum:** 18.02.2026
 **Tester:** [Dein Name]
@@ -319,11 +313,11 @@ Nach dem Test, dokumentiere:
 
 | Test | Status | Bemerkungen |
 |------|--------|-------------|
-| Stencil lädt | ✅ PASS | |
-| 11 Shapes sichtbar | ✅ PASS | |
+| Library lädt | ✅ PASS | |
+| BW-Templates sichtbar | ✅ PASS | |
 | Drag & Drop | ✅ PASS | |
 | Text-Editing | ✅ PASS | |
-| Farb-Kodierung | ✅ PASS | |
+| BW-Formen korrekt | ✅ PASS | |
 | Export PNG | ✅ PASS | |
 
 ### Probleme:
@@ -342,10 +336,10 @@ Nach dem Test, dokumentiere:
 
 **Phase 2-A gilt als erfolgreich getestet, wenn:**
 
-1. ✅ Stencil lädt ohne Fehler
-2. ✅ Mindestens 8 von 11 Shapes funktionieren
+1. ✅ Library lädt ohne Fehler
+2. ✅ Alle Kernformen (Alternative/While/For/Aufruf) sind BW-konform
 3. ✅ Drag & Drop + Text-Editing funktioniert
-4. ✅ Farben sind wie erwartet
+4. ✅ Operatortexte folgen der Operatorenliste
 5. ✅ Export als PNG/SVG funktioniert
 
 **Wenn alle 5 Punkte ✅ = READY FÜR PHASE 2-B!**
@@ -361,14 +355,14 @@ cd apps/drawio-extension
 touch TEST_REPORT_PHASE_2A.md  # Fülle mit deinen Resultaten
 
 git add TEST_REPORT_PHASE_2A.md
-git commit -m "test: Phase 2-A stencil.xml validated in Draw.io"
+git commit -m "test: Phase 2-A library.xml validated against BW notation"
 git push origin main
 ```
 
 ### Update Todo:
 
 ```
-✅ Phase 2-A: stencil.xml mit 4 BW-Formen - TESTED & WORKING
+✅ Phase 2-A: library.xml mit BW-Operator-Templates - TESTED & WORKING
 ```
 
 ---
@@ -377,15 +371,15 @@ git push origin main
 
 - **Draw.io Custom Libraries:** https://www.drawio.com/blog/custom-libraries
 - **mxGraph Shapes Reference:** https://github.com/jgraph/mxgraph/tree/master/javascript/examples/grapheditor
-- **Stencil XML Format:** https://jgraph.github.io/mxgraph/docs/manual.html
+- **mxLibrary / Stencil Format:** https://jgraph.github.io/mxgraph/docs/manual.html
 
 ---
 
 ## 💡 Tipps & Best Practices
 
-### Tipp 1: Stencil während Entwicklung testen
+### Tipp 1: Library während Entwicklung testen
 ```
-Jede Änderung an stencil.xml:
+Jede Änderung an library.xml:
 1. Speichern
 2. In Draw.io: File → Close Library
 3. File → Open Library from Device (neu laden)
@@ -394,9 +388,9 @@ Jede Änderung an stencil.xml:
 
 ### Tipp 2: Mehrere Versionen parallel
 ```
-stencil_v1.xml  ← Stable Version
-stencil_v2.xml  ← Neue Features
-stencil.xml     ← Current/Production
+library_v1.xml  ← Stable Version
+library_v2.xml  ← Neue Features
+library.xml     ← Current/Production
 ```
 
 ### Tipp 3: Debugging mit Browser DevTools

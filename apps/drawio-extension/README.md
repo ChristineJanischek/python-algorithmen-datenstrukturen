@@ -29,15 +29,15 @@ npm run dev
 
 ## 🧪 Testing (Phase 2-A)
 
-**Neu!** Du kannst das Stencil-System jetzt in Draw.io testen - **OHNE npm install**!
+**Neu!** Du kannst die BW-Library jetzt in Draw.io testen - **OHNE npm install**!
 
 📖 **[→ Zum Testing Guide (TESTING_GUIDE.md)](./TESTING_GUIDE.md)**
 
 **Was du testen kannst:**
-- ✅ 11 Shapes in Draw.io laden (via URL oder lokale Datei)
+- ✅ 18 BW-Operator-Templates in Draw.io laden (via URL oder lokale Datei)
 - ✅ Drag & Drop auf Canvas
 - ✅ Text editieren
-- ✅ Farb-Kodierung überprüfen
+- ✅ BW-Formen überprüfen (Alternative-Dreieck, umgedrehtes L, Aufruf-Seitenstriche)
 - ✅ Export als PNG/SVG
 
 **Warum jetzt testen?**
@@ -59,8 +59,8 @@ Dies ist eine **Draw.io Extension** für Struktogramme nach dem Baden-Württembe
 **Zielgruppe:** Schüler & Lehrer im deutschen Abitur (Informatik)
 
 **Features:**
-- ✅ 4 Strukturformen (Anweisung, Alternative, While, For)
-- ✅ 7 verschiedene Anweisungstypen
+- ✅ BW-konforme Strukturformen (Anweisung, Alternative, While, For, Aufruf)
+- ✅ Operator-Templates gemäß `Operatorenliste-Struktogramme.md`
 - ✅ Validierung gegen BW-Standard
 - ✅ Export zu XML/SVG
 - ✅ Automatic Code Generation (bald)
@@ -103,7 +103,7 @@ npm test:watch   # Watch-Mode für TDD
 - **[Dependencies](./DEPENDENCIES.md)** - Alle NPM-Pakete & Version Constraints
 
 ### Development & Testing
-- **[Testing Guide](./TESTING_GUIDE.md)** - 🆕 Stencil in Draw.io testen (Phase 2-A)
+- **[Testing Guide](./TESTING_GUIDE.md)** - 🆕 BW-Library in Draw.io testen (Phase 2-A)
 - **[Stencil Guide](./STENCIL_GUIDE.md)** - Technische Doku zu Shapes & SVG
 - **[Developer Guide](./docs/dev-guide.md)** - Wie trägt man Code bei? (coming soon)
 
@@ -122,7 +122,7 @@ npm test:watch   # Watch-Mode für TDD
 - ✅ Security Assessment (Option B: Monitor & Document)
 
 ### 🔄 Phase 2: Stencils & Plugin (IN PROGRESS)
-- ✅ **Phase 2-A:** Stencil XML Definition (11 Shapes) - TESTABLE!
+- ✅ **Phase 2-A:** BW-Library + Stencil-Basis (Operatoren v2.2) - TESTABLE!
 - 🔄 **Phase 2-B:** Plugin Loader Implementation
 - 🔄 **Phase 2-C:** Draw.io Palette Integration
 - 🔄 **Phase 2-D:** Shape Renderer & Event Handlers
