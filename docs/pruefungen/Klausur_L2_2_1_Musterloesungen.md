@@ -25,13 +25,18 @@ Grundlage: Inhalte aus [src/niveau/infodateien/L2_1 Information_Algorithmik.docx
 
 ### **Aufgabe 1: Verzweigung & Logik (3 Punkte)**
 
+**Aufgabenstellung (aus Prüfungsblatt):**
+> Ein Programm liest eine Ganzzahl (Alter) ein und gibt aus:
+> - „Jugendlicher" wenn das Alter < 18 ist
+> - „Erwachsener" wenn das Alter >= 18 ist
+
 **Erwartetes Struktogramm (BW-Standard - Grafische Notation):**
 
 ![L2_1_Aufgabe1_Altersklassifikation](../../struktogramme/generated/svg/L2_1_Aufgabe1_Altersklassifikation.svg)
 
 **Python-Code (Musterlösung):**
 ```python
-def klassifiziere_alter() -> None:
+def loese_aufgabe1_altersklassifikation() -> None:
     alter = int(input("Geben Sie Ihr Alter ein: "))
     if alter < 18:
         print("Jugendlicher")
@@ -40,7 +45,7 @@ def klassifiziere_alter() -> None:
 
 
 # Test: Funktions-/Methodenaufruf
-klassifiziere_alter()
+loese_aufgabe1_altersklassifikation()
 ```
 
 **Bewertung (3 Punkte):**
@@ -66,13 +71,18 @@ klassifiziere_alter()
 
 ### **Aufgabe 2: Schleife mit Bedingung (3 Punkte)**
 
+**Aufgabenstellung (aus Prüfungsblatt):**
+> Ein Programm liest positive Ganzzahlen ein, **solange** der Nutzer möchte.
+> Nach jeder Eingabe wird die **Summe aller bisherigen Zahlen** ausgegeben.
+> Das Programm endet, wenn die Eingabe **-1** ist.
+
 **Erwartetes Struktogramm (BW-Standard - Grafische Notation):**
 
 ![L2_2_Aufgabe2_Summe](../../struktogramme/generated/svg/L2_2_Aufgabe2_Summe.svg)
 
 **Python-Code (Musterlösung):**
 ```python
-def summiere_bis_abbruch() -> None:
+def loese_aufgabe2_summe_bis_abbruch() -> None:
     summe = 0
     zahl = int(input("Geben Sie eine Zahl ein (oder -1 zum Beenden): "))
 
@@ -85,7 +95,7 @@ def summiere_bis_abbruch() -> None:
 
 
 # Test: Funktions-/Methodenaufruf
-summiere_bis_abbruch()
+loese_aufgabe2_summe_bis_abbruch()
 ```
 
 **Bewertung (3 Punkte):**
@@ -113,7 +123,7 @@ summiere_bis_abbruch()
 ![L2_2b_Aufgabe2_Summe_Break](../../struktogramme/generated/svg/L2_2b_Aufgabe2_Summe_Break.svg)
 
 ```python
-def summiere_mit_break() -> None:
+def loese_aufgabe2_summe_mit_break() -> None:
     summe = 0
     while True:
         zahl = int(input("Zahl: "))
@@ -124,13 +134,18 @@ def summiere_mit_break() -> None:
 
 
 # Test: Funktions-/Methodenaufruf
-summiere_mit_break()
+loese_aufgabe2_summe_mit_break()
 ```
 → Volle Punkte (alternative Kontrollflussvariante)
 
 ---
 
 ### **Aufgabe 3: Array-Grundlagen (3 Punkte)**
+
+**Aufgabenstellung (aus Prüfungsblatt):**
+> a) Array deklarieren und initialisieren: `Noten = [1, 2, 2, 3, 1, 5, 4, 2]`
+> b) 1. Element auslesen, letztes Element auf `1` setzen, Länge ausgeben
+> c) Bedeutung von `noten[3]` erklären
 
 **a) Deklaration (1 Punkt)**
 
@@ -139,13 +154,13 @@ summiere_mit_break()
 ![L2_3a_Aufgabe3_Array_Deklaration](../../struktogramme/generated/svg/L2_3a_Aufgabe3_Array_Deklaration.svg)
 
 ```python
-def erstelle_noten_array() -> list[int]:
+def loese_aufgabe3a_deklaration() -> list[int]:
     noten = [1, 2, 2, 3, 1, 5, 4, 2]
     return noten
 
 
 # Test: Funktions-/Methodenaufruf
-print(erstelle_noten_array())
+print(loese_aufgabe3a_deklaration())
 ```
 
 **Bewertung:**
@@ -161,7 +176,7 @@ print(erstelle_noten_array())
 ![L2_3b_Aufgabe3_Array_Zugriff](../../struktogramme/generated/svg/L2_3b_Aufgabe3_Array_Zugriff.svg)
 
 ```python
-def demonstriere_array_zugriff() -> None:
+def loese_aufgabe3b_array_zugriff() -> None:
     noten = [1, 2, 2, 3, 1, 5, 4, 2]
     erstes = noten[0]          # 1. Element = 1
     noten[-1] = 1              # Letztes Element auf 1 setzen
@@ -170,7 +185,7 @@ def demonstriere_array_zugriff() -> None:
 
 
 # Test: Funktions-/Methodenaufruf
-demonstriere_array_zugriff()
+loese_aufgabe3b_array_zugriff()
 ```
 
 **Bewertung (1 Punkt, alles oder nichts):**
@@ -202,6 +217,12 @@ Das 4. Element des Arrays, dessen Wert 3 ist.
 
 ### **Aufgabe 4: Array durchlaufen & filtern (6 Punkte)**
 
+**Aufgabenstellung (aus Prüfungsblatt):**
+> Gegeben ist das Array: `werte = [12, 45, 23, 67, 8, 34, 56, 11]`
+> a) Alle Werte zeilenweise ausgeben
+> b) Nur Werte > 30 ausgeben
+> c) Jedes Element verdoppeln und in einem neuen Array speichern
+
 **Gegeben:** `werte = [12, 45, 23, 67, 8, 34, 56, 11]`
 
 ---
@@ -216,29 +237,29 @@ Das 4. Element des Arrays, dessen Wert 3 ist.
 
 **Musterlösung (for-Schleife mit Index):**
 ```python
-def gib_alle_werte_aus_index(werte: list[int]) -> None:
+def loese_aufgabe4a_werte_ausgeben_index(werte: list[int]) -> None:
     for i in range(len(werte)):
         print(werte[i])
 
 
 # Test: Funktions-/Methodenaufruf
-gib_alle_werte_aus_index([12, 45, 23, 67, 8, 34, 56, 11])
+loese_aufgabe4a_werte_ausgeben_index([12, 45, 23, 67, 8, 34, 56, 11])
 ```
 
 **Alternative akzeptabel (for-Schleife mit Element):**
 ```python
-def gib_alle_werte_aus_element(werte: list[int]) -> None:
+def loese_aufgabe4a_werte_ausgeben_element(werte: list[int]) -> None:
     for wert in werte:
         print(wert)
 
 
 # Test: Funktions-/Methodenaufruf
-gib_alle_werte_aus_element([12, 45, 23, 67, 8, 34, 56, 11])
+loese_aufgabe4a_werte_ausgeben_element([12, 45, 23, 67, 8, 34, 56, 11])
 ```
 
 **Alternative akzeptabel (while-Schleife):**
 ```python
-def gib_alle_werte_mit_while_aus(werte: list[int]) -> None:
+def loese_aufgabe4a_werte_ausgeben_while(werte: list[int]) -> None:
     i = 0
     while i < len(werte):
         print(werte[i])
@@ -246,7 +267,7 @@ def gib_alle_werte_mit_while_aus(werte: list[int]) -> None:
 
 
 # Test: Funktions-/Methodenaufruf
-gib_alle_werte_mit_while_aus([12, 45, 23, 67, 8, 34, 56, 11])
+loese_aufgabe4a_werte_ausgeben_while([12, 45, 23, 67, 8, 34, 56, 11])
 ```
 
 **Bewertung:**
@@ -264,14 +285,14 @@ gib_alle_werte_mit_while_aus([12, 45, 23, 67, 8, 34, 56, 11])
 
 
 ```python
-def filtere_werte_groesser_30(werte: list[int]) -> None:
+def loese_aufgabe4b_filtere_groesser_30(werte: list[int]) -> None:
     for wert in werte:
         if wert > 30:
             print(wert)
 
 
 # Test: Funktions-/Methodenaufruf
-filtere_werte_groesser_30([12, 45, 23, 67, 8, 34, 56, 11])
+loese_aufgabe4b_filtere_groesser_30([12, 45, 23, 67, 8, 34, 56, 11])
 ```
 
 **Alternative:**
@@ -296,14 +317,14 @@ filtere_werte_groesser_30([12, 45, 23, 67, 8, 34, 56, 11])
 
 
 ```python
-def filtere_werte_groesser_30_mit_index(werte: list[int]) -> None:
+def loese_aufgabe4b_filtere_groesser_30_index(werte: list[int]) -> None:
     for i in range(len(werte)):
         if werte[i] > 30:
             print(werte[i])
 
 
 # Test: Funktions-/Methodenaufruf
-filtere_werte_groesser_30_mit_index([12, 45, 23, 67, 8, 34, 56, 11])
+loese_aufgabe4b_filtere_groesser_30_index([12, 45, 23, 67, 8, 34, 56, 11])
 ```
 
 **Bewertung (2 Punkte):**
@@ -344,7 +365,7 @@ filtere_werte_groesser_30_mit_index([12, 45, 23, 67, 8, 34, 56, 11])
 
 
 ```python
-def verdoppele_werte_neue_liste(werte: list[int]) -> list[int]:
+def loese_aufgabe4c_verdoppeln_neue_liste(werte: list[int]) -> list[int]:
     verdoppelt = []
     for wert in werte:
         verdoppelt.append(wert * 2)
@@ -352,7 +373,7 @@ def verdoppele_werte_neue_liste(werte: list[int]) -> list[int]:
 
 
 # Test: Funktions-/Methodenaufruf
-print(verdoppele_werte_neue_liste([12, 45, 23, 67, 8, 34, 56, 11]))  # [24, 90, 46, 134, 16, 68, 112, 22]
+print(loese_aufgabe4c_verdoppeln_neue_liste([12, 45, 23, 67, 8, 34, 56, 11]))  # [24, 90, 46, 134, 16, 68, 112, 22]
 ```
 
 **Musterlösung 2 (modifizieren im Original):**
@@ -372,14 +393,14 @@ print(verdoppele_werte_neue_liste([12, 45, 23, 67, 8, 34, 56, 11]))  # [24, 90, 
 
 
 ```python
-def verdoppele_werte_im_original(werte: list[int]) -> list[int]:
+def loese_aufgabe4c_verdoppeln_im_original(werte: list[int]) -> list[int]:
     for i in range(len(werte)):
         werte[i] = werte[i] * 2
     return werte
 
 
 # Test: Funktions-/Methodenaufruf
-print(verdoppele_werte_im_original([12, 45, 23, 67, 8, 34, 56, 11]))
+print(loese_aufgabe4c_verdoppeln_im_original([12, 45, 23, 67, 8, 34, 56, 11]))
 ```
 
 **Bewertung (2 Punkte):**
@@ -390,6 +411,12 @@ print(verdoppele_werte_im_original([12, 45, 23, 67, 8, 34, 56, 11]))
 ---
 
 ### **Aufgabe 5: Algorithmen prüfen (8 Punkte)**
+
+**Aufgabenstellung (aus Prüfungsblatt):**
+> Analysiere das fehlerhafte Struktogramm.
+> a) Vermuteten Zweck beschreiben
+> b) Logischen Fehler und Auswirkung erläutern
+> c) BW-konforme Korrekturanweisung formulieren
 
 **Gegeben:** `buchstaben = ['A', 'B', 'C', 'D', 'E', 'F', 'G']`
 
@@ -405,8 +432,8 @@ print(verdoppele_werte_im_original([12, 45, 23, 67, 8, 34, 56, 11]))
 
 **Erwartung:**
 - Der Algorithmus soll eine **lineare Suche** im Array `buchstaben` durchführen.
-- Es wird ein Suchzeichen eingelesen.
-- Bei Treffer soll „Gefunden! Index: i“ ausgegeben werden, sonst „Nicht gefunden“.
+- Es wird ein Eingabewert eingelesen.
+- Bei Treffer soll „Treffer“ ausgegeben werden, sonst „Kein Treffer“.
 
 **Musterantwort (Beispiel):**
 ```
@@ -428,7 +455,7 @@ Falls kein Treffer existiert, soll "Nicht gefunden" ausgegeben werden.
 **Erwarteter Fehler:**
 - Im **Nein-Zweig** der inneren Verzweigung fehlt die Anweisung
   `Zuweisung: i = i + 1`.
-- Dadurch bleibt `i` unverändert, wenn `buchstaben[i] != such` ist.
+- Dadurch bleibt `i` unverändert, wenn `buchstaben[i] != eingabe` ist.
 - Folge: Die Schleife kann in eine **Endlosschleife** geraten (bei Nicht-Treffer am aktuellen Index).
 
 **Musterantwort (kurz):**
@@ -450,9 +477,9 @@ Die Wiederhole-solange-Bedingung bleibt wahr und das Programm kann hängen bleib
 **Erwartete BW-konforme Korrektur:**
 
 ```struktogramm
-Wenn buchstaben[i] == such, dann
+Wenn buchstaben[i] == eingabe, dann
     J
-        Zuweisung: gefunden = wahr
+        Zuweisung: flag = wahr
     , sonst
     N
         Zuweisung: i = i + 1
@@ -468,6 +495,11 @@ Wenn buchstaben[i] == such, dann
 ---
 
 ### **Aufgabe 6: Bubble Sort implementieren (7 Punkte)**
+
+**Aufgabenstellung (aus Prüfungsblatt):**
+> Schreibe ein Struktogramm und implementiere **Bubble Sort** in Python.
+> Verwende verschachtelte Schleifen und eine klare Tauschlogik.
+> Gib das sortierte Array aus.
 
 **Gegeben:** `zahlen = [5, 2, 8, 1, 9]`
 
@@ -513,7 +545,7 @@ Zähle i von 0 bis n - 2, Schrittweite 1
 ![L2_6_Aufgabe6_Bubble_Sort](../../struktogramme/generated/svg/L2_6_Aufgabe6_Bubble_Sort.svg)
 
 ```python
-def bubble_sort_temp(zahlen: list[int]) -> list[int]:
+def loese_aufgabe6_bubble_sort_temp(zahlen: list[int]) -> list[int]:
     sortierte_zahlen = zahlen.copy()
     n = len(sortierte_zahlen)
 
@@ -528,7 +560,7 @@ def bubble_sort_temp(zahlen: list[int]) -> list[int]:
 
 
 # Test: Funktions-/Methodenaufruf
-print(bubble_sort_temp([5, 2, 8, 1, 9]))  # [1, 2, 5, 8, 9]
+print(loese_aufgabe6_bubble_sort_temp([5, 2, 8, 1, 9]))  # [1, 2, 5, 8, 9]
 ```
 
 **Musterlösung 2 (mit Python-Tuple-Swap):**
@@ -559,7 +591,7 @@ print(bubble_sort_temp([5, 2, 8, 1, 9]))  # [1, 2, 5, 8, 9]
 
 
 ```python
-def bubble_sort_tuple_swap(zahlen: list[int]) -> list[int]:
+def loese_aufgabe6_bubble_sort_tuple_swap(zahlen: list[int]) -> list[int]:
     sortierte_zahlen = zahlen.copy()
 
     for i in range(len(sortierte_zahlen) - 1):
@@ -571,7 +603,7 @@ def bubble_sort_tuple_swap(zahlen: list[int]) -> list[int]:
 
 
 # Test: Funktions-/Methodenaufruf
-print(bubble_sort_tuple_swap([5, 2, 8, 1, 9]))
+print(loese_aufgabe6_bubble_sort_tuple_swap([5, 2, 8, 1, 9]))
 ```
 
 **Bewertung (3 Punkte):**
