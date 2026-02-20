@@ -30,6 +30,26 @@ Nach Phase 2-A haben wir `library.xml` mit BW-konformen Operator-Templates erste
 
 ---
 
+## ⚡ Smoke-Test (2 Minuten)
+
+Für Blog/Quick-Check ohne komplette Testsession:
+
+1. Öffne **https://app.diagrams.net** und erstelle ein leeres Diagramm.
+2. Klicke **File → Open Library from → URL...**.
+3. Füge ein:
+   ```
+   https://raw.githubusercontent.com/ChristineJanischek/python-algorithmen-datenstrukturen/main/apps/drawio-extension/library.xml
+   ```
+4. Ziehe diese 4 Shapes auf den Canvas: **Wenn ... dann ... sonst**, **While**, **For**, **Aufruf**.
+5. Prüfe kurz:
+   - Alternative = Rechteck mit eingebettetem Dreieck + J/N
+   - While/For = umgedrehtes L
+   - Aufruf = Rechteck mit zwei vertikalen Seitenstrichen
+
+Wenn das passt, ist die BW-Notation im Kern korrekt eingebunden.
+
+---
+
 ## 🚀 Methode 1: Draw.io Online (EINFACHSTE Methode)
 
 ### Schritt 1: Draw.io öffnen

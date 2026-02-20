@@ -32,6 +32,7 @@ npm run dev
 **Neu!** Du kannst die BW-Library jetzt in Draw.io testen - **OHNE npm install**!
 
 📖 **[→ Zum Testing Guide (TESTING_GUIDE.md)](./TESTING_GUIDE.md)**
+⚡ **[→ Smoke-Test in 2 Minuten](./TESTING_GUIDE.md#-smoke-test-2-minuten)**
 
 **Was du testen kannst:**
 - ✅ 18 BW-Operator-Templates in Draw.io laden (via URL oder lokale Datei)
