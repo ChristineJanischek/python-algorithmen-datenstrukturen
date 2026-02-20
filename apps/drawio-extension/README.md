@@ -47,7 +47,7 @@ npm run dev
 
 **Quick Test:** Öffne [Draw.io](https://app.diagrams.net) → File → Open Library from → URL → Gib ein:
 ```
-https://raw.githubusercontent.com/ChristineJanischek/python-algorithmen-datenstrukturen/main/apps/drawio-extension/stencil.xml
+https://raw.githubusercontent.com/ChristineJanischek/python-algorithmen-datenstrukturen/main/apps/drawio-extension/library.xml
 ```
 
 ---

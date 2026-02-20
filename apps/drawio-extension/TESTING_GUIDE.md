@@ -45,16 +45,16 @@ Du siehst jetzt einen leeren Canvas mit der Shape-Palette links.
 
 ### Schritt 2: Stencil-Datei vorbereiten
 
-Die `stencil.xml` muss für Draw.io zugänglich sein:
+Die `library.xml` muss für Draw.io als Bibliotheksdatei zugänglich sein:
 
 **Option A: Via GitHub Raw URL** (wenn schon gepusht)
 ```
-https://raw.githubusercontent.com/ChristineJanischek/python-algorithmen-datenstrukturen/main/apps/drawio-extension/stencil.xml
+https://raw.githubusercontent.com/ChristineJanischek/python-algorithmen-datenstrukturen/main/apps/drawio-extension/library.xml
 ```
 
 **Option B: Lokale Datei** (später laden)
-- Kopiere `stencil.xml` auf deinen Desktop
-- Oder merke dir den Pfad: `apps/drawio-extension/stencil.xml`
+- Kopiere `library.xml` auf deinen Desktop
+- Oder merke dir den Pfad: `apps/drawio-extension/library.xml`
 
 ---
 
@@ -65,14 +65,14 @@ https://raw.githubusercontent.com/ChristineJanischek/python-algorithmen-datenstr
 1. In Draw.io: Klicke **File** → **Open Library from** → **URL...**
 2. Gib die GitHub Raw URL ein:
    ```
-   https://raw.githubusercontent.com/ChristineJanischek/python-algorithmen-datenstrukturen/main/apps/drawio-extension/stencil.xml
+   https://raw.githubusercontent.com/ChristineJanischek/python-algorithmen-datenstrukturen/main/apps/drawio-extension/library.xml
    ```
 3. Klicke **OK**
 
 #### Via lokale Datei:
 
 1. In Draw.io: Klicke **File** → **Open Library from** → **Device...**
-2. Wähle `stencil.xml` aus
+2. Wähle `library.xml` aus
 3. Klicke **Open**
 
 ---
@@ -220,6 +220,8 @@ Hake ab, was funktioniert:
 4. **Draw.io Cache** (alte Version geladen)
 
 **Lösungen:**
+
+Wichtig: `File → Open Library from ...` erwartet eine **Bibliotheksdatei** (`<mxlibrary>`), nicht direkt ein Stencil-Set (`<shapes>`). Verwende deshalb `library.xml`.
 
 ```bash
 # 1. XML validieren
