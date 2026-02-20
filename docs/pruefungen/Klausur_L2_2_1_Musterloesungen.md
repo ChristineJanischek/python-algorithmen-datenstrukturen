@@ -325,7 +325,7 @@ for i in range(len(werte)):
 
 ---
 
-### **Aufgabe 5: Lineare Suche (8 Punkte)**
+### **Aufgabe 5: Algorithmen prüfen (8 Punkte)**
 
 **Gegeben:** `buchstaben = ['A', 'B', 'C', 'D', 'E', 'F', 'G']`
 
@@ -584,7 +584,7 @@ oder
 
 ### Besondere Hinweise zu Aufgaben
 
-**Aufgabe 5 (Lineare Suche):**
+**Aufgabe 5 (Algorithmen prüfen):**
 - Der Fokus liegt auf **Algorithmusverständnis und Fehlerdiagnose**
 - Teilpunkte geben, wenn Zweck korrekt erkannt wurde, auch wenn die Korrektur unvollständig ist
 
@@ -629,7 +629,7 @@ Bei 30 Punkten:
 - [ ] c) Neues Array mit verdoppelten Werten
 
 ### Aufgabe 5
-- [ ] Zweck als lineare Suche korrekt beschrieben
+- [ ] Zweck des Algorithmus korrekt beschrieben (lineare Suche erkannt)
 - [ ] Fehlerstelle im Nein-Zweig korrekt erkannt
 - [ ] `Zuweisung: i = i + 1` als Korrektur benannt
 

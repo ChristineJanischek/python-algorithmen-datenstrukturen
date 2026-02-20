@@ -41,7 +41,7 @@
 | **2** | Schleifen & Logik | 3 | II – Transfer |
 | **3** | Arrays: Deklaration & Zugriff | 3 | I – Reproduktion |
 | **4** | Arrays durchlaufen & filtern | 6 | II – Transfer |
-| **5** | Lineare Suche (Fehleranalyse) | 8 | II/III – Transfer & Analyse |
+| **5** | Algorithmen prüfen (Fehleranalyse) | 8 | II/III – Transfer & Analyse |
 | **6** | Sortieralgorithmus (Bubble Sort) | 7 | III – Kreativität |
 
 **Summe: 30 Punkte**
@@ -180,8 +180,8 @@ Schreibe Python-Code, um **jedes Element zu verdoppeln** und das Ergebnis in ein
 
 ---
 
-### **Aufgabe 5: Lineare Suche (8 Punkte)**
-**Thema:** BPE 7.2 – Suchalgorithmen
+### **Aufgabe 5: Algorithmen prüfen (8 Punkte)**
+**Thema:** BPE 7.2 – Algorithmenanalyse
 
 Gegeben ist das Array: `buchstaben = ['A', 'B', 'C', 'D', 'E', 'F', 'G']`
 

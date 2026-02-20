@@ -1,34 +1,34 @@
 <?xml version='1.0' encoding='utf-8'?>
 <struktogramm>
   <metadata>
-    <titel>Aufgabe 5: Lineare Suche mit Flag</titel>
+    <titel>Aufgabe 5: Algorithmen prüfen</titel>
     <level>L2</level>
     <kategorie>Suchen</kategorie>
     <autor>Klassenarbeit</autor>
-    <beschreibung>Suche nach Element in Array mit Hilfs-Flag</beschreibung>
+    <beschreibung>Analyse eines Algorithmus mit Hilfsvariable</beschreibung>
   </metadata>
   <inhalt>
     <prozess typ="zuweisung">i = 0</prozess>
-    <prozess typ="zuweisung">gefunden = falsch</prozess>
+    <prozess typ="zuweisung">flag = falsch</prozess>
     <wiederhole>
-      <bedingung>i &lt; Anzahl der Elemente des Arrays buchstaben AND NOT gefunden</bedingung>
+      <bedingung>i &lt; Anzahl der Elemente des Arrays buchstaben AND NOT flag</bedingung>
       <inhalt>
         <wenn>
-          <bedingung>buchstaben[i] == such</bedingung>
+          <bedingung>buchstaben[i] == eingabe</bedingung>
           <dann>
-            <prozess typ="zuweisung">gefunden = wahr</prozess>
+            <prozess typ="zuweisung">flag = wahr</prozess>
           </dann>
         </wenn>
         <prozess typ="zuweisung">i = i + 1</prozess>
       </inhalt>
     </wiederhole>
     <wenn>
-      <bedingung>gefunden</bedingung>
+      <bedingung>flag</bedingung>
       <dann>
-        <ausgabe typ="ausgabe">Element gefunden an Position i</ausgabe>
+        <ausgabe typ="ausgabe">Treffer</ausgabe>
       </dann>
       <sonst>
-        <ausgabe typ="ausgabe">Element nicht gefunden</ausgabe>
+        <ausgabe typ="ausgabe">Kein Treffer</ausgabe>
       </sonst>
     </wenn>
   </inhalt>
