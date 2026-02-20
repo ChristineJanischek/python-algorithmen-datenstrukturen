@@ -620,7 +620,7 @@ struktogramme/xml_definitions/L2_sortieren/
 ├── L2_3b_Aufgabe3_Array_Zugriff.xml
 ├── L2_4a_Aufgabe4_Array_Ausgeben_Index.xml
 ├── L2_4b_Aufgabe4_Array_Filtern.xml
-├── L2_5_Aufgabe5_Lineare_Suche.xml
+├── L2_5_Aufgabe5_Algorithmen_pruefen.xml
 └── L2_6_Aufgabe6_Bubble_Sort.xml
 ```
 

@@ -333,7 +333,7 @@ for i in range(len(werte)):
 
 **Fehlerhaftes Struktogramm (Aufgabenmaterial):**
 
-![L2_5_Aufgabe5_Lineare_Suche_Fehleranalyse](../../struktogramme/generated/svg/L2_5_Aufgabe5_Lineare_Suche_Fehleranalyse.svg)
+![L2_5_Aufgabe5_Algorithmen_pruefen_Fehleranalyse](../../struktogramme/generated/svg/L2_5_Aufgabe5_Algorithmen_pruefen_Fehleranalyse.svg)
 
 ---
 

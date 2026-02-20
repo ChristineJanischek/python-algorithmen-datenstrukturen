@@ -81,7 +81,7 @@
 - ✅ Markdown verlinkt
 
 ### Aufgabe 5: Lineare Suche
-- ✅ XML-Definition: `L2_5_Aufgabe5_Lineare_Suche.xml`
+- ✅ XML-Definition: `L2_5_Aufgabe5_Algorithmen_pruefen.xml`
 - ✅ SVG generiert: `L2_5_Aufgabe5_Lineare_Suche.svg` (2.4 KB)
 - ✅ Markdown verlinkt
 
@@ -181,7 +181,7 @@ L2_3a_Aufgabe3_Array_Deklaration.xml         (0.8 KB) → .svg (1.2 KB)
 L2_3b_Aufgabe3_Array_Zugriff.xml             (1.0 KB) → .svg (1.5 KB)
 L2_4a_Aufgabe4_Array_Ausgeben_Index.xml      (1.0 KB) → .svg (1.2 KB)
 L2_4b_Aufgabe4_Array_Filtern.xml             (1.1 KB) → .svg (1.4 KB)
-L2_5_Aufgabe5_Lineare_Suche.xml              (1.8 KB) → .svg (2.4 KB)
+L2_5_Aufgabe5_Algorithmen_pruefen.xml        (1.8 KB) → .svg (2.4 KB)
 L2_6_Aufgabe6_Bubble_Sort.xml                (1.5 KB) → .svg (2.1 KB)
 ```
 

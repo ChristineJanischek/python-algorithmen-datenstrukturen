@@ -189,7 +189,7 @@ Gegeben ist das Array: `buchstaben = ['A', 'B', 'C', 'D', 'E', 'F', 'G']`
 
 Das folgende Struktogramm wurde mit der BW-Operatorenliste (Draw.io-Library) entworfen und enthält **einen häufigen logischen Fehler**.
 
-![L2_5_Aufgabe5_Lineare_Suche_Fehleranalyse](../../struktogramme/generated/svg/L2_5_Aufgabe5_Lineare_Suche_Fehleranalyse.svg)
+![L2_5_Aufgabe5_Algorithmen_pruefen_Fehleranalyse](../../struktogramme/generated/svg/L2_5_Aufgabe5_Algorithmen_pruefen_Fehleranalyse.svg)
 
 Bearbeite die Teilaufgaben in dieser Reihenfolge:
 
