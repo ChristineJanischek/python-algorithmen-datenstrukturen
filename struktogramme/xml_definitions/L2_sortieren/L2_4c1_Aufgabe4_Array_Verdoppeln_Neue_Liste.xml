@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<struktogramm>
+  <metadata>
+    <titel>Aufgabe 4c1: Array verdoppeln in neuer Liste</titel>
+    <level>L2</level>
+    <kategorie>Schleifen und Arrays</kategorie>
+    <autor>Klassenarbeit</autor>
+    <beschreibung>Jedes Element verdoppeln und in neuer Liste speichern</beschreibung>
+  </metadata>
+  <inhalt>
+    <prozess typ="zuweisung">verdoppelt = []</prozess>
+    <zaehle>
+      <variable>i</variable>
+      <von>0</von>
+      <bis>Anzahl der Elemente des Arrays werte - 1</bis>
+      <inhalt>
+        <prozess typ="zuweisung">verdoppelt[Anzahl der Elemente des Arrays verdoppelt] = werte[i] * 2</prozess>
+      </inhalt>
+    </zaehle>
+  </inhalt>
+</struktogramm>

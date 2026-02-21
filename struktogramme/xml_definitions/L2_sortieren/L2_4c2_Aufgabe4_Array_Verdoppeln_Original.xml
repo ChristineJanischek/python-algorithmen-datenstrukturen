@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<struktogramm>
+  <metadata>
+    <titel>Aufgabe 4c2: Array verdoppeln im Original</titel>
+    <level>L2</level>
+    <kategorie>Schleifen und Arrays</kategorie>
+    <autor>Klassenarbeit</autor>
+    <beschreibung>Jedes Element direkt im gegebenen Array verdoppeln</beschreibung>
+  </metadata>
+  <inhalt>
+    <zaehle>
+      <variable>i</variable>
+      <von>0</von>
+      <bis>Anzahl der Elemente des Arrays werte - 1</bis>
+      <inhalt>
+        <prozess typ="zuweisung">werte[i] = werte[i] * 2</prozess>
+      </inhalt>
+    </zaehle>
+  </inhalt>
+</struktogramm>

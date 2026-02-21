@@ -12,6 +12,14 @@ Die heutige Überarbeitung der Klausur-Unterlagen wurde als stabiler Meilenstein
 - Snapshot-Kopie (eingefrorener Stand vom 2026-02-20):
    - [docs/pruefungen/archiv/Klausur_L2_2_1_Musterloesungen_2026-02-20_MILESTONE_KOPIE.md](../pruefungen/archiv/Klausur_L2_2_1_Musterloesungen_2026-02-20_MILESTONE_KOPIE.md)
 
+## Nachtrag 2026-02-21
+- Terminologie vereinheitlicht:
+   - „Klasse 2“ → „Jahrgangsstufe 2“ in den Musteraufgaben
+   - „Gültig für:“ → „Gültig für (einsetzbar):“ mit erweiterter Zielgruppe in der Musterlösung
+- Aktualisierte Sicherung:
+   - [docs/pruefungen/archiv/Klausur_L2_2_1_Musteraufgaben_2026-02-21_MILESTONE_KOPIE.md](../pruefungen/archiv/Klausur_L2_2_1_Musteraufgaben_2026-02-21_MILESTONE_KOPIE.md)
+   - [docs/pruefungen/archiv/Klausur_L2_2_1_Musterloesungen_2026-02-20_MILESTONE_KOPIE.md](../pruefungen/archiv/Klausur_L2_2_1_Musterloesungen_2026-02-20_MILESTONE_KOPIE.md)
+
 ## Inhaltliche Änderungen (heute)
 1. **Neutralisierung Aufgabe 5**
    - Titel auf „Algorithmen prüfen“ umgestellt

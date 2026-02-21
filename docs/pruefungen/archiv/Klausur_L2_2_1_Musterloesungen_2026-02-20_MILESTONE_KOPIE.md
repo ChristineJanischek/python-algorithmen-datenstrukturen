@@ -297,23 +297,7 @@ loese_aufgabe4b_filtere_groesser_30([12, 45, 23, 67, 8, 34, 56, 11])
 
 **Alternative:**
 
-## 📐 Struktogramm (grafische Notation)
-
-<!-- START_GRAPHIC_STRUKTOGRAMM -->
-```
-┌────────────────────────────────────────┐
-│ Zähle i von 0 bis Anzahl der Elemente  │
-│ des Arrays (Listen) werte - 1, Schrittweite 1   │
-│   Wenn werte[i] > 30, dann             │
-│     J                                  │
-│       Ausgabe:                         │
-│       werte[i]                         │
-│     , sonst                            │
-│     N                                  │
-│       (keine Aktion)                   │
-└────────────────────────────────────────┘
-```
-<!-- END_GRAPHIC_STRUKTOGRAMM -->
+![L2_4b_Aufgabe4_Array_Filtern](../../struktogramme/generated/svg/L2_4b_Aufgabe4_Array_Filtern.svg)
 
 
 ```python
@@ -347,21 +331,7 @@ loese_aufgabe4b_filtere_groesser_30_index([12, 45, 23, 67, 8, 34, 56, 11])
 
 **Musterlösung 1 (neue Liste mit Schleife):**
 
-## 📐 Struktogramm (grafische Notation)
-
-<!-- START_GRAPHIC_STRUKTOGRAMM -->
-```
-┌────────────────────────────────────────┐
-│ Deklaration und Initialisierung:       │
-│ verdoppelt = []                        │
-│ Zähle i von 0 bis Anzahl der Elemente  │
-│ des Arrays (Listen) werte - 1, Schrittweite 1   │
-│   Zuweisung:                           │
-│   verdoppelt[Anzahl der Elemente des   │
-│   Arrays (Listen) verdoppelt] = werte[i] * 2    │
-└────────────────────────────────────────┘
-```
-<!-- END_GRAPHIC_STRUKTOGRAMM -->
+![L2_4c1_Aufgabe4_Array_Verdoppeln_Neue_Liste](../../struktogramme/generated/svg/L2_4c1_Aufgabe4_Array_Verdoppeln_Neue_Liste.svg)
 
 
 ```python
@@ -378,18 +348,7 @@ print(loese_aufgabe4c_verdoppeln_neue_liste([12, 45, 23, 67, 8, 34, 56, 11]))  #
 
 **Musterlösung 2 (modifizieren im Original):**
 
-## 📐 Struktogramm (grafische Notation)
-
-<!-- START_GRAPHIC_STRUKTOGRAMM -->
-```
-┌────────────────────────────────────────┐
-│ Zähle i von 0 bis Anzahl der Elemente  │
-│ des Arrays (Listen) werte - 1, Schrittweite 1   │
-│   Zuweisung:                           │
-│   werte[i] = werte[i] * 2              │
-└────────────────────────────────────────┘
-```
-<!-- END_GRAPHIC_STRUKTOGRAMM -->
+![L2_4c2_Aufgabe4_Array_Verdoppeln_Original](../../struktogramme/generated/svg/L2_4c2_Aufgabe4_Array_Verdoppeln_Original.svg)
 
 
 ```python
@@ -476,14 +435,7 @@ Die Wiederhole-solange-Bedingung bleibt wahr und das Programm kann hängen bleib
 
 **Erwartete BW-konforme Korrektur:**
 
-```struktogramm
-Wenn buchstaben[i] == eingabe, dann
-    J
-        Zuweisung: flag = wahr
-    , sonst
-    N
-        Zuweisung: i = i + 1
-```
+![L2_5_Aufgabe5_Algorithmen_pruefen](../../struktogramme/generated/svg/L2_5_Aufgabe5_Algorithmen_pruefen.svg)
 
 **Alternative akzeptabel:**
 - Zuweisung `i = i + 1` außerhalb der Verzweigung, sofern die Suchlogik korrekt bleibt.
@@ -509,19 +461,7 @@ Wenn buchstaben[i] == eingabe, dann
 
 **Erwartete Struktur (BW-Standard nach Operatorenliste):**
 
-```struktogramm
-Deklaration und Initialisierung: n als Ganzzahl = Anzahl der Elemente des Arrays (Listen) zahlen
-Zähle i von 0 bis n - 2, Schrittweite 1
-    Zähle j von 0 bis n - 2 - i, Schrittweite 1
-        Wenn zahlen[j] > zahlen[j + 1], dann
-            J
-                Zuweisung: temp = zahlen[j]
-                Zuweisung: zahlen[j] = zahlen[j + 1]
-                Zuweisung: zahlen[j + 1] = temp
-            , sonst
-            N
-                (keine Aktion)
-```
+![L2_6_Aufgabe6_Bubble_Sort](../../struktogramme/generated/svg/L2_6_Aufgabe6_Bubble_Sort.svg)
 
 **Bewertung Struktogramm (3 Punkte):**
 - ✅ Äußere Schleife (for/while) (1 Punkt)
@@ -565,29 +505,7 @@ print(loese_aufgabe6_bubble_sort_temp([5, 2, 8, 1, 9]))  # [1, 2, 5, 8, 9]
 
 **Musterlösung 2 (mit Python-Tuple-Swap):**
 
-## 📐 Struktogramm (grafische Notation)
-
-<!-- START_GRAPHIC_STRUKTOGRAMM -->
-```
-┌────────────────────────────────────────┐
-│ Deklaration:                           │
-│ n = Anzahl Elemente                    │
-│ Zähle i von 0 bis n - 2, Schrittweite  │
-│ 1                                      │
-│   Zähle j von 0 bis n - 2 - i, Schritt │
-│   weite 1                              │
-│     Wenn zahlen[j] > zahlen[j + 1],    │
-│     dann                               │
-│       J                                │
-│         Zuweisung:                     │
-│         zahlen[j], zahlen[j + 1] =     │
-│         zahlen[j + 1], zahlen[j]       │
-│       , sonst                          │
-│       N                                │
-│         (keine Aktion)                 │
-└────────────────────────────────────────┘
-```
-<!-- END_GRAPHIC_STRUKTOGRAMM -->
+![L2_6_Aufgabe6_Bubble_Sort](../../struktogramme/generated/svg/L2_6_Aufgabe6_Bubble_Sort.svg)
 
 
 ```python
@@ -698,18 +616,6 @@ oder
 - Häufiger Fehler: `if zahlen[j] < zahlen[j+1]` (falsch herum)
 - Schleifengrenzen (`range(n-1-i)`) sind kritisch
 
-### Notenfelder
-
-Bei 30 Punkten:
-- **Note 1:** 27–30 (90%)
-- **Note 2:** 24–26 (80%)
-- **Note 3:** 21–23 (70%)
-- **Note 4:** 18–20 (60%)
-- **Note 5:** 15–17 (50%)
-- **Note 6:** < 15 (< 50%)
-
----
-
 ## 🔍 LÖSUNGSÜBERPRÜFUNG – SCHNELLE CHECKLISTE
 
 ### Aufgabe 1
@@ -747,5 +653,5 @@ Bei 30 Punkten:
 ---
 
 **Version:** 1.0  
-**Gültig für:** Klasse 2 (Informatik BG, 2-jährig & 3-jährig)  
+**Gültig für (einsetzbar):** Sekundarstufe 2, Berufliches Gymnasium, Berufskolleg Wirtschaftsinformatik  
 **Erstellt:** 06.02.2026

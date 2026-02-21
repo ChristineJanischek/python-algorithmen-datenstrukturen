@@ -1,5 +1,12 @@
 # Entwicklungsschritte
 
+## 2026-02-21
+1. Sprachliche Vereinheitlichung in der Klausurserie:
+	- „Gültig für:“ zu „Gültig für (einsetzbar): Sekundarstufe 2, Berufliches Gymnasium, Berufskolleg Wirtschaftsinformatik“ aktualisiert.
+	- „Klasse 2“ zu „Jahrgangsstufe 2“ aktualisiert.
+2. Sicherung ergänzt:
+	- [docs/pruefungen/archiv/Klausur_L2_2_1_Musteraufgaben_2026-02-21_MILESTONE_KOPIE.md](../pruefungen/archiv/Klausur_L2_2_1_Musteraufgaben_2026-02-21_MILESTONE_KOPIE.md)
+
 ## 2026-02-20
 1. Aufgabe 5 der Klausurunterlagen didaktisch neutralisiert ("Algorithmen prüfen" statt lösungsnaher Benennung).
 2. Variablen und Ausgaben im Struktogramm konsolidiert (`eingabe`, `flag`, `Treffer`/`Kein Treffer`).
