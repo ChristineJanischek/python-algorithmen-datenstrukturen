@@ -19,6 +19,7 @@
 ## API v1 (Plugin-Registry)
 - GET /api/v1/plugins
 - GET /api/v1/plugins/{plugin_id}
+- PATCH /api/v1/plugins/{plugin_id}/activation
 
 ### Hinweise
 - Persistenz erfolgt aktuell dateibasiert in `data/elearning/pruefungen_v1.json`.
@@ -27,6 +28,7 @@
 - RBAC aktiv für `api/v1/pruefungen` und `api/v1/plugins` über Header:
 	- `X-Role`: `autor`, `review`, `freigabe`, `admin`
 	- `X-User-Id`: frei wählbare Benutzerkennung
+- Aktivierung/Deaktivierung von Plugins ist auf Rolle `admin` beschränkt.
 - Audit-Events werden in `data/elearning/audit_log_v1.jsonl` protokolliert.
 
 ## Starten & Testen

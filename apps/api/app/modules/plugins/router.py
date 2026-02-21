@@ -10,7 +10,7 @@ from ...core import (
     append_audit_event,
     require_roles,
 )
-from .schemas import PluginResponse
+from .schemas import PluginActivationRequest, PluginResponse
 
 router = APIRouter()
 registry = PluginRegistry()
@@ -63,3 +63,26 @@ def get_plugin(
         metadata={},
     )
     return PluginResponse.model_validate(plugin)
+
+
+@router.patch("/{plugin_id}/activation", response_model=PluginResponse, responses=ERROR_RESPONSES)
+def set_plugin_activation(
+    plugin_id: str,
+    payload: PluginActivationRequest,
+    request: Request,
+    actor: ActorContext = Depends(require_roles("admin")),
+) -> PluginResponse:
+    updated = registry.set_plugin_enabled(plugin_id, payload.enabled)
+    if not updated:
+        raise NotFoundError("Plugin nicht gefunden")
+
+    append_audit_event(
+        action="plugins.activation.update",
+        resource_type="plugin",
+        resource_id=plugin_id,
+        actor_user_id=actor.user_id,
+        actor_role=actor.role,
+        trace_id=_trace_id(request),
+        metadata={"enabled": payload.enabled, "status": updated.get("status")},
+    )
+    return PluginResponse.model_validate(updated)

@@ -3,6 +3,10 @@ from __future__ import annotations
 from pydantic import BaseModel
 
 
+class PluginActivationRequest(BaseModel):
+    enabled: bool
+
+
 class PluginResponse(BaseModel):
     id: str
     name: str

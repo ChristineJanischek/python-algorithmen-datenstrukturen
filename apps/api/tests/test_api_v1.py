@@ -25,11 +25,19 @@ class TestApiV1(unittest.TestCase):
             / "elearning"
             / "audit_log_v1.jsonl"
         )
+        cls.plugins_file = (
+            Path(__file__).resolve().parents[3]
+            / "data"
+            / "elearning"
+            / "plugins_v1.json"
+        )
+        cls.plugins_baseline = cls.plugins_file.read_text(encoding="utf-8")
 
     def setUp(self) -> None:
         self.data_file.parent.mkdir(parents=True, exist_ok=True)
         self.data_file.write_text("[]\n", encoding="utf-8")
         self.audit_file.write_text("", encoding="utf-8")
+        self.plugins_file.write_text(self.plugins_baseline, encoding="utf-8")
 
     def test_plugins_list(self) -> None:
         response = self.client.get(
@@ -51,6 +59,32 @@ class TestApiV1(unittest.TestCase):
         )
         self.assertEqual(response.status_code, 404)
         self.assertEqual(response.json()["code"], "NOT_FOUND")
+
+    def test_plugin_activation_requires_admin(self) -> None:
+        response = self.client.patch(
+            "/api/v1/plugins/pruefungsmodul/activation",
+            json={"enabled": False},
+            headers=self._headers(role="review", user="reviewer-plugins"),
+        )
+        self.assertEqual(response.status_code, 403)
+        self.assertEqual(response.json()["code"], "FORBIDDEN")
+
+    def test_plugin_activation_updates_state(self) -> None:
+        disable_response = self.client.patch(
+            "/api/v1/plugins/pruefungsmodul/activation",
+            json={"enabled": False},
+            headers=self._headers(role="admin", user="admin-1"),
+        )
+        self.assertEqual(disable_response.status_code, 200)
+        self.assertFalse(disable_response.json()["enabled"])
+        self.assertEqual(disable_response.json()["status"], "inactive")
+
+        get_response = self.client.get(
+            "/api/v1/plugins/pruefungsmodul",
+            headers=self._headers(role="review", user="reviewer-plugins"),
+        )
+        self.assertEqual(get_response.status_code, 200)
+        self.assertFalse(get_response.json()["enabled"])
 
     @staticmethod
     def _headers(role: str = "admin", user: str = "tester") -> dict[str, str]:

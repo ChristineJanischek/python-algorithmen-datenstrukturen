@@ -72,3 +72,20 @@ class PluginRegistry:
             if plugin.get("id") == plugin_id:
                 return plugin
         return None
+
+    def set_plugin_enabled(self, plugin_id: str, enabled: bool) -> dict[str, Any] | None:
+        plugins = self.list_plugins()
+        for index, plugin in enumerate(plugins):
+            if plugin.get("id") != plugin_id:
+                continue
+
+            updated = dict(plugin)
+            updated["enabled"] = enabled
+            updated["status"] = "active" if enabled else "inactive"
+            plugins[index] = updated
+
+            with self.file_path.open("w", encoding="utf-8") as handle:
+                json.dump(plugins, handle, ensure_ascii=False, indent=2)
+            return updated
+
+        return None
