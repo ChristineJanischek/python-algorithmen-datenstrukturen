@@ -5,6 +5,8 @@ Zentrale Übersicht aller Meilenstein- und Fortschrittsdokumente.
 ## Aktueller Stand
 - [Meilenstein 2026-02-20: Klausur L2_2_1 Optimierung](MEILENSTEIN-2026-02-20-KLAUSUR-L2_2_1-OPTIMIERUNG.MD)
   - Neutralisierung Aufgabe 5, Dateikonsolidierung, Optimierung der Musterlösung als Korrekturvorlage
+- [Marschplan: Prüfungsmodul „prüfungen“](MEILENSTEIN-PLAN-PRUEFUNGEN-APP.MD)
+  - Präzise Ist-Analyse, Zielarchitektur, Chancen/Risiken und Umsetzungs-Milestones (M0–M7)
 - [Entwicklungsschritte](ENTWICKLUNGSSCHRITTE.MD)
   - Chronologische Dokumentation der wichtigsten Änderungen
 

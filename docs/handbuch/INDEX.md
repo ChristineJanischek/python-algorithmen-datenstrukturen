@@ -66,7 +66,7 @@ Strategie für stabile Releases und Versionierung:
 ### Architektur
 → [**ARCHITECTURE.MD**](ARCHITECTURE.MD)
 
-Systemarchitektur und technische Übersicht.
+Systemarchitektur und technische Übersicht (modular erweiterbares Backend/Frontend, Security-by-Design, Dokumentationsstandard).
 
 ### Entwicklung
 → [**DEVELOPMENT.MD**](DEVELOPMENT.MD)
@@ -77,6 +77,11 @@ Entwicklungs-Richtlinien und lokales Setup.
 → [**FRONTEND_SETUP.md**](FRONTEND_SETUP.md)
 
 Anleitung zur Frontend-Entwicklung und lokalen Einrichtung.
+
+### Backup, Recovery & Security
+→ [**BACKUP_STRATEGY.md**](BACKUP_STRATEGY.md)
+
+Betriebsstrategie für Sicherung, Wiederherstellung, Auditierbarkeit und Sicherheits-Baseline.
 
 ---
 
@@ -113,4 +118,4 @@ Anleitung zur Frontend-Entwicklung und lokalen Einrichtung.
 
 ---
 
-*Zuletzt aktualisiert: 2026-02-06*
+*Zuletzt aktualisiert: 2026-02-21*
