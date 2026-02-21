@@ -1,0 +1,32 @@
+[
+  {
+    "id": "pruefungsmodul",
+    "name": "Prüfungsmodul",
+    "type": "plugin",
+    "version": "0.1.0",
+    "enabled": true,
+    "status": "active",
+    "description": "Erweiterung für Prüfungserstellung, Aufgabenverwaltung und Exporte.",
+    "entrypoint": "apps/api/app/modules/pruefungen",
+    "capabilities": [
+      "pruefung.create",
+      "pruefung.update",
+      "pruefung.export"
+    ]
+  },
+  {
+    "id": "drawio-extension",
+    "name": "Draw.io Extension",
+    "type": "plugin",
+    "version": "0.1.0",
+    "enabled": true,
+    "status": "active",
+    "description": "Erweiterung für Struktogramm-Visualisierung und XML/SVG-Konvertierung.",
+    "entrypoint": "apps/drawio-extension",
+    "capabilities": [
+      "struktogramm.render",
+      "struktogramm.validate",
+      "struktogramm.convert"
+    ]
+  }
+]

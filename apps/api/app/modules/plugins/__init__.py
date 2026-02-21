@@ -1,0 +1,1 @@
+"""Plugin-Modul (Core + Erweiterungen)."""

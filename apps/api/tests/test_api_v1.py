@@ -31,6 +31,27 @@ class TestApiV1(unittest.TestCase):
         self.data_file.write_text("[]\n", encoding="utf-8")
         self.audit_file.write_text("", encoding="utf-8")
 
+    def test_plugins_list(self) -> None:
+        response = self.client.get(
+            "/api/v1/plugins",
+            headers=self._headers(role="review", user="reviewer-plugins"),
+        )
+        self.assertEqual(response.status_code, 200)
+        data = response.json()
+        self.assertGreaterEqual(len(data), 2)
+
+        ids = {item["id"] for item in data}
+        self.assertIn("pruefungsmodul", ids)
+        self.assertIn("drawio-extension", ids)
+
+    def test_plugins_get_not_found(self) -> None:
+        response = self.client.get(
+            "/api/v1/plugins/unbekanntes-plugin",
+            headers=self._headers(role="review", user="reviewer-plugins"),
+        )
+        self.assertEqual(response.status_code, 404)
+        self.assertEqual(response.json()["code"], "NOT_FOUND")
+
     @staticmethod
     def _headers(role: str = "admin", user: str = "tester") -> dict[str, str]:
         return {"X-Role": role, "X-User-Id": user}

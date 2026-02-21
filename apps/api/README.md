@@ -16,10 +16,15 @@
 - POST /api/v1/pruefungen/{pruefung_id}/loesungen:generate
 - POST /api/v1/pruefungen/{pruefung_id}/export
 
+## API v1 (Plugin-Registry)
+- GET /api/v1/plugins
+- GET /api/v1/plugins/{plugin_id}
+
 ### Hinweise
 - Persistenz erfolgt aktuell dateibasiert in `data/elearning/pruefungen_v1.json`.
 - Export- und Lösungsendpunkte sind in M0 als Queue-Stub implementiert (`status=queued`).
 - RBAC aktiv für `api/v1/pruefungen` über Header:
+- RBAC aktiv für `api/v1/pruefungen` und `api/v1/plugins` über Header:
 	- `X-Role`: `autor`, `review`, `freigabe`, `admin`
 	- `X-User-Id`: frei wählbare Benutzerkennung
 - Audit-Events werden in `data/elearning/audit_log_v1.jsonl` protokolliert.
