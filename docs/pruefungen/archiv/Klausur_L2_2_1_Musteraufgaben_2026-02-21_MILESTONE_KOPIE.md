@@ -12,7 +12,7 @@
 | **Dauer** | 60 Minuten |
 | **Erreichbare Punkte** | 30 Punkte |
 | **Bestanden ab** | 15 Punkte (50%) |
-| **Hilfsmittel** | Keine (Papier & Stift) |
+| **Hilfsmittel** | Keine (Papier , Stift, digitale Dokumentationsdatei) |
 | **Themen** | Algorithmen (70%) und Datenstrukturen (30%) |
 
 ---
