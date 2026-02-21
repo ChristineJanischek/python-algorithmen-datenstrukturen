@@ -19,6 +19,10 @@
 ### Hinweise
 - Persistenz erfolgt aktuell dateibasiert in `data/elearning/pruefungen_v1.json`.
 - Export- und Lösungsendpunkte sind in M0 als Queue-Stub implementiert (`status=queued`).
+- RBAC aktiv für `api/v1/pruefungen` über Header:
+	- `X-Role`: `autor`, `review`, `freigabe`, `admin`
+	- `X-User-Id`: frei wählbare Benutzerkennung
+- Audit-Events werden in `data/elearning/audit_log_v1.jsonl` protokolliert.
 
 ## Starten & Testen
 - API lokal starten:

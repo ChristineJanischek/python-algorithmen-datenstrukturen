@@ -19,10 +19,21 @@ class TestApiV1(unittest.TestCase):
             / "elearning"
             / "pruefungen_v1.json"
         )
+        cls.audit_file = (
+            Path(__file__).resolve().parents[3]
+            / "data"
+            / "elearning"
+            / "audit_log_v1.jsonl"
+        )
 
     def setUp(self) -> None:
         self.data_file.parent.mkdir(parents=True, exist_ok=True)
         self.data_file.write_text("[]\n", encoding="utf-8")
+        self.audit_file.write_text("", encoding="utf-8")
+
+    @staticmethod
+    def _headers(role: str = "admin", user: str = "tester") -> dict[str, str]:
+        return {"X-Role": role, "X-User-Id": user}
 
     def test_health_endpoint(self) -> None:
         response = self.client.get("/api/health")
@@ -44,11 +55,18 @@ class TestApiV1(unittest.TestCase):
             ],
         }
 
-        create_response = self.client.post("/api/v1/pruefungen", json=payload)
+        create_response = self.client.post(
+            "/api/v1/pruefungen",
+            json=payload,
+            headers=self._headers(role="autor", user="lehrkraft-1"),
+        )
         self.assertEqual(create_response.status_code, 200)
 
         pruefung_id = create_response.json()["id"]
-        get_response = self.client.get(f"/api/v1/pruefungen/{pruefung_id}")
+        get_response = self.client.get(
+            f"/api/v1/pruefungen/{pruefung_id}",
+            headers=self._headers(role="review", user="reviewer-1"),
+        )
         self.assertEqual(get_response.status_code, 200)
         self.assertEqual(get_response.json()["titel"], payload["titel"])
 
@@ -65,6 +83,42 @@ class TestApiV1(unittest.TestCase):
         self.assertIn("details", body)
         self.assertIn("traceId", body)
         self.assertIn("X-Trace-Id", response.headers)
+
+    def test_rbac_blocks_without_role(self) -> None:
+        payload = {
+            "titel": "Nicht erlaubt",
+            "jahrgangsstufe": "2",
+            "fach": "Informatik",
+            "zeit_minuten": 60,
+            "status": "draft",
+            "anforderungsbereiche": {"ab1": 30, "ab2": 40, "ab3": 30},
+            "themen": [],
+            "aufgaben": [],
+        }
+        response = self.client.post("/api/v1/pruefungen", json=payload)
+        self.assertEqual(response.status_code, 403)
+        self.assertEqual(response.json()["code"], "FORBIDDEN")
+
+    def test_audit_log_written_on_create(self) -> None:
+        payload = {
+            "titel": "Audit Test",
+            "jahrgangsstufe": "2",
+            "fach": "Informatik",
+            "zeit_minuten": 60,
+            "status": "draft",
+            "anforderungsbereiche": {"ab1": 30, "ab2": 40, "ab3": 30},
+            "themen": ["Suche"],
+            "aufgaben": [],
+        }
+        response = self.client.post(
+            "/api/v1/pruefungen",
+            json=payload,
+            headers=self._headers(role="autor", user="lehrkraft-2"),
+        )
+        self.assertEqual(response.status_code, 200)
+
+        lines = [line for line in self.audit_file.read_text(encoding="utf-8").splitlines() if line.strip()]
+        self.assertGreaterEqual(len(lines), 1)
 
 
 if __name__ == "__main__":

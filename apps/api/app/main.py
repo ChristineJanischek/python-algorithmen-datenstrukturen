@@ -7,7 +7,13 @@ from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
 
 from .api import v1_router
-from .core import NotFoundError, TraceIdMiddleware, ValidationError, error_response_payload
+from .core import (
+    ForbiddenError,
+    NotFoundError,
+    TraceIdMiddleware,
+    ValidationError,
+    error_response_payload,
+)
 from .data_loader import load_json, load_text
 
 app = FastAPI(title="Struktogramm E-Learning API", version="0.1.0")
@@ -47,6 +53,19 @@ async def validation_handler(request: Request, exc: ValidationError) -> JSONResp
         status_code=422,
         content=error_response_payload(
             code="VALIDATION_ERROR",
+            message=exc.message,
+            details=None,
+            trace_id=_trace_id(request),
+        ),
+    )
+
+
+@app.exception_handler(ForbiddenError)
+async def forbidden_handler(request: Request, exc: ForbiddenError) -> JSONResponse:
+    return JSONResponse(
+        status_code=403,
+        content=error_response_payload(
+            code="FORBIDDEN",
             message=exc.message,
             details=None,
             trace_id=_trace_id(request),
