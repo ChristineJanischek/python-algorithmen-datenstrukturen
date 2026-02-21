@@ -33,6 +33,18 @@ git push  # <-- Hook fragt nach Review
 python3 apps/tools/markdown_reviewer.py
 ```
 
+### Schneller Link-Check (neu)
+```bash
+# Standard: prüft docs/aufgaben, docs/information, docs/loesungen, docs/handbuch
+python3 apps/tools/check_markdown_links.py
+
+# Optional inkl. Template-Dateien
+python3 apps/tools/check_markdown_links.py --include-templates
+
+# Eigene Verzeichnisse angeben
+python3 apps/tools/check_markdown_links.py --dirs docs/handbuch docs/aufgaben
+```
+
 ## 🔧 Hook-Verhalten
 
 Beim `git push` wird interaktiv gefragt:
