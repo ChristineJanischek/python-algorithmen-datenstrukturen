@@ -23,6 +23,9 @@
 - Abhängigkeiten installieren: `cd apps/web && npm install`
 - Frontend starten: `npm run dev`
 - Tests ausführen: `npm run test`
+- Optionale Rollensteuerung (Plugin-Admin-Toggle):
+	- `VITE_USER_ROLE=admin`
+	- `VITE_USER_ID=dein-name`
 
 ## CI-Qualitätsprüfung (Backend + Frontend)
 
