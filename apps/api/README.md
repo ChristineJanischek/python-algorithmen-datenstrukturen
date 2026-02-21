@@ -18,13 +18,13 @@
 
 ## API v1 (Plugin-Registry)
 - GET /api/v1/plugins
+	- Optionaler Filter: `?enabled=true|false`
 - GET /api/v1/plugins/{plugin_id}
 - PATCH /api/v1/plugins/{plugin_id}/activation
 
 ### Hinweise
 - Persistenz erfolgt aktuell dateibasiert in `data/elearning/pruefungen_v1.json`.
 - Export- und Lösungsendpunkte sind in M0 als Queue-Stub implementiert (`status=queued`).
-- RBAC aktiv für `api/v1/pruefungen` über Header:
 - RBAC aktiv für `api/v1/pruefungen` und `api/v1/plugins` über Header:
 	- `X-Role`: `autor`, `review`, `freigabe`, `admin`
 	- `X-User-Id`: frei wählbare Benutzerkennung

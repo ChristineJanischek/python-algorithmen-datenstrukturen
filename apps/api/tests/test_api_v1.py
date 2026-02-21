@@ -52,6 +52,30 @@ class TestApiV1(unittest.TestCase):
         self.assertIn("pruefungsmodul", ids)
         self.assertIn("drawio-extension", ids)
 
+    def test_plugins_list_filter_enabled(self) -> None:
+        self.client.patch(
+            "/api/v1/plugins/drawio-extension/activation",
+            json={"enabled": False},
+            headers=self._headers(role="admin", user="admin-filter"),
+        )
+
+        response_enabled = self.client.get(
+            "/api/v1/plugins?enabled=true",
+            headers=self._headers(role="review", user="reviewer-plugins"),
+        )
+        self.assertEqual(response_enabled.status_code, 200)
+        ids_enabled = {item["id"] for item in response_enabled.json()}
+        self.assertIn("pruefungsmodul", ids_enabled)
+        self.assertNotIn("drawio-extension", ids_enabled)
+
+        response_disabled = self.client.get(
+            "/api/v1/plugins?enabled=false",
+            headers=self._headers(role="review", user="reviewer-plugins"),
+        )
+        self.assertEqual(response_disabled.status_code, 200)
+        ids_disabled = {item["id"] for item in response_disabled.json()}
+        self.assertIn("drawio-extension", ids_disabled)
+
     def test_plugins_get_not_found(self) -> None:
         response = self.client.get(
             "/api/v1/plugins/unbekanntes-plugin",

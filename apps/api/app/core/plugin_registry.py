@@ -59,13 +59,15 @@ class PluginRegistry:
         with self.file_path.open("w", encoding="utf-8") as handle:
             json.dump(_default_plugins(), handle, ensure_ascii=False, indent=2)
 
-    def list_plugins(self) -> list[dict[str, Any]]:
+    def list_plugins(self, enabled: bool | None = None) -> list[dict[str, Any]]:
         self._ensure_file()
         with self.file_path.open("r", encoding="utf-8") as handle:
             data = json.load(handle)
         if not isinstance(data, list):
             return []
-        return data
+        if enabled is None:
+            return data
+        return [item for item in data if item.get("enabled") is enabled]
 
     def get_plugin(self, plugin_id: str) -> dict[str, Any] | None:
         for plugin in self.list_plugins():

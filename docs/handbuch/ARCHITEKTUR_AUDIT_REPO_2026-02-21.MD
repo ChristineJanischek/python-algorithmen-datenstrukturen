@@ -45,16 +45,19 @@ Das Repository hat eine starke fachliche Basis (BW-Standards, Struktogramm-Tooli
 ## 2.2 Haupt-Gaps
 
 1. **Monorepo-Governance noch unvollständig**
-   - Keine durchgängige Build-/Test-Orchestrierung über alle Apps.
+   - Basis-Orchestrierung für Backend/Frontend-Tests und Frontend-Build ist vorhanden.
+   - Es fehlen Security-Scans, OpenAPI-Drift-Checks und Doku-Gates als vollständige Orchestrierung.
 
 2. **Frontend-Architektur noch komponentenzentriert statt featurezentriert**
    - API-Aufrufe liegen aktuell in `App.tsx`; Zielstruktur aus M0 noch nicht umgesetzt.
 
-3. **CI fokussiert aktuell stark auf Struktogramm-Validierung**
-   - Fehlende verpflichtende Gates für API-Tests, Security-Scans, OpenAPI-Drift, Doku-DoD.
+3. **CI-Setup ausbaufähig**
+   - Struktogramm-Workflow und App-Quality-Workflow sind aktiv.
+   - Fehlende verpflichtende Gates: Security-Scans, OpenAPI-Drift, Doku-DoD.
 
-4. **Security-Querschnitt noch nicht implementiert**
-   - Rollenmodell, Audit-Logging, einheitliches Fehler-/Trace-Format fehlen in produktiver Implementierung.
+4. **Security-Querschnitt teilweise umgesetzt**
+   - Rollenmodell (RBAC), Audit-Logging und einheitliches Fehler-/Trace-Format sind produktiv vorhanden.
+   - Es fehlen noch Authentifizierungsintegration (OIDC/JWT) und feinere Autorisierungsregeln.
 
 5. **Betriebsautomatisierung unvollständig**
    - Export-/Lösungsjobs und Freigabeworkflow sind konzeptionell vorhanden, aber noch nicht als End-to-End-Prozess automatisiert.

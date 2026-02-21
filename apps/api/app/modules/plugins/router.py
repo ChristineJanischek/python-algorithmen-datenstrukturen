@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from fastapi import APIRouter, Depends, Request
+from fastapi import APIRouter, Depends, Query, Request
 
 from ...core import (
     ActorContext,
@@ -29,9 +29,10 @@ def _trace_id(request: Request) -> str:
 @router.get("", response_model=list[PluginResponse], responses=ERROR_RESPONSES)
 def list_plugins(
     request: Request,
+    enabled: bool | None = Query(default=None, description="Filter nach aktiviert/deaktiviert"),
     actor: ActorContext = Depends(require_roles("autor", "review", "freigabe", "admin")),
 ) -> list[PluginResponse]:
-    plugins = [PluginResponse.model_validate(item) for item in registry.list_plugins()]
+    plugins = [PluginResponse.model_validate(item) for item in registry.list_plugins(enabled=enabled)]
     append_audit_event(
         action="plugins.list",
         resource_type="plugin",
