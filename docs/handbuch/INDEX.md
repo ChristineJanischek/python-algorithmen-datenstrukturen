@@ -73,6 +73,11 @@ Systemarchitektur und technische Übersicht (modular erweiterbares Backend/Front
 
 Ist-Analyse mit Gap-Bewertung, Priorisierung (Must/Should/Nice) und risikoarmem Migrationspfad.
 
+### Funktionsorientierter Zeitplan (Core + Plugins)
+→ [**../milestones/ZEITPLAN-FUNKTIONSORIENTIERTER-PROTOTYP-PLUGINS.MD**](../milestones/ZEITPLAN-FUNKTIONSORIENTIERTER-PROTOTYP-PLUGINS.MD)
+
+Konkreter 8-Wochen-Plan für lauffähigen Prototyp und pluginbasierten Ausbau (`pruefungsmodul`, `apps/drawio-extension`).
+
 ### Technische Umsetzungsvorlage (Prüfungsmodul)
 → [**TECHNISCHE_UMSETZUNGSVORLAGE_PRUEFUNGEN.MD**](TECHNISCHE_UMSETZUNGSVORLAGE_PRUEFUNGEN.MD)
 

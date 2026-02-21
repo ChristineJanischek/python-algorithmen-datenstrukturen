@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from fastapi import APIRouter, Depends, Request
 
-from ...core import ActorContext, append_audit_event, require_roles
+from ...core import ActorContext, ErrorResponse, append_audit_event, require_roles
 from .repository import PruefungenRepository
 from .schemas import (
     ExportRequest,
@@ -19,12 +19,19 @@ from .service import PruefungenService
 router = APIRouter()
 service = PruefungenService(PruefungenRepository())
 
+ERROR_RESPONSES = {
+    403: {"model": ErrorResponse, "description": "Zugriff verweigert"},
+    404: {"model": ErrorResponse, "description": "Ressource nicht gefunden"},
+    422: {"model": ErrorResponse, "description": "Validierungsfehler"},
+    500: {"model": ErrorResponse, "description": "Interner Serverfehler"},
+}
+
 
 def _trace_id(request: Request) -> str:
     return getattr(request.state, "trace_id", "unbekannt")
 
 
-@router.post("", response_model=PruefungResponse)
+@router.post("", response_model=PruefungResponse, responses=ERROR_RESPONSES)
 def create_pruefung(
     payload: PruefungCreateRequest,
     request: Request,
@@ -43,7 +50,7 @@ def create_pruefung(
     return result
 
 
-@router.get("/{pruefung_id}", response_model=PruefungResponse)
+@router.get("/{pruefung_id}", response_model=PruefungResponse, responses=ERROR_RESPONSES)
 def get_pruefung(
     pruefung_id: str,
     request: Request,
@@ -62,7 +69,7 @@ def get_pruefung(
     return result
 
 
-@router.patch("/{pruefung_id}", response_model=PruefungResponse)
+@router.patch("/{pruefung_id}", response_model=PruefungResponse, responses=ERROR_RESPONSES)
 def update_pruefung(
     pruefung_id: str,
     payload: PruefungUpdateRequest,
@@ -82,7 +89,7 @@ def update_pruefung(
     return result
 
 
-@router.post("/{pruefung_id}/aufgaben:swap", response_model=PruefungResponse)
+@router.post("/{pruefung_id}/aufgaben:swap", response_model=PruefungResponse, responses=ERROR_RESPONSES)
 def swap_aufgaben(
     pruefung_id: str,
     payload: SwapAufgabenRequest,
@@ -102,7 +109,11 @@ def swap_aufgaben(
     return result
 
 
-@router.post("/{pruefung_id}/loesungen:generate", response_model=LoesungGenerateResponse)
+@router.post(
+    "/{pruefung_id}/loesungen:generate",
+    response_model=LoesungGenerateResponse,
+    responses=ERROR_RESPONSES,
+)
 def generate_loesung(
     pruefung_id: str,
     payload: GenerateLoesungRequest,
@@ -122,7 +133,7 @@ def generate_loesung(
     return result
 
 
-@router.post("/{pruefung_id}/export", response_model=ExportResponse)
+@router.post("/{pruefung_id}/export", response_model=ExportResponse, responses=ERROR_RESPONSES)
 def export_pruefung(
     pruefung_id: str,
     payload: ExportRequest,

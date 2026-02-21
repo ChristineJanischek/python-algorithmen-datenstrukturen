@@ -154,3 +154,39 @@ Für dein Ziel „von Anfang an Ordnung und optimale Voraussetzungen“ ist das 
 - `docs/handbuch/TECHNISCHE_UMSETZUNGSVORLAGE_PRUEFUNGEN.MD`
 - `docs/handbuch/BACKUP_STRATEGY.md`
 - `docs/milestones/MEILENSTEIN-M0-ARCHITEKTUR-GOVERNANCE-AUTOMATISIERUNG.MD`
+
+---
+
+## 9) Architekturergänzung: Funktionsorientierter Prototyp mit Plugin-Modell
+
+Für das Repository wird ein **Core + Plugin**-Ansatz empfohlen, damit das System ab Start lauffähig bleibt und iterativ erweitert werden kann.
+
+### 9.1 Core (stabiler Kern)
+
+Der Core enthält nur die querschnittlichen Grundlagen:
+
+- API-Start, Routing-Basis, Fehlerformat, TraceId
+- RBAC + Audit-Basis
+- Persistenzschnittstellen, Test- und Build-Basis
+- CI-Gates und Dokumentationspflichten
+
+### 9.2 Plugins (fachliche Erweiterungen)
+
+Plugins liefern besondere Fachfunktionen, ohne den Core zu destabilisieren:
+
+1. **Prüfungsmodul-Plugin**
+   - Prüfungserstellung, Aufgabenverwaltung, Erwartungshorizont, Export
+
+2. **Draw.io-Extension-Plugin**
+   - Struktogramm-spezifische Visualisierung, Konverter/Validator, Editor-Integration
+
+### 9.3 Funktionsorientierte Ausbau-Regel
+
+Jede neue Funktion wird in kleinen Schritten geliefert:
+
+1. Feature-Contract (Input/Output, Rollen, Fehler)
+2. Minimal implementierter End-to-End-Flow
+3. Tests + Doku + CI-Gates
+4. Erst danach nächste Funktion
+
+Dadurch bleibt das System zu jedem Zeitpunkt lauffähig und testfähig.

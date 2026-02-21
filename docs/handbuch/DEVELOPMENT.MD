@@ -23,3 +23,23 @@
 - Abhängigkeiten installieren: `cd apps/web && npm install`
 - Frontend starten: `npm run dev`
 - Tests ausführen: `npm run test`
+
+## CI-Qualitätsprüfung (Backend + Frontend)
+
+- Workflow: `.github/workflows/app-quality.yml`
+- Läuft auf PR/Push bei Änderungen in `apps/api/**` oder `apps/web/**`
+- Prüft automatisch:
+	- Backend-Tests (`python -m unittest discover -s tests -p "test_*.py"`)
+	- Frontend-Tests (`npm run test`)
+	- Frontend-Build (`npm run build`)
+
+## Einheitliches API-Fehlerformat
+
+Alle API-Fehler liefern das gleiche Schema:
+
+- `code`
+- `message`
+- `details`
+- `traceId`
+
+Für `api/v1/pruefungen` ist dieses Schema zusätzlich in OpenAPI als Response-Modell dokumentiert.
