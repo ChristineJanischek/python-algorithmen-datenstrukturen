@@ -5,6 +5,8 @@ Zentrale Übersicht aller Meilenstein- und Fortschrittsdokumente.
 ## Aktueller Stand
 - [Meilenstein M0 – Architektur-Governance & Automatisierung](MEILENSTEIN-M0-ARCHITEKTUR-GOVERNANCE-AUTOMATISIERUNG.MD)
   - Verbindliche Zielstruktur, Security-/Audit-Baseline und Automatisierungs-Gates für die Umsetzung des Prüfungsmoduls
+- [M0 Status-Dashboard (2026-02-21)](M0_STATUS_DASHBOARD_2026-02-21.MD)
+  - Transparenter Überblick zu erledigten, teilweisen und offenen M0-Arbeitspaketen
 - [Zeitplan: Funktionsorientierter Prototyp mit Plugin-Erweiterungen](ZEITPLAN-FUNKTIONSORIENTIERTER-PROTOTYP-PLUGINS.MD)
   - Core+Plugin-Vorgehen mit lauffähigem Systemzustand pro Woche (Prüfungsmodul + Draw.io-Extension)
 - [Meilenstein 2026-02-20: Klausur L2_2_1 Optimierung](MEILENSTEIN-2026-02-20-KLAUSUR-L2_2_1-OPTIMIERUNG.MD)
@@ -16,6 +18,7 @@ Zentrale Übersicht aller Meilenstein- und Fortschrittsdokumente.
 
 ## Meilenstein-Dokumente
 - [Meilenstein M0 – Architektur-Governance & Automatisierung](MEILENSTEIN-M0-ARCHITEKTUR-GOVERNANCE-AUTOMATISIERUNG.MD)
+- [M0 Status-Dashboard (2026-02-21)](M0_STATUS_DASHBOARD_2026-02-21.MD)
 - [Zeitplan: Funktionsorientierter Prototyp mit Plugin-Erweiterungen](ZEITPLAN-FUNKTIONSORIENTIERTER-PROTOTYP-PLUGINS.MD)
 - [Meilenstein 1 – Aufgabenpaket: Listen, Sortier- und Suchalgorithmen](MEILENSTEIN-1-LISTEN-SORTIER-SUCHE.MD)
 - [Meilenstein-Plan für das E-Learning-Tool](FUNCTIONAL-MILESTONE-PLAN.MD)

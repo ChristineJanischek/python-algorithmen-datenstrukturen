@@ -1,13 +1,21 @@
 # Entwicklungsschritte
 
 ## 2026-02-21
-1. Meilenstein M0 „Architektur-Governance & Automatisierung“ für das Prüfungsmodul angelegt:
+1. M0-Statusdashboard ergänzt:
+	- [docs/milestones/M0_STATUS_DASHBOARD_2026-02-21.MD](M0_STATUS_DASHBOARD_2026-02-21.MD)
+2. Plugin-Architektur erweitert:
+	- Plugin-Registry mit Admin-Activation-Policy und `enabled`-Filter in API-v1 produktiv umgesetzt.
+3. Frontend erweitert:
+	- Plugin-Statusanzeige und Admin-Toggle für Aktivierung/Deaktivierung ergänzt.
+4. Qualitätsstand abgesichert:
+	- Backend-Tests sowie Frontend-Test+Build wiederholt erfolgreich ausgeführt.
+5. Meilenstein M0 „Architektur-Governance & Automatisierung“ für das Prüfungsmodul angelegt:
 	- [docs/milestones/MEILENSTEIN-M0-ARCHITEKTUR-GOVERNANCE-AUTOMATISIERUNG.MD](MEILENSTEIN-M0-ARCHITEKTUR-GOVERNANCE-AUTOMATISIERUNG.MD)
-2. Milestone-Index um M0 erweitert und als aktueller Referenz-Meilenstein verlinkt.
-3. Sprachliche Vereinheitlichung in der Klausurserie:
+6. Milestone-Index um M0 erweitert und als aktueller Referenz-Meilenstein verlinkt.
+7. Sprachliche Vereinheitlichung in der Klausurserie:
 	- „Gültig für:“ zu „Gültig für (einsetzbar): Sekundarstufe 2, Berufliches Gymnasium, Berufskolleg Wirtschaftsinformatik“ aktualisiert.
 	- „Klasse 2“ zu „Jahrgangsstufe 2“ aktualisiert.
-4. Sicherung ergänzt:
+8. Sicherung ergänzt:
 	- [docs/pruefungen/archiv/Klausur_L2_2_1_Musteraufgaben_2026-02-21_MILESTONE_KOPIE.md](../pruefungen/archiv/Klausur_L2_2_1_Musteraufgaben_2026-02-21_MILESTONE_KOPIE.md)
 
 ## 2026-02-20
