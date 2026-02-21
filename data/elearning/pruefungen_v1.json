@@ -1,0 +1,34 @@
+[
+  {
+    "id": "14d56cbd-2705-4adf-bb82-ce1300c20b7d",
+    "titel": "Testklausur API v1",
+    "jahrgangsstufe": "2",
+    "fach": "Informatik",
+    "zeit_minuten": 90,
+    "status": "draft",
+    "anforderungsbereiche": {
+      "ab1": 30,
+      "ab2": 40,
+      "ab3": 30
+    },
+    "themen": [
+      "Sortieren",
+      "Suchen"
+    ],
+    "aufgaben": [
+      {
+        "aufgabe_id": "A1",
+        "titel": "Bubble Sort",
+        "punkte": 10
+      },
+      {
+        "aufgabe_id": "A2",
+        "titel": "Lineare Suche",
+        "punkte": 8
+      }
+    ],
+    "version": 1,
+    "created_at": "2026-02-21T15:47:14.915045Z",
+    "updated_at": "2026-02-21T15:47:14.915045Z"
+  }
+]

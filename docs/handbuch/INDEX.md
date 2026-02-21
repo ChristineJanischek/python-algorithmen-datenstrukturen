@@ -68,6 +68,11 @@ Strategie für stabile Releases und Versionierung:
 
 Systemarchitektur und technische Übersicht (modular erweiterbares Backend/Frontend, Security-by-Design, Dokumentationsstandard).
 
+### Architektur-Audit (Repository)
+→ [**ARCHITEKTUR_AUDIT_REPO_2026-02-21.MD**](ARCHITEKTUR_AUDIT_REPO_2026-02-21.MD)
+
+Ist-Analyse mit Gap-Bewertung, Priorisierung (Must/Should/Nice) und risikoarmem Migrationspfad.
+
 ### Technische Umsetzungsvorlage (Prüfungsmodul)
 → [**TECHNISCHE_UMSETZUNGSVORLAGE_PRUEFUNGEN.MD**](TECHNISCHE_UMSETZUNGSVORLAGE_PRUEFUNGEN.MD)
 

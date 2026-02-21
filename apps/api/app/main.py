@@ -1,8 +1,13 @@
 from __future__ import annotations
 
+from fastapi import Request
 from fastapi import FastAPI, HTTPException
+from fastapi.exceptions import RequestValidationError
+from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
 
+from .api import v1_router
+from .core import NotFoundError, TraceIdMiddleware, ValidationError, error_response_payload
 from .data_loader import load_json, load_text
 
 app = FastAPI(title="Struktogramm E-Learning API", version="0.1.0")
@@ -14,6 +19,79 @@ app.add_middleware(
     allow_methods=["*"] ,
     allow_headers=["*"] ,
 )
+app.add_middleware(TraceIdMiddleware)
+
+app.include_router(v1_router, prefix="/api/v1")
+
+
+def _trace_id(request: Request) -> str:
+    return getattr(request.state, "trace_id", "unbekannt")
+
+
+@app.exception_handler(NotFoundError)
+async def not_found_handler(request: Request, exc: NotFoundError) -> JSONResponse:
+    return JSONResponse(
+        status_code=404,
+        content=error_response_payload(
+            code="NOT_FOUND",
+            message=exc.message,
+            details=None,
+            trace_id=_trace_id(request),
+        ),
+    )
+
+
+@app.exception_handler(ValidationError)
+async def validation_handler(request: Request, exc: ValidationError) -> JSONResponse:
+    return JSONResponse(
+        status_code=422,
+        content=error_response_payload(
+            code="VALIDATION_ERROR",
+            message=exc.message,
+            details=None,
+            trace_id=_trace_id(request),
+        ),
+    )
+
+
+@app.exception_handler(RequestValidationError)
+async def request_validation_handler(request: Request, exc: RequestValidationError) -> JSONResponse:
+    return JSONResponse(
+        status_code=422,
+        content=error_response_payload(
+            code="REQUEST_VALIDATION_ERROR",
+            message="Ungültige Anfrageparameter.",
+            details=exc.errors(),
+            trace_id=_trace_id(request),
+        ),
+    )
+
+
+@app.exception_handler(HTTPException)
+async def http_exception_handler(request: Request, exc: HTTPException) -> JSONResponse:
+    message = exc.detail if isinstance(exc.detail, str) else "HTTP-Fehler"
+    return JSONResponse(
+        status_code=exc.status_code,
+        content=error_response_payload(
+            code=f"HTTP_{exc.status_code}",
+            message=message,
+            details=None if isinstance(exc.detail, str) else exc.detail,
+            trace_id=_trace_id(request),
+        ),
+    )
+
+
+@app.exception_handler(Exception)
+async def fallback_exception_handler(request: Request, exc: Exception) -> JSONResponse:
+    return JSONResponse(
+        status_code=500,
+        content=error_response_payload(
+            code="INTERNAL_SERVER_ERROR",
+            message="Ein unerwarteter Fehler ist aufgetreten.",
+            details=str(exc),
+            trace_id=_trace_id(request),
+        ),
+    )
 
 
 @app.get("/api/health")
