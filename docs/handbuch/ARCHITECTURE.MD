@@ -171,3 +171,18 @@ Ohne diese 5 Punkte gilt ein Feature nicht als abgeschlossen.
 4. RBAC + Audit Log als Querschnittsfunktion implementieren
 5. Export- und KI-Prozesse in Job-Queue auslagern
 6. ADR-Template und Security-Checkliste verpflichtend machen
+
+---
+
+## 10) Technische Umsetzungsvorlage (M0)
+
+Für die konkrete, verbindliche Umsetzung der Struktur- und Automatisierungsstandards siehe:
+
+- [TECHNISCHE_UMSETZUNGSVORLAGE_PRUEFUNGEN.MD](TECHNISCHE_UMSETZUNGSVORLAGE_PRUEFUNGEN.MD)
+
+Diese Vorlage ist die operative Referenz für:
+
+- Redundanzvermeidung (Single-Source-of-Truth)
+- API-/Schema-Standards
+- Sicherheits- und Audit-Baseline
+- CI/CD-Automatisierung administrativer Prozesse

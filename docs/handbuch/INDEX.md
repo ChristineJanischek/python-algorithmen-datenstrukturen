@@ -68,6 +68,11 @@ Strategie für stabile Releases und Versionierung:
 
 Systemarchitektur und technische Übersicht (modular erweiterbares Backend/Frontend, Security-by-Design, Dokumentationsstandard).
 
+### Technische Umsetzungsvorlage (Prüfungsmodul)
+→ [**TECHNISCHE_UMSETZUNGSVORLAGE_PRUEFUNGEN.MD**](TECHNISCHE_UMSETZUNGSVORLAGE_PRUEFUNGEN.MD)
+
+Verbindliche Zielstruktur für M0 mit Redundanzvermeidung, Automatisierung und Governance.
+
 ### Entwicklung
 → [**DEVELOPMENT.MD**](DEVELOPMENT.MD)
 
