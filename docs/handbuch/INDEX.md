@@ -88,6 +88,11 @@ Verbindliche Zielstruktur für M0 mit Redundanzvermeidung, Automatisierung und G
 
 Entwicklungs-Richtlinien und lokales Setup.
 
+### Docker-Testumgebung
+→ [**DOCKER_TESTUMGEBUNG.MD**](DOCKER_TESTUMGEBUNG.MD)
+
+Containerisierte Profile für Live-Entwicklung (`live`) und reproduzierbare Qualitätsläufe (`test`).
+
 ### Frontend Setup
 → [**FRONTEND_SETUP.md**](FRONTEND_SETUP.md)
 

@@ -7,6 +7,7 @@
         "python.defaultInterpreterPath": "/usr/local/bin/python"
       },
       "extensions": [
+        "ms-azuretools.vscode-docker",
         "ritwickdey.LiveServer",
         "ms-python.python",
         "ms-toolsai.jupyter",
@@ -15,8 +16,9 @@
       ]
     }
   },
-  "postCreateCommand": "pip install -e . && npm install -g live-server",
+  "postCreateCommand": "bash .devcontainer/post-create.sh",
   "features": {
+    "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {},
     "ghcr.io/devcontainers/features/node:1": {
       "version": "lts"
     }

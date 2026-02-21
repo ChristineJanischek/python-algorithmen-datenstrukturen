@@ -25,6 +25,11 @@
 	- Frontend-Tests
 	- Frontend-Build
 - M0-Statusdashboard ergänzt: `docs/milestones/M0_STATUS_DASHBOARD_2026-02-21.MD`.
+- Docker-Testumgebung ergänzt:
+	- `apps/api/Dockerfile`
+	- `apps/web/Dockerfile`
+	- `docker-compose.yml` mit Profilen `live` und `test`
+	- `docs/handbuch/DOCKER_TESTUMGEBUNG.MD`
 
 ### Nächste Schritte:
 - Planung der direkten Aufgabenintegration.

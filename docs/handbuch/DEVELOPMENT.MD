@@ -36,6 +36,24 @@
 	- Frontend-Tests (`npm run test`)
 	- Frontend-Build (`npm run build`)
 
+## Docker-Profile für reproduzierbare Tests
+
+- Datei: `docker-compose.yml`
+- Profile:
+	- `live` → API + Frontend-Liveserver
+	- `test` → DoD-Check, Backend-Tests, Security-Scan, Frontend-Tests/Build
+
+### Live starten
+
+- `docker compose --profile live up --build`
+
+### Testläufe in Containern
+
+- `docker compose --profile test run --rm docs-dod`
+- `docker compose --profile test run --rm api-tests`
+- `docker compose --profile test run --rm api-security`
+- `docker compose --profile test run --rm web-tests`
+
 ## Einheitliches API-Fehlerformat
 
 Alle API-Fehler liefern das gleiche Schema:
