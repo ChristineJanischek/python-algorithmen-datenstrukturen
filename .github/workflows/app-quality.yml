@@ -5,6 +5,9 @@ on:
     paths:
       - 'apps/api/**'
       - 'apps/web/**'
+      - 'docs/**'
+      - 'CHANGELOG.md'
+      - 'apps/tools/check_docs_dod.py'
       - '.github/workflows/app-quality.yml'
   push:
     branches:
@@ -12,9 +15,72 @@ on:
     paths:
       - 'apps/api/**'
       - 'apps/web/**'
+      - 'docs/**'
+      - 'CHANGELOG.md'
+      - 'apps/tools/check_docs_dod.py'
       - '.github/workflows/app-quality.yml'
 
 jobs:
+  security-scans:
+    name: Security Scans (API + Web)
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+          cache-dependency-path: apps/api/requirements.txt
+
+      - name: Install API dependencies + pip-audit
+        working-directory: apps/api
+        run: |
+          pip install -r requirements.txt
+          pip install pip-audit
+
+      - name: Run Python dependency audit
+        working-directory: apps/api
+        run: |
+          # Übergangsweise ignoriert bis FastAPI/Starlette-Upgradepfad umgesetzt ist.
+          pip-audit -r requirements.txt --progress-spinner off \
+            --ignore-vuln CVE-2025-54121 \
+            --ignore-vuln CVE-2025-62727
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: apps/web/package-lock.json
+
+      - name: Install Web dependencies
+        working-directory: apps/web
+        run: npm ci
+
+      - name: Run npm audit (high)
+        working-directory: apps/web
+        run: npm audit --audit-level=high
+
+  docs-dod:
+    name: Docs DoD Gate
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run docs DoD checks
+        run: python apps/tools/check_docs_dod.py
+
   backend-tests:
     name: Backend Tests (FastAPI)
     runs-on: ubuntu-latest
