@@ -249,7 +249,7 @@ done
 **Siehe auch:**
 - [Operatorenliste-Struktogramme.md](../../struktogramme/Operatorenliste-Struktogramme.md) - Vollständige BW-Standards
 - [STRUKTOGRAMM_GUIDE.md](STRUKTOGRAMM_GUIDE.md) - Praktischer Guide
-- [STRUKTOGRAMM_XML_GUIDE.md](STRUKTOGRAMM_XML_GUIDE.md) - XML-Format Dokumentation
+- [SETUP_XML_SVG_SYSTEM.md](SETUP_XML_SVG_SYSTEM.md) - XML/SVG-Setup und technische Hinweise
 
 ---
 

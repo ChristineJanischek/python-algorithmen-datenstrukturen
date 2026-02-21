@@ -163,7 +163,7 @@ manager.generate_all_indices()
 
 - **Copilot-Anweisungen**: [.github/copilot-instructions.md](../../.github/copilot-instructions.md)
 - **Operatorenliste**: [struktogramme/Operatorenliste-Struktogramme.md](../../struktogramme/Operatorenliste-Struktogramme.md)
-- **Repository-Root**: [/]( /)
+- **Repository-Root**: [README.md](../../README.md)
 
 ---
 

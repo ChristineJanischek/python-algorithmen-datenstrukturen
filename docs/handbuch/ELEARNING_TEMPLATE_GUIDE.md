@@ -485,8 +485,8 @@ manager.generate_index(ContentType.AUFGABE, Level.L1)
 
 ## L1
 
-- [L1_1_1_Variablen](L1/L1_1_1_Variablen.md)
-- [L1_1_2_Datentypen](L1/L1_1_2_Datentypen.md)
+- L1_3_1_Array-Summe_berechnen (L1/L1_3_1_Array-Summe_berechnen.md)
+- INDEX (L1/INDEX.md)
 ...
 ```
 
@@ -529,7 +529,7 @@ manager = ELearningManager()
 
 # Einzelne Datei validieren
 errors = manager.validate_content(
-    Path("docs/aufgaben/L1/L1_1_1_Test.md")
+    Path("docs/aufgaben/L1/L1_3_1_Array-Summe_berechnen.md")
 )
 
 if errors:
@@ -782,7 +782,7 @@ A: Validierung schlägt fehl, INDEX-Generierung könnte Probleme haben.
 A: Bei Logik-Aufgaben ja (BW-Abitur-Standard), bei reinen Informationen nein.
 
 **Q: Wie verlinke ich zwischen Dateien?**  
-A: Verwende relative Pfade: `[Link](../aufgaben/L1/L1_1_1_Test.md)`
+A: Verwende relative Pfade: `[Link](../aufgaben/L1/L1_3_1_Array-Summe_berechnen.md)`
 
 ---
 
