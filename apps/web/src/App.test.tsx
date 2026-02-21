@@ -41,6 +41,21 @@ describe("App", () => {
           } as Response;
         }
 
+        if (url.includes("/api/v1/plugins")) {
+          return {
+            ok: true,
+            json: async () => [
+              {
+                id: "pruefungsmodul",
+                name: "Prüfungsmodul",
+                enabled: true,
+                status: "active",
+                version: "0.1.0",
+              },
+            ],
+          } as Response;
+        }
+
         return { json: async () => ({}) } as Response;
       })
     );
@@ -60,5 +75,7 @@ describe("App", () => {
     expect(taskEntries.length).toBeGreaterThan(0);
 
     expect(screen.getByText("Code-Box")).toBeInTheDocument();
+    expect(screen.getByText("Plugins (Erweiterungen)")).toBeInTheDocument();
+    expect(screen.getByText("Prüfungsmodul")).toBeInTheDocument();
   });
 });

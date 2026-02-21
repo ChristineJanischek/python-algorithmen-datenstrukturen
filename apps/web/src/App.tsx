@@ -3,6 +3,7 @@ import CodeBox from "./components/CodeBox";
 import TaskList from "./components/TaskList";
 import TaskDetail from "./components/TaskDetail";
 import OperatorList from "./components/OperatorList";
+import PluginList from "./components/PluginList";
 
 interface Task {
   id: string;
@@ -87,6 +88,12 @@ export default function App() {
           <h2>Operatorenliste</h2>
           <p>Diese Hilfestellung ist während der Bearbeitung immer verfügbar.</p>
           <OperatorList />
+        </section>
+
+        <section className="panel">
+          <h2>Plugins (Erweiterungen)</h2>
+          <p>Aktive Erweiterungen des Prototyps im Überblick.</p>
+          <PluginList />
         </section>
       </main>
     </div>
