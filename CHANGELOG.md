@@ -30,6 +30,10 @@
 	- `apps/web/Dockerfile`
 	- `docker-compose.yml` mit Profilen `live` und `test`
 	- `docs/handbuch/DOCKER_TESTUMGEBUNG.MD`
+- Backup-Stand erstellt und remote gesichert:
+	- Branch: `chore/docker-testumgebung-backup-2026-02-21`
+	- Tag: `v2026.02.21-docker-setup-backup`
+	- PR-Link: `https://github.com/ChristineJanischek/python-algorithmen-datenstrukturen/pull/new/chore/docker-testumgebung-backup-2026-02-21`
 
 ### Nächste Schritte:
 - Planung der direkten Aufgabenintegration.

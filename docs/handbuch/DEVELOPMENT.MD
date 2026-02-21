@@ -64,3 +64,9 @@ Alle API-Fehler liefern das gleiche Schema:
 - `traceId`
 
 Für `api/v1/pruefungen` ist dieses Schema zusätzlich in OpenAPI als Response-Modell dokumentiert.
+
+## Aktueller Sicherungsstand (2026-02-21)
+
+- Backup-Branch: `chore/docker-testumgebung-backup-2026-02-21`
+- Backup-Tag: `v2026.02.21-docker-setup-backup`
+- PR erstellen: `https://github.com/ChristineJanischek/python-algorithmen-datenstrukturen/pull/new/chore/docker-testumgebung-backup-2026-02-21`
