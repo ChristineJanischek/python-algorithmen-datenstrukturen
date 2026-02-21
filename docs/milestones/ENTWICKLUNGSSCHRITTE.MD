@@ -1,10 +1,13 @@
 # Entwicklungsschritte
 
 ## 2026-02-21
-1. Sprachliche Vereinheitlichung in der Klausurserie:
+1. Meilenstein M0 „Architektur-Governance & Automatisierung“ für das Prüfungsmodul angelegt:
+	- [docs/milestones/MEILENSTEIN-M0-ARCHITEKTUR-GOVERNANCE-AUTOMATISIERUNG.MD](MEILENSTEIN-M0-ARCHITEKTUR-GOVERNANCE-AUTOMATISIERUNG.MD)
+2. Milestone-Index um M0 erweitert und als aktueller Referenz-Meilenstein verlinkt.
+3. Sprachliche Vereinheitlichung in der Klausurserie:
 	- „Gültig für:“ zu „Gültig für (einsetzbar): Sekundarstufe 2, Berufliches Gymnasium, Berufskolleg Wirtschaftsinformatik“ aktualisiert.
 	- „Klasse 2“ zu „Jahrgangsstufe 2“ aktualisiert.
-2. Sicherung ergänzt:
+4. Sicherung ergänzt:
 	- [docs/pruefungen/archiv/Klausur_L2_2_1_Musteraufgaben_2026-02-21_MILESTONE_KOPIE.md](../pruefungen/archiv/Klausur_L2_2_1_Musteraufgaben_2026-02-21_MILESTONE_KOPIE.md)
 
 ## 2026-02-20

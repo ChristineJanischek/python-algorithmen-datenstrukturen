@@ -3,6 +3,8 @@
 Zentrale Übersicht aller Meilenstein- und Fortschrittsdokumente.
 
 ## Aktueller Stand
+- [Meilenstein M0 – Architektur-Governance & Automatisierung](MEILENSTEIN-M0-ARCHITEKTUR-GOVERNANCE-AUTOMATISIERUNG.MD)
+  - Verbindliche Zielstruktur, Security-/Audit-Baseline und Automatisierungs-Gates für die Umsetzung des Prüfungsmoduls
 - [Meilenstein 2026-02-20: Klausur L2_2_1 Optimierung](MEILENSTEIN-2026-02-20-KLAUSUR-L2_2_1-OPTIMIERUNG.MD)
   - Neutralisierung Aufgabe 5, Dateikonsolidierung, Optimierung der Musterlösung als Korrekturvorlage
 - [Marschplan: Prüfungsmodul „prüfungen“](MEILENSTEIN-PLAN-PRUEFUNGEN-APP.MD)
@@ -11,6 +13,7 @@ Zentrale Übersicht aller Meilenstein- und Fortschrittsdokumente.
   - Chronologische Dokumentation der wichtigsten Änderungen
 
 ## Meilenstein-Dokumente
+- [Meilenstein M0 – Architektur-Governance & Automatisierung](MEILENSTEIN-M0-ARCHITEKTUR-GOVERNANCE-AUTOMATISIERUNG.MD)
 - [Meilenstein 1 – Aufgabenpaket: Listen, Sortier- und Suchalgorithmen](MEILENSTEIN-1-LISTEN-SORTIER-SUCHE.MD)
 - [Meilenstein-Plan für das E-Learning-Tool](FUNCTIONAL-MILESTONE-PLAN.MD)
 - [Milestone: Option 3 - Multi-Purpose Umstrukturierung](OPTION3_DRAWIO_EXTENSION.md)
