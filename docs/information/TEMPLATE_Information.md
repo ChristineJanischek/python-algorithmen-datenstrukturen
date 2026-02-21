@@ -105,9 +105,9 @@ zeitaufwand: "[X] Minuten Lesezeit"
 
 ## 📚 Ressourcen
 
-- [Titel der Ressource 1](link/pfad/zur/ressource1)
-- [Titel der Ressource 2](link/pfad/zur/ressource2)
-- [Titel der Ressource 3](link/pfad/zur/ressource3)
+- Titel der Ressource 1: link/pfad/zur/ressource1
+- Titel der Ressource 2: link/pfad/zur/ressource2
+- Titel der Ressource 3: link/pfad/zur/ressource3
 
 ## 🧪 Übungsaufgaben
 

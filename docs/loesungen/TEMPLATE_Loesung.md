@@ -47,7 +47,7 @@ Ausgabe: "Summe: " + summe
 ### Vollständige Lösung
 
 ```python
-def [funktionsname](parameter: typ) -> rückgabetyp:
+def <funktionsname>(parameter_typ) -> rückgabetyp:
     """
     [Docstring - Beschreibung der Funktion]
     
@@ -179,7 +179,7 @@ if __name__ == "__main__":
 [Beschreibung des alternativen Ansatzes]
 
 ```python
-def [alternative_funktion]([parameter]):
+def <alternative_funktion>(parameter):
     [alternativer Code]
     return [ergebnis]
 ```
@@ -199,7 +199,7 @@ def [alternative_funktion]([parameter]):
 [Beschreibung des zweiten alternativen Ansatzes]
 
 ```python
-def [alternative_funktion2]([parameter]):
+def <alternative_funktion2>(parameter):
     [alternativer Code]
     return [ergebnis]
 ```
@@ -256,9 +256,9 @@ def [alternative_funktion2]([parameter]):
 
 ## 📚 Weiterführende Ressourcen
 
-- [Link zur Aufgabe](../aufgaben/[Level]/[Dateiname].md)
-- [Link zur Information](../information/[Level]/[Dateiname].md)
-- [Struktogramm](../../struktogramme/[Dateiname].stgr)
+- Link zur Aufgabe: ../aufgaben/<Level>/<Dateiname>.md
+- Link zur Information: ../information/<Level>/<Dateiname>.md
+- Struktogramm: ../../struktogramme/<Dateiname>.stgr
 
 ---
 
