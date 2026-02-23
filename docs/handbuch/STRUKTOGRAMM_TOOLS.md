@@ -13,6 +13,9 @@
 ├── struktogramm_cli.py             # Kommandozeilen-Interface      
 ├── __init__.py                     # Python Package                
 └── (Dokumentation in docs/handbuch/)                               
+
+/src/utils/
+└── struktogramm_pipeline.py        # Core-Pipeline (Render + Validate)
 ```
 
 ---
@@ -43,6 +46,12 @@ python struktogramm_cli.py refactor docs/pruefungen/Klausur_L2_2_1_Verfuegung.md
 
 # Repository prüfen
 python struktogramm_cli.py check-repo --pattern "docs/**/*.md"
+
+# Struktogramm-Blöcke als SVG rendern
+python struktogramm_cli.py render docs/pruefungen/Klausur_L2_2_1_Musterloesungen_Variante_A.md --strict
+
+# Rendern + Validieren mit JSON-Report
+python struktogramm_cli.py render-and-validate docs/pruefungen/Klausur_L2_2_1_Musterloesungen_Variante_A.md --report reports/render_report.json
 ```
 
 ---
@@ -114,6 +123,18 @@ Analysiert Struktur und Komplexität.
 python struktogramm_cli.py operators
 ```
 Zeigt alle verfügbaren Operatoren.
+
+### `render`
+```bash
+python struktogramm_cli.py render <file> [--output-dir "..."] [--prefix "..."] [--strict] [--report "..."]
+```
+Extrahiert alle ```struktogramm```-Blöcke aus Markdown und erzeugt SVG-Dateien.
+
+### `render-and-validate`
+```bash
+python struktogramm_cli.py render-and-validate <file> [--output-dir "..."] [--prefix "..."] [--strict] [--report "..."]
+```
+Führt denselben Renderprozess mit vollständiger Validierungszusammenfassung aus.
 
 ---
 
@@ -231,7 +252,16 @@ python struktogramm_cli.py refactor docs/pruefungen/Klausur_L2_2_1_Verfuegung.md
 
 # 5. Verifiziere
 python struktogramm_cli.py validate docs/pruefungen/Klausur_L2_2_1_Verfuegung.md
+
+# 6. SVGs zentral erzeugen (für E-Learning Einbettung)
+python struktogramm_cli.py render-and-validate docs/pruefungen/Klausur_L2_2_1_Musterloesungen_Variante_A.md --strict --report reports/pruefung_render_report.json
 ```
+
+## 🧱 Render-Pipeline Architektur
+
+Die vollständige Architektur inkl. Security-Regeln und Automatisierungsworkflow ist dokumentiert in:
+
+- `docs/handbuch/STRUKTOGRAMM_RENDER_PIPELINE.md`
 
 ### Szenario 3: Lehrkraft prüft Schülerarbeit
 

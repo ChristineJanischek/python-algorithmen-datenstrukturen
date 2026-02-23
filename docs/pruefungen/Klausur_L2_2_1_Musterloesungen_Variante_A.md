@@ -6,6 +6,8 @@
 
 Bezug: [docs/lehrplan/BPE5_Grundlagen_Programmierung.md](../lehrplan/BPE5_Grundlagen_Programmierung.md) und [docs/lehrplan/BPE7_Algorithmen_Datenstrukturen.md](../lehrplan/BPE7_Algorithmen_Datenstrukturen.md)
 
+SVG-Basis: BW-Formvorlagen aus `apps/drawio-extension/stencil.xml`.
+
 ---
 
 ## 📌 Übersicht Erwartungshorizont
@@ -26,9 +28,13 @@ Bezug: [docs/lehrplan/BPE5_Grundlagen_Programmierung.md](../lehrplan/BPE5_Grundl
 
 ### **Aufgabe 1 (3 Punkte)**
 
-**Muster-Struktogramm (textbasiert):**
+**Struktogramm (BW-Standard, SVG):**
+
+![L2_VarA_Aufgabe1_Bestanden](../../struktogramme/generated/svg/L2_VarA_Aufgabe1_Bestanden.svg)
+
+**BW-Notation (Operatorenliste v2.2):**
 ```struktogramm
-Deklaration und Einlesen: punkte |als Ganzzahl|
+Deklaration und Einlesen: punkte als Ganzzahl
 Wenn punkte >= 50, dann
     J
         Ausgabe: "Bestanden"
@@ -56,14 +62,18 @@ def loese_aufgabe1_bestanden() -> None:
 
 ### **Aufgabe 2 (3 Punkte)**
 
-**Muster-Struktogramm (textbasiert):**
+**Struktogramm (BW-Standard, SVG):**
+
+![L2_VarA_Aufgabe2_Anzahl_Bis_Abbruch](../../struktogramme/generated/svg/L2_VarA_Aufgabe2_Anzahl_Bis_Abbruch.svg)
+
+**BW-Notation (Operatorenliste v2.2):**
 ```struktogramm
 Deklaration und Initialisierung: anzahl = 0
-Deklaration und Einlesen: zahl |als Ganzzahl|
+Deklaration und Einlesen: zahl als Ganzzahl
 Wiederhole solange zahl != -1
     Zuweisung: anzahl = anzahl + 1
     Ausgabe: anzahl
-    Deklaration und Einlesen: zahl |als Ganzzahl|
+    Deklaration und Einlesen: zahl als Ganzzahl
 Ausgabe: "Programm endet"
 ```
 
@@ -88,11 +98,17 @@ def loese_aufgabe2_anzahl() -> None:
 ### **Aufgabe 3 (3 Punkte)**
 
 **a) Deklaration (1):**
+
+![L2_3a_Aufgabe3_Array_Deklaration](../../struktogramme/generated/svg/L2_3a_Aufgabe3_Array_Deklaration.svg)
+
 ```python
 temperaturen = [18, 21, 19, 23, 17, 20, 22, 16]
 ```
 
 **b) Zugriff (1):**
+
+![L2_3b_Aufgabe3_Array_Zugriff](../../struktogramme/generated/svg/L2_3b_Aufgabe3_Array_Zugriff.svg)
+
 ```python
 zweites = temperaturen[1]
 temperaturen[-2] = 25
@@ -110,12 +126,18 @@ print(zweites, laenge)
 Gegeben: `werte = [14, 9, 31, 27, 45, 12, 6, 39]`
 
 **a) Alle Werte ausgeben (2):**
+
+![L2_4a_Aufgabe4_Array_Ausgeben_Index](../../struktogramme/generated/svg/L2_4a_Aufgabe4_Array_Ausgeben_Index.svg)
+
 ```python
 for wert in werte:
     print(wert)
 ```
 
 **b) Durch 3 teilbar (2):**
+
+![L2_4b_Aufgabe4_Array_Filtern](../../struktogramme/generated/svg/L2_4b_Aufgabe4_Array_Filtern.svg)
+
 ```python
 for wert in werte:
     if wert % 3 == 0:
@@ -123,6 +145,9 @@ for wert in werte:
 ```
 
 **c) Neue Liste plus_fuenf (2):**
+
+![L2_4c1_Aufgabe4_Array_Verdoppeln_Neue_Liste](../../struktogramme/generated/svg/L2_4c1_Aufgabe4_Array_Verdoppeln_Neue_Liste.svg)
+
 ```python
 plus_fuenf: list[int] = []
 for wert in werte:
@@ -153,7 +178,11 @@ Zuweisung: i = i + 1
 
 ### **Aufgabe 6: Selection Sort (7 Punkte)**
 
-**a) Struktogramm (3, textbasiert):**
+**a) Struktogramm (3):**
+
+![L2_6_Aufgabe6_Selection_Sort](../../struktogramme/generated/svg/L2_6_Aufgabe6_Selection_Sort.svg)
+
+**BW-Notation (Operatorenliste v2.2):**
 ```struktogramm
 Deklaration und Initialisierung: zahlen = [29, 14, 37, 10, 18]
 Deklaration und Initialisierung: n = Anzahl der Elemente des Arrays zahlen

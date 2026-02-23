@@ -6,6 +6,8 @@
 
 Bezug: [docs/lehrplan/BPE5_Grundlagen_Programmierung.md](../lehrplan/BPE5_Grundlagen_Programmierung.md) und [docs/lehrplan/BPE7_Algorithmen_Datenstrukturen.md](../lehrplan/BPE7_Algorithmen_Datenstrukturen.md)
 
+SVG-Basis: BW-Formvorlagen aus `apps/drawio-extension/stencil.xml`.
+
 ---
 
 ## 📌 Übersicht Erwartungshorizont
@@ -25,8 +27,10 @@ Bezug: [docs/lehrplan/BPE5_Grundlagen_Programmierung.md](../lehrplan/BPE5_Grundl
 ## ✅ MUSTERLÖSUNGEN MIT BEWERTUNG
 
 ### Aufgabe 1 (3)
+![L2_VarB_Aufgabe1_Volljaehrig](../../struktogramme/generated/svg/L2_VarB_Aufgabe1_Volljaehrig.svg)
+
 ```struktogramm
-Deklaration und Einlesen: alter |als Ganzzahl|
+Deklaration und Einlesen: alter als Ganzzahl
 Wenn alter >= 18, dann
     J
         Ausgabe: "Volljährig"
@@ -47,13 +51,15 @@ def loese_aufgabe1_volljaehrig() -> None:
 ---
 
 ### Aufgabe 2 (3)
+![L2_VarB_Aufgabe2_Laufende_Summe](../../struktogramme/generated/svg/L2_VarB_Aufgabe2_Laufende_Summe.svg)
+
 ```struktogramm
 Deklaration und Initialisierung: summe = 0
-Deklaration und Einlesen: zahl |als Ganzzahl|
+Deklaration und Einlesen: zahl als Ganzzahl
 Wiederhole solange zahl != -1
     Zuweisung: summe = summe + zahl
     Ausgabe: summe
-    Deklaration und Einlesen: zahl |als Ganzzahl|
+    Deklaration und Einlesen: zahl als Ganzzahl
 Ausgabe: "Programm endet"
 ```
 
@@ -73,11 +79,15 @@ def loese_aufgabe2_laufende_summe() -> None:
 ### Aufgabe 3 (3)
 
 **a)**
+![L2_3a_Aufgabe3_Array_Deklaration](../../struktogramme/generated/svg/L2_3a_Aufgabe3_Array_Deklaration.svg)
+
 ```python
 lager = [4, 7, 2, 9, 5, 1, 8, 3]
 ```
 
 **b)**
+![L2_3b_Aufgabe3_Array_Zugriff](../../struktogramme/generated/svg/L2_3b_Aufgabe3_Array_Zugriff.svg)
+
 ```python
 erstes = lager[0]
 lager[-1] = 10
@@ -93,12 +103,16 @@ print(erstes, laenge)
 ### Aufgabe 4 (6)
 
 **a) Alle Werte ausgeben (2):**
+![L2_4a_Aufgabe4_Array_Ausgeben_Index](../../struktogramme/generated/svg/L2_4a_Aufgabe4_Array_Ausgeben_Index.svg)
+
 ```python
 for wert in werte:
     print(wert)
 ```
 
 **b) Nur gerade Werte (2):**
+![L2_4b_Aufgabe4_Array_Filtern](../../struktogramme/generated/svg/L2_4b_Aufgabe4_Array_Filtern.svg)
+
 ```python
 for wert in werte:
     if wert % 2 == 0:
@@ -106,6 +120,8 @@ for wert in werte:
 ```
 
 **c) Liste halbiert (2):**
+![L2_4c1_Aufgabe4_Array_Verdoppeln_Neue_Liste](../../struktogramme/generated/svg/L2_4c1_Aufgabe4_Array_Verdoppeln_Neue_Liste.svg)
+
 ```python
 halbiert: list[int] = []
 for wert in werte:

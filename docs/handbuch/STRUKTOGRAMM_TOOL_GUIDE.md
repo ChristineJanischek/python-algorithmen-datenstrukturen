@@ -11,6 +11,7 @@ Ein umfassendes Paket zur Validierung und Refactoring von Struktogrammen nach de
 ✅ **CLI-Tool** - Kommandozeilen-Interface für Batch-Verarbeitung  
 ✅ **Analyzer** - Analysiert Struktur und Komplexität  
 ✅ **Formatter** - Normalisiert Abstände und Konsistenz  
+✅ **Render Pipeline** - Erzeugt SVG aus `struktogramm`-Blöcken mit Report-Ausgabe
 
 ---
 
@@ -61,6 +62,12 @@ python struktogramm_cli.py operators
 
 # Datei analysieren
 python struktogramm_cli.py analyze docs/pruefungen/Klausur_L2_2_1_Verfuegung.md
+
+# SVG Rendering
+python struktogramm_cli.py render docs/pruefungen/Klausur_L2_2_1_Musterloesungen_Variante_A.md --strict
+
+# Rendering mit JSON-Report
+python struktogramm_cli.py render-and-validate docs/pruefungen/Klausur_L2_2_1_Musterloesungen_Variante_A.md --report reports/render_report.json
 ```
 
 ---
@@ -184,6 +191,22 @@ cd apps/tools
 python struktogramm_cli.py analyze <file>
 ```
 
+### `render`
+
+Rendert `struktogramm`-Codeblöcke einer Markdown-Datei zu SVG-Dateien.
+
+```bash
+python struktogramm_cli.py render <file> [--output-dir "..."] [--prefix "..."] [--strict] [--report "..."]
+```
+
+### `render-and-validate`
+
+Kombiniert Rendering und Validierungsreport in einem Lauf.
+
+```bash
+python struktogramm_cli.py render-and-validate <file> [--output-dir "..."] [--prefix "..."] [--strict] [--report "..."]
+```
+
 ---
 
 ## 📖 Python API
@@ -221,6 +244,7 @@ Siehe [STRUKTOGRAMM_COPILOT_INTEGRATION.md](STRUKTOGRAMM_COPILOT_INTEGRATION.md)
 - **Struct ogramm-Guide:** `docs/handbuch/STRUKTOGRAMM_GUIDE.md`
 - **E-Learning Template:** `docs/handbuch/ELEARNING_TEMPLATE_GUIDE.md`
 - **Main Tool Guide:** `docs/handbuch/STRUKTOGRAMM_TOOLS.md`
+- **Render Pipeline:** `docs/handbuch/STRUKTOGRAMM_RENDER_PIPELINE.md`
 
 ---
 

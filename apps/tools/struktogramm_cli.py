@@ -22,6 +22,15 @@ from pathlib import Path
 from typing import List, Optional
 from colorama import Fore, Back, Style, init
 
+REPO_ROOT = Path(__file__).resolve().parents[2]
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
+
+from src.utils.struktogramm_pipeline import (
+    StruktogrammPipeline,
+    PipelineSecurityError,
+)
+
 from struktogramm_validator import (
     StruktogrammValidator,
     StruktogrammAnalyzer,
@@ -54,6 +63,7 @@ class StruktogrammCLI:
         self.validator = StruktogrammValidator()
         self.analyzer = StruktogrammAnalyzer()
         self.refactorer = StruktogrammRefactorer()
+        self.pipeline = StruktogrammPipeline(repo_root=REPO_ROOT)
 
     def print_header(self, text: str):
         """Druckt Kopfzeile"""
@@ -275,6 +285,59 @@ class StruktogrammCLI:
         except Exception as e:
             self.print_error(f"Fehler bei Analyse: {str(e)}")
 
+    def _print_pipeline_report(self, report, strict: bool = False):
+        self.print_info(f"Quelle: {report.source_file}")
+        self.print_info(f"Ausgabeordner: {report.output_dir}")
+        if report.stencil_ok:
+            self.print_success(f"Draw.io-Stencil verfügbar: {report.stencil_file}")
+        else:
+            self.print_warning(f"Draw.io-Stencil prüfen: {report.stencil_file}")
+
+        rendered_count = sum(1 for artifact in report.artifacts if artifact.rendered)
+        issue_count = sum(len(artifact.issues) for artifact in report.artifacts)
+
+        print(f"\n{Fore.CYAN}Pipeline-Zusammenfassung:{Style.RESET_ALL}")
+        print(f"  Blöcke erkannt: {report.block_count}")
+        print(f"  SVG erzeugt: {rendered_count}")
+        print(f"  Validierungsprobleme: {issue_count}")
+
+        for artifact in report.artifacts:
+            rel_path = os.path.relpath(artifact.output_file, REPO_ROOT)
+            marker = "✅" if artifact.rendered else "⏭️"
+            print(f"  {marker} Block {artifact.block_index}: {rel_path}")
+            for issue in artifact.issues:
+                prefix = "Fehler" if issue.severity == "error" else "Warnung"
+                print(f"     - {prefix} Zeile {issue.line}: {issue.message}")
+
+        if strict and any(
+            issue.severity == "error"
+            for artifact in report.artifacts
+            for issue in artifact.issues
+        ):
+            raise ValueError("Strict-Modus: Rendering wegen Validierungsfehlern nicht vollständig durchgeführt")
+
+    def cmd_render(self, filepath: str, output_dir: str, prefix: str, strict: bool, report_file: Optional[str]):
+        self.print_header(f"Rendere Struktogramm-Blöcke: {filepath}")
+        report = self.pipeline.render_markdown(
+            markdown_file=Path(filepath),
+            output_dir=Path(output_dir) if output_dir else None,
+            prefix=prefix,
+            strict=strict,
+            write_report=Path(report_file) if report_file else None,
+        )
+        self._print_pipeline_report(report, strict=strict)
+
+    def cmd_render_and_validate(self, filepath: str, output_dir: str, prefix: str, strict: bool, report_file: Optional[str]):
+        self.print_header(f"Render + Validate: {filepath}")
+        report = self.pipeline.render_markdown(
+            markdown_file=Path(filepath),
+            output_dir=Path(output_dir) if output_dir else None,
+            prefix=prefix,
+            strict=strict,
+            write_report=Path(report_file) if report_file else None,
+        )
+        self._print_pipeline_report(report, strict=strict)
+
 
 def main():
     """Hauptfunktion"""
@@ -286,6 +349,8 @@ Beispiele:
   %(prog)s validate docs/pruefungen/Klausur_L2_2_1_Verfuegung.md
   %(prog)s refactor docs/pruefungen/Klausur_L2_2_1_Verfuegung.md --dry-run
   %(prog)s check-repo --pattern "**/*.md"
+    %(prog)s render docs/pruefungen/Klausur_L2_2_1_Musterloesungen_Variante_A.md
+    %(prog)s render-and-validate docs/pruefungen/Klausur_L2_2_1_Musterloesungen_Variante_A.md --strict
   %(prog)s operators --list
   %(prog)s analyze docs/pruefungen/Klausur_L2_2_1_Verfuegung.md
 
@@ -322,6 +387,20 @@ Dokumentation: https://github.com/ChristineJanischek/python-algorithmen-datenstr
     analyze_parser = subparsers.add_parser("analyze", help="Analysiere ein Struktogramm")
     analyze_parser.add_argument("file", help="Datei zum Analysieren")
 
+    render_parser = subparsers.add_parser("render", help="Rendert ```struktogramm```-Blöcke als SVG")
+    render_parser.add_argument("file", help="Markdown-Datei mit Struktogramm-Blöcken")
+    render_parser.add_argument("--output-dir", default="", help="Ausgabeordner für SVG-Dateien")
+    render_parser.add_argument("--prefix", default="", help="Dateipräfix für SVG-Dateien")
+    render_parser.add_argument("--strict", action="store_true", help="Keine Ausgabe bei Validierungsfehlern je Block")
+    render_parser.add_argument("--report", default="", help="Optionaler JSON-Reportpfad")
+
+    render_validate_parser = subparsers.add_parser("render-and-validate", help="Rendern und Validierung in einem Lauf")
+    render_validate_parser.add_argument("file", help="Markdown-Datei mit Struktogramm-Blöcken")
+    render_validate_parser.add_argument("--output-dir", default="", help="Ausgabeordner für SVG-Dateien")
+    render_validate_parser.add_argument("--prefix", default="", help="Dateipräfix für SVG-Dateien")
+    render_validate_parser.add_argument("--strict", action="store_true", help="Keine Ausgabe bei Validierungsfehlern je Block")
+    render_validate_parser.add_argument("--report", default="", help="Optionaler JSON-Reportpfad")
+
     args = parser.parse_args()
 
     if not args.command:
@@ -342,6 +421,10 @@ Dokumentation: https://github.com/ChristineJanischek/python-algorithmen-datenstr
         cli.cmd_operators(args.list)
     elif args.command == "analyze":
         cli.cmd_analyze(args.file)
+    elif args.command == "render":
+        cli.cmd_render(args.file, args.output_dir, args.prefix, args.strict, args.report or None)
+    elif args.command == "render-and-validate":
+        cli.cmd_render_and_validate(args.file, args.output_dir, args.prefix, args.strict, args.report or None)
 
 
 if __name__ == "__main__":
@@ -350,6 +433,9 @@ if __name__ == "__main__":
     except KeyboardInterrupt:
         print(f"\n{Fore.YELLOW}Abgebrochen durch Benutzer{Style.RESET_ALL}")
         sys.exit(0)
+    except PipelineSecurityError as e:
+        print(f"\n{Fore.RED}Sicherheitsfehler: {str(e)}{Style.RESET_ALL}")
+        sys.exit(2)
     except Exception as e:
         print(f"\n{Fore.RED}Fehler: {str(e)}{Style.RESET_ALL}")
         sys.exit(1)

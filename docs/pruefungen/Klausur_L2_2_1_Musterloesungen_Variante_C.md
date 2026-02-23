@@ -6,6 +6,8 @@
 
 Bezug: [docs/lehrplan/BPE5_Grundlagen_Programmierung.md](../lehrplan/BPE5_Grundlagen_Programmierung.md) und [docs/lehrplan/BPE7_Algorithmen_Datenstrukturen.md](../lehrplan/BPE7_Algorithmen_Datenstrukturen.md)
 
+SVG-Basis: BW-Formvorlagen aus `apps/drawio-extension/stencil.xml`.
+
 ---
 
 ## 📌 Bewertungstabelle
@@ -25,8 +27,10 @@ Bezug: [docs/lehrplan/BPE5_Grundlagen_Programmierung.md](../lehrplan/BPE5_Grundl
 ## ✅ MUSTERLÖSUNGEN
 
 ### Aufgabe 1 (3)
+![L2_VarC_Aufgabe1_Gerade_Ungerade](../../struktogramme/generated/svg/L2_VarC_Aufgabe1_Gerade_Ungerade.svg)
+
 ```struktogramm
-Deklaration und Einlesen: zahl |als Ganzzahl|
+Deklaration und Einlesen: zahl als Ganzzahl
 Wenn zahl % 2 == 0, dann
     J
         Ausgabe: "Gerade"
@@ -47,15 +51,20 @@ def loese_aufgabe1_gerade_ungerade() -> None:
 ---
 
 ### Aufgabe 2 (3)
+![L2_VarC_Aufgabe2_Maximum](../../struktogramme/generated/svg/L2_VarC_Aufgabe2_Maximum.svg)
+
 ```struktogramm
 Deklaration und Initialisierung: maximum = -999999
-Deklaration und Einlesen: zahl |als Ganzzahl|
+Deklaration und Einlesen: zahl als Ganzzahl
 Wiederhole solange zahl != -1
     Wenn zahl > maximum, dann
         J
             Zuweisung: maximum = zahl
+        , sonst
+        N
+            (keine Anweisung)
     Ausgabe: maximum
-    Deklaration und Einlesen: zahl |als Ganzzahl|
+    Deklaration und Einlesen: zahl als Ganzzahl
 Ausgabe: "Programm endet"
 ```
 
@@ -78,11 +87,15 @@ def loese_aufgabe2_maximum() -> None:
 ### Aufgabe 3 (3)
 
 **a)**
+![L2_3a_Aufgabe3_Array_Deklaration](../../struktogramme/generated/svg/L2_3a_Aufgabe3_Array_Deklaration.svg)
+
 ```python
 noten = [2, 3, 1, 4, 2, 5, 3, 1]
 ```
 
 **b)**
+![L2_3b_Aufgabe3_Array_Zugriff](../../struktogramme/generated/svg/L2_3b_Aufgabe3_Array_Zugriff.svg)
+
 ```python
 drittes = noten[2]
 noten[0] = 1
@@ -100,12 +113,16 @@ print(drittes, laenge)
 Gegeben: `werte = [11, 28, 35, 40, 53, 64, 79, 82]`
 
 **a)**
+![L2_4a_Aufgabe4_Array_Ausgeben_Index](../../struktogramme/generated/svg/L2_4a_Aufgabe4_Array_Ausgeben_Index.svg)
+
 ```python
 for wert in werte:
     print(wert)
 ```
 
 **b)**
+![L2_4b_Aufgabe4_Array_Filtern](../../struktogramme/generated/svg/L2_4b_Aufgabe4_Array_Filtern.svg)
+
 ```python
 for wert in werte:
     if wert >= 40:
@@ -113,6 +130,8 @@ for wert in werte:
 ```
 
 **c)**
+![L2_4c1_Aufgabe4_Array_Verdoppeln_Neue_Liste](../../struktogramme/generated/svg/L2_4c1_Aufgabe4_Array_Verdoppeln_Neue_Liste.svg)
+
 ```python
 quadriert: list[int] = []
 for wert in werte:
@@ -141,7 +160,11 @@ Zuweisung: i = i + 1
 
 ### Aufgabe 6: Selection Sort (7)
 
-**a) Struktogramm (3, textbasiert):**
+**a) Struktogramm (3):**
+
+![L2_6_Aufgabe6_Selection_Sort](../../struktogramme/generated/svg/L2_6_Aufgabe6_Selection_Sort.svg)
+
+**BW-Notation (Operatorenliste v2.2):**
 ```struktogramm
 Deklaration und Initialisierung: zahlen = [33, 12, 27, 5, 18]
 Deklaration und Initialisierung: n = Anzahl der Elemente des Arrays zahlen
