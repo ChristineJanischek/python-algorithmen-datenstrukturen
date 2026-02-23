@@ -41,5 +41,11 @@
 - Klausur-Musterlösungen Varianten A/B/C vollständig mit BW-konformen SVG-Struktogrammen ergänzt.
 - Neue SVG-Artefakte unter `struktogramme/generated/svg/` ergänzt (inkl. Selection-Sort und Varianten-spezifische Aufgaben).
 
+### Release Notes (2026-02-23)
+- **Neu für Lehrkräfte:** Alle aktuellen Musterlösungen in `docs/pruefungen` enthalten durchgängig eingebettete BW-konforme SVG-Struktogramme.
+- **Neu für Autoren:** Eine zentrale Render-/Validierungs-Pipeline ist verfügbar (`src/utils/struktogramm_pipeline.py`) und per CLI ansprechbar (`apps/tools/struktogramm_cli.py`).
+- **Sicherheit & Ordnung:** Pipeline-Einstieg und Doku wurden vereinheitlicht, damit Generierung/Validierung reproduzierbar und wartbar in E-Learning-Workflows nutzbar sind.
+- **Dokumentation:** Architektur- und Betriebsdokumentation wurde in `docs/handbuch/STRUKTOGRAMM_RENDER_PIPELINE.md` zusammengeführt.
+
 ### Nächste Schritte:
 - Planung der direkten Aufgabenintegration.
