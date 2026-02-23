@@ -34,6 +34,12 @@
 	- Branch: `chore/docker-testumgebung-backup-2026-02-21`
 	- Tag: `v2026.02.21-docker-setup-backup`
 	- PR-Link: `https://github.com/ChristineJanischek/python-algorithmen-datenstrukturen/pull/new/chore/docker-testumgebung-backup-2026-02-21`
+- Render-/Validierungs-Pipeline für Struktogramme ergänzt:
+	- Neues Core-Modul: `src/utils/struktogramm_pipeline.py`
+	- CLI in `apps/tools/struktogramm_cli.py` um Pipeline-Funktionen erweitert
+	- Neue Systemdokumentation: `docs/handbuch/STRUKTOGRAMM_RENDER_PIPELINE.md`
+- Klausur-Musterlösungen Varianten A/B/C vollständig mit BW-konformen SVG-Struktogrammen ergänzt.
+- Neue SVG-Artefakte unter `struktogramme/generated/svg/` ergänzt (inkl. Selection-Sort und Varianten-spezifische Aufgaben).
 
 ### Nächste Schritte:
 - Planung der direkten Aufgabenintegration.
