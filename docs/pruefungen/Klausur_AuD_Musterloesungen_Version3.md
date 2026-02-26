@@ -1,6 +1,6 @@
 # Musterlösung & Erwartungshorizont
 ## Klassenarbeit: Kontrollstrukturen, Arrays (der Liste) und Algorithmen
-## Variante B
+## Version 3
 
 **Dokumentation für Lehrkräfte**
 

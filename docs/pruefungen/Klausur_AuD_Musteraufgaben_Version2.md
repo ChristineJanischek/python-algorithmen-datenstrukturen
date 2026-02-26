@@ -1,6 +1,6 @@
 # Klassenarbeit: Kontrollstrukturen, Arrays (der Liste) und Algorithmen
 ## Informatik – Berufliches Gymnasium (Jahrgangsstufe 2)
-## Variante A (Musterklausur / Nachschreibetermin)
+## Version 2 (Musterklausur / Nachschreibetermin)
 
 ---
 

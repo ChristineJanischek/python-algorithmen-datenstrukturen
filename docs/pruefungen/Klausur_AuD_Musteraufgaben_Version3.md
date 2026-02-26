@@ -1,6 +1,6 @@
 # Klassenarbeit: Kontrollstrukturen, Arrays (der Liste) und Algorithmen
 ## Informatik – Berufliches Gymnasium (Jahrgangsstufe 2)
-## Variante C (Musterklausur / Nachschreibetermin)
+## Version 3 (Musterklausur / Nachschreibetermin)
 
 ---
 
@@ -20,9 +20,10 @@
 
 ## 📌 Allgemeine Anweisungen
 
-- Struktogramme mit BW-Operatornotation darstellen.
-- Bei Aufgaben mit Algorithmen sind eigene Schleifenlösungen erforderlich.
-- Lösungsweg begründen (insbesondere bei Analyseaufgaben).
+- Bei Aufgaben mit Struktogrammen: **Struktogramm ist erforderlich**.
+- Struktogramme in BW-Operatornotation erstellen.
+- Python-Code muss lauffähig und nachvollziehbar sein.
+- Keine eingebauten Sortier-/Suchfunktionen (`sort()`, `index()` usw.) verwenden.
 
 ---
 
@@ -35,7 +36,7 @@
 | **3** | Arrays (Listen): Deklaration & Zugriff | 3 | I – Reproduktion |
 | **4** | Arrays (der Liste) durchlaufen & filtern | 6 | II – Transfer |
 | **5** | Algorithmen prüfen (Fehleranalyse) | 8 | II/III – Transfer & Analyse |
-| **6** | Sortieralgorithmus (Selection Sort) | 7 | III – Kreativität |
+| **6** | Sortieralgorithmus (Bubble Sort) | 7 | III – Kreativität |
 
 **Summe: 30 Punkte**
 
@@ -44,74 +45,91 @@
 ## 📝 AUFGABENBLATT
 
 ### **Aufgabe 1: Verzweigung & Logik (3 Punkte)**
-**Thema:** BPE 5.2 – Alternativen
+**Thema:** BPE 5.2 – Kontrollstrukturen
 
 Schreibe Struktogramm + Python-Code:
-> Ein Programm liest eine Ganzzahl `zahl` ein und gibt aus:
-> - „Gerade" wenn `zahl % 2 == 0`
-> - „Ungerade" sonst
+> Eingabe: Ganzzahl `alter`
+> - „Volljährig" bei `alter >= 18`
+> - „Minderjährig" bei `alter < 18`
+
+```python
+# Hier Lösung eintragen:
+
+
+```
 
 ---
 
 ### **Aufgabe 2: Schleife mit Bedingung (3 Punkte)**
-**Thema:** BPE 5.2 – Wiederholungsstrukturen
+**Thema:** BPE 5.2 – Wiederholung
 
-Lies Ganzzahlen ein, bis `-1` eingegeben wird.
-Nach jeder gültigen Eingabe soll die bisherige **größte Zahl** ausgegeben werden.
+Ein Programm liest Ganzzahlen ein und führt eine laufende Summe.
+Das Programm endet bei `-1`.
+Nach jeder gültigen Eingabe wird die aktuelle Summe ausgegeben.
+
+```python
+# Hier Lösung eintragen:
+
+
+```
 
 ---
 
 ### **Aufgabe 3: Array-/Listen-Grundlagen (3 Punkte)**
 **Thema:** BPE 7.1 – Arrays
 
-Gegeben: `noten = [2, 3, 1, 4, 2, 5, 3, 1]`
+Gegeben: `lager = [4, 7, 2, 9, 5, 1, 8, 3]`
 
-**a)** Deklaration und Initialisierung (1 Punkt)
+**a) Deklaration (1 Punkt)**
 
-**b)**
-- drittes Element ausgeben
-- erstes Element auf `1` setzen
-- Länge ausgeben (1 Punkt)
+**b) Zugriff (1 Punkt)**
+- erstes Element ausgeben
+- letztes Element auf `10` setzen
+- Länge ausgeben
 
-**c)** Bedeutung von `noten[6]` erklären (1 Punkt)
+**c) Interpretation (1 Punkt)**
+
+Was bedeutet `lager[5]`?
 
 ---
 
 ### **Aufgabe 4: Array durchlaufen & filtern (6 Punkte)**
-**Thema:** BPE 7.1 – Array-Verarbeitung
+**Thema:** BPE 7.1 – Array-Algorithmen
 
-Gegeben: `werte = [11, 28, 35, 40, 53, 64, 79, 82]`
+Gegeben: `werte = [6, 17, 24, 31, 42, 55, 68, 73]`
 
-**a)** Alle Werte zeilenweise ausgeben (2 Punkte)
+**a) Alle Werte ausgeben (2 Punkte)**
 
-**b)** Nur Werte `>= 40` ausgeben (2 Punkte)
+**b) Nur gerade Werte ausgeben (2 Punkte)**
 
-**c)** Neue Liste `quadriert` erzeugen (2 Punkte)
+**c) Neue Liste `halbiert` erzeugen (2 Punkte)**
+
+Jedes Element aus `werte` soll als Ganzzahldivision durch 2 gespeichert werden.
 
 ---
 
 ### **Aufgabe 5: Algorithmen prüfen (8 Punkte)**
-**Thema:** BPE 7.2 – Analyse von Suchalgorithmen
+**Thema:** BPE 7.2 – Algorithmenanalyse
 
-Gegeben: `buchstaben = ['H', 'I', 'N', 'W', 'E', 'I', 'S']`
+Gegeben: `ids = [101, 104, 110, 117, 130, 142, 155]`
 
 Fehlerhaftes Struktogramm:
 
 ![L2_5_Aufgabe5_Algorithmen_pruefen_Fehleranalyse](../../struktogramme/generated/svg/L2_5_Aufgabe5_Algorithmen_pruefen_Fehleranalyse.svg)
 
-Teilaufgaben:
-- a) Zweck des Algorithmus
-- b) Fehler + Auswirkung
+Bearbeite:
+- a) vermuteter Zweck
+- b) logischer Fehler + Auswirkung
 - c) Korrektur in BW-Operatornotation
 
 ---
 
-### **Aufgabe 6: Selection Sort implementieren (7 Punkte)**
+### **Aufgabe 6: Bubble Sort implementieren (7 Punkte)**
 **Thema:** BPE 7.2 – Sortieralgorithmen
 
-Gegeben: `zahlen = [33, 12, 27, 5, 18]`
+Gegeben: `zahlen = [42, 7, 19, 3, 25]`
 
-Schreibe Struktogramm + Python-Code für **Selection Sort (aufsteigend)**.
+Schreibe Struktogramm + Python-Code für **Bubble Sort (aufsteigend)**.
 
 **a) Struktogramm (3 Punkte)**
 
@@ -123,10 +141,10 @@ Schreibe Struktogramm + Python-Code für **Selection Sort (aufsteigend)**.
 
 ## ✅ Checkliste vor Abgabe
 
-- [ ] Alle Teilaufgaben bearbeitet
-- [ ] Struktogramme lesbar und BW-konform
-- [ ] Python-Code nachvollziehbar
-- [ ] Fehleranalyse begründet
+- [ ] Struktogramme BW-konform
+- [ ] Schleifen und Bedingungen korrekt
+- [ ] Sortierlogik nachvollziehbar
+- [ ] Antworten vollständig
 
 ---
 
