@@ -8,10 +8,12 @@ Diese Routine überprüft:
 3. Verwaiste Dateien (keine Verweise darauf)
 4. Struktur-Konsistenz (z.B. fehlende INDEX.md Einträge)
 5. Aktualität von Dokumentation vs. Codeänderungen
+6. Prüfungs-Dateinamen nach Standardschema
 """
 
 import os
 import re
+import sys
 from pathlib import Path
 from typing import Dict, List, Set, Tuple
 import json
@@ -63,6 +65,7 @@ class MarkdownReviewer:
         self._check_index_consistency()
         self._check_documentation_structure()
         self._check_code_documentation_sync()
+        self._check_pruefungen_dateinamenschema()
         
         return {
             'errors': self.errors,
@@ -74,6 +77,32 @@ class MarkdownReviewer:
                 'info_count': len(self.info),
             }
         }
+
+    def _check_pruefungen_dateinamenschema(self) -> None:
+        """Prüft, ob Prüfungsdateien im geforderten Namensschema vorliegen."""
+
+        if str(self.repo_root) not in sys.path:
+            sys.path.insert(0, str(self.repo_root))
+
+        from src.utils.pruefungen_namenskonvention import normalisiere_pruefungsdateien
+
+        pruefungen_dir = self.repo_root / "docs" / "pruefungen"
+        if not pruefungen_dir.exists():
+            return
+
+        ergebnis = normalisiere_pruefungsdateien(pruefungen_dir, dry_run=True)
+        for umbenennung in ergebnis.umbenennungen:
+            self.errors.append(
+                {
+                    "type": "pruefungs_dateiname_ungueltig",
+                    "file": str(umbenennung.quelle.relative_to(self.repo_root)),
+                    "message": (
+                        "Dateiname nicht im Schema "
+                        "Klausur_<Thema>_<Musteraufgaben|Musterloesungen>_VersionX.md"
+                    ),
+                    "suggestion": str(umbenennung.ziel.relative_to(self.repo_root)),
+                }
+            )
     
     def _get_all_markdown_files(self, directories: List[Path] = None) -> List[Path]:
         """Hole alle .md Dateien aus den angegebenen Verzeichnissen."""

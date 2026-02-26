@@ -100,6 +100,23 @@ Stand: 2026-02-06
 - `create_information_quick(titel, level, kategorie, nummer, einfuehrung, inhalt, autor="Unbekannt")`
 - `create_loesung_quick(titel, level, kategorie, nummer, loesungsansatz, python_code, autor="Unbekannt", struktogramm=None)`
 
+## src/utils/pruefungen_namenskonvention.py
+
+### Funktionen
+- `ist_konformer_dateiname(dateiname)`
+- `analysiere_pruefungsdatei(datei)`
+- `normalisiere_pruefungsdateien(basis_verzeichnis, dry_run=True)`
+
+### Dataklassen
+- `PruefungsDateiBefund`
+- `Umbenennung`
+- `NormalisierungsErgebnis`
+
+## apps/tools/pruefungen_dateinamen_manager.py
+- `_repo_root()`
+- `_parse_args()`
+- `main()`
+
 ## src/niveau/ka_template/KA02_INF_BG13_2025_2025_lsg.py
 - `ermittleErgebnis()`
 - `ermittleSatzAusArray()`

@@ -15,6 +15,7 @@ Dieses Dokument bietet einen Überblick über alle zentralen Systemroutinen, Dok
 | [STRUKTOGRAMM_GUIDE.md](STRUKTOGRAMM_GUIDE.md) | Praktischer Guide zu Struktogrammen nach Baden-Württemberg-Abitur-Standard | Tutoren, Content-Ersteller |
 | [ELEARNING_TEMPLATE_GUIDE.md](ELEARNING_TEMPLATE_GUIDE.md) | Anleitung für das E-Learning Content Management System | Administratoren, Content-Manager |
 | [ROUTINEN.md](ROUTINEN.md) | Vollständige Übersicht aller System- und Anwendungsroutinen | Entwickler, Administratoren |
+| [PRUEFUNGS_DATEINAMEN_STANDARD.md](PRUEFUNGS_DATEINAMEN_STANDARD.md) | Verbindliches Benennungsschema und Automatik für Prüfungsdateien | Content-Team, Entwickler |
 | [BACKUP_STRATEGY.md](BACKUP_STRATEGY.md) | Versionierungs- und Backup-Strategien für verlässliche Releases | DevOps, Administratoren |
 | [ARCHITECTURE.MD](ARCHITECTURE.MD) | Systemarchitektur und technische Übersicht | Entwickler |
 | [DEVELOPMENT.MD](DEVELOPMENT.MD) | Entwicklungs-Richtlinien und Setup | Entwickler |
@@ -49,6 +50,14 @@ Verwaltung von Versionsinformationen und Release-Metadaten
 
 **Verwendung:** Versionskontrolle, Release-Management
 
+#### **pruefungen_namenskonvention.py**
+Zentrale Validierung und Auto-Normalisierung von Prüfungsdateinamen:
+- `ist_konformer_dateiname()`
+- `analysiere_pruefungsdatei()`
+- `normalisiere_pruefungsdateien()`
+
+**Verwendung:** Sicherstellung des Schemas `Klausur_<Thema>_<Typ>_VersionX.md`
+
 ### API-Anwendungen (apps/api/)
 
 #### **main.py**
@@ -72,6 +81,11 @@ Code-Analyser und Dokumentations-Generator:
 - `analyze_py()` - Python-Dateien analysieren
 - `analyze_text()` - Text-Dateien analysieren
 - `make_md_for_file()` - Markdown-Dokumentation generieren
+
+#### **pruefungen_dateinamen_manager.py**
+CLI für Prüfungsdateinamen:
+- Check-Modus (`python3 .../pruefungen_dateinamen_manager.py`)
+- Auto-Fix-Modus (`python3 .../pruefungen_dateinamen_manager.py --fix`)
 
 ---
 

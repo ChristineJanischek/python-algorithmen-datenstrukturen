@@ -38,6 +38,7 @@ echo "  ✓ Ungültige Datei-Referenzen"
 echo "  ✓ Tote Links / Verwaiste Dateien"
 echo "  ✓ Struktur-Konsistenz (fehlende INDEX-Einträge)"
 echo "  ✓ Dokumentations-Synchronisation"
+echo "  ✓ Prüfungs-Dateinamensschema (Klausur_Thema_Typ_VersionX.md)"
 echo ""
 
 # Interaktive Abfrage
