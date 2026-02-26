@@ -47,5 +47,11 @@
 - **Sicherheit & Ordnung:** Pipeline-Einstieg und Doku wurden vereinheitlicht, damit Generierung/Validierung reproduzierbar und wartbar in E-Learning-Workflows nutzbar sind.
 - **Dokumentation:** Architektur- und Betriebsdokumentation wurde in `docs/handbuch/STRUKTOGRAMM_RENDER_PIPELINE.md` zusammengeführt.
 
+### Release Notes (2026-02-26)
+- **Neu für Redaktion:** Einheitliches Prüfungs-Dateinamensschema `Klausur_<Thema>_<Typ>_VersionX.md` wurde als Systemstandard eingeführt.
+- **Neu für Betrieb:** Validierung und Auto-Normalisierung sind zentral verfügbar über `src/utils/pruefungen_namenskonvention.py` sowie CLI `apps/tools/pruefungen_dateinamen_manager.py`.
+- **Qualitätssicherung:** Der Markdown-Reviewer (`apps/tools/markdown_reviewer.py`) prüft das Dateinamenschema jetzt im Pre-Push-Workflow mit.
+- **Migration abgeschlossen:** Prüfungsdateien unter `docs/pruefungen` wurden konsistent auf das neue AuD-Versionsschema umbenannt; `INDEX.md` und Handbuch-Verweise sind aktualisiert.
+
 ### Nächste Schritte:
 - Planung der direkten Aufgabenintegration.
