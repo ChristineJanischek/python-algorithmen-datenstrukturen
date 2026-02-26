@@ -28,6 +28,11 @@ SVG-Basis: BW-Formvorlagen aus `apps/drawio-extension/stencil.xml`.
 
 ### **Aufgabe 1 (3 Punkte)**
 
+**Aufgabenstellung (aus Prüfungsblatt):**
+> Ein Programm liest eine Ganzzahl `punkte` ein und gibt aus:
+> - „Bestanden" wenn `punkte >= 50`
+> - „Nicht bestanden" wenn `punkte < 50`
+
 **Struktogramm (BW-Standard, SVG):**
 
 ![L2_VarA_Aufgabe1_Bestanden](../../struktogramme/generated/svg/L2_VarA_Aufgabe1_Bestanden.svg)
@@ -61,6 +66,10 @@ def loese_aufgabe1_bestanden() -> None:
 ---
 
 ### **Aufgabe 2 (3 Punkte)**
+
+**Aufgabenstellung (aus Prüfungsblatt):**
+> Ein Programm liest Ganzzahlen ein. Nach jeder Eingabe wird die bisherige **Anzahl gültiger Eingaben** ausgegeben.
+> Das Programm endet bei Eingabe `-1`.
 
 **Struktogramm (BW-Standard, SVG):**
 
@@ -97,6 +106,12 @@ def loese_aufgabe2_anzahl() -> None:
 
 ### **Aufgabe 3 (3 Punkte)**
 
+**Aufgabenstellung (aus Prüfungsblatt):**
+> Gegeben ist die Liste: `temperaturen = [18, 21, 19, 23, 17, 20, 22, 16]`
+> a) Deklaration und Initialisierung
+> b) Zugriff: 2. Element ausgeben, vorletztes Element auf `25` setzen, Länge ausgeben
+> c) Bedeutung von `temperaturen[4]` erläutern
+
 **a) Deklaration (1):**
 
 ![L2_3a_Aufgabe3_Array_Deklaration](../../struktogramme/generated/svg/L2_3a_Aufgabe3_Array_Deklaration.svg)
@@ -122,6 +137,12 @@ print(zweites, laenge)
 ---
 
 ### **Aufgabe 4 (6 Punkte)**
+
+**Aufgabenstellung (aus Prüfungsblatt):**
+> Gegeben ist: `werte = [14, 9, 31, 27, 45, 12, 6, 39]`
+> a) Alle Werte zeilenweise ausgeben
+> b) Nur Werte ausgeben, die durch 3 teilbar sind
+> c) Neue Liste `plus_fuenf` erzeugen (jedes Element +5)
 
 Gegeben: `werte = [14, 9, 31, 27, 45, 12, 6, 39]`
 
@@ -159,6 +180,13 @@ print(plus_fuenf)
 
 ### **Aufgabe 5 (8 Punkte)**
 
+**Aufgabenstellung (aus Prüfungsblatt):**
+> Gegeben: `codes = ['K1', 'K2', 'K3', 'K4', 'K5', 'K6', 'K7']`
+> Analysiere das fehlerhafte Struktogramm:
+> a) Vermuteter Zweck
+> b) Fehleranalyse
+> c) BW-konformer Korrekturvorschlag
+
 **Fehlerhaftes Struktogramm:**
 
 ![L2_5_Aufgabe5_Algorithmen_pruefen_Fehleranalyse](../../struktogramme/generated/svg/L2_5_Aufgabe5_Algorithmen_pruefen_Fehleranalyse.svg)
@@ -177,6 +205,11 @@ Zuweisung: i = i + 1
 ---
 
 ### **Aufgabe 6: Selection Sort (7 Punkte)**
+
+**Aufgabenstellung (aus Prüfungsblatt):**
+> Gegeben: `zahlen = [29, 14, 37, 10, 18]`
+> Schreibe ein Struktogramm und implementiere **Selection Sort aufsteigend**.
+> Gib die sortierte Liste aus.
 
 **a) Struktogramm (3):**
 

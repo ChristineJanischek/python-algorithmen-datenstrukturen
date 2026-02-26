@@ -27,6 +27,12 @@ SVG-Basis: BW-Formvorlagen aus `apps/drawio-extension/stencil.xml`.
 ## ✅ MUSTERLÖSUNGEN MIT BEWERTUNG
 
 ### Aufgabe 1 (3)
+
+**Aufgabenstellung (aus Prüfungsblatt):**
+> Eingabe: Ganzzahl `alter`
+> - „Volljährig" bei `alter >= 18`
+> - „Minderjährig" bei `alter < 18`
+
 ![L2_VarB_Aufgabe1_Volljaehrig](../../struktogramme/generated/svg/L2_VarB_Aufgabe1_Volljaehrig.svg)
 
 ```struktogramm
@@ -51,6 +57,12 @@ def loese_aufgabe1_volljaehrig() -> None:
 ---
 
 ### Aufgabe 2 (3)
+
+**Aufgabenstellung (aus Prüfungsblatt):**
+> Ein Programm liest Ganzzahlen ein und führt eine laufende Summe.
+> Das Programm endet bei `-1`.
+> Nach jeder gültigen Eingabe wird die aktuelle Summe ausgegeben.
+
 ![L2_VarB_Aufgabe2_Laufende_Summe](../../struktogramme/generated/svg/L2_VarB_Aufgabe2_Laufende_Summe.svg)
 
 ```struktogramm
@@ -78,6 +90,12 @@ def loese_aufgabe2_laufende_summe() -> None:
 
 ### Aufgabe 3 (3)
 
+**Aufgabenstellung (aus Prüfungsblatt):**
+> Gegeben: `lager = [4, 7, 2, 9, 5, 1, 8, 3]`
+> a) Deklaration
+> b) Zugriff: erstes Element ausgeben, letztes Element auf `10` setzen, Länge ausgeben
+> c) Bedeutung von `lager[5]` erläutern
+
 **a)**
 ![L2_3a_Aufgabe3_Array_Deklaration](../../struktogramme/generated/svg/L2_3a_Aufgabe3_Array_Deklaration.svg)
 
@@ -101,6 +119,12 @@ print(erstes, laenge)
 ---
 
 ### Aufgabe 4 (6)
+
+**Aufgabenstellung (aus Prüfungsblatt):**
+> Gegeben: `werte = [6, 17, 24, 31, 42, 55, 68, 73]`
+> a) Alle Werte ausgeben
+> b) Nur gerade Werte ausgeben
+> c) Neue Liste `halbiert` erzeugen (Ganzzahldivision durch 2)
 
 **a) Alle Werte ausgeben (2):**
 ![L2_4a_Aufgabe4_Array_Ausgeben_Index](../../struktogramme/generated/svg/L2_4a_Aufgabe4_Array_Ausgeben_Index.svg)
@@ -133,6 +157,13 @@ print(halbiert)
 
 ### Aufgabe 5 (8)
 
+**Aufgabenstellung (aus Prüfungsblatt):**
+> Gegeben: `ids = [101, 104, 110, 117, 130, 142, 155]`
+> Analysiere das fehlerhafte Struktogramm:
+> a) vermuteter Zweck
+> b) logischer Fehler + Auswirkung
+> c) Korrektur in BW-Operatornotation
+
 ![L2_5_Aufgabe5_Algorithmen_pruefen_Fehleranalyse](../../struktogramme/generated/svg/L2_5_Aufgabe5_Algorithmen_pruefen_Fehleranalyse.svg)
 
 - **a) Zweck (3):** lineare Suche in einer Liste.
@@ -145,6 +176,11 @@ Zuweisung: i = i + 1
 ---
 
 ### Aufgabe 6: Bubble Sort (7)
+
+**Aufgabenstellung (aus Prüfungsblatt):**
+> Gegeben: `zahlen = [42, 7, 19, 3, 25]`
+> Schreibe Struktogramm + Python-Code für **Bubble Sort (aufsteigend)**.
+> Gib die sortierte Ausgabe an.
 
 **a) Struktogramm (3):**
 

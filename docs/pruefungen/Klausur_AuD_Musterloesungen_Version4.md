@@ -27,6 +27,12 @@ SVG-Basis: BW-Formvorlagen aus `apps/drawio-extension/stencil.xml`.
 ## ✅ MUSTERLÖSUNGEN
 
 ### Aufgabe 1 (3)
+
+**Aufgabenstellung (aus Prüfungsblatt):**
+> Ein Programm liest eine Ganzzahl `zahl` ein und gibt aus:
+> - „Gerade" wenn `zahl % 2 == 0`
+> - „Ungerade" sonst
+
 ![L2_VarC_Aufgabe1_Gerade_Ungerade](../../struktogramme/generated/svg/L2_VarC_Aufgabe1_Gerade_Ungerade.svg)
 
 ```struktogramm
@@ -51,6 +57,11 @@ def loese_aufgabe1_gerade_ungerade() -> None:
 ---
 
 ### Aufgabe 2 (3)
+
+**Aufgabenstellung (aus Prüfungsblatt):**
+> Lies Ganzzahlen ein, bis `-1` eingegeben wird.
+> Nach jeder gültigen Eingabe soll die bisherige **größte Zahl** ausgegeben werden.
+
 ![L2_VarC_Aufgabe2_Maximum](../../struktogramme/generated/svg/L2_VarC_Aufgabe2_Maximum.svg)
 
 ```struktogramm
@@ -86,6 +97,12 @@ def loese_aufgabe2_maximum() -> None:
 
 ### Aufgabe 3 (3)
 
+**Aufgabenstellung (aus Prüfungsblatt):**
+> Gegeben: `noten = [2, 3, 1, 4, 2, 5, 3, 1]`
+> a) Deklaration und Initialisierung
+> b) drittes Element ausgeben, erstes Element auf `1` setzen, Länge ausgeben
+> c) Bedeutung von `noten[6]` erläutern
+
 **a)**
 ![L2_3a_Aufgabe3_Array_Deklaration](../../struktogramme/generated/svg/L2_3a_Aufgabe3_Array_Deklaration.svg)
 
@@ -109,6 +126,12 @@ print(drittes, laenge)
 ---
 
 ### Aufgabe 4 (6)
+
+**Aufgabenstellung (aus Prüfungsblatt):**
+> Gegeben: `werte = [11, 28, 35, 40, 53, 64, 79, 82]`
+> a) Alle Werte zeilenweise ausgeben
+> b) Nur Werte `>= 40` ausgeben
+> c) Neue Liste `quadriert` erzeugen
 
 Gegeben: `werte = [11, 28, 35, 40, 53, 64, 79, 82]`
 
@@ -143,6 +166,13 @@ print(quadriert)
 
 ### Aufgabe 5 (8)
 
+**Aufgabenstellung (aus Prüfungsblatt):**
+> Gegeben: `buchstaben = ['H', 'I', 'N', 'W', 'E', 'I', 'S']`
+> Analysiere das fehlerhafte Struktogramm:
+> a) Zweck des Algorithmus
+> b) Fehler + Auswirkung
+> c) Korrektur in BW-Operatornotation
+
 ![L2_5_Aufgabe5_Algorithmen_pruefen_Fehleranalyse](../../struktogramme/generated/svg/L2_5_Aufgabe5_Algorithmen_pruefen_Fehleranalyse.svg)
 
 **a) Zweck (3):**
@@ -159,6 +189,11 @@ Zuweisung: i = i + 1
 ---
 
 ### Aufgabe 6: Selection Sort (7)
+
+**Aufgabenstellung (aus Prüfungsblatt):**
+> Gegeben: `zahlen = [33, 12, 27, 5, 18]`
+> Schreibe Struktogramm + Python-Code für **Selection Sort (aufsteigend)**.
+> Gib die sortierte Ausgabe an.
 
 **a) Struktogramm (3):**
 
