@@ -1,8 +1,11 @@
 # Musterlösung & Erwartungshorizont
-## Klassenarbeit: Kontrollstrukturen, Arrays (der Liste) und Algorithmen
-## Version 3
+<!-- DOCX-CODE-STYLING: bg=#F2F2F2, text=#111111, border=#C8C8C8 -->
+## Klassenarbeit:  Algorithmen und Datenstrukturen
+<!-- DOCX-FUSSZEILE: Version 3 -->
 
 **Dokumentation für Lehrkräfte**
+
+**DOCX-Layoutvorgabe (Quellcode):** Alle Python-Quellcodelösungen sind als kopierbare Codeblöcke in einer hellgrauen Box auszugeben (Hintergrund `#F2F2F2`, Schrift `#111111`, Rahmen `#C8C8C8`).
 
 Bezug: [docs/lehrplan/BPE5_Grundlagen_Programmierung.md](../lehrplan/BPE5_Grundlagen_Programmierung.md) und [docs/lehrplan/BPE7_Algorithmen_Datenstrukturen.md](../lehrplan/BPE7_Algorithmen_Datenstrukturen.md)
 
@@ -34,6 +37,9 @@ SVG-Basis: BW-Formvorlagen aus `apps/drawio-extension/stencil.xml`.
 > - „Minderjährig" bei `alter < 18`
 
 ![L2_VarB_Aufgabe1_Volljaehrig](../../struktogramme/generated/svg/L2_VarB_Aufgabe1_Volljaehrig.svg)
+<!-- DOCX-ALT-TEXT: L2_VarB_Aufgabe1_Volljaehrig -->
+<!-- DOCX-EMBED-SVG: ../../struktogramme/generated/svg/L2_VarB_Aufgabe1_Volljaehrig.svg -->
+<!-- DOCX-EMBEDDING-HINT: Dieses Struktogramm wird bei DOCX-Export als eingebettete Grafik dargestellt für bessere Kopierbarkeit und Formatierung. -->
 
 ```struktogramm
 Deklaration und Einlesen: alter als Ganzzahl
@@ -64,6 +70,9 @@ def loese_aufgabe1_volljaehrig() -> None:
 > Nach jeder gültigen Eingabe wird die aktuelle Summe ausgegeben.
 
 ![L2_VarB_Aufgabe2_Laufende_Summe](../../struktogramme/generated/svg/L2_VarB_Aufgabe2_Laufende_Summe.svg)
+<!-- DOCX-ALT-TEXT: L2_VarB_Aufgabe2_Laufende_Summe -->
+<!-- DOCX-EMBED-SVG: ../../struktogramme/generated/svg/L2_VarB_Aufgabe2_Laufende_Summe.svg -->
+<!-- DOCX-EMBEDDING-HINT: Dieses Struktogramm wird bei DOCX-Export als eingebettete Grafik dargestellt für bessere Kopierbarkeit und Formatierung. -->
 
 ```struktogramm
 Deklaration und Initialisierung: summe = 0
@@ -98,6 +107,9 @@ def loese_aufgabe2_laufende_summe() -> None:
 
 **a)**
 ![L2_3a_Aufgabe3_Array_Deklaration](../../struktogramme/generated/svg/L2_3a_Aufgabe3_Array_Deklaration.svg)
+<!-- DOCX-ALT-TEXT: L2_3a_Aufgabe3_Array_Deklaration -->
+<!-- DOCX-EMBED-SVG: ../../struktogramme/generated/svg/L2_3a_Aufgabe3_Array_Deklaration.svg -->
+<!-- DOCX-EMBEDDING-HINT: Dieses Struktogramm wird bei DOCX-Export als eingebettete Grafik dargestellt für bessere Kopierbarkeit und Formatierung. -->
 
 ```python
 lager = [4, 7, 2, 9, 5, 1, 8, 3]
@@ -105,6 +117,9 @@ lager = [4, 7, 2, 9, 5, 1, 8, 3]
 
 **b)**
 ![L2_3b_Aufgabe3_Array_Zugriff](../../struktogramme/generated/svg/L2_3b_Aufgabe3_Array_Zugriff.svg)
+<!-- DOCX-ALT-TEXT: L2_3b_Aufgabe3_Array_Zugriff -->
+<!-- DOCX-EMBED-SVG: ../../struktogramme/generated/svg/L2_3b_Aufgabe3_Array_Zugriff.svg -->
+<!-- DOCX-EMBEDDING-HINT: Dieses Struktogramm wird bei DOCX-Export als eingebettete Grafik dargestellt für bessere Kopierbarkeit und Formatierung. -->
 
 ```python
 erstes = lager[0]
@@ -128,6 +143,9 @@ print(erstes, laenge)
 
 **a) Alle Werte ausgeben (2):**
 ![L2_4a_Aufgabe4_Array_Ausgeben_Index](../../struktogramme/generated/svg/L2_4a_Aufgabe4_Array_Ausgeben_Index.svg)
+<!-- DOCX-ALT-TEXT: L2_4a_Aufgabe4_Array_Ausgeben_Index -->
+<!-- DOCX-EMBED-SVG: ../../struktogramme/generated/svg/L2_4a_Aufgabe4_Array_Ausgeben_Index.svg -->
+<!-- DOCX-EMBEDDING-HINT: Dieses Struktogramm wird bei DOCX-Export als eingebettete Grafik dargestellt für bessere Kopierbarkeit und Formatierung. -->
 
 ```python
 for wert in werte:
@@ -136,6 +154,9 @@ for wert in werte:
 
 **b) Nur gerade Werte (2):**
 ![L2_4b_Aufgabe4_Array_Filtern](../../struktogramme/generated/svg/L2_4b_Aufgabe4_Array_Filtern.svg)
+<!-- DOCX-ALT-TEXT: L2_4b_Aufgabe4_Array_Filtern -->
+<!-- DOCX-EMBED-SVG: ../../struktogramme/generated/svg/L2_4b_Aufgabe4_Array_Filtern.svg -->
+<!-- DOCX-EMBEDDING-HINT: Dieses Struktogramm wird bei DOCX-Export als eingebettete Grafik dargestellt für bessere Kopierbarkeit und Formatierung. -->
 
 ```python
 for wert in werte:
@@ -145,6 +166,9 @@ for wert in werte:
 
 **c) Liste halbiert (2):**
 ![L2_4c1_Aufgabe4_Array_Verdoppeln_Neue_Liste](../../struktogramme/generated/svg/L2_4c1_Aufgabe4_Array_Verdoppeln_Neue_Liste.svg)
+<!-- DOCX-ALT-TEXT: L2_4c1_Aufgabe4_Array_Verdoppeln_Neue_Liste -->
+<!-- DOCX-EMBED-SVG: ../../struktogramme/generated/svg/L2_4c1_Aufgabe4_Array_Verdoppeln_Neue_Liste.svg -->
+<!-- DOCX-EMBEDDING-HINT: Dieses Struktogramm wird bei DOCX-Export als eingebettete Grafik dargestellt für bessere Kopierbarkeit und Formatierung. -->
 
 ```python
 halbiert: list[int] = []
@@ -165,6 +189,9 @@ print(halbiert)
 > c) Korrektur in BW-Operatornotation
 
 ![L2_5_Aufgabe5_Algorithmen_pruefen_Fehleranalyse](../../struktogramme/generated/svg/L2_5_Aufgabe5_Algorithmen_pruefen_Fehleranalyse.svg)
+<!-- DOCX-ALT-TEXT: L2_5_Aufgabe5_Algorithmen_pruefen_Fehleranalyse -->
+<!-- DOCX-EMBED-SVG: ../../struktogramme/generated/svg/L2_5_Aufgabe5_Algorithmen_pruefen_Fehleranalyse.svg -->
+<!-- DOCX-EMBEDDING-HINT: Dieses Struktogramm wird bei DOCX-Export als eingebettete Grafik dargestellt für bessere Kopierbarkeit und Formatierung. -->
 
 - **a) Zweck (3):** lineare Suche in einer Liste.
 - **b) Fehler (3):** Indexerhöhung im Nein-Zweig fehlt → kein Fortschritt, mögliche Endlosschleife.
@@ -185,6 +212,9 @@ Zuweisung: i = i + 1
 **a) Struktogramm (3):**
 
 ![L2_6_Aufgabe6_Bubble_Sort](../../struktogramme/generated/svg/L2_6_Aufgabe6_Bubble_Sort.svg)
+<!-- DOCX-ALT-TEXT: L2_6_Aufgabe6_Bubble_Sort -->
+<!-- DOCX-EMBED-SVG: ../../struktogramme/generated/svg/L2_6_Aufgabe6_Bubble_Sort.svg -->
+<!-- DOCX-EMBEDDING-HINT: Dieses Struktogramm wird bei DOCX-Export als eingebettete Grafik dargestellt für bessere Kopierbarkeit und Formatierung. -->
 
 **b) Python (3):**
 ```python
@@ -200,7 +230,6 @@ def loese_aufgabe6_bubble_sort(zahlen: list[int]) -> list[int]:
                 sortierte[j + 1] = temp
 
     return sortierte
-
 
 print(loese_aufgabe6_bubble_sort([42, 7, 19, 3, 25]))
 ```
@@ -218,4 +247,3 @@ print(loese_aufgabe6_bubble_sort([42, 7, 19, 3, 25]))
 
 ---
 
-**Version:** 1.0

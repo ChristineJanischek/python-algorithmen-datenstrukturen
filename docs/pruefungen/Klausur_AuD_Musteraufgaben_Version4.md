@@ -1,6 +1,6 @@
-# Klassenarbeit: Kontrollstrukturen, Arrays (der Liste) und Algorithmen
+# Klassenarbeit:  Algorithmen und Datenstrukturen
 ## Informatik – Berufliches Gymnasium (Jahrgangsstufe 2)
-## Version 4 (Musterklausur / Nachschreibetermin)
+<!-- DOCX-FUSSZEILE: Version 4 -->
 
 ---
 
@@ -12,7 +12,6 @@
 | **Klasse** | _____________________ |
 | **Dauer** | 60 Minuten |
 | **Erreichbare Punkte** | 30 Punkte |
-| **Bestanden ab** | 15 Punkte (50%) |
 | **Hilfsmittel** | Keine (Papier , Stift, digitale Dokumentationsdatei) |
 | **Themen** | Algorithmen (70%) und Datenstrukturen (30%) |
 
@@ -20,24 +19,14 @@
 
 ## 📌 Allgemeine Anweisungen
 
-- Struktogramme mit BW-Operatornotation darstellen.
-- Bei Aufgaben mit Algorithmen sind eigene Schleifenlösungen erforderlich.
-- Lösungsweg begründen (insbesondere bei Analyseaufgaben).
-
----
-
-## 🎯 Aufgabenübersicht
-
-| Aufgabe | Thema | Punkte | Anforderungsbereich |
-|---------|-------|--------|-------------------|
-| **1** | Kontrollstrukturen (if-else) | 3 | I – Reproduktion |
-| **2** | Schleifen & Logik | 3 | II – Transfer |
-| **3** | Arrays (Listen): Deklaration & Zugriff | 3 | I – Reproduktion |
-| **4** | Arrays (der Liste) durchlaufen & filtern | 6 | II – Transfer |
-| **5** | Algorithmen prüfen (Fehleranalyse) | 8 | II/III – Transfer & Analyse |
-| **6** | Sortieralgorithmus (Selection Sort) | 7 | III – Kreativität |
-
-**Summe: 30 Punkte**
+- Alle Antworten in der digitalen Vorlage dokumentieren. Alternativ das ausgehändigte Papier verwenden.
+- Bei Aufgaben mit Struktogrammen: **Struktogramm ist erforderlich**
+- **BW-Standard:** Operatorenliste für Struktogramme - in der aktuellsten Version (https://www.schule-bw.de/)
+- Programmcode muss **eine gültige Python-Syntax** haben
+- Bei Algorithmus-Aufgaben sind **eigene Schleifenlösungen** erwartet (keine eingebauten Such- oder Kurzformen)
+- **Alle Zwischenschritte zeigen** – Korrektur erfolgt nach Rechenweg, nicht nur Endergebnis
+- Analyseaufgaben: **Zweck und Fehlerursache** klar und nachvollziehbar begründen
+- Bei Fragen: **Fragen Sie, bevor Sie spekulieren!**
 
 ---
 
@@ -98,6 +87,9 @@ Gegeben: `buchstaben = ['H', 'I', 'N', 'W', 'E', 'I', 'S']`
 Fehlerhaftes Struktogramm:
 
 ![L2_5_Aufgabe5_Algorithmen_pruefen_Fehleranalyse](../../struktogramme/generated/svg/L2_5_Aufgabe5_Algorithmen_pruefen_Fehleranalyse.svg)
+<!-- DOCX-ALT-TEXT: L2_5_Aufgabe5_Algorithmen_pruefen_Fehleranalyse -->
+<!-- DOCX-EMBED-SVG: ../../struktogramme/generated/svg/L2_5_Aufgabe5_Algorithmen_pruefen_Fehleranalyse.svg -->
+<!-- DOCX-EMBEDDING-HINT: Dieses Struktogramm wird bei DOCX-Export als eingebettete Grafik dargestellt für bessere Kopierbarkeit und Formatierung. -->
 
 Teilaufgaben:
 - a) Zweck des Algorithmus

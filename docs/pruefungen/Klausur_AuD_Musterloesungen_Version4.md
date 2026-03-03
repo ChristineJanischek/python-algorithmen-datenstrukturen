@@ -1,8 +1,11 @@
 # Musterlösung & Erwartungshorizont
-## Klassenarbeit: Kontrollstrukturen, Arrays (der Liste) und Algorithmen
-## Version 4
+<!-- DOCX-CODE-STYLING: bg=#F2F2F2, text=#111111, border=#C8C8C8 -->
+## Klassenarbeit:  Algorithmen und Datenstrukturen
+<!-- DOCX-FUSSZEILE: Version 4 -->
 
 **Dokumentation für Lehrkräfte**
+
+**DOCX-Layoutvorgabe (Quellcode):** Alle Python-Quellcodelösungen sind als kopierbare Codeblöcke in einer hellgrauen Box auszugeben (Hintergrund `#F2F2F2`, Schrift `#111111`, Rahmen `#C8C8C8`).
 
 Bezug: [docs/lehrplan/BPE5_Grundlagen_Programmierung.md](../lehrplan/BPE5_Grundlagen_Programmierung.md) und [docs/lehrplan/BPE7_Algorithmen_Datenstrukturen.md](../lehrplan/BPE7_Algorithmen_Datenstrukturen.md)
 
@@ -34,6 +37,9 @@ SVG-Basis: BW-Formvorlagen aus `apps/drawio-extension/stencil.xml`.
 > - „Ungerade" sonst
 
 ![L2_VarC_Aufgabe1_Gerade_Ungerade](../../struktogramme/generated/svg/L2_VarC_Aufgabe1_Gerade_Ungerade.svg)
+<!-- DOCX-ALT-TEXT: L2_VarC_Aufgabe1_Gerade_Ungerade -->
+<!-- DOCX-EMBED-SVG: ../../struktogramme/generated/svg/L2_VarC_Aufgabe1_Gerade_Ungerade.svg -->
+<!-- DOCX-EMBEDDING-HINT: Dieses Struktogramm wird bei DOCX-Export als eingebettete Grafik dargestellt für bessere Kopierbarkeit und Formatierung. -->
 
 ```struktogramm
 Deklaration und Einlesen: zahl als Ganzzahl
@@ -63,6 +69,9 @@ def loese_aufgabe1_gerade_ungerade() -> None:
 > Nach jeder gültigen Eingabe soll die bisherige **größte Zahl** ausgegeben werden.
 
 ![L2_VarC_Aufgabe2_Maximum](../../struktogramme/generated/svg/L2_VarC_Aufgabe2_Maximum.svg)
+<!-- DOCX-ALT-TEXT: L2_VarC_Aufgabe2_Maximum -->
+<!-- DOCX-EMBED-SVG: ../../struktogramme/generated/svg/L2_VarC_Aufgabe2_Maximum.svg -->
+<!-- DOCX-EMBEDDING-HINT: Dieses Struktogramm wird bei DOCX-Export als eingebettete Grafik dargestellt für bessere Kopierbarkeit und Formatierung. -->
 
 ```struktogramm
 Deklaration und Initialisierung: maximum = -999999
@@ -105,6 +114,9 @@ def loese_aufgabe2_maximum() -> None:
 
 **a)**
 ![L2_3a_Aufgabe3_Array_Deklaration](../../struktogramme/generated/svg/L2_3a_Aufgabe3_Array_Deklaration.svg)
+<!-- DOCX-ALT-TEXT: L2_3a_Aufgabe3_Array_Deklaration -->
+<!-- DOCX-EMBED-SVG: ../../struktogramme/generated/svg/L2_3a_Aufgabe3_Array_Deklaration.svg -->
+<!-- DOCX-EMBEDDING-HINT: Dieses Struktogramm wird bei DOCX-Export als eingebettete Grafik dargestellt für bessere Kopierbarkeit und Formatierung. -->
 
 ```python
 noten = [2, 3, 1, 4, 2, 5, 3, 1]
@@ -112,6 +124,9 @@ noten = [2, 3, 1, 4, 2, 5, 3, 1]
 
 **b)**
 ![L2_3b_Aufgabe3_Array_Zugriff](../../struktogramme/generated/svg/L2_3b_Aufgabe3_Array_Zugriff.svg)
+<!-- DOCX-ALT-TEXT: L2_3b_Aufgabe3_Array_Zugriff -->
+<!-- DOCX-EMBED-SVG: ../../struktogramme/generated/svg/L2_3b_Aufgabe3_Array_Zugriff.svg -->
+<!-- DOCX-EMBEDDING-HINT: Dieses Struktogramm wird bei DOCX-Export als eingebettete Grafik dargestellt für bessere Kopierbarkeit und Formatierung. -->
 
 ```python
 drittes = noten[2]
@@ -137,6 +152,9 @@ Gegeben: `werte = [11, 28, 35, 40, 53, 64, 79, 82]`
 
 **a)**
 ![L2_4a_Aufgabe4_Array_Ausgeben_Index](../../struktogramme/generated/svg/L2_4a_Aufgabe4_Array_Ausgeben_Index.svg)
+<!-- DOCX-ALT-TEXT: L2_4a_Aufgabe4_Array_Ausgeben_Index -->
+<!-- DOCX-EMBED-SVG: ../../struktogramme/generated/svg/L2_4a_Aufgabe4_Array_Ausgeben_Index.svg -->
+<!-- DOCX-EMBEDDING-HINT: Dieses Struktogramm wird bei DOCX-Export als eingebettete Grafik dargestellt für bessere Kopierbarkeit und Formatierung. -->
 
 ```python
 for wert in werte:
@@ -145,6 +163,9 @@ for wert in werte:
 
 **b)**
 ![L2_4b_Aufgabe4_Array_Filtern](../../struktogramme/generated/svg/L2_4b_Aufgabe4_Array_Filtern.svg)
+<!-- DOCX-ALT-TEXT: L2_4b_Aufgabe4_Array_Filtern -->
+<!-- DOCX-EMBED-SVG: ../../struktogramme/generated/svg/L2_4b_Aufgabe4_Array_Filtern.svg -->
+<!-- DOCX-EMBEDDING-HINT: Dieses Struktogramm wird bei DOCX-Export als eingebettete Grafik dargestellt für bessere Kopierbarkeit und Formatierung. -->
 
 ```python
 for wert in werte:
@@ -154,6 +175,9 @@ for wert in werte:
 
 **c)**
 ![L2_4c1_Aufgabe4_Array_Verdoppeln_Neue_Liste](../../struktogramme/generated/svg/L2_4c1_Aufgabe4_Array_Verdoppeln_Neue_Liste.svg)
+<!-- DOCX-ALT-TEXT: L2_4c1_Aufgabe4_Array_Verdoppeln_Neue_Liste -->
+<!-- DOCX-EMBED-SVG: ../../struktogramme/generated/svg/L2_4c1_Aufgabe4_Array_Verdoppeln_Neue_Liste.svg -->
+<!-- DOCX-EMBEDDING-HINT: Dieses Struktogramm wird bei DOCX-Export als eingebettete Grafik dargestellt für bessere Kopierbarkeit und Formatierung. -->
 
 ```python
 quadriert: list[int] = []
@@ -174,6 +198,9 @@ print(quadriert)
 > c) Korrektur in BW-Operatornotation
 
 ![L2_5_Aufgabe5_Algorithmen_pruefen_Fehleranalyse](../../struktogramme/generated/svg/L2_5_Aufgabe5_Algorithmen_pruefen_Fehleranalyse.svg)
+<!-- DOCX-ALT-TEXT: L2_5_Aufgabe5_Algorithmen_pruefen_Fehleranalyse -->
+<!-- DOCX-EMBED-SVG: ../../struktogramme/generated/svg/L2_5_Aufgabe5_Algorithmen_pruefen_Fehleranalyse.svg -->
+<!-- DOCX-EMBEDDING-HINT: Dieses Struktogramm wird bei DOCX-Export als eingebettete Grafik dargestellt für bessere Kopierbarkeit und Formatierung. -->
 
 **a) Zweck (3):**
 Lineare Suche in der Zeichenliste nach Eingabe.
@@ -198,6 +225,9 @@ Zuweisung: i = i + 1
 **a) Struktogramm (3):**
 
 ![L2_6_Aufgabe6_Selection_Sort](../../struktogramme/generated/svg/L2_6_Aufgabe6_Selection_Sort.svg)
+<!-- DOCX-ALT-TEXT: L2_6_Aufgabe6_Selection_Sort -->
+<!-- DOCX-EMBED-SVG: ../../struktogramme/generated/svg/L2_6_Aufgabe6_Selection_Sort.svg -->
+<!-- DOCX-EMBEDDING-HINT: Dieses Struktogramm wird bei DOCX-Export als eingebettete Grafik dargestellt für bessere Kopierbarkeit und Formatierung. -->
 
 **BW-Notation (Operatorenliste v2.2):**
 ```struktogramm
@@ -236,7 +266,6 @@ def loese_aufgabe6_selection_sort(zahlen: list[int]) -> list[int]:
 
     return sortierte
 
-
 print(loese_aufgabe6_selection_sort([33, 12, 27, 5, 18]))
 ```
 
@@ -253,4 +282,3 @@ print(loese_aufgabe6_selection_sort([33, 12, 27, 5, 18]))
 
 ---
 
-**Version:** 1.0

@@ -1,0 +1,32 @@
+{
+  "description": "DOCX Markdown Optimizer - Standard-Konfiguration für Prüfungsdokumente",
+  "version": "1.0",
+  "author": "python-algorithmen-datenstrukturen",
+  "_note": "Diese Datei kann mit optimize_docx.py --config verwendet werden",
+  
+  "code_bg_color": "#F2F2F2",
+  "code_text_color": "#111111",
+  "code_border_color": "#C8C8C8",
+  
+  "embed_struktogramme": true,
+  "add_alttext": true,
+  "add_embedding_info": true,
+  
+  "version_footer": true,
+  "footer_format": "Version {version}",
+  
+  "export_format": "docx",
+  "verbose": false,
+  
+  "_color_notes": {
+    "code_bg_color": "Hintergrundfarbe für Code-Blöcke (Hellgrau für gute Lesbarkeit)",
+    "code_text_color": "Textfarbe für Code (Dunkelgrau für hohen Kontrast)",
+    "code_border_color": "Rahmenfarbe (Mittleres Grau zur Definition)"
+  },
+  
+  "_feature_notes": {
+    "embed_struktogramme": "Fügt DOCX-Metadaten für SVG-Einbettung hinzu",
+    "add_alttext": "Fügt Alt-Text zu Bildern für Barrierefreiheit hinzu",
+    "add_embedding_info": "Ergänzt Hinweise für DOCX-Export-Tools"
+  }
+}

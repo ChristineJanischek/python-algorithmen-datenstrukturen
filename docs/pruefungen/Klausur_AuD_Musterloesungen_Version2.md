@@ -1,8 +1,11 @@
 # Musterlösung & Erwartungshorizont
-## Klassenarbeit: Kontrollstrukturen, Arrays (der Liste) und Algorithmen
-## Version 2
+<!-- DOCX-CODE-STYLING: bg=#F2F2F2, text=#111111, border=#C8C8C8 -->
+## Klassenarbeit:  Algorithmen und Datenstrukturen
+<!-- DOCX-FUSSZEILE: Version 2 -->
 
 **Dokumentation für Lehrkräfte**
+
+**DOCX-Layoutvorgabe (Quellcode):** Alle Python-Quellcodelösungen sind als kopierbare Codeblöcke in einer hellgrauen Box auszugeben (Hintergrund `#F2F2F2`, Schrift `#111111`, Rahmen `#C8C8C8`).
 
 Bezug: [docs/lehrplan/BPE5_Grundlagen_Programmierung.md](../lehrplan/BPE5_Grundlagen_Programmierung.md) und [docs/lehrplan/BPE7_Algorithmen_Datenstrukturen.md](../lehrplan/BPE7_Algorithmen_Datenstrukturen.md)
 
@@ -36,6 +39,9 @@ SVG-Basis: BW-Formvorlagen aus `apps/drawio-extension/stencil.xml`.
 **Struktogramm (BW-Standard, SVG):**
 
 ![L2_VarA_Aufgabe1_Bestanden](../../struktogramme/generated/svg/L2_VarA_Aufgabe1_Bestanden.svg)
+<!-- DOCX-ALT-TEXT: L2_VarA_Aufgabe1_Bestanden -->
+<!-- DOCX-EMBED-SVG: ../../struktogramme/generated/svg/L2_VarA_Aufgabe1_Bestanden.svg -->
+<!-- DOCX-EMBEDDING-HINT: Dieses Struktogramm wird bei DOCX-Export als eingebettete Grafik dargestellt für bessere Kopierbarkeit und Formatierung. -->
 
 **BW-Notation (Operatorenliste v2.2):**
 ```struktogramm
@@ -74,6 +80,9 @@ def loese_aufgabe1_bestanden() -> None:
 **Struktogramm (BW-Standard, SVG):**
 
 ![L2_VarA_Aufgabe2_Anzahl_Bis_Abbruch](../../struktogramme/generated/svg/L2_VarA_Aufgabe2_Anzahl_Bis_Abbruch.svg)
+<!-- DOCX-ALT-TEXT: L2_VarA_Aufgabe2_Anzahl_Bis_Abbruch -->
+<!-- DOCX-EMBED-SVG: ../../struktogramme/generated/svg/L2_VarA_Aufgabe2_Anzahl_Bis_Abbruch.svg -->
+<!-- DOCX-EMBEDDING-HINT: Dieses Struktogramm wird bei DOCX-Export als eingebettete Grafik dargestellt für bessere Kopierbarkeit und Formatierung. -->
 
 **BW-Notation (Operatorenliste v2.2):**
 ```struktogramm
@@ -115,6 +124,9 @@ def loese_aufgabe2_anzahl() -> None:
 **a) Deklaration (1):**
 
 ![L2_3a_Aufgabe3_Array_Deklaration](../../struktogramme/generated/svg/L2_3a_Aufgabe3_Array_Deklaration.svg)
+<!-- DOCX-ALT-TEXT: L2_3a_Aufgabe3_Array_Deklaration -->
+<!-- DOCX-EMBED-SVG: ../../struktogramme/generated/svg/L2_3a_Aufgabe3_Array_Deklaration.svg -->
+<!-- DOCX-EMBEDDING-HINT: Dieses Struktogramm wird bei DOCX-Export als eingebettete Grafik dargestellt für bessere Kopierbarkeit und Formatierung. -->
 
 ```python
 temperaturen = [18, 21, 19, 23, 17, 20, 22, 16]
@@ -123,6 +135,9 @@ temperaturen = [18, 21, 19, 23, 17, 20, 22, 16]
 **b) Zugriff (1):**
 
 ![L2_3b_Aufgabe3_Array_Zugriff](../../struktogramme/generated/svg/L2_3b_Aufgabe3_Array_Zugriff.svg)
+<!-- DOCX-ALT-TEXT: L2_3b_Aufgabe3_Array_Zugriff -->
+<!-- DOCX-EMBED-SVG: ../../struktogramme/generated/svg/L2_3b_Aufgabe3_Array_Zugriff.svg -->
+<!-- DOCX-EMBEDDING-HINT: Dieses Struktogramm wird bei DOCX-Export als eingebettete Grafik dargestellt für bessere Kopierbarkeit und Formatierung. -->
 
 ```python
 zweites = temperaturen[1]
@@ -149,6 +164,9 @@ Gegeben: `werte = [14, 9, 31, 27, 45, 12, 6, 39]`
 **a) Alle Werte ausgeben (2):**
 
 ![L2_4a_Aufgabe4_Array_Ausgeben_Index](../../struktogramme/generated/svg/L2_4a_Aufgabe4_Array_Ausgeben_Index.svg)
+<!-- DOCX-ALT-TEXT: L2_4a_Aufgabe4_Array_Ausgeben_Index -->
+<!-- DOCX-EMBED-SVG: ../../struktogramme/generated/svg/L2_4a_Aufgabe4_Array_Ausgeben_Index.svg -->
+<!-- DOCX-EMBEDDING-HINT: Dieses Struktogramm wird bei DOCX-Export als eingebettete Grafik dargestellt für bessere Kopierbarkeit und Formatierung. -->
 
 ```python
 for wert in werte:
@@ -158,6 +176,9 @@ for wert in werte:
 **b) Durch 3 teilbar (2):**
 
 ![L2_4b_Aufgabe4_Array_Filtern](../../struktogramme/generated/svg/L2_4b_Aufgabe4_Array_Filtern.svg)
+<!-- DOCX-ALT-TEXT: L2_4b_Aufgabe4_Array_Filtern -->
+<!-- DOCX-EMBED-SVG: ../../struktogramme/generated/svg/L2_4b_Aufgabe4_Array_Filtern.svg -->
+<!-- DOCX-EMBEDDING-HINT: Dieses Struktogramm wird bei DOCX-Export als eingebettete Grafik dargestellt für bessere Kopierbarkeit und Formatierung. -->
 
 ```python
 for wert in werte:
@@ -168,6 +189,9 @@ for wert in werte:
 **c) Neue Liste plus_fuenf (2):**
 
 ![L2_4c1_Aufgabe4_Array_Verdoppeln_Neue_Liste](../../struktogramme/generated/svg/L2_4c1_Aufgabe4_Array_Verdoppeln_Neue_Liste.svg)
+<!-- DOCX-ALT-TEXT: L2_4c1_Aufgabe4_Array_Verdoppeln_Neue_Liste -->
+<!-- DOCX-EMBED-SVG: ../../struktogramme/generated/svg/L2_4c1_Aufgabe4_Array_Verdoppeln_Neue_Liste.svg -->
+<!-- DOCX-EMBEDDING-HINT: Dieses Struktogramm wird bei DOCX-Export als eingebettete Grafik dargestellt für bessere Kopierbarkeit und Formatierung. -->
 
 ```python
 plus_fuenf: list[int] = []
@@ -190,6 +214,9 @@ print(plus_fuenf)
 **Fehlerhaftes Struktogramm:**
 
 ![L2_5_Aufgabe5_Algorithmen_pruefen_Fehleranalyse](../../struktogramme/generated/svg/L2_5_Aufgabe5_Algorithmen_pruefen_Fehleranalyse.svg)
+<!-- DOCX-ALT-TEXT: L2_5_Aufgabe5_Algorithmen_pruefen_Fehleranalyse -->
+<!-- DOCX-EMBED-SVG: ../../struktogramme/generated/svg/L2_5_Aufgabe5_Algorithmen_pruefen_Fehleranalyse.svg -->
+<!-- DOCX-EMBEDDING-HINT: Dieses Struktogramm wird bei DOCX-Export als eingebettete Grafik dargestellt für bessere Kopierbarkeit und Formatierung. -->
 
 **a) Zweck (3):**
 Lineare Suche in einem Array/einer Liste nach einem eingegebenen Wert.
@@ -214,6 +241,9 @@ Zuweisung: i = i + 1
 **a) Struktogramm (3):**
 
 ![L2_6_Aufgabe6_Selection_Sort](../../struktogramme/generated/svg/L2_6_Aufgabe6_Selection_Sort.svg)
+<!-- DOCX-ALT-TEXT: L2_6_Aufgabe6_Selection_Sort -->
+<!-- DOCX-EMBED-SVG: ../../struktogramme/generated/svg/L2_6_Aufgabe6_Selection_Sort.svg -->
+<!-- DOCX-EMBEDDING-HINT: Dieses Struktogramm wird bei DOCX-Export als eingebettete Grafik dargestellt für bessere Kopierbarkeit und Formatierung. -->
 
 **BW-Notation (Operatorenliste v2.2):**
 ```struktogramm
@@ -249,7 +279,6 @@ def loese_aufgabe6_selection_sort(zahlen: list[int]) -> list[int]:
             sortierte[min_index] = temp
     return sortierte
 
-
 print(loese_aufgabe6_selection_sort([29, 14, 37, 10, 18]))
 ```
 
@@ -266,4 +295,3 @@ print(loese_aufgabe6_selection_sort([29, 14, 37, 10, 18]))
 
 ---
 
-**Version:** 1.0

@@ -1,5 +1,7 @@
-# Klassenarbeit: Kontrollstrukturen, Arrays (der Liste) und Algorithmen
+# Klassenarbeit:  Algorithmen und Datenstrukturen
+<!-- DOCX-CODE-STYLING: bg=#F2F2F2, text=#111111, border=#C8C8C8 -->
 ## Informatik – Berufliches Gymnasium (Jahrgangsstufe 2)
+<!-- DOCX-FUSSZEILE: Version 1 -->
 
 ---
 
@@ -11,7 +13,6 @@
 | **Klasse** | _____________________ |
 | **Dauer** | 60 Minuten |
 | **Erreichbare Punkte** | 30 Punkte |
-| **Bestanden ab** | 15 Punkte (50%) |
 | **Hilfsmittel** | Keine (Papier , Stift, digitale Dokumentationsdatei) |
 | **Themen** | Algorithmen (70%) und Datenstrukturen (30%) |
 
@@ -21,30 +22,12 @@
 
 - Alle Antworten in der digitalen Vorlage dokumentieren. Alternativ das ausgehändigte Papier verwenden.
 - Bei Aufgaben mit Struktogrammen: **Struktogramm ist erforderlich**
-- Struktogramme **IMMER** in textbasierter Notation nach **Operatorenliste**: `struktogramme/Operatorenliste-Struktogramme.md`
-- **BW-Standard:** Operatoren korrekt verwenden
-  - ✅ `Deklaration und Einlesen:`, `Zuweisung:`, `Wenn...dann`, `Wiederhole solange`, `Zähle...von...bis`, `Ausgabe:`, `Rückgabe:`
-  - ❌ **KEINE** englischen Keywords: `while`, `if`, `else`, `for`, `return`, `print`
+- **BW-Standard:** Operatorenliste für Struktogramme - in der aktuellsten Version (https://www.schule-bw.de/)
 - Programmcode muss **eine gültige Python-Syntax** haben
-- Bei Algorithmusaufgaben sind **eigene Schleifenlösungen** erwartet (keine eingebauten Such- oder Kurzformen)
+- Bei Algorithmus-Aufgaben sind **eigene Schleifenlösungen** erwartet (keine eingebauten Such- oder Kurzformen)
 - **Alle Zwischenschritte zeigen** – Korrektur erfolgt nach Rechenweg, nicht nur Endergebnis
 - Analyseaufgaben: **Zweck und Fehlerursache** klar und nachvollziehbar begründen
 - Bei Fragen: **Fragen Sie, bevor Sie spekulieren!**
-
----
-
-## 🎯 Aufgabenübersicht
-
-| Aufgabe | Thema | Punkte | Anforderungsbereich |
-|---------|-------|--------|-------------------|
-| **1** | Kontrollstrukturen (if-else) | 3 | I – Reproduktion |
-| **2** | Schleifen & Logik | 3 | II – Transfer |
-| **3** | Arrays (Listen): Deklaration & Zugriff | 3 | I – Reproduktion |
-| **4** | Arrays (der Liste) durchlaufen & filtern | 6 | II – Transfer |
-| **5** | Algorithmen prüfen (Fehleranalyse) | 8 | II/III – Transfer & Analyse |
-| **6** | Sortieralgorithmus (Bubble Sort) | 7 | III – Kreativität |
-
-**Summe: 30 Punkte**
 
 ---
 
@@ -65,8 +48,7 @@ Schreibe ein Struktogramm und implementiere in Python:
   - Ausgaben korrekt positioniert
 
 ```python
-# Hier Lösung eintragen:
-
+# Lösung kommt in die digitale Lösungsdatei oder auf das ausgeteilte Papier!
 
 ```
 
@@ -98,8 +80,7 @@ Programm endet
   - Funktionsfähig und nachvollziehbar
 
 ```python
-# Hier Lösung eintragen:
-
+# Lösung kommt in die digitale Lösungsdatei oder auf das ausgeteilte Papier!
 
 ```
 
@@ -114,8 +95,7 @@ Schreibe die Python-Zeile, um folgendes Array (Liste) zu deklarieren und zu init
 > Noten: [1, 2, 2, 3, 1, 5, 4, 2]
 
 ```python
-# Deklaration:
-
+# Lösung kommt in die digitale Lösungsdatei oder auf das ausgeteilte Papier!
 
 ```
 
@@ -127,8 +107,7 @@ Schreibe Python-Code, um:
 - Die **Länge des Arrays (der Liste)** ausgeben
 
 ```python
-# Zugriff und Manipulation:
-
+# Lösung kommt in die digitale Lösungsdatei oder auf das ausgeteilte Papier!
 
 ```
 
@@ -137,7 +116,7 @@ Schreibe Python-Code, um:
 Was bedeutet `noten[3]` in Ihrem obigen Array (Liste)?
 
 ```
-Antwort:
+[Lösung kommt in die digitale Lösungsdatei oder auf das ausgeteilte Papier!]
 ```
 
 ---
@@ -153,7 +132,7 @@ Schreibe ein Struktogramm und Python-Code, um **alle Elemente des Arrays (der Li
 
 Struktogramm (textbasierte Notation nach Operatorenliste):
 ```struktogramm
-[Hier Struktogramm eintragen]
+[Lösung kommt in die digitale Lösungsdatei oder auf das ausgeteilte Papier!]
 ```
 
 Python-Code:
@@ -163,8 +142,7 @@ Python-Code:
 Schreibe Python-Code, um **nur die Werte > 30** auszugeben.
 
 ```python
-# Hier Lösung:
-
+[Lösung kommt in die digitale Lösungsdatei oder auf das ausgeteilte Papier!]
 
 ```
 
@@ -173,8 +151,7 @@ Schreibe Python-Code, um **nur die Werte > 30** auszugeben.
 Schreibe Python-Code, um **jedes Element zu verdoppeln** und das Ergebnis in einem neuen Array (Liste) zu speichern.
 
 ```python
-# Hier Lösung:
-
+[Lösung kommt in die digitale Lösungsdatei oder auf das ausgeteilte Papier!]
 
 ```
 
@@ -190,6 +167,9 @@ Gegeben ist das Array (Liste): `buchstaben = ['A', 'B', 'C', 'D', 'E', 'F', 'G']
 Das folgende Struktogramm wurde mit der BW-Operatorenliste (Draw.io-Library) entworfen und enthält **einen häufigen logischen Fehler**.
 
 ![L2_5_Aufgabe5_Algorithmen_pruefen_Fehleranalyse](../../struktogramme/generated/svg/L2_5_Aufgabe5_Algorithmen_pruefen_Fehleranalyse.svg)
+<!-- DOCX-ALT-TEXT: L2_5_Aufgabe5_Algorithmen_pruefen_Fehleranalyse -->
+<!-- DOCX-EMBED-SVG: ../../struktogramme/generated/svg/L2_5_Aufgabe5_Algorithmen_pruefen_Fehleranalyse.svg -->
+<!-- DOCX-EMBEDDING-HINT: Dieses Struktogramm wird bei DOCX-Export als eingebettete Grafik dargestellt für bessere Kopierbarkeit und Formatierung. -->
 
 Bearbeite die Teilaufgaben in dieser Reihenfolge:
 
@@ -198,7 +178,7 @@ Bearbeite die Teilaufgaben in dieser Reihenfolge:
 Beschreibe in 2–4 Sätzen, **welchen Zweck** der Algorithmus wahrscheinlich hat.
 
 ```
-Antwort:
+[Lösung kommt in die digitale Lösungsdatei oder auf das ausgeteilte Papier!]
 ```
 
 **b) Fehleranalyse (3 Punkte):**
@@ -206,7 +186,7 @@ Antwort:
 Nenne den **logischen Fehler** im Struktogramm und erkläre kurz die Auswirkung auf die Programmausführung.
 
 ```
-Antwort:
+[Lösung kommt in die digitale Lösungsdatei oder auf das ausgeteilte Papier!]
 ```
 
 **c) Korrekturvorschlag (2 Punkte):**
@@ -214,7 +194,7 @@ Antwort:
 Formuliere die fehlende/falsch platzierte Anweisung in **BW-konformer Operator-Notation**.
 
 ```
-Antwort:
+[Lösung kommt in die digitale Lösungsdatei oder auf das ausgeteilte Papier!]
 ```
 
 ---
@@ -237,14 +217,13 @@ Schreibe ein Struktogramm und implementiere **Bubble Sort** in Python.
 - Korrekte Verschachtelung
 
 ```struktogramm
-[Hier Struktogramm eintragen]
+[Lösung kommt in die digitale Lösungsdatei oder auf das ausgeteilte Papier!]
 ```
 
 **b) Python-Code (3 Punkte):**
 - Hinweis: Verwende **verschachtelte Schleifen** und eine klare Tauschlogik.
 ```python
-# Bubble Sort implementieren:
-
+# Lösung kommt in die digitale Lösungsdatei oder auf das ausgeteilte Papier!
 
 ```
 
@@ -253,7 +232,7 @@ Schreibe ein Struktogramm und implementiere **Bubble Sort** in Python.
 Wie sieht das sortierte Array (Liste) aus?
 
 ```
-Antwort: _______________
+[Lösung kommt in die digitale Lösungsdatei oder auf das ausgeteilte Papier!]
 ```
 
 ---
@@ -272,6 +251,3 @@ Antwort: _______________
 
 **Viel Erfolg! 🚀**
 
----
-
-*Klassenstufe:* ________ *Name:* __________________ *Klasse:* __________
