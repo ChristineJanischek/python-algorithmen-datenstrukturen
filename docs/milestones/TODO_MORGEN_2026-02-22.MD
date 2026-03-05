@@ -29,7 +29,7 @@
 - [x] Struktogramm auf BW-Operatoren und Reihenfolge geprueft (Soll-Sequenz fuer `L2_3_1_1`: Deklaration/Initialisierung -> Wiederhole/Zaehle -> Wenn -> Zuweisung -> Rueckgabe; Operatorenfokus laut Meilenstein: Wiederhole, Wenn, Zuweisung, Rueckgabe)
 - [x] Python-Loesung mit Type Hints und kurzer Komplexitaetsangabe abgeglichen (`docs/loesungen/L2/L2_3_1_Lineare_Suche_Mitgliedsnummer.md`)
 - [x] Doku-Checks laufen gelassen (`check_markdown_links.py`, `check_docs_dod.py`)
-- Aenderungen als mini-PR auf Feature-Branch einreichen
+- [x] Aenderungen als mini-PR auf Feature-Branch eingereicht (`feat/l2-lineare-suche-loesung-2026-03-05`)
 
 ## Definition of Done für morgen
 
