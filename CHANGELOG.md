@@ -40,6 +40,7 @@
 	- Neue Systemdokumentation: `docs/handbuch/STRUKTOGRAMM_RENDER_PIPELINE.md`
 - Klausur-Musterlösungen Varianten A/B/C vollständig mit BW-konformen SVG-Struktogrammen ergänzt.
 - Neue SVG-Artefakte unter `struktogramme/generated/svg/` ergänzt (inkl. Selection-Sort und Varianten-spezifische Aufgaben).
+- `docs/handbuch/DOCX_OPTIMIZER_GUIDE.md` bereinigt: defekte relative Beispiel-Links durch valide URL-Beispiele ersetzt, damit `check_markdown_links.py --include-templates` wieder fehlerfrei läuft.
 
 ### Release Notes (2026-02-23)
 - **Neu für Lehrkräfte:** Alle aktuellen Musterlösungen in `docs/pruefungen` enthalten durchgängig eingebettete BW-konforme SVG-Struktogramme.
