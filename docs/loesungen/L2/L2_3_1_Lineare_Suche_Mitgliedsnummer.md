@@ -33,6 +33,9 @@ Die Liste wird von links nach rechts durchlaufen. Sobald die gesuchte Mitgliedsn
 ## 📊 Struktogramm
 
 ```
+┌──────────────────────────────────────────────────────────────┐
+│ Grafische Notation (BW): Lineare Suche nach Mitgliedsnummer │
+└──────────────────────────────────────────────────────────────┘
 Deklaration und Initialisierung: gefunden_index als Ganzzahl = -1
 Deklaration und Initialisierung: n = Anzahl der Elemente des Arrays mitgliedsnummern
 Zähle i von 0 bis n - 1, Schrittweite 1
