@@ -108,7 +108,8 @@ jobs:
       
       - name: 📊 Validierung nach Fixes
         run: |
-          python src/utils/struktogramm_validator.py
+          # Nicht hart fehlschlagen: Der globale Fehlerstand wird im Qualitäts-Gate bewertet.
+          python src/utils/struktogramm_validator.py || true
       
       - name: 💾 Fixes committen (falls nötig)
         run: |
