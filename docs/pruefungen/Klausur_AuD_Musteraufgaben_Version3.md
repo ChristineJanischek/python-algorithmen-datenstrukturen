@@ -34,12 +34,18 @@
 ## 📝 AUFGABENBLATT
 
 ### **Aufgabe 1: Verzweigung & Logik (3 Punkte)**
-**Thema:** BPE 5.2 – Kontrollstrukturen
+**Thema:** BPE 5.2 – Kontrollstrukturen (Alternativen)
 
-Schreibe Struktogramm + Python-Code:
-> Eingabe: Ganzzahl `alter`
-> - „Volljährig" bei `alter >= 18`
-> - „Minderjährig" bei `alter < 18`
+Schreibe ein Struktogramm und implementiere in Python:
+> Ein Programm liest eine Ganzzahl `alter` ein und gibt aus:
+> - „Volljährig" wenn `alter >= 18`
+> - „Minderjährig" wenn `alter < 18`
+
+**Anforderungen:**
+- Struktogramm mit korrektem Aufbau (3 Punkte)
+  - Eingabe darstellen
+  - Verzweigung mit Bedingung
+  - Ausgaben korrekt positioniert
 
 ```python
 # Lösung kommt in die digitale Lösungsdatei oder auf das ausgeteilte Papier!
@@ -49,11 +55,29 @@ Schreibe Struktogramm + Python-Code:
 ---
 
 ### **Aufgabe 2: Schleife mit Bedingung (3 Punkte)**
-**Thema:** BPE 5.2 – Wiederholung
+**Thema:** BPE 5.2 – Schleifen & Bedingungen
 
-Ein Programm liest Ganzzahlen ein und führt eine laufende Summe.
-Das Programm endet bei `-1`.
-Nach jeder gültigen Eingabe wird die aktuelle Summe ausgegeben.
+Schreibe ein Struktogramm und implementiere:
+> Ein Programm liest Ganzzahlen ein und führt eine laufende Summe.
+> Das Programm endet bei `-1`.
+> Nach jeder gültigen Eingabe wird die aktuelle Summe ausgegeben.
+
+**Beispiel:**
+```
+Eingabe: 7
+Summe: 7
+Eingabe: 3
+Summe: 10
+Eingabe: -1
+Programm endet
+```
+
+**Anforderungen:**
+- Struktogramm (min. 2 Punkte):
+  - Wiederholung korrekt dargestellt
+  - Abbruchbedingung erkennbar
+- Python-Code (1 Punkt):
+  - Funktionsfähig und nachvollziehbar
 
 ```python
 # Lösung kommt in die digitale Lösungsdatei oder auf das ausgeteilte Papier!
@@ -63,35 +87,92 @@ Nach jeder gültigen Eingabe wird die aktuelle Summe ausgegeben.
 ---
 
 ### **Aufgabe 3: Array-/Listen-Grundlagen (3 Punkte)**
-**Thema:** BPE 7.1 – Arrays
+**Thema:** BPE 7.1 – Arrays (Deklaration, Initialisierung, Zugriff)
 
 Gegeben: `lager = [4, 7, 2, 9, 5, 1, 8, 3]`
 
 **a) Deklaration (1 Punkt)**
 
+Schreibe die Python-Zeile zur Deklaration und Initialisierung dieser Liste.
+
+```python
+# Lösung kommt in die digitale Lösungsdatei oder auf das ausgeteilte Papier!
+
+```
+
 **b) Zugriff (1 Punkt)**
-- erstes Element ausgeben
-- letztes Element auf `10` setzen
-- Länge ausgeben
+
+Schreibe Python-Code, um:
+- das **erste Element** auszugeben
+- das **letzte Element** auf `10` zu setzen
+- die **Länge** auszugeben
+
+**Anforderungen:**
+- Alle drei Operationen korrekt implementiert
+- Python-Syntax korrekt
+
+```python
+# Lösung kommt in die digitale Lösungsdatei oder auf das ausgeteilte Papier!
+
+```
 
 **c) Interpretation (1 Punkt)**
 
-Was bedeutet `lager[5]`?
+Was bedeutet `lager[5]`? Erkläre kurz.
+
+```
+[Lösung kommt in die digitale Lösungsdatei oder auf das ausgeteilte Papier!]
+```
 
 ---
 
 ### **Aufgabe 4: Array durchlaufen & filtern (6 Punkte)**
-**Thema:** BPE 7.1 – Array-Algorithmen
+**Thema:** BPE 7.1 – Schleife über Arrays
 
 Gegeben: `werte = [6, 17, 24, 31, 42, 55, 68, 73]`
 
 **a) Alle Werte ausgeben (2 Punkte)**
 
+Schreibe ein Struktogramm und Python-Code, um alle Werte zeilenweise auszugeben.
+
+**Anforderungen:**
+- Struktogramm (1 Punkt):
+  - Schleife über Array erkennbar
+  - Array-Zugriff mit Index
+- Python-Code (1 Punkt):
+  - Funktionsfähig und nachvollziehbar
+
+```python
+# Lösung kommt in die digitale Lösungsdatei oder auf das ausgeteilte Papier!
+
+```
+
 **b) Nur gerade Werte ausgeben (2 Punkte)**
+
+Schreibe Python-Code, um nur die **geraden Werte** auszugeben.
+
+**Anforderungen:**
+- Bedingung (`% 2 == 0`) korrekt formuliert
+- Nur gerade Werte werden ausgegeben
+
+```python
+# Lösung kommt in die digitale Lösungsdatei oder auf das ausgeteilte Papier!
+
+```
 
 **c) Neue Liste `halbiert` erzeugen (2 Punkte)**
 
-Jedes Element aus `werte` soll als Ganzzahldivision durch 2 gespeichert werden.
+Schreibe Python-Code, um eine neue Liste zu erzeugen, deren Elemente jeweils die **Ganzzahldivision durch 2** der ursprünglichen Werte sind.
+
+**Anforderungen:**
+- Neue Liste korrekt erzeugt
+- Ganzzahldivision (`//`) verwendet
+- Alle Elemente transformiert
+
+```python
+# Lösung kommt in die digitale Lösungsdatei oder auf das ausgeteilte Papier!
+
+```
 
 ---
 
@@ -100,41 +181,104 @@ Jedes Element aus `werte` soll als Ganzzahldivision durch 2 gespeichert werden.
 
 Gegeben: `ids = [101, 104, 110, 117, 130, 142, 155]`
 
-Fehlerhaftes Struktogramm:
+Das folgende Struktogramm wurde mit der BW-Operatorenliste (Draw.io-Library) entworfen und enthält **einen häufigen logischen Fehler**.
 
 ![L2_5_Aufgabe5_Algorithmen_pruefen_Fehleranalyse](../../struktogramme/generated/svg/L2_5_Aufgabe5_Algorithmen_pruefen_Fehleranalyse.svg)
 <!-- DOCX-ALT-TEXT: L2_5_Aufgabe5_Algorithmen_pruefen_Fehleranalyse -->
 <!-- DOCX-EMBED-SVG: ../../struktogramme/generated/svg/L2_5_Aufgabe5_Algorithmen_pruefen_Fehleranalyse.svg -->
 <!-- DOCX-EMBEDDING-HINT: Dieses Struktogramm wird bei DOCX-Export als eingebettete Grafik dargestellt für bessere Kopierbarkeit und Formatierung. -->
 
-Bearbeite:
-- a) vermuteter Zweck
-- b) logischer Fehler + Auswirkung
-- c) Korrektur in BW-Operatornotation
+Bearbeite die Teilaufgaben in dieser Reihenfolge:
+
+**a) Vermuteter Zweck (3 Punkte)**
+
+Beschreibe in 2–4 Sätzen, **welchen Zweck** der Algorithmus wahrscheinlich hat.
+
+**Anforderungen:**
+- Klare und nachvollziehbare Beschreibung
+- Bezug zu Array und Operationen erkennbar
+
+```
+[Lösung kommt in die digitale Lösungsdatei oder auf das ausgeteilte Papier!]
+```
+
+**b) Fehleranalyse (3 Punkte)**
+
+Nenne den **logischen Fehler** im Struktogramm und erkläre kurz die Auswirkung auf die Programmausführung.
+
+**Anforderungen:**
+- Fehler klar identifiziert
+- Auswirkung nachvollziehbar erklärt
+- Konkretes Beispiel möglich
+
+```
+[Lösung kommt in die digitale Lösungsdatei oder auf das ausgeteilte Papier!]
+```
+
+**c) Korrekturvorschlag (2 Punkte)**
+
+Formuliere die fehlende/falsch platzierte Anweisung in **BW-konformer Operator-Notation**.
+
+**Anforderungen:**
+- Korrekte Notation nach Operatorenliste
+- Lösung ist logisch korrekt
+
+```
+[Lösung kommt in die digitale Lösungsdatei oder auf das ausgeteilte Papier!]
+```
 
 ---
 
 ### **Aufgabe 6: Bubble Sort implementieren (7 Punkte)**
-**Thema:** BPE 7.2 – Sortieralgorithmen
+**Thema:** BPE 7.2 – Sortieralgorithmen (Bubble Sort)
 
 Gegeben: `zahlen = [42, 7, 19, 3, 25]`
 
-Schreibe Struktogramm + Python-Code für **Bubble Sort (aufsteigend)**.
+Schreibe ein Struktogramm und implementiere **Bubble Sort aufsteigend**.
 
 **a) Struktogramm (3 Punkte)**
 
+**Anforderungen:**
+- Äußere Schleife (Durchläufe)
+- Innere Schleife (Vergleiche & Tausch)
+- Swap-Bedingung erkennbar
+- Korrekte Verschachtelung
+
+```struktogramm
+[Lösung kommt in die digitale Lösungsdatei oder auf das ausgeteilte Papier!]
+```
+
 **b) Python-Code (3 Punkte)**
 
+**Anforderungen:**
+- Verschachtelte Schleifen
+- Klare Tauschlogik
+- Sortierung aufsteigend
+
+```python
+# Lösung kommt in die digitale Lösungsdatei oder auf das ausgeteilte Papier!
+
+```
+
 **c) Sortierte Ausgabe (1 Punkt)**
+
+Wie sieht das sortierte Array aus?
+
+```
+[Lösung kommt in die digitale Lösungsdatei oder auf das ausgeteilte Papier!]
+```
 
 ---
 
 ## ✅ Checkliste vor Abgabe
 
-- [ ] Struktogramme BW-konform
-- [ ] Schleifen und Bedingungen korrekt
-- [ ] Sortierlogik nachvollziehbar
-- [ ] Antworten vollständig
+- [ ] Alle Aufgaben bearbeitet
+- [ ] Struktogramme lesbar und vollständig
+- [ ] Python-Code syntaktisch korrekt (soweit möglich)
+- [ ] Bei Algorithmusaufgaben nur Schleifenlösungen verwendet
+- [ ] Alle Zwischenschritte zeigen – Korrektur erfolgt nach Rechenweg
+- [ ] Fehleranalyse nachvollziehbar begründet
+- [ ] Name & Datum oben eingetragen
 
 ---
 

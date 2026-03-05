@@ -13,7 +13,7 @@
 | **Klasse** | _____________________ |
 | **Dauer** | 60 Minuten |
 | **Erreichbare Punkte** | 30 Punkte |
-| **Hilfsmittel** | Keine (Papier , Stift, digitale Dokumentationsdatei) |
+| **Hilfsmittel** | Keine (Papier, Stift, digitale Dokumentationsdatei) |
 | **Themen** | Algorithmen (70%) und Datenstrukturen (30%) |
 
 ---
@@ -40,6 +40,12 @@ Schreibe ein Struktogramm und implementiere in Python:
 > Ein Programm liest eine Ganzzahl `punkte` ein und gibt aus:
 > - „Bestanden" wenn `punkte >= 50`
 > - „Nicht bestanden" wenn `punkte < 50`
+
+**Anforderungen:**
+- Struktogramm mit korrektem Aufbau (3 Punkte)
+  - Eingabe darstellen
+  - Verzweigung mit Bedingung
+  - Ausgaben korrekt positioniert
 
 ```python
 # Lösung kommt in die digitale Lösungsdatei oder auf das ausgeteilte Papier!
@@ -73,7 +79,7 @@ Programm endet
 ---
 
 ### **Aufgabe 3: Array-/Listen-Grundlagen (3 Punkte)**
-**Thema:** BPE 7.1 – Arrays (Listen)
+**Thema:** BPE 7.1 – Arrays (Listen) (Deklaration, Initialisierung, Zugriff)
 
 Gegeben ist die Liste:
 `temperaturen = [18, 21, 19, 23, 17, 20, 22, 16]`
@@ -83,19 +89,19 @@ Gegeben ist die Liste:
 Schreibe die Python-Zeile zur Deklaration und Initialisierung.
 
 ```python
-# Deklaration:
+# Lösung kommt in die digitale Lösungsdatei oder auf das ausgeteilte Papier!
 
 ```
 
 **b) Zugriff (1 Punkt)**
 
 Schreibe Python-Code, um:
-- das **2. Element** auszugeben,
-- das **vorletzte Element** auf `25` zu setzen,
-- die **Länge** auszugeben.
+- das **2. Element** auszugeben
+- das **vorletzte Element** auf `25` zu setzen
+- die **Länge** auszugeben
 
 ```python
-# Zugriff und Manipulation:
+# Lösung kommt in die digitale Lösungsdatei oder auf das ausgeteilte Papier!
 
 ```
 
@@ -104,7 +110,7 @@ Schreibe Python-Code, um:
 Was bedeutet `temperaturen[4]`?
 
 ```
-Antwort:
+[Lösung kommt in die digitale Lösungsdatei oder auf das ausgeteilte Papier!]
 ```
 
 ---
@@ -116,15 +122,40 @@ Gegeben ist: `werte = [14, 9, 31, 27, 45, 12, 6, 39]`
 
 **a) Alle Werte ausgeben (2 Punkte)**
 
-Schreibe Struktogramm + Python-Code, um alle Werte zeilenweise auszugeben.
+Schreibe ein Struktogramm und Python-Code, um alle Werte zeilenweise auszugeben.
+
+**Anforderungen:**
+- Struktogramm (1 Punkt):
+  - Schleife über Array erkennbar
+  - Array-Zugriff mit Index
+- Python-Code (1 Punkt):
+  - Funktionsfähig und nachvollziehbar
+
+```python
+# Lösung kommt in die digitale Lösungsdatei oder auf das ausgeteilte Papier!
+
+```
 
 **b) Elemente filtern (2 Punkte)**
 
-Gib nur Werte aus, die **durch 3 teilbar** sind.
+Schreibe Python-Code, um nur Werte auszugeben, die **durch 3 teilbar** sind.
+
+**Anforderungen:**
+- Bedingung korrekt formuliert
+- Nur passende Werte ausgeben
+
+```python
+# Lösung kommt in die digitale Lösungsdatei oder auf das ausgeteilte Papier!
+
+```
 
 **c) Array manipulieren (2 Punkte)**
 
-Erzeuge eine neue Liste `plus_fuenf`, die jedes Element von `werte` um 5 erhöht enthält.
+Schreibe Python-Code, um eine neue Liste `plus_fuenf` zu erzeugen, die jedes Element von `werte` um 5 erhöht enthält.
+
+**Anforderungen:**
+- Neue Liste erzeugt und korrekt benannt
+- Alle Elemente um 5 erhöht
 
 ```python
 # Lösung kommt in die digitale Lösungsdatei oder auf das ausgeteilte Papier!
@@ -138,20 +169,50 @@ Erzeuge eine neue Liste `plus_fuenf`, die jedes Element von `werte` um 5 erhöht
 
 Gegeben: `codes = ['K1', 'K2', 'K3', 'K4', 'K5', 'K6', 'K7']`
 
-Das folgende Struktogramm enthält einen logischen Fehler:
+Das folgende Struktogramm wurde mit der BW-Operatorenliste (Draw.io-Library) entworfen und enthält **einen häufigen logischen Fehler**.
 
 ![L2_5_Aufgabe5_Algorithmen_pruefen_Fehleranalyse](../../struktogramme/generated/svg/L2_5_Aufgabe5_Algorithmen_pruefen_Fehleranalyse.svg)
 <!-- DOCX-ALT-TEXT: L2_5_Aufgabe5_Algorithmen_pruefen_Fehleranalyse -->
 <!-- DOCX-EMBED-SVG: ../../struktogramme/generated/svg/L2_5_Aufgabe5_Algorithmen_pruefen_Fehleranalyse.svg -->
 <!-- DOCX-EMBEDDING-HINT: Dieses Struktogramm wird bei DOCX-Export als eingebettete Grafik dargestellt für bessere Kopierbarkeit und Formatierung. -->
 
-Bearbeite:
+Bearbeite die Teilaufgaben in dieser Reihenfolge:
 
 **a) Vermuteter Zweck (3 Punkte)**
 
+Beschreibe in 2–4 Sätzen, **welchen Zweck** der Algorithmus wahrscheinlich hat.
+
+**Anforderungen:**
+- Klare und nachvollziehbare Beschreibung
+- Bezug zu Array und Schleife
+
+```
+[Lösung kommt in die digitale Lösungsdatei oder auf das ausgeteilte Papier!]
+```
+
 **b) Fehleranalyse (3 Punkte)**
 
+Nenne den **logischen Fehler** im Struktogramm und erkläre kurz die Auswirkung auf die Programmausführung.
+
+**Anforderungen:**
+- Fehler klar identifiziert
+- Auswirkung nachvollziehbar erklärt
+
+```
+[Lösung kommt in die digitale Lösungsdatei oder auf das ausgeteilte Papier!]
+```
+
 **c) BW-konformer Korrekturvorschlag (2 Punkte)**
+
+Formuliere die fehlende/falsch platzierte Anweisung in **BW-konformer Operator-Notation**.
+
+**Anforderungen:**
+- Korrekte Notation nach Operatorenliste
+- Lösung ist logisch korrekt
+
+```
+[Lösung kommt in die digitale Lösungsdatei oder auf das ausgeteilte Papier!]
+```
 
 ---
 
@@ -163,18 +224,35 @@ Gegeben: `zahlen = [29, 14, 37, 10, 18]`
 Schreibe ein Struktogramm und implementiere **Selection Sort aufsteigend**.
 
 **a) Struktogramm (3 Punkte)**
-- äußere Schleife (Position `i`)
-- innerer Vergleich (Minimum finden)
+
+**Anforderungen:**
+- Äußere Schleife (Position `i`)
+- Innerer Vergleich (Minimum finden)
 - Tausch an Position `i`
+- Korrekte Verschachtelung
+
+```struktogramm
+[Lösung kommt in die digitale Lösungsdatei oder auf das ausgeteilte Papier!]
+```
 
 **b) Python-Code (3 Punkte)**
+
+**Anforderungen:**
+- Verschachtelte Schleifen
+- Klare Tauschlogik
+- Sortierung aufsteigend
+
+```python
+# Lösung kommt in die digitale Lösungsdatei oder auf das ausgeteilte Papier!
+
+```
 
 **c) Ausgabe (1 Punkt)**
 
 Wie sieht die sortierte Liste aus?
 
 ```
-Antwort: __________________
+[Lösung kommt in die digitale Lösungsdatei oder auf das ausgeteilte Papier!]
 ```
 
 ---
@@ -185,7 +263,9 @@ Antwort: __________________
 - [ ] Struktogramme lesbar und vollständig
 - [ ] Python-Code syntaktisch korrekt (soweit möglich)
 - [ ] Bei Algorithmusaufgaben nur Schleifenlösungen verwendet
+- [ ] Alle Zwischenschritte zeigen – Korrektur erfolgt nach Rechenweg
 - [ ] Fehleranalyse nachvollziehbar begründet
+- [ ] Name & Datum oben eingetragen
 
 ---
 
