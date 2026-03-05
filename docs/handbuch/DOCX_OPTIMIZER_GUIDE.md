@@ -196,14 +196,14 @@ Der Optimizer erzeugt folgende DOCX-Metadaten-Kommentare im Markdown:
 
 **Input:**
 ```markdown
-![Mein Struktogramm](../../images/diagram.svg)
+![Mein Struktogramm](https://example.com/diagram.svg)
 ```
 
 **Output:**
 ```markdown
-![Mein Struktogramm](../../images/diagram.svg)
+![Mein Struktogramm](https://example.com/diagram.svg)
 <!-- DOCX-ALT-TEXT: Mein Struktogramm -->
-<!-- DOCX-EMBED-SVG: ../../images/diagram.svg -->
+<!-- DOCX-EMBED-SVG: https://example.com/diagram.svg -->
 <!-- DOCX-EMBEDDING-HINT: Dieses Struktogramm wird bei DOCX-Export als eingebettete Grafik dargestellt... -->
 ```
 
@@ -255,7 +255,7 @@ pandoc input.md -t docx -o output.docx
 from src.utils.docx_markdown_optimizer import StruktogrammOptimizer, DocxMetadata
 
 optimizer = StruktogrammOptimizer(DocxMetadata())
-content = "![Test](image.svg)"
+content = "![Test](https://example.com/image.svg)"
 optimized, count = optimizer.optimize(content)
 
 assert count == 1
