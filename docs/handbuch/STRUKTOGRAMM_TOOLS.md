@@ -68,6 +68,14 @@ Prüft Struktogramme gegen die Operatorenliste.
 - ✅ Inkonsistente Notation
 - ✅ Strukturprobleme
 
+**Strikte BW-Verzweigungsregeln (dauerhaft):**
+- `Wenn <bedingung>, dann` muss direkt gefolgt sein von `J`
+- `, sonst` muss auf gleicher Einrueckungsebene wie `J`/`N` stehen
+- Nach `, sonst` muss direkt `N` folgen
+- Freistehende `J`/`N` ohne zugehoeriges `Wenn` sind ungueltig
+
+Diese Regeln werden zentral in `src/utils/bw_branch_validation.py` verwaltet und sowohl vom Helper als auch vom CLI-Validator genutzt.
+
 **Ausgabe:** Detaillierte Fehler mit Vorschlägen
 
 ### 2. **Refactorer** (`struktogramm_refactorer.py`)
@@ -111,6 +119,13 @@ Refaktoriert eine Datei. Standard: `--dry-run` (keine Änderungen).
 python struktogramm_cli.py check-repo [--pattern "**/*.md"] [--base-path "."]
 ```
 Prüft alle Dateien im Repository.
+
+### `Aufgaben/Loesungs-Sync-Check`
+```bash
+python apps/tools/check_pruefungen_solution_sync.py
+```
+Prueft automatisch, ob geaenderte Klausur-Aufgaben und Musterloesungen pro Version konsistent sind.
+Das Skript ist in der CI-Routine (`app-quality.yml`) als Gate integriert.
 
 ### `analyze`
 ```bash

@@ -9,9 +9,17 @@ Version: 1.0
 """
 
 import re
+import sys
+from pathlib import Path
 from typing import List, Dict, Tuple, Optional
 from dataclasses import dataclass
 from enum import Enum
+
+REPO_ROOT = Path(__file__).resolve().parents[2]
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
+
+from src.utils.bw_branch_validation import validate_bw_branch_structure
 
 
 class ValidationLevel(Enum):
@@ -105,7 +113,6 @@ class StruktogrammValidator:
 
     # Häufige Fehler und ihre Korrektionen
     COMMON_MISTAKES = {
-        "Wiederhole": "Wiederhole (korrekter BW-Standard)",
         "While": "Wiederhole solange",
         "For": "Zähle",
         "If": "Wenn",
@@ -178,6 +185,17 @@ class StruktogrammValidator:
         for line_num, line in enumerate(lines, start=1):
             line_results = self.validate_line(line, line_num)
             results.extend(line_results)
+
+        # Strikte Strukturprüfung für BW-Verzweigungen ergänzen.
+        for issue in validate_bw_branch_structure(lines):
+            results.append(ValidationResult(
+                level=ValidationLevel.ERROR,
+                line=issue.line,
+                column=1,
+                message=issue.message,
+                code=issue.code,
+                suggested_fix=issue.suggested_fix,
+            ))
 
         return results
 

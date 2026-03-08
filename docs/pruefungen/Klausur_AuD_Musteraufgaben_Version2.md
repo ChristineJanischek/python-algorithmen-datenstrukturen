@@ -171,9 +171,9 @@ Gegeben: `codes = ['K1', 'K2', 'K3', 'K4', 'K5', 'K6', 'K7']` (sortiert)
 
 Das folgende Struktogramm wurde mit der BW-Operatorenliste (Draw.io-Library) entworfen und enthält **einen häufigen logischen Fehler** in einer Binärsuche.
 
-![L2_5_Aufgabe5_Binaere_Suche_Fehleranalyse](../../struktogramme/generated/svg/l2_5_aufgabe5_binaere_suche_fehleranalyse_block_01.svg)
+![L2_5_Aufgabe5_Binaere_Suche_Fehleranalyse](../../struktogramme/generated/svg/L2_5_Aufgabe5_Binaere_Suche_Fehleranalyse.svg)
 <!-- DOCX-ALT-TEXT: L2_5_Aufgabe5_Binaere_Suche_Fehleranalyse -->
-<!-- DOCX-EMBED-SVG: ../../struktogramme/generated/svg/l2_5_aufgabe5_binaere_suche_fehleranalyse_block_01.svg -->
+<!-- DOCX-EMBED-SVG: ../../struktogramme/generated/svg/L2_5_Aufgabe5_Binaere_Suche_Fehleranalyse.svg -->
 <!-- DOCX-EMBEDDING-HINT: Dieses Struktogramm wird bei DOCX-Export als eingebettete Grafik dargestellt für bessere Kopierbarkeit und Formatierung. -->
 
 Bearbeite die Teilaufgaben in dieser Reihenfolge:

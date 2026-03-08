@@ -14,6 +14,8 @@ from typing import List, Dict, Tuple, Optional
 from dataclasses import dataclass
 from enum import Enum
 
+from src.utils.bw_branch_validation import validate_bw_branch_structure
+
 
 class OperatorType(Enum):
     """Enum für die verschiedenen Operator-Typen"""
@@ -102,22 +104,19 @@ class StruktogrammValidator:
             Liste von Fehlermeldungen (leer wenn alles OK)
         """
         errors = []
-        indentation_level = 0
         
         for i, line in enumerate(lines, start=1):
             # Einrückung berechnen
             stripped = line.lstrip()
-            current_indent = len(line) - len(stripped)
             
             is_valid, op_type, error = cls.validate_line(stripped)
             
             if not is_valid and error:
                 errors.append(f"Zeile {i}: {error}")
-            
-            # Prüfe Einrückung bei Kontrollstrukturen
-            if op_type in [OperatorType.WIEDERHOLE_SOLANGE, OperatorType.ZAEHLE, 
-                          OperatorType.WIEDERHOLE_VON, OperatorType.WENN]:
-                indentation_level += 1
+
+        # Strikte Strukturregeln fuer Verzweigungen nach BW-Operatorenliste pruefen.
+        branch_issues = validate_bw_branch_structure(lines)
+        errors.extend([f"Zeile {issue.line}: {issue.message}" for issue in branch_issues])
         
         return errors
 

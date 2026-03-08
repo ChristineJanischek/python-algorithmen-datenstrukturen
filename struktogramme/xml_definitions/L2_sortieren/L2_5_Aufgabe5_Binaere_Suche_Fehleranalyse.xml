@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='utf-8'?>
+<struktogramm>
+  <metadata>
+    <titel>Aufgabe 5: Binäre Suche prüfen</titel>
+    <level>L2</level>
+    <kategorie>Suchen</kategorie>
+    <autor>Klassenarbeit</autor>
+    <beschreibung>Analyse einer Binärsuche mit absichtlich vertauschtem Vergleichszweig</beschreibung>
+  </metadata>
+  <inhalt>
+    <prozess typ="deklaration_und_initialisierung">links = 0</prozess>
+    <prozess typ="deklaration_und_initialisierung">rechts = Anzahl der Elemente des Arrays codes - 1</prozess>
+    <prozess typ="deklaration_und_initialisierung">gefunden = falsch</prozess>
+    <wiederhole>
+      <bedingung>links &lt;= rechts AND NOT gefunden</bedingung>
+      <inhalt>
+        <prozess typ="deklaration_und_initialisierung">mitte = (links + rechts) // 2</prozess>
+        <wenn>
+          <bedingung>codes[mitte] == ziel</bedingung>
+          <dann>
+            <prozess typ="zuweisung">gefunden = wahr</prozess>
+          </dann>
+          <sonst>
+            <wenn>
+              <bedingung>codes[mitte] &lt; ziel</bedingung>
+              <dann>
+                <prozess typ="zuweisung">rechts = mitte - 1</prozess>
+              </dann>
+              <sonst>
+                <prozess typ="zuweisung">links = mitte + 1</prozess>
+              </sonst>
+            </wenn>
+          </sonst>
+        </wenn>
+      </inhalt>
+    </wiederhole>
+    <wenn>
+      <bedingung>gefunden</bedingung>
+      <dann>
+        <ausgabe typ="ausgabe">Treffer</ausgabe>
+      </dann>
+      <sonst>
+        <ausgabe typ="ausgabe">Kein Treffer</ausgabe>
+      </sonst>
+    </wenn>
+  </inhalt>
+</struktogramm>

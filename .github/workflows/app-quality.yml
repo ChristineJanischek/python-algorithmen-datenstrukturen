@@ -8,6 +8,7 @@ on:
       - 'docs/**'
       - 'CHANGELOG.md'
       - 'apps/tools/check_docs_dod.py'
+      - 'apps/tools/check_pruefungen_solution_sync.py'
       - '.github/workflows/app-quality.yml'
   push:
     branches:
@@ -18,6 +19,7 @@ on:
       - 'docs/**'
       - 'CHANGELOG.md'
       - 'apps/tools/check_docs_dod.py'
+      - 'apps/tools/check_pruefungen_solution_sync.py'
       - '.github/workflows/app-quality.yml'
 
 jobs:
@@ -81,7 +83,9 @@ jobs:
           python-version: '3.11'
 
       - name: Run docs DoD checks
-        run: python apps/tools/check_docs_dod.py
+        run: |
+          python apps/tools/check_docs_dod.py
+          python apps/tools/check_pruefungen_solution_sync.py
 
   backend-tests:
     name: Backend Tests (FastAPI)

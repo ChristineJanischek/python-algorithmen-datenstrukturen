@@ -205,7 +205,7 @@ print(plus_fuenf)
 ### **Aufgabe 5 (8 Punkte)**
 
 **Aufgabenstellung (aus Prüfungsblatt):**
-> Gegeben: `codes = ['K1', 'K2', 'K3', 'K4', 'K5', 'K6', 'K7']`
+> Gegeben: `codes = ['K1', 'K2', 'K3', 'K4', 'K5', 'K6', 'K7']` (sortiert)
 > Analysiere das fehlerhafte Struktogramm:
 > a) Vermuteter Zweck
 > b) Fehleranalyse
@@ -213,20 +213,30 @@ print(plus_fuenf)
 
 **Fehlerhaftes Struktogramm:**
 
-![L2_5_Aufgabe5_Algorithmen_pruefen_Fehleranalyse](../../struktogramme/generated/svg/L2_5_Aufgabe5_Algorithmen_pruefen_Fehleranalyse.svg)
-<!-- DOCX-ALT-TEXT: L2_5_Aufgabe5_Algorithmen_pruefen_Fehleranalyse -->
-<!-- DOCX-EMBED-SVG: ../../struktogramme/generated/svg/L2_5_Aufgabe5_Algorithmen_pruefen_Fehleranalyse.svg -->
+![L2_5_Aufgabe5_Binaere_Suche_Fehleranalyse](../../struktogramme/generated/svg/L2_5_Aufgabe5_Binaere_Suche_Fehleranalyse.svg)
+<!-- DOCX-ALT-TEXT: L2_5_Aufgabe5_Binaere_Suche_Fehleranalyse -->
+<!-- DOCX-EMBED-SVG: ../../struktogramme/generated/svg/L2_5_Aufgabe5_Binaere_Suche_Fehleranalyse.svg -->
 <!-- DOCX-EMBEDDING-HINT: Dieses Struktogramm wird bei DOCX-Export als eingebettete Grafik dargestellt für bessere Kopierbarkeit und Formatierung. -->
 
 **a) Zweck (3):**
-Lineare Suche in einem Array/einer Liste nach einem eingegebenen Wert.
+Der Algorithmus soll eine Binärsuche in der sortierten Liste `codes` durchführen.
+Dabei wird in jeder Iteration die Mitte des aktuellen Suchbereichs geprüft und der Bereich halbiert.
+Bei Treffer wird `gefunden` auf `wahr` gesetzt, sonst wird links/rechts entsprechend angepasst.
 
 **b) Fehleranalyse (3):**
-Im Nein-Zweig fehlt die Fortschrittsanweisung `i = i + 1`; dadurch kann eine Endlosschleife entstehen.
+Im inneren Vergleichszweig sind die Aktualisierungen vertauscht:
+- Bei `codes[mitte] < ziel` müsste `links = mitte + 1` gesetzt werden.
+- Im anderen Fall müsste `rechts = mitte - 1` gesetzt werden.
+Durch die Vertauschung wird der falsche Teilbereich verworfen, die Suche kann den Treffer verfehlen.
 
 **c) Korrektur (2):**
 ```struktogramm
-Zuweisung: i = i + 1
+Wenn codes[mitte] < ziel, dann
+    J
+        Zuweisung: links = mitte + 1
+    , sonst
+    N
+        Zuweisung: rechts = mitte - 1
 ```
 
 ---

@@ -102,19 +102,23 @@ class BwNotationValidator:
 
     def validate_block(self, block: StruktogrammBlock) -> list[ValidationIssue]:
         issues: list[ValidationIssue] = []
-        for offset, line in enumerate(block.lines, start=0):
-            normalized = line.strip()
-            if not normalized:
-                continue
-            valid, _, error = self.validator.validate_line(normalized)
-            if not valid and error:
-                issues.append(
-                    ValidationIssue(
-                        line=block.start_line + offset,
-                        message=error,
-                        severity="error",
-                    )
+        block_errors = self.validator.validate_struktogramm(block.lines)
+        for raw_error in block_errors:
+            line_number = block.start_line
+            message = raw_error
+            match = re.match(r"^Zeile\s+(\d+):\s*(.+)$", raw_error)
+            if match:
+                relative_line = int(match.group(1))
+                line_number = block.start_line + max(0, relative_line - 1)
+                message = match.group(2)
+
+            issues.append(
+                ValidationIssue(
+                    line=line_number,
+                    message=message,
+                    severity="error",
                 )
+            )
         return issues
 
 
