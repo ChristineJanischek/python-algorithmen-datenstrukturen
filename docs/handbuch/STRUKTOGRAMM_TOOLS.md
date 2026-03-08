@@ -126,6 +126,22 @@ python apps/tools/check_pruefungen_solution_sync.py
 ```
 Prueft automatisch, ob geaenderte Klausur-Aufgaben und Musterloesungen pro Version konsistent sind.
 Das Skript ist in der CI-Routine (`app-quality.yml`) als Gate integriert.
+Zusatzregel: inhaltlich identische Aufgaben zwischen Musteraufgaben-Versionen werden als Fehler gemeldet.
+
+Vollstaendige Prozessdokumentation:
+- [KLAUSUR_LOESUNG_SYNC_ROUTINE.md](KLAUSUR_LOESUNG_SYNC_ROUTINE.md)
+
+Optionale Modi fuer die Redaktionsroutine:
+```bash
+# Nur eine Version pruefen
+python apps/tools/check_pruefungen_solution_sync.py --version 3
+
+# Strikter Textabgleich (Ueberschriften + Aufgabenstellung)
+python apps/tools/check_pruefungen_solution_sync.py --strict-task-sync --version 3
+
+# Aufgabenstellung/Heading in Loesung automatisch nachziehen
+python apps/tools/check_pruefungen_solution_sync.py --apply --version 3
+```
 
 ### `analyze`
 ```bash

@@ -41,10 +41,12 @@ Vollständige Anleitung für die Verwaltung von E-Learning-Inhalten:
 #### Systemroutinen & API
 → [**ROUTINEN.md**](ROUTINEN.md)
 → [**PRUEFUNGS_DATEINAMEN_STANDARD.md**](PRUEFUNGS_DATEINAMEN_STANDARD.md)
+→ [**KLAUSUR_LOESUNG_SYNC_ROUTINE.md**](KLAUSUR_LOESUNG_SYNC_ROUTINE.md)
 
 Umfassende Dokumentation aller Routinen im System:
 - Python Utilities (struktogramm_helper.py, elearning_manager.py)
 - Prüfungs-Dateinamenschema (Validierung + Auto-Normalisierung)
+- Routine fuer konsistente Aufgaben/Loesungs-Synchronisierung
 - REST-API Endpunkte (main.py)
 - Tool-Skripte (generate_information_docs.py)
 - Klassenstrukturen und Funktionssignaturen

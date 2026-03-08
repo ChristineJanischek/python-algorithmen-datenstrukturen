@@ -29,12 +29,21 @@ SVG-Basis: BW-Formvorlagen aus `apps/drawio-extension/stencil.xml`.
 
 ## ✅ MUSTERLÖSUNGEN
 
-### Aufgabe 1 (3)
+### Aufgabe 1: Verzweigung & Logik (3 Punkte)
 
 **Aufgabenstellung (aus Prüfungsblatt):**
-> Ein Programm liest eine Ganzzahl `zahl` ein und gibt aus:
-> - „Gerade" wenn `zahl % 2 == 0`
-> - „Ungerade" sonst
+> **Thema:** BPE 5.2 – Kontrollstrukturen (Alternativen)
+>
+> Schreibe ein Struktogramm und implementiere in Python:
+> > Ein Programm liest eine Ganzzahl `zahl` ein und gibt aus:
+> > - „Gerade" wenn `zahl % 2 == 0`
+> > - „Ungerade" sonst
+>
+> **Anforderungen:**
+> - Struktogramm mit korrektem Aufbau (3 Punkte)
+> - Eingabe darstellen
+> - Verzweigung mit Bedingung
+> - Ausgaben korrekt positioniert
 
 ![L2_VarC_Aufgabe1_Gerade_Ungerade](../../struktogramme/generated/svg/L2_VarC_Aufgabe1_Gerade_Ungerade.svg)
 <!-- DOCX-ALT-TEXT: L2_VarC_Aufgabe1_Gerade_Ungerade -->
@@ -62,11 +71,17 @@ def loese_aufgabe1_gerade_ungerade() -> None:
 
 ---
 
-### Aufgabe 2 (3)
+### Aufgabe 2: Schleife mit Bedingung (3 Punkte)
 
 **Aufgabenstellung (aus Prüfungsblatt):**
-> Lies Ganzzahlen ein, bis `-1` eingegeben wird.
-> Nach jeder gültigen Eingabe soll die bisherige **größte Zahl** ausgegeben werden.
+> **Thema:** BPE 5.2 – Schleifen & Bedingungen
+>
+> Schreibe ein Struktogramm und implementiere:
+> > Ein Programm liest Ganzzahlen ein, **solange** der Nutzer möchte.
+> > Das Programm endet bei Eingabe `-1`.
+> > Nach jeder gültigen Eingabe soll die bisherige **größte Zahl** ausgegeben werden.
+>
+> **Beispiel:**
 
 ![L2_VarC_Aufgabe2_Maximum](../../struktogramme/generated/svg/L2_VarC_Aufgabe2_Maximum.svg)
 <!-- DOCX-ALT-TEXT: L2_VarC_Aufgabe2_Maximum -->
@@ -104,13 +119,12 @@ def loese_aufgabe2_maximum() -> None:
 
 ---
 
-### Aufgabe 3 (3)
+### Aufgabe 3: Array-/Listen-Grundlagen (3 Punkte)
 
 **Aufgabenstellung (aus Prüfungsblatt):**
+> **Thema:** BPE 7.1 – Arrays (Deklaration, Initialisierung, Zugriff)
+>
 > Gegeben: `noten = [2, 3, 1, 4, 2, 5, 3, 1]`
-> a) Deklaration und Initialisierung
-> b) drittes Element ausgeben, erstes Element auf `1` setzen, Länge ausgeben
-> c) Bedeutung von `noten[6]` erläutern
 
 **a)**
 ![L2_3a_Aufgabe3_Array_Deklaration](../../struktogramme/generated/svg/L2_3a_Aufgabe3_Array_Deklaration.svg)
@@ -140,13 +154,12 @@ print(drittes, laenge)
 
 ---
 
-### Aufgabe 4 (6)
+### Aufgabe 4: Array durchlaufen & filtern (6 Punkte)
 
 **Aufgabenstellung (aus Prüfungsblatt):**
+> **Thema:** BPE 7.1 – Schleife über Arrays
+>
 > Gegeben: `werte = [11, 28, 35, 40, 53, 64, 79, 82]`
-> a) Alle Werte zeilenweise ausgeben
-> b) Nur Werte `>= 40` ausgeben
-> c) Neue Liste `quadriert` erzeugen
 
 Gegeben: `werte = [11, 28, 35, 40, 53, 64, 79, 82]`
 
@@ -188,14 +201,21 @@ print(quadriert)
 
 ---
 
-### Aufgabe 5 (8)
+### Aufgabe 5: Algorithmen prüfen (8 Punkte)
 
 **Aufgabenstellung (aus Prüfungsblatt):**
+> **Thema:** BPE 7.2 – Algorithmenanalyse
+>
 > Gegeben: `buchstaben = ['H', 'I', 'N', 'W', 'E', 'I', 'S']`
-> Analysiere das fehlerhafte Struktogramm:
-> a) Zweck des Algorithmus
-> b) Fehler + Auswirkung
-> c) Korrektur in BW-Operatornotation
+>
+> Das folgende Struktogramm wurde mit der BW-Operatorenliste (Draw.io-Library) entworfen und enthält **einen häufigen logischen Fehler**.
+>
+> ![L2_5_Aufgabe5_Algorithmen_pruefen_Fehleranalyse](../../struktogramme/generated/svg/L2_5_Aufgabe5_Algorithmen_pruefen_Fehleranalyse.svg)
+> <!-- DOCX-ALT-TEXT: L2_5_Aufgabe5_Algorithmen_pruefen_Fehleranalyse -->
+> <!-- DOCX-EMBED-SVG: ../../struktogramme/generated/svg/L2_5_Aufgabe5_Algorithmen_pruefen_Fehleranalyse.svg -->
+> <!-- DOCX-EMBEDDING-HINT: Dieses Struktogramm wird bei DOCX-Export als eingebettete Grafik dargestellt für bessere Kopierbarkeit und Formatierung. -->
+>
+> Bearbeite die Teilaufgaben in dieser Reihenfolge:
 
 ![L2_5_Aufgabe5_Algorithmen_pruefen_Fehleranalyse](../../struktogramme/generated/svg/L2_5_Aufgabe5_Algorithmen_pruefen_Fehleranalyse.svg)
 <!-- DOCX-ALT-TEXT: L2_5_Aufgabe5_Algorithmen_pruefen_Fehleranalyse -->
@@ -215,12 +235,14 @@ Zuweisung: i = i + 1
 
 ---
 
-### Aufgabe 6: Selection Sort (7)
+### Aufgabe 6: Selection Sort implementieren (7 Punkte)
 
 **Aufgabenstellung (aus Prüfungsblatt):**
+> **Thema:** BPE 7.2 – Sortieralgorithmen (Selection Sort)
+>
 > Gegeben: `zahlen = [33, 12, 27, 5, 18]`
-> Schreibe Struktogramm + Python-Code für **Selection Sort (aufsteigend)**.
-> Gib die sortierte Ausgabe an.
+>
+> Schreibe ein Struktogramm und implementiere **Selection Sort aufsteigend**.
 
 **a) Struktogramm (3):**
 

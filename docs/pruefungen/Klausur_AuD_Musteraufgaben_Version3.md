@@ -181,10 +181,10 @@ Schreibe Python-Code, um eine neue Liste zu erzeugen, deren Elemente jeweils die
 
 Gegeben: `werte = [29, 14, 37, 10, 18]`
 
-Das folgende Struktogramm wurde mit der BW-Operatorenliste (Draw.io-Library) entworfen und enthält **einen häufigen logischen Fehler** in einem Selection-Sort-Ablauf.
+Das folgende Struktogramm wurde mit der BW-Operatorenliste (Draw.io-Library) entworfen und enthält **einen häufigen logischen Fehler** in einem Sortieralgorithmus.
 
-![L2_5_Aufgabe5_Selection_Sort_Fehleranalyse](../../struktogramme/generated/svg/L2_5_Aufgabe5_Selection_Sort_Fehleranalyse.svg)
-<!-- DOCX-ALT-TEXT: L2_5_Aufgabe5_Selection_Sort_Fehleranalyse -->
+![L2_5_Aufgabe5_Algorithmen_pruefen_Fehleranalyse](../../struktogramme/generated/svg/L2_5_Aufgabe5_Selection_Sort_Fehleranalyse.svg)
+<!-- DOCX-ALT-TEXT: L2_5_Aufgabe5_Algorithmen_pruefen_Fehleranalyse -->
 <!-- DOCX-EMBED-SVG: ../../struktogramme/generated/svg/L2_5_Aufgabe5_Selection_Sort_Fehleranalyse.svg -->
 <!-- DOCX-EMBEDDING-HINT: Dieses Struktogramm wird bei DOCX-Export als eingebettete Grafik dargestellt für bessere Kopierbarkeit und Formatierung. -->
 
@@ -196,7 +196,7 @@ Beschreibe in 2–4 Sätzen, **welchen Zweck** der Algorithmus wahrscheinlich ha
 
 **Anforderungen:**
 - Klare und nachvollziehbare Beschreibung
-- Bezug auf Minimumsuche und Tausch im Array erkennbar
+- Bezug auf Vergleichs- und Tauschlogik im Array erkennbar
 
 ```
 [Lösung kommt in die digitale Lösungsdatei oder auf das ausgeteilte Papier!]
@@ -229,20 +229,20 @@ Formuliere die falsch gesetzte Vergleichsbedingung in **BW-konformer Operator-No
 
 ---
 
-### **Aufgabe 6: Bubble Sort implementieren (7 Punkte)**
-**Thema:** BPE 7.2 – Sortieralgorithmen (Bubble Sort)
+### **Aufgabe 6: Lineare Suche implementieren (7 Punkte)**
+**Thema:** BPE 7.2 – Suchalgorithmen (Lineare Suche)
 
-Gegeben: `zahlen = [42, 7, 19, 3, 25]`
+Gegeben: `kunden_ids = [104, 117, 109, 123, 111, 130]` und `such_id = 123`
 
-Schreibe ein Struktogramm und implementiere **Bubble Sort aufsteigend**.
+Schreibe ein Struktogramm und implementiere eine **Lineare Suche**, die den Index der gesuchten ID bestimmt.
 
 **a) Struktogramm (3 Punkte)**
 
 **Anforderungen:**
-- Äußere Schleife (Durchläufe)
-- Innere Schleife (Vergleiche & Tausch)
-- Swap-Bedingung erkennbar
-- Korrekte Verschachtelung
+- Schleife zum Durchlaufen des Arrays
+- Vergleich von aktuellem Element mit `such_id`
+- Trefferfall eindeutig erkennbar (z. B. über Variable `gefunden_index`)
+- Korrekte Verzweigung und Verschachtelung
 
 ```struktogramm
 [Lösung kommt in die digitale Lösungsdatei oder auf das ausgeteilte Papier!]
@@ -251,18 +251,18 @@ Schreibe ein Struktogramm und implementiere **Bubble Sort aufsteigend**.
 **b) Python-Code (3 Punkte)**
 
 **Anforderungen:**
-- Verschachtelte Schleifen
-- Klare Tauschlogik
-- Sortierung aufsteigend
+- Vollständige lineare Suche mit Schleife
+- Korrekte Behandlung von Treffer und Nicht-Treffer
+- Rückgabe oder Ausgabe des gefundenen Index
 
 ```python
 # Lösung kommt in die digitale Lösungsdatei oder auf das ausgeteilte Papier!
 
 ```
 
-**c) Sortierte Ausgabe (1 Punkt)**
+**c) Erwartete Ausgabe (1 Punkt)**
 
-Wie sieht das sortierte Array aus?
+Welche Ausgabe entsteht für die gegebenen Daten (`kunden_ids`, `such_id = 123`)?
 
 ```
 [Lösung kommt in die digitale Lösungsdatei oder auf das ausgeteilte Papier!]

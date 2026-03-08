@@ -169,10 +169,10 @@ Schreibe Python-Code, um eine neue Liste `plus_fuenf` zu erzeugen, die jedes Ele
 
 Gegeben: `codes = ['K1', 'K2', 'K3', 'K4', 'K5', 'K6', 'K7']` (sortiert)
 
-Das folgende Struktogramm wurde mit der BW-Operatorenliste (Draw.io-Library) entworfen und enthält **einen häufigen logischen Fehler** in einer Binärsuche.
+Das folgende Struktogramm wurde mit der BW-Operatorenliste (Draw.io-Library) entworfen und enthält **einen häufigen logischen Fehler** in einem Suchalgorithmus.
 
-![L2_5_Aufgabe5_Binaere_Suche_Fehleranalyse](../../struktogramme/generated/svg/L2_5_Aufgabe5_Binaere_Suche_Fehleranalyse.svg)
-<!-- DOCX-ALT-TEXT: L2_5_Aufgabe5_Binaere_Suche_Fehleranalyse -->
+![L2_5_Aufgabe5_Algorithmen_pruefen_Fehleranalyse](../../struktogramme/generated/svg/L2_5_Aufgabe5_Binaere_Suche_Fehleranalyse.svg)
+<!-- DOCX-ALT-TEXT: L2_5_Aufgabe5_Algorithmen_pruefen_Fehleranalyse -->
 <!-- DOCX-EMBED-SVG: ../../struktogramme/generated/svg/L2_5_Aufgabe5_Binaere_Suche_Fehleranalyse.svg -->
 <!-- DOCX-EMBEDDING-HINT: Dieses Struktogramm wird bei DOCX-Export als eingebettete Grafik dargestellt für bessere Kopierbarkeit und Formatierung. -->
 
@@ -184,7 +184,7 @@ Beschreibe in 2–4 Sätzen, **welchen Zweck** der Algorithmus wahrscheinlich ha
 
 **Anforderungen:**
 - Klare und nachvollziehbare Beschreibung
-- Bezug auf sortierte Liste und Halbierung des Suchbereichs
+- Bezug auf Suchstrategie und Ablaufstruktur im Struktogramm
 
 ```
 [Lösung kommt in die digitale Lösungsdatei oder auf das ausgeteilte Papier!]
@@ -208,7 +208,7 @@ Formuliere die falsch gesetzten Anweisungen im Vergleichszweig in **BW-konformer
 
 **Anforderungen:**
 - Korrekte Notation nach Operatorenliste
-- Lösung ist für Binärsuche logisch korrekt
+- Lösung ist für den vorliegenden Suchalgorithmus logisch korrekt
 
 ```
 [Lösung kommt in die digitale Lösungsdatei oder auf das ausgeteilte Papier!]

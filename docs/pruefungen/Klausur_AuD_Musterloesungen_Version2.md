@@ -29,12 +29,21 @@ SVG-Basis: BW-Formvorlagen aus `apps/drawio-extension/stencil.xml`.
 
 ## ✅ MUSTERLÖSUNGEN MIT BEWERTUNG
 
-### **Aufgabe 1 (3 Punkte)**
+### Aufgabe 1: Verzweigung & Logik (3 Punkte)
 
 **Aufgabenstellung (aus Prüfungsblatt):**
-> Ein Programm liest eine Ganzzahl `punkte` ein und gibt aus:
-> - „Bestanden" wenn `punkte >= 50`
-> - „Nicht bestanden" wenn `punkte < 50`
+> **Thema:** BPE 5.2 – Kontrollstrukturen (Alternativen)
+>
+> Schreibe ein Struktogramm und implementiere in Python:
+> > Ein Programm liest eine Ganzzahl `punkte` ein und gibt aus:
+> > - „Bestanden" wenn `punkte >= 50`
+> > - „Nicht bestanden" wenn `punkte < 50`
+>
+> **Anforderungen:**
+> - Struktogramm mit korrektem Aufbau (3 Punkte)
+> - Eingabe darstellen
+> - Verzweigung mit Bedingung
+> - Ausgaben korrekt positioniert
 
 **Struktogramm (BW-Standard, SVG):**
 
@@ -71,11 +80,16 @@ def loese_aufgabe1_bestanden() -> None:
 
 ---
 
-### **Aufgabe 2 (3 Punkte)**
+### Aufgabe 2: Schleife mit Bedingung (3 Punkte)
 
 **Aufgabenstellung (aus Prüfungsblatt):**
-> Ein Programm liest Ganzzahlen ein. Nach jeder Eingabe wird die bisherige **Anzahl gültiger Eingaben** ausgegeben.
-> Das Programm endet bei Eingabe `-1`.
+> **Thema:** BPE 5.2 – Schleifen & Bedingungen
+>
+> Schreibe ein Struktogramm und implementiere:
+> > Ein Programm liest Ganzzahlen ein. Nach jeder Eingabe wird die bisherige **Anzahl gültiger Eingaben** ausgegeben.
+> > Das Programm endet bei Eingabe `-1`.
+>
+> **Beispiel:**
 
 **Struktogramm (BW-Standard, SVG):**
 
@@ -113,13 +127,13 @@ def loese_aufgabe2_anzahl() -> None:
 
 ---
 
-### **Aufgabe 3 (3 Punkte)**
+### Aufgabe 3: Array-/Listen-Grundlagen (3 Punkte)
 
 **Aufgabenstellung (aus Prüfungsblatt):**
-> Gegeben ist die Liste: `temperaturen = [18, 21, 19, 23, 17, 20, 22, 16]`
-> a) Deklaration und Initialisierung
-> b) Zugriff: 2. Element ausgeben, vorletztes Element auf `25` setzen, Länge ausgeben
-> c) Bedeutung von `temperaturen[4]` erläutern
+> **Thema:** BPE 7.1 – Arrays (Listen) (Deklaration, Initialisierung, Zugriff)
+>
+> Gegeben ist die Liste:
+> `temperaturen = [18, 21, 19, 23, 17, 20, 22, 16]`
 
 **a) Deklaration (1):**
 
@@ -151,13 +165,12 @@ print(zweites, laenge)
 
 ---
 
-### **Aufgabe 4 (6 Punkte)**
+### Aufgabe 4: Array (Liste) durchlaufen & filtern (6 Punkte)
 
 **Aufgabenstellung (aus Prüfungsblatt):**
+> **Thema:** BPE 7.1 – Schleife über Arrays (Listen)
+>
 > Gegeben ist: `werte = [14, 9, 31, 27, 45, 12, 6, 39]`
-> a) Alle Werte zeilenweise ausgeben
-> b) Nur Werte ausgeben, die durch 3 teilbar sind
-> c) Neue Liste `plus_fuenf` erzeugen (jedes Element +5)
 
 Gegeben: `werte = [14, 9, 31, 27, 45, 12, 6, 39]`
 
@@ -202,14 +215,21 @@ print(plus_fuenf)
 
 ---
 
-### **Aufgabe 5 (8 Punkte)**
+### Aufgabe 5: Algorithmen prüfen (8 Punkte)
 
 **Aufgabenstellung (aus Prüfungsblatt):**
+> **Thema:** BPE 7.2 – Algorithmenanalyse
+>
 > Gegeben: `codes = ['K1', 'K2', 'K3', 'K4', 'K5', 'K6', 'K7']` (sortiert)
-> Analysiere das fehlerhafte Struktogramm:
-> a) Vermuteter Zweck
-> b) Fehleranalyse
-> c) BW-konformer Korrekturvorschlag
+>
+> Das folgende Struktogramm wurde mit der BW-Operatorenliste (Draw.io-Library) entworfen und enthält **einen häufigen logischen Fehler** in einem Suchalgorithmus.
+>
+> ![L2_5_Aufgabe5_Algorithmen_pruefen_Fehleranalyse](../../struktogramme/generated/svg/L2_5_Aufgabe5_Binaere_Suche_Fehleranalyse.svg)
+> <!-- DOCX-ALT-TEXT: L2_5_Aufgabe5_Algorithmen_pruefen_Fehleranalyse -->
+> <!-- DOCX-EMBED-SVG: ../../struktogramme/generated/svg/L2_5_Aufgabe5_Binaere_Suche_Fehleranalyse.svg -->
+> <!-- DOCX-EMBEDDING-HINT: Dieses Struktogramm wird bei DOCX-Export als eingebettete Grafik dargestellt für bessere Kopierbarkeit und Formatierung. -->
+>
+> Bearbeite die Teilaufgaben in dieser Reihenfolge:
 
 **Fehlerhaftes Struktogramm:**
 
@@ -241,12 +261,14 @@ Wenn codes[mitte] < ziel, dann
 
 ---
 
-### **Aufgabe 6: Selection Sort (7 Punkte)**
+### Aufgabe 6: Selection Sort implementieren (7 Punkte)
 
 **Aufgabenstellung (aus Prüfungsblatt):**
+> **Thema:** BPE 7.2 – Sortieralgorithmen (Selection Sort)
+>
 > Gegeben: `zahlen = [29, 14, 37, 10, 18]`
+>
 > Schreibe ein Struktogramm und implementiere **Selection Sort aufsteigend**.
-> Gib die sortierte Liste aus.
 
 **a) Struktogramm (3):**
 

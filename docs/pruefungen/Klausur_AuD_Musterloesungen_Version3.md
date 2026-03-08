@@ -22,19 +22,28 @@ SVG-Basis: BW-Formvorlagen aus `apps/drawio-extension/stencil.xml`.
 | 3 | 3 | Grundlagen Arrays | Indexverständnis |
 | 4 | 6 | Array-Algorithmen | Filter + neue Liste |
 | 5 | 8 | Fehleranalyse | Ursache + Wirkung |
-| 6 | 7 | Bubble Sort | Swap-Logik + Grenzen |
+| 6 | 7 | Lineare Suche | Trefferlogik + Index |
 | **Summe** | **30** | — | — |
 
 ---
 
 ## ✅ MUSTERLÖSUNGEN MIT BEWERTUNG
 
-### Aufgabe 1 (3)
+### Aufgabe 1: Verzweigung & Logik (3 Punkte)
 
 **Aufgabenstellung (aus Prüfungsblatt):**
-> Eingabe: Ganzzahl `alter`
-> - „Volljährig" bei `alter >= 18`
-> - „Minderjährig" bei `alter < 18`
+> **Thema:** BPE 5.2 – Kontrollstrukturen (Alternativen)
+>
+> Schreibe ein Struktogramm und implementiere in Python:
+> > Ein Programm liest eine Ganzzahl `alter` ein und gibt aus:
+> > - „Volljährig" wenn `alter >= 18`
+> > - „Minderjährig" wenn `alter < 18`
+>
+> **Anforderungen:**
+> - Struktogramm mit korrektem Aufbau (3 Punkte)
+> - Eingabe darstellen
+> - Verzweigung mit Bedingung
+> - Ausgaben korrekt positioniert
 
 ![L2_VarB_Aufgabe1_Volljaehrig](../../struktogramme/generated/svg/L2_VarB_Aufgabe1_Volljaehrig.svg)
 <!-- DOCX-ALT-TEXT: L2_VarB_Aufgabe1_Volljaehrig -->
@@ -62,12 +71,17 @@ def loese_aufgabe1_volljaehrig() -> None:
 
 ---
 
-### Aufgabe 2 (3)
+### Aufgabe 2: Schleife mit Bedingung (3 Punkte)
 
 **Aufgabenstellung (aus Prüfungsblatt):**
-> Ein Programm liest Ganzzahlen ein und führt eine laufende Summe.
-> Das Programm endet bei `-1`.
-> Nach jeder gültigen Eingabe wird die aktuelle Summe ausgegeben.
+> **Thema:** BPE 5.2 – Schleifen & Bedingungen
+>
+> Schreibe ein Struktogramm und implementiere:
+> > Ein Programm liest Ganzzahlen ein und führt eine laufende Summe.
+> > Das Programm endet bei `-1`.
+> > Nach jeder gültigen Eingabe wird die aktuelle Summe ausgegeben.
+>
+> **Beispiel:**
 
 ![L2_VarB_Aufgabe2_Laufende_Summe](../../struktogramme/generated/svg/L2_VarB_Aufgabe2_Laufende_Summe.svg)
 <!-- DOCX-ALT-TEXT: L2_VarB_Aufgabe2_Laufende_Summe -->
@@ -97,13 +111,12 @@ def loese_aufgabe2_laufende_summe() -> None:
 
 ---
 
-### Aufgabe 3 (3)
+### Aufgabe 3: Array-/Listen-Grundlagen (3 Punkte)
 
 **Aufgabenstellung (aus Prüfungsblatt):**
+> **Thema:** BPE 7.1 – Arrays (Deklaration, Initialisierung, Zugriff)
+>
 > Gegeben: `lager = [4, 7, 2, 9, 5, 1, 8, 3]`
-> a) Deklaration
-> b) Zugriff: erstes Element ausgeben, letztes Element auf `10` setzen, Länge ausgeben
-> c) Bedeutung von `lager[5]` erläutern
 
 **a)**
 ![L2_3a_Aufgabe3_Array_Deklaration](../../struktogramme/generated/svg/L2_3a_Aufgabe3_Array_Deklaration.svg)
@@ -133,13 +146,12 @@ print(erstes, laenge)
 
 ---
 
-### Aufgabe 4 (6)
+### Aufgabe 4: Array durchlaufen & filtern (6 Punkte)
 
 **Aufgabenstellung (aus Prüfungsblatt):**
+> **Thema:** BPE 7.1 – Schleife über Arrays
+>
 > Gegeben: `werte = [6, 17, 24, 31, 42, 55, 68, 73]`
-> a) Alle Werte ausgeben
-> b) Nur gerade Werte ausgeben
-> c) Neue Liste `halbiert` erzeugen (Ganzzahldivision durch 2)
 
 **a) Alle Werte ausgeben (2):**
 ![L2_4a_Aufgabe4_Array_Ausgeben_Index](../../struktogramme/generated/svg/L2_4a_Aufgabe4_Array_Ausgeben_Index.svg)
@@ -179,14 +191,21 @@ print(halbiert)
 
 ---
 
-### Aufgabe 5 (8)
+### Aufgabe 5: Algorithmen prüfen (8 Punkte)
 
 **Aufgabenstellung (aus Prüfungsblatt):**
+> **Thema:** BPE 7.2 – Algorithmenanalyse
+>
 > Gegeben: `werte = [29, 14, 37, 10, 18]`
-> Analysiere das fehlerhafte Struktogramm:
-> a) vermuteter Zweck
-> b) logischer Fehler + Auswirkung
-> c) Korrektur in BW-Operatornotation
+>
+> Das folgende Struktogramm wurde mit der BW-Operatorenliste (Draw.io-Library) entworfen und enthält **einen häufigen logischen Fehler** in einem Sortieralgorithmus.
+>
+> ![L2_5_Aufgabe5_Algorithmen_pruefen_Fehleranalyse](../../struktogramme/generated/svg/L2_5_Aufgabe5_Selection_Sort_Fehleranalyse.svg)
+> <!-- DOCX-ALT-TEXT: L2_5_Aufgabe5_Algorithmen_pruefen_Fehleranalyse -->
+> <!-- DOCX-EMBED-SVG: ../../struktogramme/generated/svg/L2_5_Aufgabe5_Selection_Sort_Fehleranalyse.svg -->
+> <!-- DOCX-EMBEDDING-HINT: Dieses Struktogramm wird bei DOCX-Export als eingebettete Grafik dargestellt für bessere Kopierbarkeit und Formatierung. -->
+>
+> Bearbeite die Teilaufgaben in dieser Reihenfolge:
 
 ![L2_5_Aufgabe5_Selection_Sort_Fehleranalyse](../../struktogramme/generated/svg/L2_5_Aufgabe5_Selection_Sort_Fehleranalyse.svg)
 <!-- DOCX-ALT-TEXT: L2_5_Aufgabe5_Selection_Sort_Fehleranalyse -->
@@ -204,47 +223,47 @@ Wenn werte[j] < werte[min_index], dann
 
 ---
 
-### Aufgabe 6: Bubble Sort (7)
+### Aufgabe 6: Lineare Suche implementieren (7 Punkte)
 
 **Aufgabenstellung (aus Prüfungsblatt):**
-> Gegeben: `zahlen = [42, 7, 19, 3, 25]`
-> Schreibe Struktogramm + Python-Code für **Bubble Sort (aufsteigend)**.
-> Gib die sortierte Ausgabe an.
+> **Thema:** BPE 7.2 – Suchalgorithmen (Lineare Suche)
+>
+> Gegeben: `kunden_ids = [104, 117, 109, 123, 111, 130]` und `such_id = 123`
+>
+> Schreibe ein Struktogramm und implementiere eine **Lineare Suche**, die den Index der gesuchten ID bestimmt.
 
 **a) Struktogramm (3):**
 
-![L2_6_Aufgabe6_Bubble_Sort](../../struktogramme/generated/svg/L2_6_Aufgabe6_Bubble_Sort.svg)
-<!-- DOCX-ALT-TEXT: L2_6_Aufgabe6_Bubble_Sort -->
-<!-- DOCX-EMBED-SVG: ../../struktogramme/generated/svg/L2_6_Aufgabe6_Bubble_Sort.svg -->
+![L2_6_Aufgabe6_Lineare_Suche](../../struktogramme/generated/svg/l2_6_aufgabe6_lineare_suche_block_01.svg)
+<!-- DOCX-ALT-TEXT: L2_6_Aufgabe6_Lineare_Suche -->
+<!-- DOCX-EMBED-SVG: ../../struktogramme/generated/svg/l2_6_aufgabe6_lineare_suche_block_01.svg -->
 <!-- DOCX-EMBEDDING-HINT: Dieses Struktogramm wird bei DOCX-Export als eingebettete Grafik dargestellt für bessere Kopierbarkeit und Formatierung. -->
 
 **b) Python (3):**
 ```python
-def loese_aufgabe6_bubble_sort(zahlen: list[int]) -> list[int]:
-    sortierte = zahlen.copy()
-    n = len(sortierte)
+def loese_aufgabe6_lineare_suche(kunden_ids: list[int], such_id: int) -> int:
+    for index in range(len(kunden_ids)):
+        if kunden_ids[index] == such_id:
+            return index
+    return -1
 
-    for i in range(n - 1):
-        for j in range(n - 1 - i):
-            if sortierte[j] > sortierte[j + 1]:
-                temp = sortierte[j]
-                sortierte[j] = sortierte[j + 1]
-                sortierte[j + 1] = temp
 
-    return sortierte
-
-print(loese_aufgabe6_bubble_sort([42, 7, 19, 3, 25]))
+treffer_index = loese_aufgabe6_lineare_suche([104, 117, 109, 123, 111, 130], 123)
+if treffer_index >= 0:
+    print(f"Treffer bei Index {treffer_index}")
+else:
+    print("Nicht gefunden")
 ```
 
 **c) Ausgabe (1):**
-`[3, 7, 19, 25, 42]`
+`Treffer bei Index 3`
 
 ---
 
 ## ⚠️ Korrekturhinweise
 
 - Teilpunkte bei korrekter Schleifenstruktur vergeben.
-- Bei Aufgabe 6 ist `if a[j] > a[j+1]` die zentrale Bedingung.
+- Bei Aufgabe 6 ist `if kunden_ids[index] == such_id` die zentrale Bedingung.
 - Bei Aufgabe 5 reicht ein präziser, korrekter Fehlerhinweis für hohe Teilpunktzahl.
 
 ---

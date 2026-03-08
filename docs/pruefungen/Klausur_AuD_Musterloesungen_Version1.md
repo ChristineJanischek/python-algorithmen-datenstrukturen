@@ -30,9 +30,18 @@ Grundlage: Inhalte aus [src/niveau/infodateien/L2_1 Information_Algorithmik.docx
 ### **Aufgabe 1: Verzweigung & Logik (3 Punkte)**
 
 **Aufgabenstellung (aus Prüfungsblatt):**
-> Ein Programm liest eine Ganzzahl (Alter) ein und gibt aus:
-> - „Jugendlicher" wenn das Alter < 18 ist
-> - „Erwachsener" wenn das Alter >= 18 ist
+> **Thema:** BPE 5.2 – Kontrollstrukturen (Alternativen)
+>
+> Schreibe ein Struktogramm und implementiere in Python:
+> > Ein Programm liest eine Ganzzahl (Alter) ein und gibt aus:
+> > - „Jugendlicher" wenn das Alter < 18 ist
+> > - „Erwachsener" wenn das Alter >= 18 ist
+>
+> **Anforderungen:**
+> - Struktogramm mit korrektem Aufbau (3 Punkte)
+> - Eingabe darstellen
+> - Verzweigung mit Bedingung
+> - Ausgaben korrekt positioniert
 
 **Erwartetes Struktogramm (BW-Standard - Grafische Notation):**
 
@@ -78,9 +87,14 @@ loese_aufgabe1_altersklassifikation()
 ### **Aufgabe 2: Schleife mit Bedingung (3 Punkte)**
 
 **Aufgabenstellung (aus Prüfungsblatt):**
-> Ein Programm liest positive Ganzzahlen ein, **solange** der Nutzer möchte.
-> Nach jeder Eingabe wird die **Summe aller bisherigen Zahlen** ausgegeben.
-> Das Programm endet, wenn die Eingabe **-1** ist.
+> **Thema:** BPE 5.2 – Schleifen & Bedingungen
+>
+> Schreibe ein Struktogramm und implementiere:
+> > Ein Programm liest positive Ganzzahlen ein, **solange** der Nutzer möchte.
+> > Nach jeder Eingabe wird die **Summe aller bisherigen Zahlen** ausgegeben.
+> > Das Programm endet, wenn die Eingabe **-1** ist.
+>
+> **Beispiel:**
 
 **Erwartetes Struktogramm (BW-Standard - Grafische Notation):**
 
@@ -153,9 +167,7 @@ loese_aufgabe2_summe_mit_break()
 ### **Aufgabe 3: Array-/Listen-Grundlagen (3 Punkte)**
 
 **Aufgabenstellung (aus Prüfungsblatt):**
-> a) Array (Liste) deklarieren und initialisieren: `Noten = [1, 2, 2, 3, 1, 5, 4, 2]`
-> b) 1. Element auslesen, letztes Element auf `1` setzen, Länge ausgeben
-> c) Bedeutung von `noten[3]` erklären
+> **Thema:** BPE 7.1 – Arrays (Listen) (Deklaration, Initialisierung, Zugriff)
 
 **a) Deklaration (1 Punkt)**
 
@@ -232,10 +244,9 @@ Das 4. Element des Arrays (der Liste), dessen Wert 3 ist.
 ### **Aufgabe 4: Array (Liste) durchlaufen & filtern (6 Punkte)**
 
 **Aufgabenstellung (aus Prüfungsblatt):**
+> **Thema:** BPE 7.1 – Schleife über Arrays (Listen)
+>
 > Gegeben ist das Array (Liste): `werte = [12, 45, 23, 67, 8, 34, 56, 11]`
-> a) Alle Werte zeilenweise ausgeben
-> b) Nur Werte > 30 ausgeben
-> c) Jedes Element verdoppeln und in einem neuen Array (Liste) speichern
 
 **Gegeben:** `werte = [12, 45, 23, 67, 8, 34, 56, 11]`
 
@@ -390,10 +401,20 @@ print(loese_aufgabe4c_verdoppeln_im_original([12, 45, 23, 67, 8, 34, 56, 11]))
 ### **Aufgabe 5: Algorithmen prüfen (8 Punkte)**
 
 **Aufgabenstellung (aus Prüfungsblatt):**
-> Analysiere das fehlerhafte Struktogramm.
-> a) Vermuteten Zweck beschreiben
-> b) Logischen Fehler und Auswirkung erläutern
-> c) BW-konforme Korrekturanweisung formulieren
+> **Thema:** BPE 7.2 – Algorithmenanalyse
+>
+> Gegeben ist das Array (Liste): `buchstaben = ['A', 'B', 'C', 'D', 'E', 'F', 'G']`
+>
+> **Aufgabe (Analyse eines fehlerhaften Struktogramms):**
+>
+> Das folgende Struktogramm wurde mit der BW-Operatorenliste (Draw.io-Library) entworfen und enthält **einen häufigen logischen Fehler**.
+>
+> ![L2_5_Aufgabe5_Algorithmen_pruefen_Fehleranalyse](../../struktogramme/generated/svg/L2_5_Aufgabe5_Algorithmen_pruefen_Fehleranalyse.svg)
+> <!-- DOCX-ALT-TEXT: L2_5_Aufgabe5_Algorithmen_pruefen_Fehleranalyse -->
+> <!-- DOCX-EMBED-SVG: ../../struktogramme/generated/svg/L2_5_Aufgabe5_Algorithmen_pruefen_Fehleranalyse.svg -->
+> <!-- DOCX-EMBEDDING-HINT: Dieses Struktogramm wird bei DOCX-Export als eingebettete Grafik dargestellt für bessere Kopierbarkeit und Formatierung. -->
+>
+> Bearbeite die Teilaufgaben in dieser Reihenfolge:
 
 **Gegeben:** `buchstaben = ['A', 'B', 'C', 'D', 'E', 'F', 'G']`
 
@@ -473,9 +494,15 @@ Die Wiederhole-solange-Bedingung bleibt wahr und das Programm kann hängen bleib
 ### **Aufgabe 6: Bubble Sort implementieren (7 Punkte)**
 
 **Aufgabenstellung (aus Prüfungsblatt):**
+> **Thema:** BPE 7.2 – Sortieralgorithmen (Bubble Sort)
+>
+> Gegeben ist das Array (Liste): `zahlen = [5, 2, 8, 1, 9]`
+>
+> **Aufgabe:**
+>
 > Schreibe ein Struktogramm und implementiere **Bubble Sort** in Python.
-> Verwende verschachtelte Schleifen und eine klare Tauschlogik.
-> Gib das sortierte Array (Liste) aus.
+>
+> **Anforderungen:**
 
 **Gegeben:** `zahlen = [5, 2, 8, 1, 9]`
 
