@@ -167,13 +167,13 @@ Schreibe Python-Code, um eine neue Liste `plus_fuenf` zu erzeugen, die jedes Ele
 ### **Aufgabe 5: Algorithmen prüfen (8 Punkte)**
 **Thema:** BPE 7.2 – Algorithmenanalyse
 
-Gegeben: `codes = ['K1', 'K2', 'K3', 'K4', 'K5', 'K6', 'K7']`
+Gegeben: `codes = ['K1', 'K2', 'K3', 'K4', 'K5', 'K6', 'K7']` (sortiert)
 
-Das folgende Struktogramm wurde mit der BW-Operatorenliste (Draw.io-Library) entworfen und enthält **einen häufigen logischen Fehler**.
+Das folgende Struktogramm wurde mit der BW-Operatorenliste (Draw.io-Library) entworfen und enthält **einen häufigen logischen Fehler** in einer Binärsuche.
 
-![L2_5_Aufgabe5_Algorithmen_pruefen_Fehleranalyse](../../struktogramme/generated/svg/L2_5_Aufgabe5_Algorithmen_pruefen_Fehleranalyse.svg)
-<!-- DOCX-ALT-TEXT: L2_5_Aufgabe5_Algorithmen_pruefen_Fehleranalyse -->
-<!-- DOCX-EMBED-SVG: ../../struktogramme/generated/svg/L2_5_Aufgabe5_Algorithmen_pruefen_Fehleranalyse.svg -->
+![L2_5_Aufgabe5_Binaere_Suche_Fehleranalyse](../../struktogramme/generated/svg/l2_5_aufgabe5_binaere_suche_fehleranalyse_block_01.svg)
+<!-- DOCX-ALT-TEXT: L2_5_Aufgabe5_Binaere_Suche_Fehleranalyse -->
+<!-- DOCX-EMBED-SVG: ../../struktogramme/generated/svg/l2_5_aufgabe5_binaere_suche_fehleranalyse_block_01.svg -->
 <!-- DOCX-EMBEDDING-HINT: Dieses Struktogramm wird bei DOCX-Export als eingebettete Grafik dargestellt für bessere Kopierbarkeit und Formatierung. -->
 
 Bearbeite die Teilaufgaben in dieser Reihenfolge:
@@ -184,7 +184,7 @@ Beschreibe in 2–4 Sätzen, **welchen Zweck** der Algorithmus wahrscheinlich ha
 
 **Anforderungen:**
 - Klare und nachvollziehbare Beschreibung
-- Bezug zu Array und Schleife
+- Bezug auf sortierte Liste und Halbierung des Suchbereichs
 
 ```
 [Lösung kommt in die digitale Lösungsdatei oder auf das ausgeteilte Papier!]
@@ -196,7 +196,7 @@ Nenne den **logischen Fehler** im Struktogramm und erkläre kurz die Auswirkung 
 
 **Anforderungen:**
 - Fehler klar identifiziert
-- Auswirkung nachvollziehbar erklärt
+- Auswirkung auf Suchbereich und Ergebnis nachvollziehbar erklärt
 
 ```
 [Lösung kommt in die digitale Lösungsdatei oder auf das ausgeteilte Papier!]
@@ -204,11 +204,11 @@ Nenne den **logischen Fehler** im Struktogramm und erkläre kurz die Auswirkung 
 
 **c) BW-konformer Korrekturvorschlag (2 Punkte)**
 
-Formuliere die fehlende/falsch platzierte Anweisung in **BW-konformer Operator-Notation**.
+Formuliere die falsch gesetzten Anweisungen im Vergleichszweig in **BW-konformer Operator-Notation** korrekt.
 
 **Anforderungen:**
 - Korrekte Notation nach Operatorenliste
-- Lösung ist logisch korrekt
+- Lösung ist für Binärsuche logisch korrekt
 
 ```
 [Lösung kommt in die digitale Lösungsdatei oder auf das ausgeteilte Papier!]
