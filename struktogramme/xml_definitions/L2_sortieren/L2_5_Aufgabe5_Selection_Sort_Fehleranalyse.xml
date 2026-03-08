@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='utf-8'?>
+<struktogramm>
+  <metadata>
+    <titel>Aufgabe 5: Selection Sort prüfen</titel>
+    <level>L2</level>
+    <kategorie>Sortieren</kategorie>
+    <autor>Klassenarbeit</autor>
+    <beschreibung>Analyse eines Selection-Sort-Algorithmus mit logischem Vergleichsfehler</beschreibung>
+  </metadata>
+  <inhalt>
+    <prozess typ="deklaration_und_initialisierung">n = Anzahl der Elemente des Arrays werte</prozess>
+    <zaehle>
+      <parameter>i von 0 bis n - 2, Schrittweite 1</parameter>
+      <inhalt>
+        <prozess typ="deklaration_und_initialisierung">min_index = i</prozess>
+        <zaehle>
+          <parameter>j von i + 1 bis n - 1, Schrittweite 1</parameter>
+          <inhalt>
+            <wenn>
+              <bedingung>werte[j] &gt; werte[min_index]</bedingung>
+              <dann>
+                <prozess typ="zuweisung">min_index = j</prozess>
+              </dann>
+            </wenn>
+          </inhalt>
+        </zaehle>
+        <wenn>
+          <bedingung>min_index != i</bedingung>
+          <dann>
+            <prozess typ="deklaration_und_initialisierung">temp = werte[i]</prozess>
+            <prozess typ="zuweisung">werte[i] = werte[min_index]</prozess>
+            <prozess typ="zuweisung">werte[min_index] = temp</prozess>
+          </dann>
+        </wenn>
+      </inhalt>
+    </zaehle>
+    <ausgabe typ="ausgabe">werte</ausgabe>
+  </inhalt>
+</struktogramm>

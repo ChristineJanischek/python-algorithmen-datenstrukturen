@@ -182,22 +182,24 @@ print(halbiert)
 ### Aufgabe 5 (8)
 
 **Aufgabenstellung (aus Prüfungsblatt):**
-> Gegeben: `ids = [101, 104, 110, 117, 130, 142, 155]`
+> Gegeben: `werte = [29, 14, 37, 10, 18]`
 > Analysiere das fehlerhafte Struktogramm:
 > a) vermuteter Zweck
 > b) logischer Fehler + Auswirkung
 > c) Korrektur in BW-Operatornotation
 
-![L2_5_Aufgabe5_Algorithmen_pruefen_Fehleranalyse](../../struktogramme/generated/svg/L2_5_Aufgabe5_Algorithmen_pruefen_Fehleranalyse.svg)
-<!-- DOCX-ALT-TEXT: L2_5_Aufgabe5_Algorithmen_pruefen_Fehleranalyse -->
-<!-- DOCX-EMBED-SVG: ../../struktogramme/generated/svg/L2_5_Aufgabe5_Algorithmen_pruefen_Fehleranalyse.svg -->
+![L2_5_Aufgabe5_Selection_Sort_Fehleranalyse](../../struktogramme/generated/svg/L2_5_Aufgabe5_Selection_Sort_Fehleranalyse.svg)
+<!-- DOCX-ALT-TEXT: L2_5_Aufgabe5_Selection_Sort_Fehleranalyse -->
+<!-- DOCX-EMBED-SVG: ../../struktogramme/generated/svg/L2_5_Aufgabe5_Selection_Sort_Fehleranalyse.svg -->
 <!-- DOCX-EMBEDDING-HINT: Dieses Struktogramm wird bei DOCX-Export als eingebettete Grafik dargestellt für bessere Kopierbarkeit und Formatierung. -->
 
-- **a) Zweck (3):** lineare Suche in einer Liste.
-- **b) Fehler (3):** Indexerhöhung im Nein-Zweig fehlt → kein Fortschritt, mögliche Endlosschleife.
+- **a) Zweck (3):** Selection Sort aufsteigend: in jedem Durchlauf das Minimum im Restfeld finden und an Position `i` tauschen.
+- **b) Fehler (3):** Die Vergleichsbedingung ist invertiert (`werte[j] > werte[min_index]` statt `<`). Dadurch wird das Maximum gewählt und die Reihenfolge wird nicht aufsteigend sortiert.
 - **c) Korrektur (2):**
 ```struktogramm
-Zuweisung: i = i + 1
+Wenn werte[j] < werte[min_index], dann
+    J
+        Zuweisung: min_index = j
 ```
 
 ---

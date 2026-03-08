@@ -179,13 +179,13 @@ Schreibe Python-Code, um eine neue Liste zu erzeugen, deren Elemente jeweils die
 ### **Aufgabe 5: Algorithmen prüfen (8 Punkte)**
 **Thema:** BPE 7.2 – Algorithmenanalyse
 
-Gegeben: `ids = [101, 104, 110, 117, 130, 142, 155]`
+Gegeben: `werte = [29, 14, 37, 10, 18]`
 
-Das folgende Struktogramm wurde mit der BW-Operatorenliste (Draw.io-Library) entworfen und enthält **einen häufigen logischen Fehler**.
+Das folgende Struktogramm wurde mit der BW-Operatorenliste (Draw.io-Library) entworfen und enthält **einen häufigen logischen Fehler** in einem Selection-Sort-Ablauf.
 
-![L2_5_Aufgabe5_Algorithmen_pruefen_Fehleranalyse](../../struktogramme/generated/svg/L2_5_Aufgabe5_Algorithmen_pruefen_Fehleranalyse.svg)
-<!-- DOCX-ALT-TEXT: L2_5_Aufgabe5_Algorithmen_pruefen_Fehleranalyse -->
-<!-- DOCX-EMBED-SVG: ../../struktogramme/generated/svg/L2_5_Aufgabe5_Algorithmen_pruefen_Fehleranalyse.svg -->
+![L2_5_Aufgabe5_Selection_Sort_Fehleranalyse](../../struktogramme/generated/svg/L2_5_Aufgabe5_Selection_Sort_Fehleranalyse.svg)
+<!-- DOCX-ALT-TEXT: L2_5_Aufgabe5_Selection_Sort_Fehleranalyse -->
+<!-- DOCX-EMBED-SVG: ../../struktogramme/generated/svg/L2_5_Aufgabe5_Selection_Sort_Fehleranalyse.svg -->
 <!-- DOCX-EMBEDDING-HINT: Dieses Struktogramm wird bei DOCX-Export als eingebettete Grafik dargestellt für bessere Kopierbarkeit und Formatierung. -->
 
 Bearbeite die Teilaufgaben in dieser Reihenfolge:
@@ -196,7 +196,7 @@ Beschreibe in 2–4 Sätzen, **welchen Zweck** der Algorithmus wahrscheinlich ha
 
 **Anforderungen:**
 - Klare und nachvollziehbare Beschreibung
-- Bezug zu Array und Operationen erkennbar
+- Bezug auf Minimumsuche und Tausch im Array erkennbar
 
 ```
 [Lösung kommt in die digitale Lösungsdatei oder auf das ausgeteilte Papier!]
@@ -208,7 +208,7 @@ Nenne den **logischen Fehler** im Struktogramm und erkläre kurz die Auswirkung 
 
 **Anforderungen:**
 - Fehler klar identifiziert
-- Auswirkung nachvollziehbar erklärt
+- Auswirkung auf Sortierreihenfolge nachvollziehbar erklärt
 - Konkretes Beispiel möglich
 
 ```
@@ -217,11 +217,11 @@ Nenne den **logischen Fehler** im Struktogramm und erkläre kurz die Auswirkung 
 
 **c) Korrekturvorschlag (2 Punkte)**
 
-Formuliere die fehlende/falsch platzierte Anweisung in **BW-konformer Operator-Notation**.
+Formuliere die falsch gesetzte Vergleichsbedingung in **BW-konformer Operator-Notation** korrekt.
 
 **Anforderungen:**
 - Korrekte Notation nach Operatorenliste
-- Lösung ist logisch korrekt
+- Lösung ist für aufsteigende Sortierung logisch korrekt
 
 ```
 [Lösung kommt in die digitale Lösungsdatei oder auf das ausgeteilte Papier!]
