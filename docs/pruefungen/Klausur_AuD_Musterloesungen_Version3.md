@@ -239,6 +239,22 @@ Wenn werte[j] < werte[min_index], dann
 <!-- DOCX-EMBED-SVG: ../../struktogramme/generated/svg/l2_6_aufgabe6_lineare_suche_block_01.svg -->
 <!-- DOCX-EMBEDDING-HINT: Dieses Struktogramm wird bei DOCX-Export als eingebettete Grafik dargestellt für bessere Kopierbarkeit und Formatierung. -->
 
+**BW-Notation (Operatorenliste v2.2):**
+```struktogramm
+Deklaration und Initialisierung: kunden_ids = [104, 117, 109, 123, 111, 130]
+Deklaration und Initialisierung: such_id = 123
+Deklaration und Initialisierung: index = 0
+Deklaration und Initialisierung: treffer_index = -1
+Wiederhole solange index < Anzahl der Elemente des Arrays kunden_ids AND treffer_index == -1
+    Wenn kunden_ids[index] == such_id, dann
+        J
+            Zuweisung: treffer_index = index
+    , sonst
+    N
+        Zuweisung: index = index + 1
+Ausgabe: treffer_index
+```
+
 **b) Python (3):**
 ```python
 def loese_aufgabe6_lineare_suche(kunden_ids: list[int], such_id: int) -> int:

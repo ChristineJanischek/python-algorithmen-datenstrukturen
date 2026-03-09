@@ -287,11 +287,17 @@ Zähle i von 0 bis n - 2, Schrittweite 1
         Wenn zahlen[j] < zahlen[min_index], dann
             J
                 Zuweisung: min_index = j
+            , sonst
+            N
+                [keine Anweisung]
     Wenn min_index != i, dann
         J
             Deklaration und Initialisierung: temp = zahlen[i]
             Zuweisung: zahlen[i] = zahlen[min_index]
             Zuweisung: zahlen[min_index] = temp
+        , sonst
+        N
+            [keine Anweisung]
 Ausgabe: zahlen
 ```
 
