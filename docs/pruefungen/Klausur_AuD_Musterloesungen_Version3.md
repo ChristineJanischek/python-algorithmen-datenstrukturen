@@ -243,16 +243,23 @@ Wenn werte[j] < werte[min_index], dann
 ```struktogramm
 Deklaration und Initialisierung: kunden_ids = [104, 117, 109, 123, 111, 130]
 Deklaration und Initialisierung: such_id = 123
-Deklaration und Initialisierung: index = 0
+Deklaration und Initialisierung: gefunden = falsch
 Deklaration und Initialisierung: treffer_index = -1
-Wiederhole solange index < Anzahl der Elemente des Arrays kunden_ids AND treffer_index == -1
+Deklaration und Initialisierung: n = Anzahl der Elemente des Arrays kunden_ids
+Zähle index von 0 bis n - 1, Schrittweite 1
     Wenn kunden_ids[index] == such_id, dann
         J
+            Zuweisung: gefunden = wahr
             Zuweisung: treffer_index = index
     , sonst
     N
-        Zuweisung: index = index + 1
-Ausgabe: treffer_index
+        [keine Anweisung]
+Wenn gefunden == wahr, dann
+    J
+        Ausgabe: "Treffer bei Index " + treffer_index
+    , sonst
+    N
+        Ausgabe: "Nicht gefunden"
 ```
 
 **b) Python (3):**

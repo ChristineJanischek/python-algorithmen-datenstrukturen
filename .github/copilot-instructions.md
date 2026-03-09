@@ -51,6 +51,11 @@ Zuweisung: array[index] = wert
 Anzahl der Elemente des Arrays array
 ```
 
+**Verzweigungs-Routine (verbindlich):**
+- Bei textbasierter Struktogramm-Notation immer die BW-Briefumschlag-Alternative verwenden.
+- Keine Kurzschreibweise wie `Wenn ... / J / N`.
+- Leere Zweige als `[keine Anweisung]` kennzeichnen.
+
 #### Häufige Patterns (aus Guide verwenden):
 
 - Array durchlaufen

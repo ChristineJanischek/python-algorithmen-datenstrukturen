@@ -54,6 +54,38 @@ Bei der textbasierten Darstellung verwenden wir Einrückungen und Schlüsselwör
 └────────────────────────────────────────────────────────┘
 ```
 
+### Verbindliche Routine: Briefumschlag-Alternative (BW)
+
+Diese Routine ist fuer alle Klausur- und Musterloesungsdokumente verbindlich.
+
+1. **Bedingung oben mittig formulieren:**
+    `Wenn bedingung, dann`
+2. **Ja-Fall links notieren:**
+    Zeile `J`, darunter die Ja-Anweisungen.
+3. **Nein-Fall rechts notieren:**
+    Zeilen `, sonst` und `N`, darunter die Nein-Anweisungen.
+4. **Keine Kurzschreibweise verwenden:**
+    Keine Slash-Schreibweise wie `Wenn ... / J / N` in Struktogramm-Notationen.
+5. **Bei leerem Zweig explizit markieren:**
+    Verwende `[keine Anweisung]`.
+
+**Standard-Template fuer Textnotation:**
+
+```struktogramm
+Wenn bedingung, dann
+     J
+          [Anweisungen Ja]
+     , sonst
+     N
+          [Anweisungen Nein oder [keine Anweisung]]
+```
+
+**Qualitaetscheck vor Abgabe:**
+- Enthalten alle Verzweigungen `Wenn ..., dann`?
+- Ist `J` vorhanden und eingerueckt?
+- Sind `, sonst` und `N` vorhanden und korrekt positioniert?
+- Sind leere Zweige als `[keine Anweisung]` markiert?
+
 ### Schleife
 
 ```
