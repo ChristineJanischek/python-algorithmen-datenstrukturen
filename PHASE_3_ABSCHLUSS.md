@@ -178,7 +178,7 @@ Konvertiert zu: 54 Zeilen SVG
                 ▼
 ┌─────────────────────────────────────────┐
 │  SVG BEREIT FÜR MARKDOWN-EMBEDDING     │
-│  (/struktogramme/generated/svg/*.svg)   │
+│  (/archiv/struktogramme/generated/svg/*.svg)   │
 └─────────────────────────────────────────┘
 ```
 
@@ -336,7 +336,7 @@ Ich habe ein Array mit Zahlen und möchte die Summe aller Elemente berechnen.
 
 Folgende Lösung zeigt das Struktogramm:
 
-![Array-Summe](../../struktogramme/generated/svg/L1_1_Array_Summe.svg)
+![Array-Summe](../../archiv/struktogramme/generated/svg/L1_1_Array_Summe.svg)
 
 ## Erklärung
 Das Struktogramm zeigt:

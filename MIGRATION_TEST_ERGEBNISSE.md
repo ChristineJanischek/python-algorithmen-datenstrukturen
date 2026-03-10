@@ -39,7 +39,7 @@
 ```
 
 ### NACHHER (SVG Grafik):
-![L2_1_Aufgabe1_Altersklassifikation](../../struktogramme/generated/svg/L2_1_Aufgabe1_Altersklassifikation.svg)
+![L2_1_Aufgabe1_Altersklassifikation](../../archiv/struktogramme/generated/svg/L2_1_Aufgabe1_Altersklassifikation.svg)
 
 ---
 
@@ -128,11 +128,11 @@
 Alle SVGs sind jetzt über relative Links eingebunden:
 
 ```markdown
-![L2_1_Aufgabe1_Altersklassifikation](../../struktogramme/generated/svg/L2_1_Aufgabe1_Altersklassifikation.svg)
+![L2_1_Aufgabe1_Altersklassifikation](../../archiv/struktogramme/generated/svg/L2_1_Aufgabe1_Altersklassifikation.svg)
 
-![L2_2_Aufgabe2_Summe](../../struktogramme/generated/svg/L2_2_Aufgabe2_Summe.svg)
+![L2_2_Aufgabe2_Summe](../../archiv/struktogramme/generated/svg/L2_2_Aufgabe2_Summe.svg)
 
-![L2_6_Aufgabe6_Bubble_Sort](../../struktogramme/generated/svg/L2_6_Aufgabe6_Bubble_Sort.svg)
+![L2_6_Aufgabe6_Bubble_Sort](../../archiv/struktogramme/generated/svg/L2_6_Aufgabe6_Bubble_Sort.svg)
 ```
 
 ---
@@ -169,7 +169,7 @@ Alle SVGs sind jetzt über relative Links eingebunden:
 
 **Erstellt:**
 - ✅ 9 XML-Definitionen in `struktogramme/xml_definitions/L2_sortieren/`
-- ✅ 9 SVG-Grafiken in `struktogramme/generated/svg/`
+- ✅ 9 SVG-Grafiken in `archiv/struktogramme/generated/svg/`
 - ✅ 1 Markdown-Datei aktualisiert: `docs/pruefungen/Klausur_L2_2_1_Musterloesungen.md`
 
 **Größen:**

@@ -47,9 +47,9 @@ SVG-Basis: BW-Formvorlagen aus `apps/drawio-extension/stencil.xml`.
 
 **Struktogramm (BW-Standard, SVG):**
 
-![L2_VarA_Aufgabe1_Bestanden](../../struktogramme/generated/svg/L2_VarA_Aufgabe1_Bestanden.svg)
+![L2_VarA_Aufgabe1_Bestanden](../../archiv/struktogramme/generated/svg/L2_VarA_Aufgabe1_Bestanden.svg)
 <!-- DOCX-ALT-TEXT: L2_VarA_Aufgabe1_Bestanden -->
-<!-- DOCX-EMBED-SVG: ../../struktogramme/generated/svg/L2_VarA_Aufgabe1_Bestanden.svg -->
+<!-- DOCX-EMBED-SVG: ../../archiv/struktogramme/generated/svg/L2_VarA_Aufgabe1_Bestanden.svg -->
 <!-- DOCX-EMBEDDING-HINT: Dieses Struktogramm wird bei DOCX-Export als eingebettete Grafik dargestellt für bessere Kopierbarkeit und Formatierung. -->
 
 **BW-Notation (Operatorenliste v2.2):**
@@ -93,9 +93,9 @@ def loese_aufgabe1_bestanden() -> None:
 
 **Struktogramm (BW-Standard, SVG):**
 
-![L2_VarA_Aufgabe2_Anzahl_Bis_Abbruch](../../struktogramme/generated/svg/L2_VarA_Aufgabe2_Anzahl_Bis_Abbruch.svg)
+![L2_VarA_Aufgabe2_Anzahl_Bis_Abbruch](../../archiv/struktogramme/generated/svg/L2_VarA_Aufgabe2_Anzahl_Bis_Abbruch.svg)
 <!-- DOCX-ALT-TEXT: L2_VarA_Aufgabe2_Anzahl_Bis_Abbruch -->
-<!-- DOCX-EMBED-SVG: ../../struktogramme/generated/svg/L2_VarA_Aufgabe2_Anzahl_Bis_Abbruch.svg -->
+<!-- DOCX-EMBED-SVG: ../../archiv/struktogramme/generated/svg/L2_VarA_Aufgabe2_Anzahl_Bis_Abbruch.svg -->
 <!-- DOCX-EMBEDDING-HINT: Dieses Struktogramm wird bei DOCX-Export als eingebettete Grafik dargestellt für bessere Kopierbarkeit und Formatierung. -->
 
 **BW-Notation (Operatorenliste v2.2):**
@@ -137,9 +137,9 @@ def loese_aufgabe2_anzahl() -> None:
 
 **a) Deklaration (1):**
 
-![L2_3a_Aufgabe3_Array_Deklaration](../../struktogramme/generated/svg/L2_3a_Aufgabe3_Array_Deklaration.svg)
+![L2_3a_Aufgabe3_Array_Deklaration](../../archiv/struktogramme/generated/svg/L2_3a_Aufgabe3_Array_Deklaration.svg)
 <!-- DOCX-ALT-TEXT: L2_3a_Aufgabe3_Array_Deklaration -->
-<!-- DOCX-EMBED-SVG: ../../struktogramme/generated/svg/L2_3a_Aufgabe3_Array_Deklaration.svg -->
+<!-- DOCX-EMBED-SVG: ../../archiv/struktogramme/generated/svg/L2_3a_Aufgabe3_Array_Deklaration.svg -->
 <!-- DOCX-EMBEDDING-HINT: Dieses Struktogramm wird bei DOCX-Export als eingebettete Grafik dargestellt für bessere Kopierbarkeit und Formatierung. -->
 
 ```python
@@ -148,9 +148,9 @@ temperaturen = [18, 21, 19, 23, 17, 20, 22, 16]
 
 **b) Zugriff (1):**
 
-![L2_3b_Aufgabe3_Array_Zugriff](../../struktogramme/generated/svg/L2_3b_Aufgabe3_Array_Zugriff.svg)
+![L2_3b_Aufgabe3_Array_Zugriff](../../archiv/struktogramme/generated/svg/L2_3b_Aufgabe3_Array_Zugriff.svg)
 <!-- DOCX-ALT-TEXT: L2_3b_Aufgabe3_Array_Zugriff -->
-<!-- DOCX-EMBED-SVG: ../../struktogramme/generated/svg/L2_3b_Aufgabe3_Array_Zugriff.svg -->
+<!-- DOCX-EMBED-SVG: ../../archiv/struktogramme/generated/svg/L2_3b_Aufgabe3_Array_Zugriff.svg -->
 <!-- DOCX-EMBEDDING-HINT: Dieses Struktogramm wird bei DOCX-Export als eingebettete Grafik dargestellt für bessere Kopierbarkeit und Formatierung. -->
 
 ```python
@@ -176,9 +176,9 @@ Gegeben: `werte = [14, 9, 31, 27, 45, 12, 6, 39]`
 
 **a) Alle Werte ausgeben (2):**
 
-![L2_4a_Aufgabe4_Array_Ausgeben_Index](../../struktogramme/generated/svg/L2_4a_Aufgabe4_Array_Ausgeben_Index.svg)
+![L2_4a_Aufgabe4_Array_Ausgeben_Index](../../archiv/struktogramme/generated/svg/L2_4a_Aufgabe4_Array_Ausgeben_Index.svg)
 <!-- DOCX-ALT-TEXT: L2_4a_Aufgabe4_Array_Ausgeben_Index -->
-<!-- DOCX-EMBED-SVG: ../../struktogramme/generated/svg/L2_4a_Aufgabe4_Array_Ausgeben_Index.svg -->
+<!-- DOCX-EMBED-SVG: ../../archiv/struktogramme/generated/svg/L2_4a_Aufgabe4_Array_Ausgeben_Index.svg -->
 <!-- DOCX-EMBEDDING-HINT: Dieses Struktogramm wird bei DOCX-Export als eingebettete Grafik dargestellt für bessere Kopierbarkeit und Formatierung. -->
 
 ```python
@@ -188,9 +188,9 @@ for wert in werte:
 
 **b) Durch 3 teilbar (2):**
 
-![L2_4b_Aufgabe4_Array_Filtern](../../struktogramme/generated/svg/L2_4b_Aufgabe4_Array_Filtern.svg)
+![L2_4b_Aufgabe4_Array_Filtern](../../archiv/struktogramme/generated/svg/L2_4b_Aufgabe4_Array_Filtern.svg)
 <!-- DOCX-ALT-TEXT: L2_4b_Aufgabe4_Array_Filtern -->
-<!-- DOCX-EMBED-SVG: ../../struktogramme/generated/svg/L2_4b_Aufgabe4_Array_Filtern.svg -->
+<!-- DOCX-EMBED-SVG: ../../archiv/struktogramme/generated/svg/L2_4b_Aufgabe4_Array_Filtern.svg -->
 <!-- DOCX-EMBEDDING-HINT: Dieses Struktogramm wird bei DOCX-Export als eingebettete Grafik dargestellt für bessere Kopierbarkeit und Formatierung. -->
 
 ```python
@@ -201,9 +201,9 @@ for wert in werte:
 
 **c) Neue Liste plus_fuenf (2):**
 
-![L2_4c1_Aufgabe4_Array_Verdoppeln_Neue_Liste](../../struktogramme/generated/svg/L2_4c1_Aufgabe4_Array_Verdoppeln_Neue_Liste.svg)
+![L2_4c1_Aufgabe4_Array_Verdoppeln_Neue_Liste](../../archiv/struktogramme/generated/svg/L2_4c1_Aufgabe4_Array_Verdoppeln_Neue_Liste.svg)
 <!-- DOCX-ALT-TEXT: L2_4c1_Aufgabe4_Array_Verdoppeln_Neue_Liste -->
-<!-- DOCX-EMBED-SVG: ../../struktogramme/generated/svg/L2_4c1_Aufgabe4_Array_Verdoppeln_Neue_Liste.svg -->
+<!-- DOCX-EMBED-SVG: ../../archiv/struktogramme/generated/svg/L2_4c1_Aufgabe4_Array_Verdoppeln_Neue_Liste.svg -->
 <!-- DOCX-EMBEDDING-HINT: Dieses Struktogramm wird bei DOCX-Export als eingebettete Grafik dargestellt für bessere Kopierbarkeit und Formatierung. -->
 
 ```python
@@ -224,18 +224,18 @@ print(plus_fuenf)
 >
 > Das folgende Struktogramm wurde mit der BW-Operatorenliste (Draw.io-Library) entworfen und enthält **einen häufigen logischen Fehler** in einem Suchalgorithmus.
 >
-> ![L2_5_Aufgabe5_Algorithmen_pruefen_Fehleranalyse](../../struktogramme/generated/svg/L2_5_Aufgabe5_Binaere_Suche_Fehleranalyse.svg)
+> ![L2_5_Aufgabe5_Algorithmen_pruefen_Fehleranalyse](../../archiv/struktogramme/generated/svg/L2_5_Aufgabe5_Binaere_Suche_Fehleranalyse.svg)
 > <!-- DOCX-ALT-TEXT: L2_5_Aufgabe5_Algorithmen_pruefen_Fehleranalyse -->
-> <!-- DOCX-EMBED-SVG: ../../struktogramme/generated/svg/L2_5_Aufgabe5_Binaere_Suche_Fehleranalyse.svg -->
+> <!-- DOCX-EMBED-SVG: ../../archiv/struktogramme/generated/svg/L2_5_Aufgabe5_Binaere_Suche_Fehleranalyse.svg -->
 > <!-- DOCX-EMBEDDING-HINT: Dieses Struktogramm wird bei DOCX-Export als eingebettete Grafik dargestellt für bessere Kopierbarkeit und Formatierung. -->
 >
 > Bearbeite die Teilaufgaben in dieser Reihenfolge:
 
 **Fehlerhaftes Struktogramm:**
 
-![L2_5_Aufgabe5_Binaere_Suche_Fehleranalyse](../../struktogramme/generated/svg/L2_5_Aufgabe5_Binaere_Suche_Fehleranalyse.svg)
+![L2_5_Aufgabe5_Binaere_Suche_Fehleranalyse](../../archiv/struktogramme/generated/svg/L2_5_Aufgabe5_Binaere_Suche_Fehleranalyse.svg)
 <!-- DOCX-ALT-TEXT: L2_5_Aufgabe5_Binaere_Suche_Fehleranalyse -->
-<!-- DOCX-EMBED-SVG: ../../struktogramme/generated/svg/L2_5_Aufgabe5_Binaere_Suche_Fehleranalyse.svg -->
+<!-- DOCX-EMBED-SVG: ../../archiv/struktogramme/generated/svg/L2_5_Aufgabe5_Binaere_Suche_Fehleranalyse.svg -->
 <!-- DOCX-EMBEDDING-HINT: Dieses Struktogramm wird bei DOCX-Export als eingebettete Grafik dargestellt für bessere Kopierbarkeit und Formatierung. -->
 
 **a) Zweck (3):**
@@ -272,9 +272,9 @@ Wenn codes[mitte] < ziel, dann
 
 **a) Struktogramm (3):**
 
-![L2_6_Aufgabe6_Selection_Sort](../../struktogramme/generated/svg/L2_6_Aufgabe6_Selection_Sort.svg)
+![L2_6_Aufgabe6_Selection_Sort](../../archiv/struktogramme/generated/svg/L2_6_Aufgabe6_Selection_Sort.svg)
 <!-- DOCX-ALT-TEXT: L2_6_Aufgabe6_Selection_Sort -->
-<!-- DOCX-EMBED-SVG: ../../struktogramme/generated/svg/L2_6_Aufgabe6_Selection_Sort.svg -->
+<!-- DOCX-EMBED-SVG: ../../archiv/struktogramme/generated/svg/L2_6_Aufgabe6_Selection_Sort.svg -->
 <!-- DOCX-EMBEDDING-HINT: Dieses Struktogramm wird bei DOCX-Export als eingebettete Grafik dargestellt für bessere Kopierbarkeit und Formatierung. -->
 
 **BW-Notation (Operatorenliste v2.2):**

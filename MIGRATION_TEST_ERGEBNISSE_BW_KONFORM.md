@@ -288,7 +288,7 @@ def _render_funktionsaufruf(self, element: ET.Element, x: int, width: int) -> st
 
 **Prüfung:**
 ```bash
-grep -A5 "ALTERNATIVE" struktogramme/generated/svg/L2_1_Aufgabe1_Altersklassifikation.svg
+grep -A5 "ALTERNATIVE" archiv/struktogramme/generated/svg/L2_1_Aufgabe1_Altersklassifikation.svg
 ```
 
 **Resultat:**
@@ -308,7 +308,7 @@ grep -A5 "ALTERNATIVE" struktogramme/generated/svg/L2_1_Aufgabe1_Altersklassifik
 
 **Prüfung:**
 ```bash
-grep -A10 "WHILE-SCHLEIFE" struktogramme/generated/svg/L2_2_Aufgabe2_Summe.svg
+grep -A10 "WHILE-SCHLEIFE" archiv/struktogramme/generated/svg/L2_2_Aufgabe2_Summe.svg
 ```
 
 **Resultat:**
@@ -327,7 +327,7 @@ grep -A10 "WHILE-SCHLEIFE" struktogramme/generated/svg/L2_2_Aufgabe2_Summe.svg
 
 **Prüfung:**
 ```bash
-grep "label" struktogramme/generated/svg/L2_3a_Aufgabe3_Array_Deklaration.svg
+grep "label" archiv/struktogramme/generated/svg/L2_3a_Aufgabe3_Array_Deklaration.svg
 ```
 
 **Resultat:**
@@ -351,7 +351,7 @@ grep "label" struktogramme/generated/svg/L2_3a_Aufgabe3_Array_Deklaration.svg
 
 **Prüfung:**
 ```bash
-head -100 struktogramme/generated/svg/L2_6_Aufgabe6_Bubble_Sort.svg | grep -E "(FOR-SCHLEIFE|ALTERNATIVE|line x1)"
+head -100 archiv/struktogramme/generated/svg/L2_6_Aufgabe6_Bubble_Sort.svg | grep -E "(FOR-SCHLEIFE|ALTERNATIVE|line x1)"
 ```
 
 **Resultat:**
@@ -451,7 +451,7 @@ bash .github/hooks/pre-commit-xml-svg
 ```markdown
 ### Musterlösung
 
-![Aufgabe 1: Altersklassifikation](../../struktogramme/generated/svg/L2_1_Aufgabe1_Altersklassifikation.svg)
+![Aufgabe 1: Altersklassifikation](../../archiv/struktogramme/generated/svg/L2_1_Aufgabe1_Altersklassifikation.svg)
 ```
 
 **Vorteile:**
@@ -565,7 +565,7 @@ bash .github/hooks/pre-commit-xml-svg
 2. **Git Commit:**
    ```bash
    git add struktogramme/converter/struktogramm_xml_renderer.py
-   git add struktogramme/generated/svg/L2_*.svg
+   git add archiv/struktogramme/generated/svg/L2_*.svg
    git add docs/pruefungen/Klausur_L2_2_1_Musterloesungen.md
    git add docs/handbuch/BW_FORMEN_VERGLEICH.md
    git commit -m "fix: BW-konforme Struktogramm-Formen implementiert
@@ -627,7 +627,7 @@ struktogramme/xml_definitions/L2_sortieren/
 **SVG-Outputs:**
 
 ```
-struktogramme/generated/svg/
+archiv/struktogramme/generated/svg/
 ├── L2_1_Aufgabe1_Altersklassifikation.svg (1.9K)
 ├── L2_2_Aufgabe2_Summe.svg (2.4K)
 ├── L2_2b_Aufgabe2_Summe_Break.svg (2.7K)
@@ -713,7 +713,7 @@ python3 struktogramme/converter/struktogramm_xml_renderer.py \
 ```bash
 for xml in struktogramme/xml_definitions/L2_sortieren/*.xml; do
     python3 struktogramme/converter/struktogramm_xml_renderer.py "$xml" \
-        "struktogramme/generated/svg/$(basename "$xml" .xml).svg"
+        "archiv/struktogramme/generated/svg/$(basename "$xml" .xml).svg"
 done
 ```
 
@@ -729,7 +729,7 @@ bash .github/hooks/pre-commit-xml-svg
 
 **SVG visuell prüfen:**
 ```bash
-head -100 struktogramme/generated/svg/DATEI.svg
+head -100 archiv/struktogramme/generated/svg/DATEI.svg
 ```
 
 ---

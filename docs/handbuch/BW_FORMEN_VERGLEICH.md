@@ -203,7 +203,7 @@ Kombiniert alle Formen:
 └─┴─────────────────────────────────────┘
 ```
 
-**Siehe:** [L2_6_Aufgabe6_Bubble_Sort.svg](../../struktogramme/generated/svg/L2_6_Aufgabe6_Bubble_Sort.svg)
+**Siehe:** [L2_6_Aufgabe6_Bubble_Sort.svg](../../archiv/struktogramme/generated/svg/L2_6_Aufgabe6_Bubble_Sort.svg)
 
 ---
 

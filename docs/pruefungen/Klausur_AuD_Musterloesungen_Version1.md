@@ -45,9 +45,9 @@ Grundlage: Inhalte aus [src/niveau/infodateien/L2_1 Information_Algorithmik.docx
 
 **Erwartetes Struktogramm (BW-Standard - Grafische Notation):**
 
-![L2_1_Aufgabe1_Altersklassifikation](../../struktogramme/generated/svg/L2_1_Aufgabe1_Altersklassifikation.svg)
+![L2_1_Aufgabe1_Altersklassifikation](../../archiv/struktogramme/generated/svg/L2_1_Aufgabe1_Altersklassifikation.svg)
 <!-- DOCX-ALT-TEXT: L2_1_Aufgabe1_Altersklassifikation -->
-<!-- DOCX-EMBED-SVG: ../../struktogramme/generated/svg/L2_1_Aufgabe1_Altersklassifikation.svg -->
+<!-- DOCX-EMBED-SVG: ../../archiv/struktogramme/generated/svg/L2_1_Aufgabe1_Altersklassifikation.svg -->
 <!-- DOCX-EMBEDDING-HINT: Dieses Struktogramm wird bei DOCX-Export als eingebettete Grafik dargestellt für bessere Kopierbarkeit und Formatierung. -->
 
 **Python-Code (Musterlösung):**
@@ -98,9 +98,9 @@ loese_aufgabe1_altersklassifikation()
 
 **Erwartetes Struktogramm (BW-Standard - Grafische Notation):**
 
-![L2_2_Aufgabe2_Summe](../../struktogramme/generated/svg/L2_2_Aufgabe2_Summe.svg)
+![L2_2_Aufgabe2_Summe](../../archiv/struktogramme/generated/svg/L2_2_Aufgabe2_Summe.svg)
 <!-- DOCX-ALT-TEXT: L2_2_Aufgabe2_Summe -->
-<!-- DOCX-EMBED-SVG: ../../struktogramme/generated/svg/L2_2_Aufgabe2_Summe.svg -->
+<!-- DOCX-EMBED-SVG: ../../archiv/struktogramme/generated/svg/L2_2_Aufgabe2_Summe.svg -->
 <!-- DOCX-EMBEDDING-HINT: Dieses Struktogramm wird bei DOCX-Export als eingebettete Grafik dargestellt für bessere Kopierbarkeit und Formatierung. -->
 
 **Python-Code (Musterlösung):**
@@ -142,9 +142,9 @@ loese_aufgabe2_summe_bis_abbruch()
 
 **Alternative Akzeptabel:**
 
-![L2_2b_Aufgabe2_Summe_Break](../../struktogramme/generated/svg/L2_2b_Aufgabe2_Summe_Break.svg)
+![L2_2b_Aufgabe2_Summe_Break](../../archiv/struktogramme/generated/svg/L2_2b_Aufgabe2_Summe_Break.svg)
 <!-- DOCX-ALT-TEXT: L2_2b_Aufgabe2_Summe_Break -->
-<!-- DOCX-EMBED-SVG: ../../struktogramme/generated/svg/L2_2b_Aufgabe2_Summe_Break.svg -->
+<!-- DOCX-EMBED-SVG: ../../archiv/struktogramme/generated/svg/L2_2b_Aufgabe2_Summe_Break.svg -->
 <!-- DOCX-EMBEDDING-HINT: Dieses Struktogramm wird bei DOCX-Export als eingebettete Grafik dargestellt für bessere Kopierbarkeit und Formatierung. -->
 
 ```python
@@ -173,9 +173,9 @@ loese_aufgabe2_summe_mit_break()
 
 **Musterlösung:**
 
-![L2_3a_Aufgabe3_Array_Deklaration](../../struktogramme/generated/svg/L2_3a_Aufgabe3_Array_Deklaration.svg)
+![L2_3a_Aufgabe3_Array_Deklaration](../../archiv/struktogramme/generated/svg/L2_3a_Aufgabe3_Array_Deklaration.svg)
 <!-- DOCX-ALT-TEXT: L2_3a_Aufgabe3_Array_Deklaration -->
-<!-- DOCX-EMBED-SVG: ../../struktogramme/generated/svg/L2_3a_Aufgabe3_Array_Deklaration.svg -->
+<!-- DOCX-EMBED-SVG: ../../archiv/struktogramme/generated/svg/L2_3a_Aufgabe3_Array_Deklaration.svg -->
 <!-- DOCX-EMBEDDING-HINT: Dieses Struktogramm wird bei DOCX-Export als eingebettete Grafik dargestellt für bessere Kopierbarkeit und Formatierung. -->
 
 ```python
@@ -197,9 +197,9 @@ print(loese_aufgabe3a_deklaration())
 
 **Musterlösung:**
 
-![L2_3b_Aufgabe3_Array_Zugriff](../../struktogramme/generated/svg/L2_3b_Aufgabe3_Array_Zugriff.svg)
+![L2_3b_Aufgabe3_Array_Zugriff](../../archiv/struktogramme/generated/svg/L2_3b_Aufgabe3_Array_Zugriff.svg)
 <!-- DOCX-ALT-TEXT: L2_3b_Aufgabe3_Array_Zugriff -->
-<!-- DOCX-EMBED-SVG: ../../struktogramme/generated/svg/L2_3b_Aufgabe3_Array_Zugriff.svg -->
+<!-- DOCX-EMBED-SVG: ../../archiv/struktogramme/generated/svg/L2_3b_Aufgabe3_Array_Zugriff.svg -->
 <!-- DOCX-EMBEDDING-HINT: Dieses Struktogramm wird bei DOCX-Export als eingebettete Grafik dargestellt für bessere Kopierbarkeit und Formatierung. -->
 
 ```python
@@ -256,9 +256,9 @@ Das 4. Element des Arrays (der Liste), dessen Wert 3 ist.
 
 **Struktogramm (1 Punkt):**
 
-![L2_4a_Aufgabe4_Array_Ausgeben_Index](../../struktogramme/generated/svg/L2_4a_Aufgabe4_Array_Ausgeben_Index.svg)
+![L2_4a_Aufgabe4_Array_Ausgeben_Index](../../archiv/struktogramme/generated/svg/L2_4a_Aufgabe4_Array_Ausgeben_Index.svg)
 <!-- DOCX-ALT-TEXT: L2_4a_Aufgabe4_Array_Ausgeben_Index -->
-<!-- DOCX-EMBED-SVG: ../../struktogramme/generated/svg/L2_4a_Aufgabe4_Array_Ausgeben_Index.svg -->
+<!-- DOCX-EMBED-SVG: ../../archiv/struktogramme/generated/svg/L2_4a_Aufgabe4_Array_Ausgeben_Index.svg -->
 <!-- DOCX-EMBEDDING-HINT: Dieses Struktogramm wird bei DOCX-Export als eingebettete Grafik dargestellt für bessere Kopierbarkeit und Formatierung. -->
 
 **Python-Code (1 Punkt):**
@@ -306,9 +306,9 @@ loese_aufgabe4a_werte_ausgeben_while([12, 45, 23, 67, 8, 34, 56, 11])
 
 **Musterlösung:**
 
-![L2_4b_Aufgabe4_Array_Filtern](../../struktogramme/generated/svg/L2_4b_Aufgabe4_Array_Filtern.svg)
+![L2_4b_Aufgabe4_Array_Filtern](../../archiv/struktogramme/generated/svg/L2_4b_Aufgabe4_Array_Filtern.svg)
 <!-- DOCX-ALT-TEXT: L2_4b_Aufgabe4_Array_Filtern -->
-<!-- DOCX-EMBED-SVG: ../../struktogramme/generated/svg/L2_4b_Aufgabe4_Array_Filtern.svg -->
+<!-- DOCX-EMBED-SVG: ../../archiv/struktogramme/generated/svg/L2_4b_Aufgabe4_Array_Filtern.svg -->
 <!-- DOCX-EMBEDDING-HINT: Dieses Struktogramm wird bei DOCX-Export als eingebettete Grafik dargestellt für bessere Kopierbarkeit und Formatierung. -->
 
 ```python
@@ -323,9 +323,9 @@ loese_aufgabe4b_filtere_groesser_30([12, 45, 23, 67, 8, 34, 56, 11])
 
 **Alternative:**
 
-![L2_4b_Aufgabe4_Array_Filtern](../../struktogramme/generated/svg/L2_4b_Aufgabe4_Array_Filtern.svg)
+![L2_4b_Aufgabe4_Array_Filtern](../../archiv/struktogramme/generated/svg/L2_4b_Aufgabe4_Array_Filtern.svg)
 <!-- DOCX-ALT-TEXT: L2_4b_Aufgabe4_Array_Filtern -->
-<!-- DOCX-EMBED-SVG: ../../struktogramme/generated/svg/L2_4b_Aufgabe4_Array_Filtern.svg -->
+<!-- DOCX-EMBED-SVG: ../../archiv/struktogramme/generated/svg/L2_4b_Aufgabe4_Array_Filtern.svg -->
 <!-- DOCX-EMBEDDING-HINT: Dieses Struktogramm wird bei DOCX-Export als eingebettete Grafik dargestellt für bessere Kopierbarkeit und Formatierung. -->
 
 ```python
@@ -358,9 +358,9 @@ loese_aufgabe4b_filtere_groesser_30_index([12, 45, 23, 67, 8, 34, 56, 11])
 
 **Musterlösung 1 (neue Liste mit Schleife):**
 
-![L2_4c1_Aufgabe4_Array_Verdoppeln_Neue_Liste](../../struktogramme/generated/svg/L2_4c1_Aufgabe4_Array_Verdoppeln_Neue_Liste.svg)
+![L2_4c1_Aufgabe4_Array_Verdoppeln_Neue_Liste](../../archiv/struktogramme/generated/svg/L2_4c1_Aufgabe4_Array_Verdoppeln_Neue_Liste.svg)
 <!-- DOCX-ALT-TEXT: L2_4c1_Aufgabe4_Array_Verdoppeln_Neue_Liste -->
-<!-- DOCX-EMBED-SVG: ../../struktogramme/generated/svg/L2_4c1_Aufgabe4_Array_Verdoppeln_Neue_Liste.svg -->
+<!-- DOCX-EMBED-SVG: ../../archiv/struktogramme/generated/svg/L2_4c1_Aufgabe4_Array_Verdoppeln_Neue_Liste.svg -->
 <!-- DOCX-EMBEDDING-HINT: Dieses Struktogramm wird bei DOCX-Export als eingebettete Grafik dargestellt für bessere Kopierbarkeit und Formatierung. -->
 
 ```python
@@ -376,9 +376,9 @@ print(loese_aufgabe4c_verdoppeln_neue_liste([12, 45, 23, 67, 8, 34, 56, 11]))  #
 
 **Musterlösung 2 (modifizieren im Original):**
 
-![L2_4c2_Aufgabe4_Array_Verdoppeln_Original](../../struktogramme/generated/svg/L2_4c2_Aufgabe4_Array_Verdoppeln_Original.svg)
+![L2_4c2_Aufgabe4_Array_Verdoppeln_Original](../../archiv/struktogramme/generated/svg/L2_4c2_Aufgabe4_Array_Verdoppeln_Original.svg)
 <!-- DOCX-ALT-TEXT: L2_4c2_Aufgabe4_Array_Verdoppeln_Original -->
-<!-- DOCX-EMBED-SVG: ../../struktogramme/generated/svg/L2_4c2_Aufgabe4_Array_Verdoppeln_Original.svg -->
+<!-- DOCX-EMBED-SVG: ../../archiv/struktogramme/generated/svg/L2_4c2_Aufgabe4_Array_Verdoppeln_Original.svg -->
 <!-- DOCX-EMBEDDING-HINT: Dieses Struktogramm wird bei DOCX-Export als eingebettete Grafik dargestellt für bessere Kopierbarkeit und Formatierung. -->
 
 ```python
@@ -409,9 +409,9 @@ print(loese_aufgabe4c_verdoppeln_im_original([12, 45, 23, 67, 8, 34, 56, 11]))
 >
 > Das folgende Struktogramm wurde mit der BW-Operatorenliste (Draw.io-Library) entworfen und enthält **einen häufigen logischen Fehler**.
 >
-> ![L2_5_Aufgabe5_Algorithmen_pruefen_Fehleranalyse](../../struktogramme/generated/svg/L2_5_Aufgabe5_Algorithmen_pruefen_Fehleranalyse.svg)
+> ![L2_5_Aufgabe5_Algorithmen_pruefen_Fehleranalyse](../../archiv/struktogramme/generated/svg/L2_5_Aufgabe5_Algorithmen_pruefen_Fehleranalyse.svg)
 > <!-- DOCX-ALT-TEXT: L2_5_Aufgabe5_Algorithmen_pruefen_Fehleranalyse -->
-> <!-- DOCX-EMBED-SVG: ../../struktogramme/generated/svg/L2_5_Aufgabe5_Algorithmen_pruefen_Fehleranalyse.svg -->
+> <!-- DOCX-EMBED-SVG: ../../archiv/struktogramme/generated/svg/L2_5_Aufgabe5_Algorithmen_pruefen_Fehleranalyse.svg -->
 > <!-- DOCX-EMBEDDING-HINT: Dieses Struktogramm wird bei DOCX-Export als eingebettete Grafik dargestellt für bessere Kopierbarkeit und Formatierung. -->
 >
 > Bearbeite die Teilaufgaben in dieser Reihenfolge:
@@ -422,9 +422,9 @@ print(loese_aufgabe4c_verdoppeln_im_original([12, 45, 23, 67, 8, 34, 56, 11]))
 
 **Fehlerhaftes Struktogramm (Aufgabenmaterial):**
 
-![L2_5_Aufgabe5_Algorithmen_pruefen_Fehleranalyse](../../struktogramme/generated/svg/L2_5_Aufgabe5_Algorithmen_pruefen_Fehleranalyse.svg)
+![L2_5_Aufgabe5_Algorithmen_pruefen_Fehleranalyse](../../archiv/struktogramme/generated/svg/L2_5_Aufgabe5_Algorithmen_pruefen_Fehleranalyse.svg)
 <!-- DOCX-ALT-TEXT: L2_5_Aufgabe5_Algorithmen_pruefen_Fehleranalyse -->
-<!-- DOCX-EMBED-SVG: ../../struktogramme/generated/svg/L2_5_Aufgabe5_Algorithmen_pruefen_Fehleranalyse.svg -->
+<!-- DOCX-EMBED-SVG: ../../archiv/struktogramme/generated/svg/L2_5_Aufgabe5_Algorithmen_pruefen_Fehleranalyse.svg -->
 <!-- DOCX-EMBEDDING-HINT: Dieses Struktogramm wird bei DOCX-Export als eingebettete Grafik dargestellt für bessere Kopierbarkeit und Formatierung. -->
 
 ---
@@ -477,9 +477,9 @@ Die Wiederhole-solange-Bedingung bleibt wahr und das Programm kann hängen bleib
 
 **Erwartete BW-konforme Korrektur:**
 
-![L2_5_Aufgabe5_Algorithmen_pruefen](../../struktogramme/generated/svg/L2_5_Aufgabe5_Algorithmen_pruefen.svg)
+![L2_5_Aufgabe5_Algorithmen_pruefen](../../archiv/struktogramme/generated/svg/L2_5_Aufgabe5_Algorithmen_pruefen.svg)
 <!-- DOCX-ALT-TEXT: L2_5_Aufgabe5_Algorithmen_pruefen -->
-<!-- DOCX-EMBED-SVG: ../../struktogramme/generated/svg/L2_5_Aufgabe5_Algorithmen_pruefen.svg -->
+<!-- DOCX-EMBED-SVG: ../../archiv/struktogramme/generated/svg/L2_5_Aufgabe5_Algorithmen_pruefen.svg -->
 <!-- DOCX-EMBEDDING-HINT: Dieses Struktogramm wird bei DOCX-Export als eingebettete Grafik dargestellt für bessere Kopierbarkeit und Formatierung. -->
 
 **Alternative akzeptabel:**
@@ -512,9 +512,9 @@ Die Wiederhole-solange-Bedingung bleibt wahr und das Programm kann hängen bleib
 
 **Erwartete Struktur (BW-Standard nach Operatorenliste):**
 
-![L2_6_Aufgabe6_Bubble_Sort](../../struktogramme/generated/svg/L2_6_Aufgabe6_Bubble_Sort.svg)
+![L2_6_Aufgabe6_Bubble_Sort](../../archiv/struktogramme/generated/svg/L2_6_Aufgabe6_Bubble_Sort.svg)
 <!-- DOCX-ALT-TEXT: L2_6_Aufgabe6_Bubble_Sort -->
-<!-- DOCX-EMBED-SVG: ../../struktogramme/generated/svg/L2_6_Aufgabe6_Bubble_Sort.svg -->
+<!-- DOCX-EMBED-SVG: ../../archiv/struktogramme/generated/svg/L2_6_Aufgabe6_Bubble_Sort.svg -->
 <!-- DOCX-EMBEDDING-HINT: Dieses Struktogramm wird bei DOCX-Export als eingebettete Grafik dargestellt für bessere Kopierbarkeit und Formatierung. -->
 
 **Bewertung Struktogramm (3 Punkte):**
@@ -536,9 +536,9 @@ Die Wiederhole-solange-Bedingung bleibt wahr und das Programm kann hängen bleib
 
 **Musterlösung 1 (klassisch mit temp):**
 
-![L2_6_Aufgabe6_Bubble_Sort](../../struktogramme/generated/svg/L2_6_Aufgabe6_Bubble_Sort.svg)
+![L2_6_Aufgabe6_Bubble_Sort](../../archiv/struktogramme/generated/svg/L2_6_Aufgabe6_Bubble_Sort.svg)
 <!-- DOCX-ALT-TEXT: L2_6_Aufgabe6_Bubble_Sort -->
-<!-- DOCX-EMBED-SVG: ../../struktogramme/generated/svg/L2_6_Aufgabe6_Bubble_Sort.svg -->
+<!-- DOCX-EMBED-SVG: ../../archiv/struktogramme/generated/svg/L2_6_Aufgabe6_Bubble_Sort.svg -->
 <!-- DOCX-EMBEDDING-HINT: Dieses Struktogramm wird bei DOCX-Export als eingebettete Grafik dargestellt für bessere Kopierbarkeit und Formatierung. -->
 
 ```python
@@ -561,9 +561,9 @@ print(loese_aufgabe6_bubble_sort_temp([5, 2, 8, 1, 9]))  # [1, 2, 5, 8, 9]
 
 **Musterlösung 2 (mit Python-Tuple-Swap):**
 
-![L2_6_Aufgabe6_Bubble_Sort](../../struktogramme/generated/svg/L2_6_Aufgabe6_Bubble_Sort.svg)
+![L2_6_Aufgabe6_Bubble_Sort](../../archiv/struktogramme/generated/svg/L2_6_Aufgabe6_Bubble_Sort.svg)
 <!-- DOCX-ALT-TEXT: L2_6_Aufgabe6_Bubble_Sort -->
-<!-- DOCX-EMBED-SVG: ../../struktogramme/generated/svg/L2_6_Aufgabe6_Bubble_Sort.svg -->
+<!-- DOCX-EMBED-SVG: ../../archiv/struktogramme/generated/svg/L2_6_Aufgabe6_Bubble_Sort.svg -->
 <!-- DOCX-EMBEDDING-HINT: Dieses Struktogramm wird bei DOCX-Export als eingebettete Grafik dargestellt für bessere Kopierbarkeit und Formatierung. -->
 
 ```python

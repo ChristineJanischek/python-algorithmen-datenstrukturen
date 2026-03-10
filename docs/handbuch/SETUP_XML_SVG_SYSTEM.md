@@ -98,7 +98,7 @@ git commit -m "Add: L1_1_Neue_Aufgabe"
 
 Folgendes Struktogramm zeigt die Lösung:
 
-![L1_1_Array_Summe](../../struktogramme/generated/svg/L1_1_Array_Summe.svg)
+![L1_1_Array_Summe](../../archiv/struktogramme/generated/svg/L1_1_Array_Summe.svg)
 
 **Erklärung:** Das Struktogramm...
 ```
