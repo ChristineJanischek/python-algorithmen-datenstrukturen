@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="860" viewBox="0 0 920 860">
+  <style>
+    .box { stroke: #000; stroke-width: 2; fill: #fff; }
+    .text { font-family: Arial, sans-serif; font-size: 13px; fill: #000; }
+    .label { font-size: 11px; fill: #666; }
+    .bold { font-weight: bold; }
+  </style>
+
+  <text x="460" y="28" class="text bold" text-anchor="middle" font-size="16">Aufgabe 6 - Lineare Suche (korrekt)</text>
+  <line x1="30" y1="46" x2="890" y2="46" stroke="#000" stroke-width="1"/>
+
+  <rect x="40" y="64" width="840" height="44" class="box"/>
+  <text x="52" y="81" class="text label">Deklaration und Initialisierung:</text>
+  <text x="52" y="97" class="text">kunden_ids = [104, 117, 109, 123, 111, 130]</text>
+
+  <rect x="40" y="108" width="840" height="44" class="box"/>
+  <text x="52" y="125" class="text label">Deklaration und Initialisierung:</text>
+  <text x="52" y="141" class="text">such_id = 123</text>
+
+  <rect x="40" y="152" width="840" height="44" class="box"/>
+  <text x="52" y="169" class="text label">Deklaration und Initialisierung:</text>
+  <text x="52" y="185" class="text">i = 0</text>
+
+  <rect x="40" y="196" width="840" height="44" class="box"/>
+  <text x="52" y="213" class="text label">Deklaration und Initialisierung:</text>
+  <text x="52" y="229" class="text">gefunden_index = -1</text>
+
+  <rect x="40" y="240" width="840" height="40" class="box"/>
+  <text x="52" y="265" class="text">Wiederhole solange i &lt; Anzahl der Elemente des Arrays kunden_ids und gefunden_index == -1</text>
+  <line x1="40" y1="280" x2="40" y2="478" stroke="#000" stroke-width="2"/>
+
+  <rect x="60" y="280" width="820" height="120" class="box"/>
+  <polygon points="60,280 880,280 470,320" fill="#fff" stroke="#000" stroke-width="2"/>
+  <text x="470" y="298" class="text" text-anchor="middle">kunden_ids[i] == such_id</text>
+  <line x1="470" y1="320" x2="470" y2="400" stroke="#000" stroke-width="2"/>
+  <text x="72" y="338" class="text bold">J</text>
+  <text x="482" y="338" class="text bold">N</text>
+
+  <rect x="74" y="344" width="386" height="50" class="box"/>
+  <text x="86" y="362" class="text label">Zuweisung:</text>
+  <text x="86" y="380" class="text">gefunden_index = i</text>
+
+  <rect x="480" y="344" width="386" height="50" class="box"/>
+  <text x="492" y="362" class="text label">Zuweisung:</text>
+  <text x="492" y="380" class="text">i = i + 1</text>
+
+  <line x1="40" y1="478" x2="880" y2="478" stroke="#000" stroke-width="2"/>
+
+  <rect x="40" y="478" width="840" height="120" class="box"/>
+  <polygon points="40,478 880,478 460,518" fill="#fff" stroke="#000" stroke-width="2"/>
+  <text x="460" y="496" class="text" text-anchor="middle">gefunden_index &gt;= 0</text>
+  <line x1="460" y1="518" x2="460" y2="598" stroke="#000" stroke-width="2"/>
+  <text x="52" y="536" class="text bold">J</text>
+  <text x="472" y="536" class="text bold">N</text>
+
+  <rect x="54" y="542" width="396" height="50" class="box"/>
+  <text x="66" y="560" class="text label">Ausgabe:</text>
+  <text x="66" y="578" class="text">"Treffer bei Index " + gefunden_index</text>
+
+  <rect x="470" y="542" width="396" height="50" class="box"/>
+  <text x="482" y="560" class="text label">Ausgabe:</text>
+  <text x="482" y="578" class="text">"Nicht gefunden"</text>
+</svg>

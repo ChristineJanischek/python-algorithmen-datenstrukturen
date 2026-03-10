@@ -237,26 +237,24 @@ Wenn werte[j] < werte[min_index], dann
 
 **a) Struktogramm (3):**
 
+![L2_6_Aufgabe6_Lineare_Suche_Korrekt](../../archiv/struktogramme/generated/svg/L2_6_Aufgabe6_Lineare_Suche_Korrekt.svg)
+<!-- DOCX-ALT-TEXT: L2_6_Aufgabe6_Lineare_Suche_Korrekt -->
+<!-- DOCX-EMBED-SVG: ../../archiv/struktogramme/generated/svg/L2_6_Aufgabe6_Lineare_Suche_Korrekt.svg -->
+<!-- DOCX-EMBEDDING-HINT: Dieses Struktogramm wird bei DOCX-Export als eingebettete Grafik dargestellt fuer bessere Kopierbarkeit und Formatierung. -->
+
 ```struktogramm
 Deklaration und Initialisierung: kunden_ids = [104, 117, 109, 123, 111, 130]
 Deklaration und Initialisierung: such_id = 123
 Deklaration und Initialisierung: i = 0
 Deklaration und Initialisierung: gefunden_index = -1
 
-Wiederhole solange i < Anzahl der Elemente des Arrays kunden_ids, dann
+Wiederhole solange i < Anzahl der Elemente des Arrays kunden_ids und gefunden_index == -1
     Wenn kunden_ids[i] == such_id, dann
         J
             Zuweisung: gefunden_index = i
         , sonst
         N
-            [keine Anweisung]
-    
-    Wenn gefunden_index == -1, dann
-        J
             Zuweisung: i = i + 1
-        , sonst
-        N
-            [Schleife beendet]
 
 Wenn gefunden_index >= 0, dann
     J
