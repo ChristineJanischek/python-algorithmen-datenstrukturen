@@ -219,6 +219,9 @@ print(halbiert)
 Wenn werte[j] < werte[min_index], dann
     J
         Zuweisung: min_index = j
+    , sonst
+    N
+        [keine Anweisung]
 ```
 
 ---
@@ -243,20 +246,18 @@ Wenn werte[j] < werte[min_index], dann
 ```struktogramm
 Deklaration und Initialisierung: kunden_ids = [104, 117, 109, 123, 111, 130]
 Deklaration und Initialisierung: such_id = 123
-Deklaration und Initialisierung: gefunden = falsch
-Deklaration und Initialisierung: treffer_index = -1
-Deklaration und Initialisierung: n = Anzahl der Elemente des Arrays kunden_ids
-Zähle index von 0 bis n - 1, Schrittweite 1
-    Wenn kunden_ids[index] == such_id, dann
+Deklaration und Initialisierung: i = 0
+Deklaration und Initialisierung: gefunden_index = -1
+Wiederhole solange i < Anzahl der Elemente des Arrays kunden_ids AND gefunden_index == -1
+    Wenn kunden_ids[i] == such_id, dann
         J
-            Zuweisung: gefunden = wahr
-            Zuweisung: treffer_index = index
+            Zuweisung: gefunden_index = i
     , sonst
     N
-        [keine Anweisung]
-Wenn gefunden == wahr, dann
+        Zuweisung: i = i + 1
+Wenn gefunden_index >= 0, dann
     J
-        Ausgabe: "Treffer bei Index " + treffer_index
+        Ausgabe: "Treffer bei Index " + gefunden_index
     , sonst
     N
         Ausgabe: "Nicht gefunden"

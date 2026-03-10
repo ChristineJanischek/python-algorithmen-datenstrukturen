@@ -13,9 +13,15 @@ Dies ist ein Python-Repository für **Algorithmen und Datenstrukturen** im Konte
 #### Wenn Programmlogik gefragt ist:
 
 1. **IMMER** Struktogramme verwenden (keine Flussdiagramme!)
-2. **IMMER** die Operatorenliste beachten: `struktogramme/Operatorenliste-Struktogramme.md`
+2. **IMMER** die zentrale Wissensdatenbank verwenden: `src/utils/struktogramm_knowledge_base.py`
 3. **IMMER** den Guide verwenden: `docs/handbuch/STRUKTOGRAMM_GUIDE.md`
 4. **IMMER** textbasierte Notation verwenden
+
+**Zentrale Wissensdatenbank:**
+```python
+from src.utils.struktogramm_knowledge_base import get_knowledge_base
+kb = get_knowledge_base()  # Single Source of Truth für BW-Standards
+```
 
 #### Verfügbare Operatoren (Kurzübersicht):
 
@@ -68,6 +74,15 @@ Anzahl der Elemente des Arrays array
 #### Python-Helper verfügbar:
 
 ```python
+# Zentrale Wissensdatenbank (PRIMÄR verwenden!)
+from src.utils.struktogramm_knowledge_base import (
+    get_knowledge_base,
+    get_operator_syntax,
+    get_pattern,
+    validate_bw_notation
+)
+
+# Helper-Funktionen für Erstellung
 from src.utils.struktogramm_helper import (
     StruktogrammBuilder,
     StruktogrammValidator,
@@ -90,12 +105,15 @@ src/
 │   ├── ka_template/  # Klassenarbeits-Templates
 │   ├── myKa/         # Klassenarbeiten
 │   └── pruefdateien/ # Prüfungsmaterialien
-├── utils/            # Hilfs-Module (inkl. struktogramm_helper.py)
+├── utils/            # Hilfs-Module
+│   ├── struktogramm_knowledge_base.py  # ⭐ ZENTRALE Wissensdatenbank
+│   └── struktogramm_helper.py         # Helper-Funktionen
 docs/
 ├── aufgaben/         # Aufgabenstellungen
 ├── loesungen/        # Lösungen
 ├── handbuch/         # Handbücher und Guides
-struktogramme/        # Struktogramm-Dateien (.stgr)
+archiv/
+└── struktogramme/    # Archiv: Beispiel-Struktogramme (.stgr)
 ```
 
 #### Python-Code:
@@ -233,7 +251,7 @@ Bei Sortier-/Suchalgorithmen:
 3. **Immer** Komplexität angeben (O-Notation)
 4. **Optional** Visualisierung
 
-Beispiel verfügbar in: `struktogramme/L2_2_1_3_Struktogramm_Bubble_Sort.stgr`
+Beispiel verfügbar in: `archiv/struktogramme/L2_2_1_3_Struktogramm_Bubble_Sort.stgr`
 
 ### 5. Datenstrukturen
 
@@ -286,7 +304,7 @@ Format: `LX_Y_Z_Thema`
 
 **Wichtigste Dateien:**
 
-- 📄 `struktogramme/Operatorenliste-Struktogramme.md` - Die Bibel für Struktogramme!
+- 📄 `src/utils/struktogramm_knowledge_base.py` - ⭐ DIE zentrale Wissensdatenbank!
 - 📄 `docs/handbuch/STRUKTOGRAMM_GUIDE.md` - Praktischer Guide mit Patterns
 - � `docs/handbuch/ELEARNING_TEMPLATE_GUIDE.md` - E-Learning Content Management
 - 🐍 `src/utils/struktogramm_helper.py` - Python-Helper für Struktogramme
@@ -301,7 +319,7 @@ Format: `LX_Y_Z_Thema`
 
 **Beispiele:**
 
-- `struktogramme/*.stgr` - Fertige Struktogramm-Beispiele
+- `archiv/struktogramme/*.stgr` - Fertige Struktogramm-Beispiele (archiviert)
 - `docs/aufgaben/L*/` - Beispiel-Aufgaben
 - `src/niveau/infodateien/` - Informationsmaterialien
 
@@ -369,14 +387,26 @@ Wenn du Code/Aufgaben für dieses Repository erstellst:
 **Wenn du ein AI-Assistent bist der in diesem Repository arbeitet:**
 
 1. **LIES ZUERST:** `docs/handbuch/STRUKTOGRAMM_GUIDE.md`
-2. **BEI STRUKTOGRAMMEN:** Verwende IMMER die Operatorenliste
+2. **BEI STRUKTOGRAMMEN:** Verwende IMMER `struktogramm_knowledge_base.py`
 3. **BEI E-LEARNING:** Verwende IMMER `elearning_manager.py`
-4. **BEI PATTERNS:** Nutze die vorgefertigten Patterns aus den Guides
-5. **BEI UNSICHERHEIT:** Validiere mit den Helper-Modulen
+4. **BEI PATTERNS:** Nutze die vorgefertigten Patterns aus der Knowledge Base
+5. **BEI UNSICHERHEIT:** Validiere mit `struktogramm_helper.py` und der Knowledge Base
 6. **DENKE DARAN:** Dies ist für Schüler im Abitur - klar und verständlich!
-3. **BEI PATTERNS:** Nutze die vorgefertigten Patterns aus dem Guide
-4. **BEI UNSICHERHEIT:** Validiere mit `struktogramm_helper.py`
-5. **DENKE DARAN:** Dies ist für Schüler im Abitur - klar und verständlich!
+
+**Zentrale Wissensdatenbank:**
+```python
+from src.utils.struktogramm_knowledge_base import get_knowledge_base
+kb = get_knowledge_base()
+
+# Operator abrufen
+op = kb.get_operator("deklaration")
+
+# Pattern-Template abrufen
+pattern = kb.get_pattern_template("array_durchlaufen")
+
+# Notation-Regel abrufen
+regel = kb.get_notation_regel("briefumschlag_alternative")
+```
 
 ---
 
