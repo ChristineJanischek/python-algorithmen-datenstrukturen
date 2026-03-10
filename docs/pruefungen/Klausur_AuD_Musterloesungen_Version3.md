@@ -237,24 +237,27 @@ Wenn werte[j] < werte[min_index], dann
 
 **a) Struktogramm (3):**
 
-![L2_6_Aufgabe6_Lineare_Suche](../../archiv/struktogramme/generated/svg/l2_6_aufgabe6_lineare_suche_block_01.svg)
-<!-- DOCX-ALT-TEXT: L2_6_Aufgabe6_Lineare_Suche -->
-<!-- DOCX-EMBED-SVG: ../../archiv/struktogramme/generated/svg/l2_6_aufgabe6_lineare_suche_block_01.svg -->
-<!-- DOCX-EMBEDDING-HINT: Dieses Struktogramm wird bei DOCX-Export als eingebettete Grafik dargestellt für bessere Kopierbarkeit und Formatierung. -->
-
-**BW-Notation (Operatorenliste v2.2):**
 ```struktogramm
 Deklaration und Initialisierung: kunden_ids = [104, 117, 109, 123, 111, 130]
 Deklaration und Initialisierung: such_id = 123
 Deklaration und Initialisierung: i = 0
 Deklaration und Initialisierung: gefunden_index = -1
-Wiederhole solange i < Anzahl der Elemente des Arrays kunden_ids AND gefunden_index == -1
+
+Wiederhole solange i < Anzahl der Elemente des Arrays kunden_ids, dann
     Wenn kunden_ids[i] == such_id, dann
         J
             Zuweisung: gefunden_index = i
-    , sonst
-    N
-        Zuweisung: i = i + 1
+        , sonst
+        N
+            [keine Anweisung]
+    
+    Wenn gefunden_index == -1, dann
+        J
+            Zuweisung: i = i + 1
+        , sonst
+        N
+            [Schleife beendet]
+
 Wenn gefunden_index >= 0, dann
     J
         Ausgabe: "Treffer bei Index " + gefunden_index
@@ -262,6 +265,13 @@ Wenn gefunden_index >= 0, dann
     N
         Ausgabe: "Nicht gefunden"
 ```
+
+**Erklärung:**
+- **Initialisierung:** Array und Suchvariablen vorbereiten
+- **Schleife:** Nacheinander jedes Element untersuchen
+- **Vergleich:** `kunden_ids[i] == such_id` prüft auf Treffer
+- **Trefferlogik:** Bei Treffer wird `gefunden_index` gesetzt und Schleife beendet
+- **Ausgabe:** Ergebnis (Index oder „Nicht gefunden") anzeigen
 
 **b) Python (3):**
 ```python
