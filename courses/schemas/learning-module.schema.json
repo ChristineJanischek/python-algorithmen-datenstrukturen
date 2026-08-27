@@ -1,0 +1,100 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://example.org/learning-module.schema.json",
+  "title": "LearningModule",
+  "description": "Schema für ein wiederverwendbares Lernmodul im didaktischen Lernagenten.",
+  "type": "object",
+  "required": [
+    "id",
+    "titel",
+    "fachgebiet",
+    "thema",
+    "niveau",
+    "lernziele",
+    "vorkenntnisse",
+    "aufgabenstellung",
+    "fehlvorstellungen",
+    "hinweise",
+    "reflexionsfrage",
+    "transferaufgabe"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Eindeutige Kennung des Moduls, z.B. 'inf-python-listen-001'.",
+      "minLength": 1
+    },
+    "titel": {
+      "type": "string",
+      "description": "Kurzer, beschreibender Titel des Moduls.",
+      "minLength": 1
+    },
+    "fachgebiet": {
+      "type": "string",
+      "description": "Das Lehrfach, z.B. 'Informatik'.",
+      "minLength": 1
+    },
+    "thema": {
+      "type": "string",
+      "description": "Das konkrete Thema innerhalb des Fachs.",
+      "minLength": 1
+    },
+    "niveau": {
+      "type": "string",
+      "description": "Zielgruppe oder Lernniveau, z.B. 'Einstieg', 'Fortgeschritten'.",
+      "enum": ["Einstieg", "Grundkurs", "Leistungskurs", "Fortgeschritten"]
+    },
+    "lernziele": {
+      "type": "array",
+      "description": "Was die Lernenden nach dieser Einheit können sollen.",
+      "items": { "type": "string" },
+      "minItems": 1
+    },
+    "vorkenntnisse": {
+      "type": "array",
+      "description": "Benötigte Vorkenntnisse für dieses Modul.",
+      "items": { "type": "string" }
+    },
+    "aufgabenstellung": {
+      "type": "string",
+      "description": "Die Aufgabenstellung für die Lernenden.",
+      "minLength": 1
+    },
+    "fehlvorstellungen": {
+      "type": "array",
+      "description": "Häufige Fehlvorstellungen zu diesem Thema.",
+      "items": { "type": "string" }
+    },
+    "hinweise": {
+      "type": "object",
+      "description": "Gestufte Hinweise: Schlüssel 1 = Orientierung, 2 = Hinweis, 3 = Erklärung.",
+      "properties": {
+        "1": { "type": "string" },
+        "2": { "type": "string" },
+        "3": { "type": "string" }
+      },
+      "required": ["1", "2", "3"]
+    },
+    "reflexionsfrage": {
+      "type": "string",
+      "description": "Eine Frage zur Reflexion nach der Aufgabe.",
+      "minLength": 1
+    },
+    "transferaufgabe": {
+      "type": "string",
+      "description": "Eine ähnliche Aufgabe zum Übertragen des Gelernten.",
+      "minLength": 1
+    },
+    "metadaten": {
+      "type": "object",
+      "description": "Optionale Metadaten (Autor, Version, Datum usw.).",
+      "properties": {
+        "autor": { "type": "string" },
+        "version": { "type": "string" },
+        "erstellt_am": { "type": "string", "format": "date" },
+        "sprache": { "type": "string", "default": "de" }
+      }
+    }
+  },
+  "additionalProperties": false
+}

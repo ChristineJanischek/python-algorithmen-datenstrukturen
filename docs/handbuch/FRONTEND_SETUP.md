@@ -51,3 +51,14 @@ Falls Probleme auftreten:
 # Nächste Schritte
 - Passen Sie die Aufgaben, Operatoren oder Meilensteine durch Bearbeitung der JSON-Dateien an.
 - Dokumentationen zur Architektur und API stehen ebenfalls zur Verfügung.
+
+<!-- CUSTOM_LICENSE_NOTICE_START -->
+## License
+
+This repository is licensed under a custom license.
+
+- Attribution required: Christine Janischek - https://emotionalspirit.de
+- Non-commercial use only
+- Use only within state school systems
+- Any other use requires explicit prior written permission
+<!-- CUSTOM_LICENSE_NOTICE_END -->

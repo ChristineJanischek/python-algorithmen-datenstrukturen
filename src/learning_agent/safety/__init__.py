@@ -1,0 +1,1 @@
+"""Sicherheit – Paket-Initialisierung."""

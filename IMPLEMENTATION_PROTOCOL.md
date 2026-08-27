@@ -650,3 +650,14 @@ Zielquote: 100% Compliance
 
 *Status: Ready für finales GitHub Actions Testing*
 *Nächstes Update: 17.02.2026 (morgen)*
+
+<!-- CUSTOM_LICENSE_NOTICE_START -->
+## License
+
+This repository is licensed under a custom license.
+
+- Attribution required: Christine Janischek - https://emotionalspirit.de
+- Non-commercial use only
+- Use only within state school systems
+- Any other use requires explicit prior written permission
+<!-- CUSTOM_LICENSE_NOTICE_END -->

@@ -1,0 +1,1 @@
+"""Lernmodul (learning) – Paket-Initialisierung."""

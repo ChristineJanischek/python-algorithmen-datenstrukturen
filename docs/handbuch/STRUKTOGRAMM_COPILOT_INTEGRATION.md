@@ -221,3 +221,14 @@ Nach Aktivierung des Tools:
 **Erstellt von:** GitHub Copilot  
 **Version:** 1.0  
 **Gültig ab:** February 2026
+
+<!-- CUSTOM_LICENSE_NOTICE_START -->
+## License
+
+This repository is licensed under a custom license.
+
+- Attribution required: Christine Janischek - https://emotionalspirit.de
+- Non-commercial use only
+- Use only within state school systems
+- Any other use requires explicit prior written permission
+<!-- CUSTOM_LICENSE_NOTICE_END -->

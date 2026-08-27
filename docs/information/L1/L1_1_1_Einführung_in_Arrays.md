@@ -48,3 +48,14 @@ print(zahlen[0])  # Ausgabe: 1
 ---
 
 *Erstellt am 05.02.2026 von Demo-Autor*
+
+<!-- CUSTOM_LICENSE_NOTICE_START -->
+## License
+
+This repository is licensed under a custom license.
+
+- Attribution required: Christine Janischek - https://emotionalspirit.de
+- Non-commercial use only
+- Use only within state school systems
+- Any other use requires explicit prior written permission
+<!-- CUSTOM_LICENSE_NOTICE_END -->

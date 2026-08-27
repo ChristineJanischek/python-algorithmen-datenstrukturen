@@ -169,3 +169,14 @@ Christine Janischek
 - **Main Repository:** https://github.com/ChristineJanischek/python-algorithmen-datenstrukturen
 - **Milestone Plan:** [OPTION3_DRAWIO_EXTENSION.md](../../docs/milestones/OPTION3_DRAWIO_EXTENSION.md)
 - **Operatorenliste:** [Struktogramm Operators](../../struktogramme/Operatorenliste-Struktogramme.md)
+
+<!-- CUSTOM_LICENSE_NOTICE_START -->
+## License
+
+This repository is licensed under a custom license.
+
+- Attribution required: Christine Janischek - https://emotionalspirit.de
+- Non-commercial use only
+- Use only within state school systems
+- Any other use requires explicit prior written permission
+<!-- CUSTOM_LICENSE_NOTICE_END -->

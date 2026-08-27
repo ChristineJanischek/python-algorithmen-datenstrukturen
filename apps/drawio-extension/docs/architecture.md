@@ -214,3 +214,14 @@ Das Draw.io Struktogramm Extension System besteht aus **4 Hauptkomponenten**:
 - [Developer Guide](./dev-guide.md)
 - [API Reference](./api-reference.md)
 - Main Repo: [OPTION3_DRAWIO_EXTENSION.md](../../../docs/milestones/OPTION3_DRAWIO_EXTENSION.md)
+
+<!-- CUSTOM_LICENSE_NOTICE_START -->
+## License
+
+This repository is licensed under a custom license.
+
+- Attribution required: Christine Janischek - https://emotionalspirit.de
+- Non-commercial use only
+- Use only within state school systems
+- Any other use requires explicit prior written permission
+<!-- CUSTOM_LICENSE_NOTICE_END -->
