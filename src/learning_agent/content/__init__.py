@@ -1,0 +1,1 @@
+"""Inhalte – Paket-Initialisierung."""

@@ -1,0 +1,35 @@
+{
+  "id": "inf-python-listen-001",
+  "titel": "Python-Listen: Elemente hinzufügen",
+  "fachgebiet": "Informatik",
+  "thema": "Python-Listen",
+  "niveau": "Einstieg",
+  "lernziele": [
+    "Die Methode append() korrekt auf eine Python-Liste anwenden",
+    "Den Unterschied zwischen einem Index-Zugriff und dem Hinzufügen erklären",
+    "Eine Liste schrittweise mit Benutzereingaben befüllen"
+  ],
+  "vorkenntnisse": [
+    "Variablen in Python deklarieren und zuweisen",
+    "Einfache Ausgabe mit print()"
+  ],
+  "aufgabenstellung": "Erstelle eine leere Python-Liste. Füge anschließend drei Zahlen der Reihe nach mit einer Schleife hinzu und gib die vollständige Liste aus.",
+  "fehlvorstellungen": [
+    "Listen sind nach der Erstellung unveränderbar (Verwechslung mit Tuples)",
+    "append() verändert die Liste nicht, sondern gibt eine neue Liste zurück",
+    "Der Index beginnt bei 1 statt bei 0"
+  ],
+  "hinweise": {
+    "1": "Welche Operation möchtest du durchführen: ein Element lesen, verändern oder am Ende ergänzen?",
+    "2": "Python-Listen haben eine Methode, die speziell dafür gedacht ist, Elemente anzuhängen. Schau dir die Methoden an, die auf Listen aufgerufen werden können.",
+    "3": "Mit meine_liste.append(element) fügst du ein Element am Ende der Liste hinzu. append() verändert die Liste direkt und gibt None zurück – nicht die neue Liste."
+  },
+  "reflexionsfrage": "Wann würdest du append() verwenden und wann wäre eine andere Methode sinnvoller?",
+  "transferaufgabe": "Schreibe ein Programm, das den Benutzer so lange nach Zahlen fragt, bis er 'fertig' eingibt, und alle eingegebenen Zahlen in einer Liste speichert.",
+  "metadaten": {
+    "autor": "Lernagent-Projekt",
+    "version": "1.0",
+    "erstellt_am": "2024-01-01",
+    "sprache": "de"
+  }
+}

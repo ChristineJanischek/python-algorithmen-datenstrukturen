@@ -1,0 +1,33 @@
+name: Schüleraufgabe
+description: Vorlage für eine Schüleraufgabe aus student_tasks/
+title: "[Aufgabe XX] Kurztitel der Aufgabe"
+labels: ["student-task"]
+body:
+  - type: dropdown
+    id: aufgabe
+    attributes:
+      label: Aufgabennummer
+      options:
+        - "01 - Hilfestufen-Auswahl"
+        - "02 - Prompt-Strategien"
+        - "03 - Fehlerklassifikation"
+        - "04 - Lernmodul-Validierung"
+        - "05 - Testabdeckung"
+        - "06 - Reflexionsfragen"
+    validations:
+      required: true
+  - type: textarea
+    id: vorhaben
+    attributes:
+      label: Vorhaben
+      description: Was möchtest du in dieser Aufgabe implementieren?
+    validations:
+      required: true
+  - type: textarea
+    id: branch
+    attributes:
+      label: Branch
+      description: Wie lautet dein geplanter Branch-Name?
+      placeholder: feature/aufgabe-01-dein-name
+    validations:
+      required: true

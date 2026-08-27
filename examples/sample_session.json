@@ -1,0 +1,30 @@
+{
+  "beschreibung": "Beispiel einer Lernsitzung mit dem Lernagenten (MockProvider)",
+  "hinweis": "Diese Datei dient nur zur Veranschaulichung. Keine Daten werden gespeichert.",
+  "sitzung": {
+    "fachgebiet": "Informatik",
+    "thema": "Python-Listen",
+    "niveau": "Einstieg",
+    "lernziel": "Elemente zu einer Liste hinzufügen"
+  },
+  "nachrichten": [
+    {
+      "eingabe": "Ich weiß nicht, wie ich ein neues Element ergänzen kann.",
+      "hilfestufe": 1,
+      "hilfestufe_name": "Orientierungsfrage",
+      "antwort": "Welche Operation möchtest du durchführen: ein Element lesen, verändern oder am Ende ergänzen?"
+    },
+    {
+      "eingabe": "Ich habe eine leere Liste, aber weiß nicht welche Methode.",
+      "hilfestufe": 2,
+      "hilfestufe_name": "Fachlicher Hinweis",
+      "antwort": "Python-Listen haben eine Methode, die speziell dafür gedacht ist, Elemente anzuhängen. Kennst du Methoden, die auf Listen aufgerufen werden?"
+    },
+    {
+      "eingabe": "Ich brauche eine ausführliche Erklärung.",
+      "hilfestufe": 3,
+      "hilfestufe_name": "Ausführliche Erklärung",
+      "antwort": "Mit meine_liste.append(element) fügst du ein Element am Ende der Liste hinzu. append kommt vom englischen Wort für 'anhängen'."
+    }
+  ]
+}
