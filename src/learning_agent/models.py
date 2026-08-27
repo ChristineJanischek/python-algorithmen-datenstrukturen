@@ -12,7 +12,6 @@ from __future__ import annotations
 
 from dataclasses import dataclass, field
 from enum import Enum
-from typing import Optional
 
 
 class HintLevel(Enum):
@@ -98,7 +97,7 @@ class AgentResponse:
     text: str
     antworttyp: ResponseType
     hilfestufe: HintLevel
-    naechste_aktion: Optional[str] = None
+    naechste_aktion: str | None = None
 
 
 @dataclass

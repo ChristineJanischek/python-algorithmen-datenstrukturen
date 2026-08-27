@@ -43,7 +43,7 @@ def erzeuge_systemprompt(kontext: LearningContext) -> str:
     prompt_teile = [
         _GRUNDREGELN,
         "",
-        f"Aktueller Lernkontext:",
+        "Aktueller Lernkontext:",
         f"  Fachgebiet: {kontext.fachgebiet}",
         f"  Thema: {kontext.thema}",
         f"  Niveau: {kontext.niveau}",
