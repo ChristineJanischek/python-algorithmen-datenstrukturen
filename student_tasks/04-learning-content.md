@@ -82,3 +82,14 @@ Erstelle auch passende `introduction.md` und `exercise.md`.
 
 Nutze die Python-Bibliothek `jsonschema`, um das Modul automatisch gegen das
 offizielle JSON-Schema zu validieren. Dokumentiere die Installation in `docs/student-setup.md`.
+
+<!-- CUSTOM_LICENSE_NOTICE_START -->
+## License
+
+This repository is licensed under a custom license.
+
+- Attribution required: Christine Janischek - https://emotionalspirit.de
+- Non-commercial use only
+- Use only within state school systems
+- Any other use requires explicit prior written permission
+<!-- CUSTOM_LICENSE_NOTICE_END -->

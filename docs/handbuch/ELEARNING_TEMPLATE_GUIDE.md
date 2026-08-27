@@ -813,3 +813,14 @@ A: Verwende relative Pfade: `[Link](../aufgaben/L1/L1_3_1_Array-Summe_berechnen.
 ---
 
 *Für Fragen und Feedback bitte ein Issue im Repository erstellen.*
+
+<!-- CUSTOM_LICENSE_NOTICE_START -->
+## License
+
+This repository is licensed under a custom license.
+
+- Attribution required: Christine Janischek - https://emotionalspirit.de
+- Non-commercial use only
+- Use only within state school systems
+- Any other use requires explicit prior written permission
+<!-- CUSTOM_LICENSE_NOTICE_END -->

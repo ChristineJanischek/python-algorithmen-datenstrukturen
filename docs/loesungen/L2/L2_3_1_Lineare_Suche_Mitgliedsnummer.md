@@ -81,3 +81,14 @@ Für unsortierte Listen ist lineare Suche die direkte Standardmethode. Bei sorti
 ---
 
 *Erstellt am 05.03.2026 von Christine Janischek*
+
+<!-- CUSTOM_LICENSE_NOTICE_START -->
+## License
+
+This repository is licensed under a custom license.
+
+- Attribution required: Christine Janischek - https://emotionalspirit.de
+- Non-commercial use only
+- Use only within state school systems
+- Any other use requires explicit prior written permission
+<!-- CUSTOM_LICENSE_NOTICE_END -->

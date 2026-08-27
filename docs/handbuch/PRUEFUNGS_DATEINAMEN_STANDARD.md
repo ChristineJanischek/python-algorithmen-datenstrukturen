@@ -67,3 +67,14 @@ Die Heuristik zur Themenableitung ist zentral gekapselt und kann ohne Redundanz 
 2. `python3 apps/tools/pruefungen_dateinamen_manager.py --fix` ausführen
 3. `python3 apps/tools/markdown_reviewer.py` ausführen
 4. Danach commit/push
+
+<!-- CUSTOM_LICENSE_NOTICE_START -->
+## License
+
+This repository is licensed under a custom license.
+
+- Attribution required: Christine Janischek - https://emotionalspirit.de
+- Non-commercial use only
+- Use only within state school systems
+- Any other use requires explicit prior written permission
+<!-- CUSTOM_LICENSE_NOTICE_END -->

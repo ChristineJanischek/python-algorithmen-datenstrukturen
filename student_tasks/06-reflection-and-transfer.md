@@ -82,3 +82,14 @@ automatisch eine Reflexionsfrage an den Antworttext angehängt wird.
 Nutze die Reflexionsfrage aus dem Lernmodul (falls vorhanden):
 Wenn ein `LearningModule` geladen ist und die Sitzung das gleiche Thema hat,
 verwende die Reflexionsfrage aus dem Modul statt einer allgemeinen Frage.
+
+<!-- CUSTOM_LICENSE_NOTICE_START -->
+## License
+
+This repository is licensed under a custom license.
+
+- Attribution required: Christine Janischek - https://emotionalspirit.de
+- Non-commercial use only
+- Use only within state school systems
+- Any other use requires explicit prior written permission
+<!-- CUSTOM_LICENSE_NOTICE_END -->

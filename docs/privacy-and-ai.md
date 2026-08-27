@@ -72,3 +72,14 @@ Lernende sollen verstehen:
 - KI-Antworten können plausibel klingen, aber falsch sein.
 - Der Lernagent ist ein **Lernwerkzeug**, kein Tutor mit menschlichem Urteil.
 - Eigenes Nachdenken und kritisches Prüfen bleiben unersetzbar.
+
+<!-- CUSTOM_LICENSE_NOTICE_START -->
+## License
+
+This repository is licensed under a custom license.
+
+- Attribution required: Christine Janischek - https://emotionalspirit.de
+- Non-commercial use only
+- Use only within state school systems
+- Any other use requires explicit prior written permission
+<!-- CUSTOM_LICENSE_NOTICE_END -->

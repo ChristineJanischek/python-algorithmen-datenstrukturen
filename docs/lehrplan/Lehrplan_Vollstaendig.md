@@ -411,3 +411,14 @@ Planmäßiges Verarbeiten komplexer Sachverhalte mit dem Ziel selbstständiger G
 
 *Dieser Lehrplan wurde ins Markdown-Format konvertiert für digitale Verfügbarkeit im E-Learning-System.*  
 *Original-PDF: BG2-AG-EG-SG-WG_Informatik_18_3992k_NEU_Abitur2021.pdf*
+
+<!-- CUSTOM_LICENSE_NOTICE_START -->
+## License
+
+This repository is licensed under a custom license.
+
+- Attribution required: Christine Janischek - https://emotionalspirit.de
+- Non-commercial use only
+- Use only within state school systems
+- Any other use requires explicit prior written permission
+<!-- CUSTOM_LICENSE_NOTICE_END -->

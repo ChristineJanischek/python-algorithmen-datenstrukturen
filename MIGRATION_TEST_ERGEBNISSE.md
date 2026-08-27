@@ -214,3 +214,14 @@ L2_6_Aufgabe6_Bubble_Sort.xml                (1.5 KB) → .svg (2.1 KB)
 *Test durchgeführt: 2025-02-17*  
 *System: XML→SVG Pipeline v1.0*  
 *Status: ✅ PRODUCTION READY*
+
+<!-- CUSTOM_LICENSE_NOTICE_START -->
+## License
+
+This repository is licensed under a custom license.
+
+- Attribution required: Christine Janischek - https://emotionalspirit.de
+- Non-commercial use only
+- Use only within state school systems
+- Any other use requires explicit prior written permission
+<!-- CUSTOM_LICENSE_NOTICE_END -->

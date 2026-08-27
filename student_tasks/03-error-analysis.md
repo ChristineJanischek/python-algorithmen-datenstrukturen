@@ -106,3 +106,14 @@ def erkenne_fehlertyp(code_text: str) -> FehlerTyp:
 
 Verbinde die Fehlerklassifikation mit dem Agenten: Wenn ein Syntaxfehler erkannt wird,
 soll der Agent automatisch Hilfestufe 2 verwenden und den Fehlertyp benennen.
+
+<!-- CUSTOM_LICENSE_NOTICE_START -->
+## License
+
+This repository is licensed under a custom license.
+
+- Attribution required: Christine Janischek - https://emotionalspirit.de
+- Non-commercial use only
+- Use only within state school systems
+- Any other use requires explicit prior written permission
+<!-- CUSTOM_LICENSE_NOTICE_END -->

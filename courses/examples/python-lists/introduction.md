@@ -44,3 +44,14 @@ Wer PHP kennt, wird Ähnlichkeiten erkennen:
 
 > **Hinweis:** In Python ist `append()` eine Methode der Liste selbst.
 > Sie wird direkt auf die Liste aufgerufen: `meine_liste.append(wert)`.
+
+<!-- CUSTOM_LICENSE_NOTICE_START -->
+## License
+
+This repository is licensed under a custom license.
+
+- Attribution required: Christine Janischek - https://emotionalspirit.de
+- Non-commercial use only
+- Use only within state school systems
+- Any other use requires explicit prior written permission
+<!-- CUSTOM_LICENSE_NOTICE_END -->

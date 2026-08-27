@@ -44,3 +44,14 @@ Wann würdest du `append()` verwenden und wann wäre eine andere Methode sinnvol
 
 Schreibe ein Programm, das den Benutzer so lange nach Zahlen fragt,
 bis er `fertig` eingibt, und alle eingegebenen Zahlen in einer Liste speichert.
+
+<!-- CUSTOM_LICENSE_NOTICE_START -->
+## License
+
+This repository is licensed under a custom license.
+
+- Attribution required: Christine Janischek - https://emotionalspirit.de
+- Non-commercial use only
+- Use only within state school systems
+- Any other use requires explicit prior written permission
+<!-- CUSTOM_LICENSE_NOTICE_END -->
